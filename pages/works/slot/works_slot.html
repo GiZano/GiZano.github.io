@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="./works_slot.css">
+    <script rel="text/javascript" src="./slot.js"></script>
+    <title>Slot Machine</title>
+</head>
+
+<body>
+    <div class="safe-area spaced-column">
+        <nav>
+            <div class="logo">Giovanni Zanotti</div>
+            <input type="checkbox" class="toggler">
+            <div class="hamburger">
+                <div></div>
+            </div>
+            <div class="menu">
+                <a class="menu-item" href="../../../home.html">Home</a>
+                <a class="menu-item" href="../../about/about.html">About</a>
+                <a class="menu-item active" href="../works.html">Works</a>
+                <a class="menu-item" href="../../contacts/contacts.html">Contacts</a>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="title-block">
+                <h3>
+                    works
+                </h3>
+                <h1>
+                    Development and Creation of a Simple Slot Game
+                </h1>
+                <h2>Abstract</h2>
+                <p>
+                    The slot machine is a simple and fun way to learn coding for beginners, that's how I learned more
+                    about User Interfaces and basic coding.
+                    To do that I used Java, a strong language which has leaded the market for much time.
+                </p>
+                <h2>Introduction</h2>
+                <p>
+                    During my first year of high school I decided to start programming, and my first ever project has
+                    been the development and realization of a simple slot game. To do this I decided to use Java, a
+                    language which makes possibile to use the same compiled code for all the machines.
+                </p>
+                <h2>Materials and Methods</h2>
+                <p>
+                    To develop the game it has been used the Eclipse IDE (Integrated Development Environment), which can
+                    give an harsh time for beginners but becomes easier with experience.
+                    The window for the application has been built using the Standard Widget Toolkit (SWT), an open
+                    source tool which allows to simply create an user interface for our code.
+                    In the window we can find some main components, which are: four labels and a button. The button has
+                    an event listeners, which allows to launch a part of the code when clicked. When the button is
+                    pressed, three random numbers get generated and displayed in the center labels. While being
+                    displayed, the next instructions check if the numbers are all higher than 5, and if so, a winning
+                    message get displayed in the lower label. If the condition isn't met, a losing message get
+                    displayed.
+                </p>
+                <h2>Results and Discussion</h2>
+                <p>
+                    On launch, a colorful window appears with the four blank labels and a button above all the other
+                    components. On click, three random numbers appear in the labels and a message appears in the label
+                    below. If all three numbers are higher than 5 the winning message correctly appears, if not the
+                    losing message appears. There isn't any problem in the application except for the fact that the
+                    dimension of the window is fixed and by enlarging it the buttons doesn't grow but only the
+                    background color expands.
+                </p>
+                <h2>Conclusion</h2>
+                <p>
+                    The objective to create a slot machine has been fullfilled completely. The application works but the
+                    part of beauty in the widget should be revisioned as it has bright but discordant colors. In general
+                    the code has no problems thinking that I was just a beginner in coding.
+                </p>
+               
+            </div>
+            <div class="Demo">
+                <h3>Try the Demo!</h3>
+                <br>
+                <button class="startGame" id="startSlot" onclick="playGame()">Try your luck!</button>
+                <div id="slot">
+                    <div class="slot-item" id="first"></div>
+                    <div class="slot-item" id="second"></div>
+                    <div class="slot-item" id="third"></div>
+                </div>
+                <h3 id="result"></h3>
+            </div>
+        </div>
+        <div class="footer">2024</div>
+    </div>
+</body>
+
+</html>

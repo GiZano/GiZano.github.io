@@ -1,0 +1,72 @@
+h2 {
+    margin-bottom: 2rem;
+}
+
+h3 {
+    letter-spacing: 7px;
+    font-weight: bold;
+}
+
+.Demo {
+    width: 100%;
+    text-align: center;
+}
+
+.startGame {
+    border: 2px solid var(--primary400);
+    border-radius: 5px;
+    width: 30%;
+    font-size: 1.5rem;
+    line-height: 32px;
+    letter-spacing: 7px;
+    font-weight: bold;
+    margin: auto;
+    background-color: white;
+}
+
+.startGame:hover {
+    color: var(--primary400);
+}
+
+#slot {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    height: 300px;
+    margin: auto;
+    margin-bottom: -4rem;
+    margin-top: 4rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.slot-item {
+    background-color: var(--primary400);
+    width: 12.5%;
+    height: 50%;
+    line-height: 140px;
+}
+
+#result {
+    border: 2px solid var(--primary400);
+    border-radius: 5px;
+    margin:auto;
+    width: 60%;
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .slot-item {
+        width: 25%;
+    }
+
+    .startGame {
+        width: 80%;
+    }
+
+    #result {
+        width: 80%;
+    }
+}
