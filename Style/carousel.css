@@ -1,0 +1,262 @@
+/* Carousel Styles */
+#portfolio {
+    padding: 5rem 0;
+    background-color: #f8f9fa;  
+}
+
+#portfolioCarousel {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0 2rem 0; /* Aggiunto 100px di padding-top */
+    min-height: 600px;
+}
+
+/* Stile per le card */
+/* Stile per le card */
+#portfolioCarousel .card {
+    margin: 0 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#portfolioCarousel .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2) !important;
+}
+
+#portfolioCarousel .card-img-top {
+    height: 300px !important; /* Altezza fissa per le immagini */
+    object-fit: cover;
+    width: 100%;
+    object-position: center top;
+    transition: transform 0.3s ease;
+    flex-shrink: 0; /* Impedisce il ridimensionamento dell'immagine */
+}
+
+#portfolioCarousel .card:hover .card-img-top {
+    transform: scale(1.03);
+}
+
+#portfolioCarousel .card-body {
+    padding: 1.25rem;
+}
+
+#portfolioCarousel .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+#portfolioCarousel .card-text {
+    color: #6c757d;
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Ensure buttons in the portfolio cards have proper Bootstrap styles */
+#portfolioCarousel .project-links .btn {
+    transition: opacity 0.2s ease-in-out; /* Transizione fluida */
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.9rem;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Button color variants */
+#portfolioCarousel .project-links .btn {
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+#portfolioCarousel .project-links .btn-primary {
+    color: #0d6efd;
+    border: 1px solid #0d6efd;
+}
+
+#portfolioCarousel .project-links .btn-success {
+    color: #198754;
+    border: 1px solid #198754;
+}
+
+#portfolioCarousel .project-links .btn-primary:hover {
+    background-color: #0d6efd;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#portfolioCarousel .project-links .btn-success:hover {
+    background-color: #198754;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#portfolioCarousel .carousel-inner {
+    transition: transform 0.3s ease-in-out;
+    min-height: 400px; /* Ensure enough height for content */
+}
+
+#portfolioCarousel .project-card {
+    transition: all 0.3s ease-in-out;
+    opacity: 0.9;
+    transform: scale(0.95);
+}
+
+#portfolioCarousel .project-card.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#portfolioCarousel .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+#portfolioCarousel .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+#portfolioCarousel .card-img-top {
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Navigation Buttons */
+/* Stili per le frecce di navigazione del portfolio carousel */
+#portfolioCarousel {
+    position: relative;
+    z-index: 1;
+    padding: 0 40px;
+    overflow: visible;
+    position: relative;
+    padding: 0 40px; /* Spazio per le frecce */
+}
+
+#portfolioCarousel .carousel-control-prev,
+#portfolioCarousel .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: #fff !important;
+    border: 1px solid #dee2e6 !important;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1 !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2) !important;
+    z-index: 1001; /* Valore più alto per assicurare la visibilità */
+    position: absolute;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#portfolioCarousel .carousel-control-prev {
+    left: -20px;
+}
+
+#portfolioCarousel .carousel-control-next {
+    right: -20px;
+}
+
+#portfolioCarousel .carousel-control-prev-icon,
+#portfolioCarousel .carousel-control-next-icon {
+    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#portfolioCarousel .carousel-control-prev:hover,
+#portfolioCarousel .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+
+/* Stili per le frecce del secondo carosello (carouselExampleDark) */
+#carouselExampleDark {
+    position: relative;
+    padding: 0 60px; /* Più spazio per le frecce più grandi */
+}
+
+#carouselExampleDark .carousel-control-prev,
+#carouselExampleDark .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+#carouselExampleDark .carousel-control-prev {
+    left: -25px;
+}
+
+#carouselExampleDark .carousel-control-next {
+    right: -25px;
+}
+
+#carouselExampleDark .carousel-control-prev-icon,
+#carouselExampleDark .carousel-control-next-icon {
+    filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+#carouselExampleDark .carousel-control-prev:hover,
+#carouselExampleDark .carousel-control-next:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-50%) scale(1.05);
+}
+
+#portfolioCarousel .carousel-control-prev:disabled,
+#portfolioCarousel .carousel-control-next:disabled {
+    opacity: 0.2;
+    cursor: not-allowed;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    #portfolioCarousel .carousel-inner {
+        min-height: 350px;
+    }
+    
+    #portfolioCarousel .card-img-top {
+        height: 150px;
+    }
+}
+
+/* Animation for card entrance */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#portfolioCarousel .project-card {
+    animation: fadeIn 0.5s ease-out forwards;
+}
