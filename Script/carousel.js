@@ -2,6 +2,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.querySelector('#portfolioCarousel');
     if (!carousel) return;
+    
+    // Rimuovi i pulsanti di navigazione su mobile
+    if (window.innerWidth <= 767.98) {
+        const prevButton = document.getElementById('portfolioCarouselPrev');
+        const nextButton = document.getElementById('portfolioCarouselNext');
+        if (prevButton) prevButton.remove();
+        if (nextButton) nextButton.remove();
+    }
 
     // Project data
     const projects = [
@@ -176,33 +184,75 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Add touch support
+    // Enhanced touch support with momentum and better handling
     let touchStartX = 0;
     let touchEndX = 0;
+    let touchStartTime = 0;
+    let touchEndTime = 0;
+    let isScrolling = false;
+    let touchStartY = 0;
     
-    carousel.addEventListener('touchstart', (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-    }, false);
+    carousel.addEventListener('touchstart', e => {
+        touchStartX = e.touches[0].clientX;
+        touchStartTime = Date.now();
+        touchStartY = e.touches[0].clientY;
+        isScrolling = false;
+    }, { passive: true });
 
-    carousel.addEventListener('touchend', (e) => {
-        touchEndX = e.changedTouches[0].screenX;
+    carousel.addEventListener('touchmove', e => {
+        if (!touchStartX) return;
+        
+        const touchX = e.touches[0].clientX;
+        const touchY = e.touches[0].clientY;
+        
+        // Check if the user is scrolling vertically
+        if (Math.abs(touchY - touchStartY) > 10) {
+            isScrolling = true;
+            return;
+        }
+        
+        // Prevent page scroll when swiping horizontally
+        if (Math.abs(touchX - touchStartX) > 10) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+
+    carousel.addEventListener('touchend', e => {
+        if (isScrolling) return;
+        
+        touchEndX = e.changedTouches[0].clientX;
+        touchEndTime = Date.now();
+        
         handleSwipe();
-    }, false);
+        touchStartX = 0;
+    }, { passive: true });
 
     function handleSwipe() {
-        const cards = carouselInner.querySelectorAll('.project-card');
-        if (touchStartX - touchEndX > 50) {
-            // Swipe left - go to next
-            if (currentIndex < cards.length - visibleCards) {
+        const swipeThreshold = 30; // Reduced threshold for better responsiveness
+        const swipeTimeThreshold = 300; // ms
+        const swipeDistance = touchEndX - touchStartX;
+        const swipeTime = touchEndTime - touchStartTime;
+        
+        // Calculate velocity (pixels per second)
+        const velocity = Math.abs(swipeDistance) / (swipeTime / 1000);
+        
+        // Check if it's a valid swipe (fast enough or long enough)
+        const isFastSwipe = velocity > 300 && swipeTime < swipeTimeThreshold;
+        const isLongSwipe = Math.abs(swipeDistance) > 100;
+        
+        if (isFastSwipe || isLongSwipe) {
+            if (swipeDistance < -swipeThreshold && currentIndex < projects.length - 1) {
+                // Swipe left - go to next
                 goToSlide(currentIndex + 1);
-            }
-        } else if (touchEndX - touchStartX > 50) {
-            // Swipe right - go to previous
-            if (currentIndex > 0) {
+            } else if (swipeDistance > swipeThreshold && currentIndex > 0) {
+                // Swipe right - go to previous
                 goToSlide(currentIndex - 1);
             }
         }
     }
+    
+    // Prevent vertical scroll when swiping horizontally
+    carousel.style.touchAction = 'pan-y';
 
     // Initialize
     window.addEventListener('resize', handleResize);
