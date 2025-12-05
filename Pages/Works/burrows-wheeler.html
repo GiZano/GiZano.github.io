@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiZano - Project</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Style -->
+    <link rel="stylesheet" href="../../Style/globals.css">
+    <link rel="stylesheet" href="../../Style/bench.css">
+    <!-- JS -->
+    <script src="../../Script/nav.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-glass fixed-top bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html">GiZano</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#portfolio" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sections
+                        </a>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#abstract">Abstract</a></li>
+                        <li><a class="dropdown-item" href="#project">The Project</a></li>
+                        <li><a class="dropdown-item" href="#development">Development</a></li>
+                        <li><a class="dropdown-item" href="#realization">Realization</a></li>
+                        <li><a class="dropdown-item" href="#carousel">Carousel</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html"><i class="fab fa-arrow fa-lg"></i>Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+       <!-- Sezione Hero -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Burrows Wheeler's Transform Calculator</h1>
+                    <a href="#abstract" class="btn btn-light btn-lg">Check out my journey!</a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="rounded-circle bg-light d-inline-block p-4 bench-main">
+                        <img src="../../Media/burrow_main.png" alt="" class="img-fluid rounded-circle img-profilo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Abstract Section -->
+     <section id="abstract" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="mb-4 section-title">Abstract</h2>
+                    <p class="text-muted lead">
+                        It is often needed to compress data in order to efficiently send it over the network. 
+                        To do this we first need a special algorithm to transform the string to compress in order for it to be ready for compression. 
+                        This is where the Burrows Wheeler Transform algorithm comes into play. 
+                        In our solution, we develop our own Burrows Wheeler Transform python script. 
+                        The script is then used by the server solutions we developed to make the algorithm available for the services which are then going to compress the data.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Section -->
+    <section id="project" class="py-5 bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-left">
+                    <h2 class="mb-4 section-title">The Project</h2>
+                </div>
+                <div class="col-lg-10 mx-auto text-left project-section">
+                    <div>
+                        <p class="text-muted lead">
+                            All the data we elaborate through computers, in every sector, is sent as strings.
+                            Obviously, string means different letters in different positions, which can become complex as we need to scroll, search through them and then elaborate the found data. 
+                            To make string manipulation  more efficient, we can compress the data the string contains by using some special algorithms. Before using these algorithms, we have to apply a transformation, which makes it possible to bring similar characters together and make it easier to compress the data. 
+                            The service we created will make it possible to elaborate and output data ready to be compressed, thanks to the Burrows Wheeler algorithm. 
+                            <br>
+                            The objective of this project is to develop a Python service that offers the chance to calculate the Burrows Wheeler Transform after taking the string to elaborate as input.
+
+                        </p>
+                    </div>
+                    <img src="../../Media/burrow_main.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools and Technologies Section -->
+    <section id="development" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-end">
+                    <h2 class="mb-4 section-title">Tools and Technologies</h2>
+                </div>
+                <div class="col-lg-10 mx-auto text-left development-section">
+                    <img src="../../Media/carousel/carousel2.jpg" alt="">
+                    <p class="text-muted lead">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ullamcorper nibh ac scelerisque vulputate. Aenean non feugiat lorem. In tincidunt, massa in facilisis ullamcorper, odio quam sodales risus, quis suscipit lorem metus vel mi. Vestibulum consequat sed erat pulvinar porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur quis quam eget neque tempus aliquam. Maecenas egestas dignissim neque eu molestie. In hac habitasse platea dictumst. Morbi vitae sem eu odio mollis faucibus. Nulla ligula libero, ultrices a enim a, faucibus placerat sapien. Suspendisse in bibendum tortor. Pellentesque et mauris odio. In vitae nibh semper, elementum est in, ullamcorper massa. Etiam viverra in dui at rutrum. Mauris eget eros nec orci pellentesque aliquet at et nibh.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Realization Section -->
+    <section id="realization" class="py-5 bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-left">
+                    <h2 class="mb-4 section-title">Real Life Realization</h2>
+                </div>
+                <div class="col-lg-10 mx-auto text-left realization-section">
+                    <p class="text-muted lead">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ullamcorper nibh ac scelerisque vulputate. Aenean non feugiat lorem. In tincidunt, massa in facilisis ullamcorper, odio quam sodales risus, quis suscipit lorem metus vel mi. Vestibulum consequat sed erat pulvinar porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur quis quam eget neque tempus aliquam. Maecenas egestas dignissim neque eu molestie. In hac habitasse platea dictumst. Morbi vitae sem eu odio mollis faucibus. Nulla ligula libero, ultrices a enim a, faucibus placerat sapien. Suspendisse in bibendum tortor. Pellentesque et mauris odio. In vitae nibh semper, elementum est in, ullamcorper massa. Etiam viverra in dui at rutrum. Mauris eget eros nec orci pellentesque aliquet at et nibh.
+                    </p>
+                    <img src="../../Media/carousel/carousel6.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+     <section id="carousel" class="py-5 bg-light">
+        <div class="container">
+            <div class="col-lg-10 mx-auto text-center">
+                    <h2 class="mb-4 section-title">Development Carousel</h2>
+            </div>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                </div>
+                <div class="carousel-inner">
+                    <!-- Img1 -->
+                    <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="../../Media/carousel/carousel1.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Finished 3D Model</h5>
+                             </div>
+                        </a>
+                    </div>
+                    <!-- Img2 -->
+                    <div class="carousel-item " data-bs-interval="10000">
+                            <img src="../../Media/carousel/carousel2.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Exploded View</h5>
+                             </div>
+                        </a>
+                    </div>
+                    <!-- Img3 -->
+                    <div class="carousel-item " data-bs-interval="10000">
+                            <img src="../../Media/carousel/carousel3.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Bike Rack 3D Model</h5>
+                             </div>
+                        </a>
+                    </div>
+                    <!-- Img4 -->
+                    <div class="carousel-item " data-bs-interval="10000">
+                            <img src="../../Media/carousel/carousel4.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Bench 3D Model</h5>
+                             </div>
+                        </a>
+                    </div>
+                    <!-- Img5 -->
+                    <div class="carousel-item " data-bs-interval="10000">
+                            <img src="../../Media/carousel/carousel5.png" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Finished Uncolored 3D Model</h5>
+                             </div>
+                        </a>
+                    </div>
+                    <!-- Img6 -->
+                    <div class="carousel-item " data-bs-interval="10000">
+                            <img src="../../Media/carousel/carousel6.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Final Product</h5>
+                             </div>
+                        </a>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="social-links">
+                <a target="_blank" href="https://www.linkedin.com/in/giovanni-zanotti-it/" class="text-light me-5"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a target="_blank" href="https://github.com/GiZano" class="text-light me-5"><i class="fab fa-github fa-lg"></i></a>
+                <a target="_blank" href="https://www.instagram.com/giova.zano/" class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
