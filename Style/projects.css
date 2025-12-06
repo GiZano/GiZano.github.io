@@ -1,184 +1,153 @@
-/* Common styles for project pages */
-
-/* Base image container styles */
-.image-container {
-    position: relative;
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto 30px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive image styles */
 .responsive-img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.3s ease;
 }
 
-/* Hover effect for images */
-.responsive-img:hover {
-    transform: scale(1.02);
-}
+@media (max-width: 991.98px) {
+    .project-section .row > div,
+    .development-section .row > div,
+    .realization-section .row > div {
+        margin-bottom: 30px;
+    }
 
-/* Section layouts */
-.project-section,
-.development-section,
-.realization-section {
-    margin: 30px 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    align-items: flex-start;
-}
-
-/* Specific alignment for project section */
-.project-section > div:first-child {
-    flex: 1;
-    min-width: 300px;
-}
-
-.project-section > .image-container {
-    flex: 0 1 45%;
-    min-width: 300px;
-    margin-top: 0;
-}
-
-/* Text content next to images */
-.section-content {
-    flex: 1;
-    min-width: 300px;
-}
-
-/* Individual image styling */
-.project-section .image-container,
-.development-section .image-container,
-.realization-section .image-container {
-    flex: 0 1 45%;
-    min-width: 300px;
-}
-
-/* List styling */
-.group-list-item {
-    text-align: left;
-    margin-bottom: 10px;
-    position: relative;
-    padding-left: 20px;
-}
-
-.group-list-item:before {
-    content: "•";
-    color: #2c3e50;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .project-section,
-    .development-section,
-    .realization-section {
-        flex-direction: column;
+    .project-section .row > div:last-child,
+    .development-section .row > div:last-child,
+    .realization-section .row > div:last-child {
+        margin-bottom: 0;
     }
     
-    .project-section .image-container,
-    .development-section .image-container,
-    .realization-section .image-container {
-        flex: 1 1 100%;
-        max-width: 100%;
+    .image-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
     }
     
-    .section-content {
-        width: 100%;
+    .section-content,
+    .section-title,
+    .text-muted.lead {
+        text-align: center !important;
+    }
+
+    .group-list {
+        text-align: left;
+        display: inline-block;
+    }
+
+    .group-list-item {
+        text-align: left;
     }
 }
 
-/* Spacing adjustments */
-#project p,
-#realization p,
-#development p {
-    margin: 0 0 20px 0;
-    line-height: 1.6;
-}
-
-/* Carousel specific styles */
-#carouselExampleDark .carousel-inner {
-    max-width: 800px;
+#carousel .carousel {
     margin: 0 auto;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: visible;
 }
 
-#carouselExampleDark .carousel-item img {
-    max-height: 400px;
-    width: auto;
-    margin: 0 auto;
-    object-fit: contain;
-}
-
-.carousel-caption {
-    background-color: rgba(255, 255, 255, 0.9);
-    width: auto;
-    max-width: 80%;
-    padding: 10px 20px;
-    border-radius: 4px;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: opacity 0.3s ease;
-}
-
-.carousel-caption h5 {
-    color: #2c3e50;
-    font-size: 1rem;
-    margin: 0;
-    font-weight: 500;
-}
-
-.carousel-caption:hover {
-    opacity: 0.8;
-}
-
-#development .section-title {
-    margin: 60px 0 30px;
-}
-
-/* Mobile-specific styles */
-@media (max-width: 768px) {
-    body {
-        overflow-x: hidden;
+@media (max-width: 991.98px) {
+    #carousel .carousel {
+        width: 80%;
     }
 
-    .project-section,
-    .development-section,
-    .realization-section {
-        text-align: center;
-        flex-direction: column;
+    .carousel-control-prev {
+        left: -15%;
+        width: 15%;
+        justify-content: flex-end;
     }
 
-    .project-section img,
-    .development-section img,
-    .realization-section img {
-        width: 100%;
-        height: auto;
-        margin-top: 20px;
-        border-radius: 8px;
+    .carousel-control-next {
+        right: -15%;
+        width: 15%;
+        justify-content: flex-start;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        filter: invert(1) grayscale(100);
+    }
+}
+
+@media (min-width: 992px) {
+    #carousel .carousel {
+        max-width: 700px;
     }
 
-    #development img {
-        margin-bottom: 20px;
+    .carousel-control-prev {
+        left: -80px;
+        width: 60px;
+        opacity: 0.5;
     }
 
-    .section-title {
-        text-align: center;
+    .carousel-control-next {
+        right: -80px;
+        width: 60px;
+        opacity: 0.5;
     }
 
-    .bench-main {
-        margin-top: 20px;
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        opacity: 1;
+        transform: scale(1.1);
+        transition: all 0.2s ease;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .carousel-caption {
+        bottom: 10px;
+        left: 5%;
+        right: 5%;
+    }
+    
+    .carousel-caption h5 {
+        color: #fff;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel-caption {
+        background: rgba(255, 255, 255, 0.85);
+        color: #2c3e50;
+        border-radius: 12px;
+        padding: 15px 30px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        left: 10%;
+        right: 10%;
+        bottom: 30px;
+    }
+
+    .carousel-caption h5 {
+        color: #2c3e50;
+        font-weight: 600;
+        margin: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .carousel-caption {
+        left: 15%;
+        right: 15%;
+        bottom: 40px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .carousel-caption h5 {
+        transition: color 0.4s ease-in-out;
+    }
+
+    .carousel-item.active:hover .carousel-caption {
+        background: rgba(255, 255, 255, 0);
+        box-shadow: none;
+    }
+
+    .carousel-item.active:hover .carousel-caption h5 {
+        color: #ffffff;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
     }
 }

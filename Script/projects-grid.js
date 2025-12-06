@@ -5,7 +5,7 @@ const projects = [
         description: 'IoT System - React - Arduino - ...',
         image: './Pages/Works/bE-More/static/media/logo.f891aae4577c48b75ca4.jpg',
         links: [
-            { text: 'Details (it)', url: './Pages/Works/bE-More/index.html', class: 'btn btn-primary' },
+            { text: 'Details (it)', url: './Pages/Works/bE-More/index.html', class: 'btn btn-primary', target: '_blank'},
             { text: 'Code', url: 'https://github.com/GiZano/project-day', class: 'btn btn-success' }
         ]
     },

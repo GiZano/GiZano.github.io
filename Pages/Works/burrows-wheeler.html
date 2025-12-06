@@ -4,16 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GiZano - Project</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Style -->
     <link rel="stylesheet" href="../../Style/globals.css">
     <link rel="stylesheet" href="../../Style/projects.css">
-    <!-- JS -->
     <script src="../../Script/nav.js"></script>
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -43,14 +38,14 @@
         </div>
     </nav>
 
-       <!-- Sezione Hero -->
-    <section class="hero-section">
+       <section class="hero-section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h1 class="display-4 fw-bold mb-4">Burrows Wheeler's Transform Calculator</h1>
-                    <a href="#abstract" class="btn btn-light btn-lg">Check out my journey!</a>
-                    <a href="../../Media/Burrows_Wheeler_Transform_Technical_Report.pdf" download class="btn btn-outline-warning btn-lg download-report">Download full Technical Report...</a>
+                    <a href="#abstract" class="btn btn-primary btn-lg">Check out my journey!</a>
+                    <br><br>
+                    <a href="../../Media/Burrows_Wheeler_Transform_Technical_Report.pdf" download target="_blank" class="btn btn-outline-primary btn-lg download-report">Download the full Technical Report...</a>
                 </div>
                 <div class="col-lg-6 text-center">
                     <div class="image-container rounded-circle bg-light d-inline-block p-4 bench-main">
@@ -61,8 +56,7 @@
         </div>
     </section>
 
-    <!-- Abstract Section -->
-     <section id="abstract" class="py-5 bg-light">
+    <section id="abstract" class="py-5 bg-alt-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
@@ -79,153 +73,110 @@
         </div>
     </section>
 
-    <!-- Project Section -->
     <section id="project" class="py-5 bg-white">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 mx-auto text-left">
                     <h2 class="mb-4 section-title">The Project</h2>
                 </div>
-                <div class="col-lg-10 mx-auto text-left project-section">
-                    <div>
-                        <p class="text-muted lead">
-                            All the data we elaborate through computers, in every sector, is sent as strings.
-                            Obviously, string means different letters in different positions, which can become complex as we need to scroll, search through them and then elaborate the found data. 
-                            To make string manipulation  more efficient, we can compress the data the string contains by using some special algorithms. Before using these algorithms, we have to apply a transformation, which makes it possible to bring similar characters together and make it easier to compress the data. 
-                            The service we created will make it possible to elaborate and output data ready to be compressed, thanks to the Burrows Wheeler algorithm. 
-                            <br>
-                            The objective of this project is to develop a Python service that offers the chance to calculate the Burrows Wheeler Transform after taking the string to elaborate as input.
-
-                        </p>
-                    </div>
-                    <div class="image-container">
-                        <img src="../../Media/burrow_main.png" alt="Burrows Wheeler Transform visualization" class="responsive-img">
+                <div class="col-lg-10 mx-auto">
+                    <div class="project-section">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <p class="text-muted lead">
+                                    Often, to transmit data, we have to compress it, but to do this we first need to prepare it.
+                                    <br>
+                                    This is where the Burrows Wheeler Transform Algorithm comes in handy.
+                                    The objective of this project is to create a server that makes it possible for clients 
+                                    to send strings, and then be received after being transformed by the server.
+                                </p>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="image-container">
+                                    <img src="../../Media/burrow_main.png" alt="Burrows Wheeler Transform visualization" class="responsive-img">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Tools and Technologies Section -->
-    <section id="development" class="py-5 bg-light">
+    <section id="development" class="py-5 bg-alt-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 mx-auto text-end">
-                    <h2 class="mb-4 section-title">Tools and Technologies</h2>
+                    <h2 class="mb-4 section-title">Project Development</h2>
                 </div>
-                <div class="col-lg-10 mx-auto text-left development-section">
-                    <div class="image-container">
-                        <img src="../../Media/carousel/carousel2.jpg" alt="Tools and technologies used in the project" class="responsive-img">
+                <div class="col-lg-10 mx-auto">
+                    <div class="development-section">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="image-container">
+                                    <img src="../../Media/burrow-wheeler-develop.png" alt="Terminal Demo" class="responsive-img">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="section-content">
+                                    <p class="text-muted lead">
+                                        To develop this project, many different solutions have been applied:
+                                        <ul class="group-list muted lead">
+                                            <li class="group-list-item">Terminal Application</li>
+                                            <li class="group-list-item">FastAPI Client-Server Application</li>
+                                            <li class="group-list-item">Normal Client-Server Application</li>
+                                        </ul>
+                                        <span class="text-muted lead">Other than that, there is also the chance to just use the transformation script for debug.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="section-content">
-                        <p class="text-muted lead">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ullamcorper nibh ac scelerisque vulputate. Aenean non feugiat lorem. In tincidunt, massa in facilisis ullamcorper, odio quam sodales risus, quis suscipit lorem metus vel mi. Vestibulum consequat sed erat pulvinar porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur quis quam eget neque tempus aliquam. Maecenas egestas dignissim neque eu molestie. In hac habitasse platea dictumst. Morbi vitae sem eu odio mollis faucibus. Nulla ligula libero, ultrices a enim a, faucibus placerat sapien. Suspendisse in bibendum tortor. Pellentesque et mauris odio. In vitae nibh semper, elementum est in, ullamcorper massa. Etiam viverra in dui at rutrum. Mauris eget eros nec orci pellentesque aliquet at et nibh.
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Realization Section -->
     <section id="realization" class="py-5 bg-white">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 mx-auto text-left">
-                    <h2 class="mb-4 section-title">Real Life Realization</h2>
+                    <h2 class="mb-4 section-title">Real Life Application</h2>
                 </div>
-                <div class="col-lg-10 mx-auto text-left realization-section">
-                    <div class="section-content">
-                        <p class="text-muted lead">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ullamcorper nibh ac scelerisque vulputate. Aenean non feugiat lorem. In tincidunt, massa in facilisis ullamcorper, odio quam sodales risus, quis suscipit lorem metus vel mi. Vestibulum consequat sed erat pulvinar porttitor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur quis quam eget neque tempus aliquam. Maecenas egestas dignissim neque eu molestie. In hac habitasse platea dictumst. Morbi vitae sem eu odio mollis faucibus. Nulla ligula libero, ultrices a enim a, faucibus placerat sapien. Suspendisse in bibendum tortor. Pellentesque et mauris odio. In vitae nibh semper, elementum est in, ullamcorper massa. Etiam viverra in dui at rutrum. Mauris eget eros nec orci pellentesque aliquet at et nibh.
-                        </p>
-                    </div>
-                    <div class="image-container">
-                        <img src="../../Media/carousel/carousel6.jpg" alt="Final project realization" class="responsive-img">
+                <div class="col-lg-10 mx-auto">
+                    <div class="realization-section">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="section-content">
+                                    <p class="text-muted lead">
+                                        It is now possible to download the code in my github repository <a class="btn btn-outline-primary fw-bold" target="_blank" href="https://github.com/GiZano/burrow-wheeler-calculator/tree/master">Here</a> and follow the steps to clone the code 
+                                        in local and then execute it in your local machine! Other than that, it is also possible to run the server side on a machine and then
+                                        access it through a second machine in the network. To do this, you just have to fix the server configuration 
+                                        if you want to use the normal client-server solution.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="image-container">
+                                    <img src="../../Media/carousel/carousel6.jpg" alt="Final project realization" class="responsive-img">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Carousel Section -->
-     <section id="carousel" class="py-5 bg-light">
+    <section id="carousel" class="py-5 bg-alt-section">
         <div class="container">
             <div class="col-lg-10 mx-auto text-center">
-                    <h2 class="mb-4 section-title">Development Carousel</h2>
-            </div>
-            <div id="carouselExampleDark" class="carousel carousel-dark slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                </div>
-                <div class="carousel-inner">
-                    <!-- Img1 -->
-                    <div class="carousel-item active" data-bs-interval="10000">
-                            <img src="../../Media/carousel/carousel1.png" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Finished 3D Model</h5>
-                             </div>
-                        </a>
-                    </div>
-                    <!-- Img2 -->
-                    <div class="carousel-item " data-bs-interval="10000">
-                            <img src="../../Media/carousel/carousel2.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Exploded View</h5>
-                             </div>
-                        </a>
-                    </div>
-                    <!-- Img3 -->
-                    <div class="carousel-item " data-bs-interval="10000">
-                            <img src="../../Media/carousel/carousel3.png" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Bike Rack 3D Model</h5>
-                             </div>
-                        </a>
-                    </div>
-                    <!-- Img4 -->
-                    <div class="carousel-item " data-bs-interval="10000">
-                            <img src="../../Media/carousel/carousel4.png" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Bench 3D Model</h5>
-                             </div>
-                        </a>
-                    </div>
-                    <!-- Img5 -->
-                    <div class="carousel-item " data-bs-interval="10000">
-                            <img src="../../Media/carousel/carousel5.png" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Finished Uncolored 3D Model</h5>
-                             </div>
-                        </a>
-                    </div>
-                    <!-- Img6 -->
-                    <div class="carousel-item " data-bs-interval="10000">
-                            <img src="../../Media/carousel/carousel6.jpg" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Final Product</h5>
-                             </div>
-                        </a>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                    <h2 class="mb-4 section-title">Demo</h2>
             </div>
         </div>
     </section>
 
 
-    <!-- Footer -->
     <footer class="py-5 bg-dark text-white">
         <div class="container">
             <div class="social-links">
@@ -236,7 +187,6 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -3,6 +3,13 @@
     height: 300px;
 }
 
+.img-profilo-back {
+    margin-left: 10vw;
+}
+
+.hero-content {
+    margin-top: 40px;
+}
 
 .typewriter-container {
 
@@ -16,7 +23,7 @@
     font-size: 2.5rem;
     font-weight: 300;
     color: var(--text-light);
-    border-right: 3px solid #ffc107;
+    border-right: 3px solid var(--accent-color);
     white-space: nowrap;
     overflow: hidden;
 }
@@ -66,9 +73,7 @@
     text-align: left;
 }
 
-/* Carousel controls for both sections */
-#portfolioCarousel .carousel-control-prev,
-#portfolioCarousel .carousel-control-next,
+/* Carousel controls */
 #carouselExampleDark .carousel-control-prev,
 #carouselExampleDark .carousel-control-next {
     width: 4%;
@@ -79,16 +84,6 @@
     z-index: 10;
 }
 
-/* Portfolio Carousel */
-#portfolioCarousel .carousel-control-prev {
-    left: -3rem;
-}
-
-#portfolioCarousel .carousel-control-next {
-    right: -3rem;
-}
-
-/* Talking about me Carousel */
 #carouselExampleDark .carousel-control-prev {
     left: -4rem;
 }
@@ -97,9 +92,6 @@
     right: -4rem;
 }
 
-/* Icons styling */
-#portfolioCarousel .carousel-control-prev-icon,
-#portfolioCarousel .carousel-control-next-icon,
 #carouselExampleDark .carousel-control-prev-icon,
 #carouselExampleDark .carousel-control-next-icon {
     filter: invert(1) grayscale(100);
@@ -107,33 +99,27 @@
     height: 2.5rem;
 }
 
-/* Hover effects */
 #carouselExampleDark .carousel-control-prev:hover,
 #carouselExampleDark .carousel-control-next:hover {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 50%;
 }
 
-/* Responsive adjustments */
 @media (max-width: 991.98px) {
-    #portfolioCarousel .carousel-control-prev,
     #carouselExampleDark .carousel-control-prev {
         left: -2rem;
     }
 
-    #portfolioCarousel .carousel-control-next,
     #carouselExampleDark .carousel-control-next {
         right: -2rem;
     }
 }
 
 @media (max-width: 767.98px) {
-    #portfolioCarousel .carousel-control-prev,
     #carouselExampleDark .carousel-control-prev {
         left: 0.5rem;
     }
 
-    #portfolioCarousel .carousel-control-next,
     #carouselExampleDark .carousel-control-next {
         right: 0.5rem;
     }
