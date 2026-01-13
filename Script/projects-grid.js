@@ -19,6 +19,14 @@ const projects = [
         ]
     },
     {
+        title: 'Web Presentations',
+        description: 'React/Vite - HTML/CSS/JS - Web Design - ...',
+        image: './Media/react-logo.svg',
+        links: [
+            { text: 'View Projects', url: './Pages/Works/web-presentations.html', class: 'btn btn-primary' }
+        ]
+    },
+    {
         title: 'The Bench of Kindness',
         description: 'Project Management - Real Life Implementation - ...',
         image: './Media/bench_main.png',
