@@ -10,9 +10,18 @@ const projects = [
         ]
     },
     {
+        title: 'Telegram Secretary Bot',
+        description: 'Telegram Bot - Google Calendar API - ...',
+        image: './Media/telegram-bot/bot.webp',
+        links: [
+            { text: 'Details', url: './Pages/Works/telegram-bot.html', class: 'btn btn-primary' },
+            { text: 'Code', url: 'https://github.com/GiZano/telegram-to-calendar', class: 'btn btn-success' }
+        ]
+    },
+    {
         title: "Burrows Wheeler's Algorithm Calculator",
         description: 'Python - FastAPI - Server - ...',
-        image: './Media/burrow_main.png',
+        image: './Media/burrows/burrow_main.webp',
         links: [
             { text: 'Details', url: './Pages/Works/burrows-wheeler.html', class: 'btn btn-primary' },
             { text: 'Code', url: 'https://github.com/GiZano/burrow-wheeler-calculator', class: 'btn btn-success' }
@@ -21,7 +30,7 @@ const projects = [
     {
         title: 'Web Presentations',
         description: 'React/Vite - HTML/CSS/JS - Web Design - ...',
-        image: './Media/react-logo.svg',
+        image: './Media/presentations/react-logo.svg',
         links: [
             { text: 'View Projects', url: './Pages/Works/web-presentations.html', class: 'btn btn-primary' }
         ]
@@ -29,7 +38,7 @@ const projects = [
     {
         title: 'The Bench of Kindness',
         description: 'Project Management - Real Life Implementation - ...',
-        image: './Media/bench_main.png',
+        image: './Media/bench/bench_main.webp',
         links: [
             { text: 'Details', url: './Pages/Works/bench.html', class: 'btn btn-primary' }
         ]
@@ -37,7 +46,7 @@ const projects = [
     {
         title: 'School Dungeon - Command Line Based Game',
         description: 'Java - Game Development - ...',
-        image: './Media/school-dungeon_project.png',
+        image: './Media/school-dungeon/school-dungeon_project.webp',
         links: [
             { text: 'Code', url: 'https://github.com/GiZano/school-dungeon', class: 'btn btn-success' }
         ]

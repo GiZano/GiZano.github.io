@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiZano - Telegram Secretary</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../Style/globals.css">
+    <link href="../../Style/projects.css" rel="stylesheet">
+    <script src="../../Script/nav.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-glass fixed-top bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html">GiZano</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#portfolio" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sections
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#abstract">Abstract</a></li>
+                            <li><a class="dropdown-item" href="#telegram">The Interface</a></li>
+                            <li><a class="dropdown-item" href="#google">The Brain</a></li>
+                            <li><a class="dropdown-item" href="#hosting">Self Hosting</a></li>
+                            <li><a class="dropdown-item" href="#demo">Live Demo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../../index.html"><i class="fab fa-arrow fa-lg"></i>Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Personal Telegram Secretary Bot</h1>
+                    <p class="lead text-muted mb-4">A seamless bridge between instant messaging and Google Calendar, hosted locally.</p>
+                    <a href="#abstract" class="btn btn-primary btn-lg">Discover the architecture</a>
+                    <br><br>
+                    <a href="https://github.com/GiZano/telegram-to-calendar" target="_blank" class="btn btn-outline-primary btn-lg download-report"><i class="fab fa-github"></i> View Source Code</a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="image-container rounded-circle bg-light d-inline-block p-4 bench-main">
+                        
+                        <img src="../../Media/telegram-bot/bot.webp" alt="Telegram Bot Project" class="img-fluid rounded-circle img-profilo responsive-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="abstract" class="py-5 bg-alt-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="mb-4 section-title">Abstract</h2>
+                    <p class="text-muted lead">
+                        In a fast-paced digital environment, opening a calendar app to schedule a simple meeting can be a friction point. 
+                        The goal of this project was to create a conversational interface using Telegram—an app I use daily—to interact directly with my Google Account.
+                        By leveraging the Telegram API and Google Calendar API, I created a "Secretary Bot" that parses natural language and manages my schedule automatically.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="telegram" class="py-5 bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-left">
+                    <h2 class="mb-4 section-title">The Interface: Telegram</h2>
+                </div>
+                <div class="col-lg-10 mx-auto">
+                    <div class="project-section">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <p class="text-muted lead">
+                                    The frontend of this application is entirely chat-based. Using <strong>@BotFather</strong>, I registered a new bot identity on the Telegram network.
+                                    <br><br>
+                                    Instead of building a complex React or Vue UI, I utilized the chat interface which provides zero-latency interactions on both mobile and desktop. 
+                                    The bot listens for specific command triggers or natural language inputs, ready to parse dates and event titles.
+                                </p>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="image-container">
+                                    
+                                    <img src="../../Media/telegram-bot/botfather.webp" alt="Telegram BotFather Setup" class="responsive-img rounded shadow-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="google" class="py-5 bg-alt-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-end">
+                    <h2 class="mb-4 section-title">The Brain: Google Integration</h2>
+                </div>
+                <div class="col-lg-10 mx-auto">
+                    <div class="development-section">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 order-lg-1 order-2">
+                                <div class="image-container">
+                                     
+                                    <img src="../../Media/telegram-bot/google-api.webp" alt="Google Cloud Console API" class="responsive-img rounded shadow-sm">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 order-lg-2 order-1">
+                                <div class="section-content">
+                                    <p class="text-muted lead">
+                                        The core logic handles the authentication and data sync with Google Services.
+                                        <ul class="group-list muted lead">
+                                            <li class="group-list-item"><strong>Google Service Account:</strong> Used for secure server-to-server authentication without manual OAuth logins.</li>
+                                            <li class="group-list-item"><strong>Calendar API:</strong> The bot allows reading upcoming events and inserting new ones (POST requests).</li>
+                                            <li class="group-list-item"><strong>Chrome Integration:</strong> The system is linked to my main Google Chrome account, ensuring instant sync across all my devices.</li>
+                                        </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hosting" class="py-5 bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-left">
+                    <h2 class="mb-4 section-title">The Home: Self Hosting</h2>
+                </div>
+                <div class="col-lg-10 mx-auto">
+                    <div class="realization-section">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="section-content">
+                                    <p class="text-muted lead">
+                                        To ensure the "Secretary" is awake 24/7, I deployed the Python codebase on a <strong>Raspberry Pi</strong>.
+                                        <br><br>
+                                        This IoT approach allows for a low-power, always-on solution. The bot runs as a systemd service (or via Docker), ensuring it automatically restarts if the Pi reboots. This makes the architecture completely independent of third-party cloud hosting providers, giving me full control over the data flow.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="image-container">
+                                    
+                                    <img src="../../Media/telegram-bot/raspberry.webp" alt="Raspberry Pi Hosting" class="responsive-img rounded shadow-sm">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demo" class="py-5 bg-alt-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto text-center">
+                    <h2 class="mb-4 section-title">Bot in Action</h2>
+                    <p class="lead mb-5">Watch how a simple text message converts into a real Google Calendar event in seconds.</p>
+                    
+                    <div class="card shadow-lg border-0">
+                        <div class="card-body p-0">
+                            
+                            <img src="../../Media/telegram-bot/demo_bot.gif" alt="Demo of the Telegram Bot adding an event" class="img-fluid rounded">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="social-links">
+                <a target="_blank" href="https://www.linkedin.com/in/giovanni-zanotti-it/" class="text-light me-5"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a target="_blank" href="https://github.com/GiZano" class="text-light me-5"><i class="fab fa-github fa-lg"></i></a>
+                <a target="_blank" href="https://www.instagram.com/giova.zano/" class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
