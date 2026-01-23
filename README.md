@@ -1,98 +1,113 @@
-# GiZano Portfolio
+# 🚀 GiZano Portfolio
 
-A modern, responsive portfolio website showcasing my projects, skills, and professional background. Built with HTML5, CSS3, and vanilla JavaScript, featuring a clean, minimalist design with smooth animations and interactive elements.
+> A modern, fullstack & IoT developer portfolio showcasing my projects, skills, and professional background.
 
-## 🌟 Features
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Status](https://img.shields.io/website?url=https%3A%2F%2Fgiovanni-zanotti.is-a.dev)
 
-- **Responsive Design**: Fully responsive layout that works on all devices
-- **Modern UI**: Clean, minimalist interface with smooth animations
-- **Interactive Elements**: Dynamic content loading and interactive components
-- **Project Showcase**: Detailed project pages with demos and descriptions
-- **Contact Section**: Easy way to get in touch
+**Live Demo:** [https://giovanni-zanotti.is-a.dev](https://giovanni-zanotti.is-a.dev)
+
+Built with **HTML5**, **CSS3**, and **Vanilla JavaScript**, featuring a clean, minimalist design with smooth animations, high accessibility standards, and SEO optimization.
+
+## 🌟 Key Features
+
+- **⚡ High Performance:** Optimized for speed with Lazy Loading, Resource Hints (Preload/Preconnect), and critical CSS/JS strategies. Achieved **95+ Lighthouse scores** on Mobile & Desktop.
+- **📱 Fully Responsive:** Adaptive layout that works seamlessly on all devices (Mobile, Tablet, Desktop) using Bootstrap 5 and custom media queries.
+- **🔍 SEO Friendly:** Proper semantic HTML5, Meta Tags, Open Graph protocols, JSON-LD Structured Data, `sitemap.xml`, and `robots.txt` configuration.
+- **📊 Analytics:** Integrated with Google Analytics 4 for traffic monitoring.
+- **🎨 Modern UI/UX:** Clean interface with `Inter` typography, smooth scrolling, and typewriter effects.
 
 ## 🚀 Technologies Used
 
-- **Frontend**:
-  - HTML5
-  - CSS3 (with CSS Variables for theming)
+- **Frontend Core:**
+  - HTML5 (Semantic)
+  - CSS3 (Custom Variables, Flexbox, Grid)
   - Vanilla JavaScript (ES6+)
-  - [Bootstrap 5](https://getbootstrap.com/) - For responsive layout and components
-  - [Font Awesome](https://fontawesome.com/) - For icons
-  - [Google Fonts](https://fonts.google.com/) - Using Inter font family
+- **Libraries & Frameworks:**
+  - [Bootstrap 5](https://getbootstrap.com/) - Responsive layout system
+  - [Font Awesome 6](https://fontawesome.com/) - Icons
+  - [Google Fonts](https://fonts.google.com/) - Inter Font Family
+- **Tools & Hosting:**
+  - **GitHub Pages** - Hosting
+  - **is-a.dev** - Custom Domain Service
+  - **Google Analytics 4** - User tracking
 
 ## 📁 Project Structure
 
-```
+```text
 Portfolio/
-├── Media/                # Media assets (images, icons, etc.)
-├── Pages/                # HTML pages
-│   ├── Template/         # Page templates
-│   └── Works/            # Project showcase pages
-│       └── bE-More/      # Individual project
-├── Script/               # JavaScript files
-│   ├── typewrite.js      # Typewriter effect
-│   ├── index.js          # Main JavaScript
-│   └── nav.js            # Navigation functionality
-├── Style/                # CSS files
-│   ├── globals.css       # Global styles and variables
+├── Media/                # Optimized images (WebP), SVGs, and assets
+├── Pages/                # Project Detail Pages
+│   └── Works/            
+│       ├── bE-More/             # React Project Build
+│       ├── bench.html           # IoT/Real-life Project
+│       ├── burrows-wheeler.html # Algorithm Project
+│       ├── telegram-bot.html    # Backend/Automation Project
+│       └── web-presentations.html # Frontend Showcase
+├── Script/               # Logic
+│   ├── index.js          # Homepage logic (Typewriter, etc.)
+│   ├── nav.js            # Sticky navbar & mobile menu
+│   └── projects-grid.js  # Dynamic grid rendering
+├── Style/                # Styling
+│   ├── globals.css       # Variables & Reset
 │   ├── index.css         # Homepage specific styles
-│   └── projects.css      # Project showcase styles
-├── favicon.ico           # Website favicon
-└── index.html            # Main entry point
+│   └── projects.css      # Shared styles for project pages
+├── CNAME                 # Custom domain configuration
+├── favicon.ico           # Site Icon
+├── index.html            # Landing Page
+├── robots.txt            # SEO Crawler directives
+└── sitemap.xml           # SEO Site Map
 ```
 
 ## 🎨 Design System
 
-- **Color Scheme**:
-  - Primary: `#2c3e50` (Dark Blue)
-  - Accent: `#3498db` (Blue)
-  - Text Light: `#7f8c8d` (Gray)
-  - Highlight: `#ffc107` (Yellow)
+- **Color Palette:**
+  - Primary: `#2c3e50` (Midnight Blue) - Used for text and main elements.
+  - Accent: `#3498db` (Bright Blue) - Used for links and buttons.
+  - Highlight: `#ffc107` (Amber) - Used for emphasis.
+  - Text Light: `#7f8c8d` (Concrete Gray) - Used for secondary text.
 
-- **Typography**:
-  - Primary Font: Inter (from Google Fonts)
-  - Clean, readable typography with proper hierarchy
+- **Typography:**
+  - Font Family: `'Inter', sans-serif`
+  - Weights: 300 (Light), 400 (Regular), 600 (Bold)
 
-## 🛠️ Development
+## 📝 Projects Showcase
 
-### Local Setup
+Here are the main projects featured in the portfolio:
 
-1. Clone the repository:
+### 1. 🤖 [Telegram Secretary Bot](./Pages/Works/telegram-bot.html)
+A Python-based bot hosted on Raspberry Pi that acts as a bridge between Telegram and Google Calendar API. It parses natural language to schedule appointments automatically.
+
+### 2. 🪑 [Bench of Kindness](./Pages/Works/bench.html)
+A real-life realization project involving 3D modeling, material sourcing (recycled pallets), and physical construction of a smart bench for schools.
+
+### 3. 🔢 [Burrows-Wheeler Calculator](./Pages/Works/burrows-wheeler.html)
+A technical deep-dive into data compression algorithms. Includes a Python implementation of the BWT algorithm and a web-based calculator demo.
+
+### 4. 💡 [bE-More](./Pages/Works/bE-More/)
+A comprehensive React web application focused on personal development and energy efficiency tracking systems.
+
+### 5. 🖥️ [Web Presentations](./Pages/Works/web-presentations.html)
+A showcase of interactive, web-based slide decks built with modern web technologies (React, Vite) replacing traditional PowerPoint files.
+
+## 🛠️ Local Development
+
+To run this project locally:
+
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/GiZano/GiZano.github.io.git
    ```
 
-2. Open `index.html` in your preferred web browser
-
-### Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## 📝 Projects Showcase
-
-### Featured Projects
-
-1. **bE-More**
-   - A web application for personal development
-   - [View Project](./Pages/Works/bE-More/)
-
-2. **Bench**
-   - A real life project
-   - [View Project](./Pages/Works/bench.html)
-
-3. **Burrows-Wheeler**
-   - Data compression algorithm implementation
-   - [View Project](./Pages/Works/burrows-wheeler.html)
+2. **Open the project:**
+   Simply open `index.html` in your browser. No build step required for the main site (Vanilla JS).
 
 ## 📬 Contact
 
-For inquiries or collaboration opportunities, please visit the [Contact Section](#contact) on the website.
+- **LinkedIn:** [Giovanni Zanotti](https://www.linkedin.com/in/giovanni-zanotti-it/)
+- **GitHub:** [@GiZano](https://github.com/GiZano)
+- **Email:** Available in the contact section of the website.
 
-## 🙏 Acknowledgments
+---
 
-- [Bootstrap](https://getbootstrap.com/) for the responsive framework
-- [Font Awesome](https://fontawesome.com/) for the beautiful icons
-- [Google Fonts](https://fonts.google.com/) for the Inter font family
+© 2026 Giovanni Zanotti. All Rights Reserved.
