@@ -3,19 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GiZano - Project</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Bench of Kindness - GiZano Project</title>
+    <meta name="description" content="Development and realization of the Bench of Kindness: a sustainable, purple bench built with recycled materials to promote kindness in schools.">
+    <meta name="author" content="Giovanni Zanotti">
+
+    <link rel="preload" as="image" href="../../Media/bench/bench_main.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </noscript>
+
     <link rel="stylesheet" href="../../Style/globals.css">
     <link rel="stylesheet" href="../../Style/projects.css">
-    <script src="../../Script/nav.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="../../Script/nav.js" defer></script>
 </head>
 <body>
-    <!-- Navbar -->
+    
     <nav class="navbar navbar-expand-lg navbar-light navbar-glass fixed-top bg-white shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="../../index.html">GiZano</a>
+            <a class="navbar-brand fw-bold" href="../../index.html" aria-label="Go to Homepage">GiZano</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open the navigation menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,233 +43,258 @@
                             Sections
                         </a>
                         <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#abstract">Abstract</a></li>
-                        <li><a class="dropdown-item" href="#project">The Project</a></li>
-                        <li><a class="dropdown-item" href="#development">Development</a></li>
-                        <li><a class="dropdown-item" href="#realization">Realization</a></li>
-                        <li><a class="dropdown-item" href="#carousel">Carousel</a></li>
-                    </ul>
+                            <li><a class="dropdown-item" href="#abstract">Abstract</a></li>
+                            <li><a class="dropdown-item" href="#project">The Project</a></li>
+                            <li><a class="dropdown-item" href="#development">Development</a></li>
+                            <li><a class="dropdown-item" href="#realization">Realization</a></li>
+                            <li><a class="dropdown-item" href="#carousel">Carousel</a></li>
+                        </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="../../index.html"><i class="fab fa-arrow fa-lg"></i>Home</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html" aria-label="Back to Home">
+                            <i class="fab fa-arrow fa-lg"></i> Home
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    
-    <section class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold mb-4">Bench of Kindness Development and Realization</h1>
-                    <a href="#abstract" class="btn btn-primary btn-lg">Check out my journey!</a>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <div class="image-container rounded-circle bg-light d-inline-block p-4 bench-main">
-                        <img src="../../Media/bench/bench_main.webp" alt="Bench of Kindness Project" class="img-fluid rounded-circle img-profilo responsive-img">
+    <main>
+        
+        <section class="hero-section" style="padding-top: 120px; padding-bottom: 60px;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">Bench of Kindness Development and Realization</h1>
+                        <a href="#abstract" class="btn btn-primary btn-lg">Check out my journey!</a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="abstract" class="py-5 bg-alt-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="mb-4 section-title">Abstract</h2>
-                    <p class="text-muted lead">
-                        Realization of the project "<a target="_blank" href="https://costruiamogentilezza.org/strumenti-di-gentilezza/le-panchine-viola/">Bench of Kindness</a>". 
-                        Development of a bench, mandatorily in a purple shade, to be built by the school and placed inside the school complex.
-                        <br>
-                        To be actually built, the project had to compete against others.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="project" class="py-5 bg-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 mx-auto text-left">
-                    <h2 class="mb-4 section-title">The Project</h2>
-                </div>
-                <div class="col-lg-10 mx-auto">
-                    <div class="project-section">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <p class="text-muted lead">
-                                    To design the bench, students had to follow specific rules:
-                                </p>
-                                <ul class="group-list text-muted lead">
-                                    <li class="group-list-item">Build with recycled materials;</li>
-                                    <li class="group-list-item">Paint with a shade of purple;</li>
-                                    <li class="group-list-item">Adorned with phrase or poem about kindness;</li>
-                                    <li class="group-list-item">Provide a QR code to reach the description site.</li>
-                                </ul>
-                                <p class="text-muted lead">
-                                    The developed projects, would then be voted by jury basing on:
-                                </p>
-                                <ul class="group-list text-muted lead">
-                                    <li class="group-list-item">Feasability;</li>
-                                    <li class="group-list-item">Functionality;</li>
-                                    <li class="group-list-item">Creativity and originality;</li>
-                                    <li class="group-list-item">Disciplinary transversality (number of subjects involved).</li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="image-container">
-                                    <img src="../../Media/bench/carousel/carousel1.webp" alt="Project visualization" class="responsive-img">
-                                </div>
-                            </div>
+                    <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                        <div class="image-container rounded-circle bg-light d-inline-block p-4 bench-main">
+                            <img src="../../Media/bench/bench_main.webp" 
+                                 alt="Bench of Kindness Project Logo" 
+                                 class="img-fluid rounded-circle img-profilo responsive-img"
+                                 width="400" height="400"
+                                 fetchpriority="high">
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="development" class="py-5 bg-alt-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 mx-auto text-end">
-                    <h2 class="mb-4 section-title">Project Development</h2>
+        <section id="abstract" class="py-5 bg-alt-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="mb-4 section-title">Abstract</h2>
+                        <p class="lead text-secondary">
+                            Realization of the project "<a target="_blank" href="https://costruiamogentilezza.org/strumenti-di-gentilezza/le-panchine-viola/" aria-label="Visit Costruiamo Gentilezza website">Bench of Kindness</a>". 
+                            Development of a bench, mandatorily in a purple shade, to be built by the school and placed inside the school complex.
+                            <br>
+                            To be actually built, the project had to compete against others.
+                        </p>
+                    </div>
                 </div>
-                <div class="col-lg-10 mx-auto">
-                    <div class="development-section">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <div class="image-container">
-                                    <img src="../../Media/bench/carousel/carousel2.webp" alt="Development process" class="responsive-img">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="section-content">
+            </div>
+        </section>
+
+        <section id="project" class="py-5 bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto text-left">
+                        <h2 class="mb-4 section-title">The Project</h2>
+                    </div>
+                    <div class="col-lg-10 mx-auto">
+                        <div class="project-section">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
                                     <p class="text-muted lead">
-                                        To develop this bench, we decided to use pallets as main material,
-                                        as it is easily reusable and recyclable.
-                                        To put together the parts, we decided to create a steel frame with tubular profiles,
-                                        that we could easily retrieve from dismentled old school desks.
-                                        Next to the seating area, we added a bike rack to encourage sustainable mobility.
+                                        To design the bench, students had to follow specific rules:
                                     </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="realization" class="py-5 bg-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 mx-auto text-left">
-                    <h2 class="mb-4 section-title">Real Life Realization</h2>
-                </div>
-                <div class="col-lg-10 mx-auto">
-                    <div class="realization-section">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6">
-                                <div class="section-content">
+                                    <ul class="group-list text-muted lead">
+                                        <li class="group-list-item">Build with recycled materials;</li>
+                                        <li class="group-list-item">Paint with a shade of purple;</li>
+                                        <li class="group-list-item">Adorned with phrase or poem about kindness;</li>
+                                        <li class="group-list-item">Provide a QR code to reach the description site.</li>
+                                    </ul>
                                     <p class="text-muted lead">
-                                        Then the project competed against others, resulting in the winning one. <br>
-                                        The realization took place in the school workshop, and it has been decided
-                                        to actually use an already existing bench, painting it purple and adding 
-                                        the bike rack on the back.
-                                        It doesn't fully look like the original project, but it still represents
-                                        the values we wanted to convey.
+                                        The developed projects, would then be voted by jury basing on:
                                     </p>
+                                    <ul class="group-list text-muted lead">
+                                        <li class="group-list-item">Feasability;</li>
+                                        <li class="group-list-item">Functionality;</li>
+                                        <li class="group-list-item">Creativity and originality;</li>
+                                        <li class="group-list-item">Disciplinary transversality (number of subjects involved).</li>
+                                    </ul>
                                 </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="image-container">
-                                    <img src="../../Media/bench/carousel/carousel6.webp" alt="Final realization" class="responsive-img">
+                                <div class="col-lg-6">
+                                    <div class="image-container text-center">
+                                        <img src="../../Media/bench/carousel/carousel1.webp" 
+                                             alt="3D Project visualization of the bench" 
+                                             class="responsive-img"
+                                             width="600" height="400"
+                                             loading="lazy">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="carousel" class="py-5 bg-alt-section">
-        <div class="container">
-            <div class="col-lg-10 mx-auto text-center">
+        <section id="development" class="py-5 bg-alt-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto text-end">
+                        <h2 class="mb-4 section-title">Project Development</h2>
+                    </div>
+                    <div class="col-lg-10 mx-auto">
+                        <div class="development-section">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="image-container text-center">
+                                        <img src="../../Media/bench/carousel/carousel2.webp" 
+                                             alt="Exploded view of the bench components" 
+                                             class="responsive-img"
+                                             width="600" height="400"
+                                             loading="lazy">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="section-content">
+                                        <p class="lead" style="color: #495057;">
+                                            To develop this bench, we decided to use pallets as main material,
+                                            as it is easily reusable and recyclable.
+                                            To put together the parts, we decided to create a steel frame with tubular profiles,
+                                            that we could easily retrieve from dismentled old school desks.
+                                            Next to the seating area, we added a bike rack to encourage sustainable mobility.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="realization" class="py-5 bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto text-left">
+                        <h2 class="mb-4 section-title">Real Life Realization</h2>
+                    </div>
+                    <div class="col-lg-10 mx-auto">
+                        <div class="realization-section">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="section-content">
+                                        <p class="text-muted lead">
+                                            Then the project competed against others, resulting in the winning one. <br>
+                                            The realization took place in the school workshop, and it has been decided
+                                            to actually use an already existing bench, painting it purple and adding 
+                                            the bike rack on the back.
+                                            It doesn't fully look like the original project, but it still represents
+                                            the values we wanted to convey.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="image-container text-center">
+                                        <img src="../../Media/bench/carousel/carousel6.webp" 
+                                             alt="Final realization of the purple bench" 
+                                             class="responsive-img"
+                                             width="600" height="400"
+                                             loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="carousel" class="py-5 bg-alt-section">
+            <div class="container">
+                <div class="col-lg-10 mx-auto text-center">
                     <h2 class="mb-4 section-title">Development Carousel</h2>
-            </div>
-            <div id="carouselExampleDark" class="carousel carousel-dark slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                            <img src="../../Media/bench/carousel/carousel1.webp" class="d-block w-100" alt="...">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="../../Media/bench/carousel/carousel1.webp" class="d-block w-100" alt="3D Model" width="800" height="600" loading="lazy">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Finished 3D Model</h5>
-                             </div>
-                    </div>
-                    <div class="carousel-item " data-bs-interval="10000">
-                            <img src="../../Media/bench/carousel/carousel2.webp" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="10000">
+                            <img src="../../Media/bench/carousel/carousel2.webp" class="d-block w-100" alt="Exploded View" width="800" height="600" loading="lazy">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Exploded View</h5>
-                             </div>
-                    </div>
-                    <div class="carousel-item " data-bs-interval="10000">
-                            <img src="../../Media/bench/carousel/carousel3.webp" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="10000">
+                            <img src="../../Media/bench/carousel/carousel3.webp" class="d-block w-100" alt="Bike Rack Detail" width="800" height="600" loading="lazy">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Bike Rack 3D Model</h5>
-                             </div>
-                    </div>
-                    <div class="carousel-item " data-bs-interval="10000">
-                            <img src="../../Media/bench/carousel/carousel4.webp" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="10000">
+                            <img src="../../Media/bench/carousel/carousel4.webp" class="d-block w-100" alt="Bench Model" width="800" height="600" loading="lazy">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Bench 3D Model</h5>
-                             </div>
-                    </div>
-                    <div class="carousel-item " data-bs-interval="10000">
-                            <img src="../../Media/bench/carousel/carousel5.webp" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="10000">
+                            <img src="../../Media/bench/carousel/carousel5.webp" class="d-block w-100" alt="Uncolored Model" width="800" height="600" loading="lazy">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Finished Uncolored 3D Model</h5>
-                             </div>
-                    </div>
-                    <div class="carousel-item " data-bs-interval="10000">
-                            <img src="../../Media/bench/carousel/carousel6.webp" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="10000">
+                            <img src="../../Media/bench/carousel/carousel6.webp" class="d-block w-100" alt="Final Product Real Life" width="800" height="600" loading="lazy">
                             <div class="carousel-caption d-none d-md-block">
                                 <h5>Final Product</h5>
-                             </div>
+                            </div>
+                        </div>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev" aria-label="Previous Slide">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next" aria-label="Next Slide">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
-        </div>
-    </section>
+        </section>
 
+    </main>
 
     <footer class="py-5 bg-dark text-white">
         <div class="container">
-            <div class="social-links">
-                <a target="_blank" href="https://www.linkedin.com/in/giovanni-zanotti-it/" class="text-light me-5"><i class="fab fa-linkedin fa-lg"></i></a>
-                <a target="_blank" href="https://github.com/GiZano" class="text-light me-5"><i class="fab fa-github fa-lg"></i></a>
-                <a target="_blank" href="https://www.instagram.com/giova.zano/" class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
+            <div class="social-links text-center">
+                <a target="_blank" href="https://www.linkedin.com/in/giovanni-zanotti-it/" class="text-light me-5" aria-label="LinkedIn Profile" rel="noopener noreferrer"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a target="_blank" href="https://github.com/GiZano" class="text-light me-5" aria-label="GitHub Profile" rel="noopener noreferrer"><i class="fab fa-github fa-lg"></i></a>
+                <a target="_blank" href="https://www.instagram.com/giova.zano/" class="text-light" aria-label="Instagram Profile" rel="noopener noreferrer"><i class="fab fa-instagram fa-lg"></i></a>
+            </div>
+            <div class="text-center mt-4 text-white-50 small">
+                <p>&copy; 2026 Giovanni Zanotti. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>
