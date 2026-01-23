@@ -1,22 +1,35 @@
+/* Profilo */
 .img-profilo {
     width: 300px;
     height: 300px;
+    object-fit: cover;
 }
 
 .img-profilo-back {
-    margin-left: 10vw;
+    margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+    .img-profilo-back {
+        margin-left: 5vw;
+    }
 }
 
 .hero-content {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
+/* Typewriter */
 .typewriter-container {
-
-    min-height: 120px;
+    min-height: 80px;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .typewriter-container {
+        justify-content: center;
+    }
 }
 
 .typewriter-text {
@@ -26,6 +39,13 @@
     border-right: 3px solid var(--accent-color);
     white-space: nowrap;
     overflow: hidden;
+    line-height: 1.2;
+}
+
+@media (max-width: 576px) {
+    .typewriter-text {
+        font-size: 1.8rem;
+    }
 }
 
 /* Animazione cursore */
@@ -38,105 +58,80 @@
     50% { border-color: var(--text-important); }
 }
 
-/* Per versioni più piccole */
-.typewriter-sm {
-    font-size: 1.5rem;
-}
-
-.typewriter-lg {
-    font-size: 3rem;
-}
-
+/* News Carousel */
 .news {
     text-decoration: none;
 }
 
-.news-carousel {
-    width: 80%;
-    height: auto;
-    margin: auto;
+#carouselExampleDark {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 #carouselExampleDark .carousel-item img {
     height: 400px;
     object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    #carouselExampleDark .carousel-item img {
+        height: 250px;
+    }
 }
 
 .carousel-caption {
-    background-color: white;
-    width: 30%;
-    border-radius:15px;
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
     margin: auto;
+    bottom: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.social-links {
-    text-align: left;
+.carousel-caption h3, .carousel-caption p {
+    color: #333;
+    margin-bottom: 5px;
 }
 
 /* Carousel controls */
 #carouselExampleDark .carousel-control-prev,
 #carouselExampleDark .carousel-control-next {
-    width: 4%;
+    width: 50px;
+    height: 50px;
     top: 50%;
     transform: translateY(-50%);
-    opacity: 1;
-    background: transparent;
-    z-index: 10;
+    opacity: 0.8;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 #carouselExampleDark .carousel-control-prev {
-    left: -4rem;
+    left: -20px;
 }
 
 #carouselExampleDark .carousel-control-next {
-    right: -4rem;
+    right: -20px;
 }
 
-#carouselExampleDark .carousel-control-prev-icon,
-#carouselExampleDark .carousel-control-next-icon {
-    filter: invert(1) grayscale(100);
-    width: 2.5rem;
-    height: 2.5rem;
-}
-
-#carouselExampleDark .carousel-control-prev:hover,
-#carouselExampleDark .carousel-control-next:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-}
-
-@media (max-width: 991.98px) {
+@media (min-width: 992px) {
     #carouselExampleDark .carousel-control-prev {
-        left: -2rem;
+        left: -60px;
     }
-
     #carouselExampleDark .carousel-control-next {
-        right: -2rem;
-    }
-}
-
-@media (max-width: 767.98px) {
-    #carouselExampleDark .carousel-control-prev {
-        left: 0.5rem;
-    }
-
-    #carouselExampleDark .carousel-control-next {
-        right: 0.5rem;
-    }
-    
-    #carouselExampleDark .carousel-control-prev-icon,
-    #carouselExampleDark .carousel-control-next-icon {
-        width: 2rem;
-        height: 2rem;
+        right: -60px;
     }
 }
 
 /* Project Cards Styling */
 .project-card .card {
     border: 1px solid #e0e0e0;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     height: 100%;
     background-color: white;
     display: flex;
@@ -144,15 +139,19 @@
 }
 
 .project-card .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-card .img-container {
     position: relative;
     width: 100%;
-    padding-top: 100%; /* Creates a square aspect ratio */
+    /* RIPRISTINATO A 100% 
+       Questo rende l'immagine quadrata (1:1) e la card più grande 
+    */
+    padding-top: 100%; 
     overflow: hidden;
+    background-color: #f8f9fa;
 }
 
 .project-card .card-img-top {
@@ -167,22 +166,26 @@
 
 .project-card .card-body {
     padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card .card-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.75rem;
+    font-weight: 700;
     color: #2c3e50;
+    margin-bottom: 0.5rem;
 }
 
 .project-card .card-text {
     color: #6c757d;
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
-    line-height: 1.5;
+    flex-grow: 1; /* Spinge i bottoni in basso */
 }
 
+/* RIPRISTINATO STILE BOTTONI OUTLINE 
+   Queste regole sovrascrivono Bootstrap standard solo dentro le card
+*/
 .project-card .btn {
     padding: 0.375rem 0.75rem;
     font-size: 0.875rem;
@@ -190,12 +193,14 @@
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
     transition: all 0.3s ease;
-    background-color: transparent;
+    background-color: transparent; /* Sfondo trasparente di base */
 }
 
+/* Bottone Details (Primary) */
 .project-card .btn-primary {
     color: #0d6efd;
     border: 1px solid #0d6efd;
+    background-color: transparent;
 }
 
 .project-card .btn-primary:hover {
@@ -203,9 +208,11 @@
     color: white;
 }
 
+/* Bottone Code (Success) */
 .project-card .btn-success {
     color: #198754;
     border: 1px solid #198754;
+    background-color: transparent;
 }
 
 .project-card .btn-success:hover {
@@ -214,5 +221,5 @@
 }
 
 .portfolio-title {
-    margin-bottom: 10rem !important;
+    margin-bottom: 4rem !important;
 }

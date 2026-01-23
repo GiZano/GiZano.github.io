@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-
-    <!-- SEO -->
-    <meta name="google-site-verification" content="GggujLBm2j0mORanJ5b_txJz-jFb1l--kpyWC6i1KUM" />
-    <meta name="description" content="Portfolio di Giovanni Zanotti (alias GiZano), esperto in sviluppo software, IoT e Fullstack. Progetti e blog personale.">
-    <meta name="keywords" content="Giovanni Zanotti, GiZano, Sviluppatore Fullstack, IoT, Portfolio">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiZano - Portfolio Fullstack & IoT</title>
+    <meta name="description" content="Portfolio di Giovanni Zanotti (GiZano), sviluppatore software esperto in Fullstack, IoT e Web Design. Scopri i miei progetti.">
+    <meta name="keywords" content="Giovanni Zanotti, GiZano, Sviluppatore Fullstack, IoT, Portfolio, Web Developer, Italia">
     <meta name="author" content="Giovanni Zanotti">
+    <meta name="google-site-verification" content="GggujLBm2j0mORanJ5b_txJz-jFb1l--kpyWC6i1KUM" />
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Giovanni Zanotti",
       "alternateName": "GiZano",
-      "url": "https://giovanni-zanotti.is-a.dev", 
+      "url": "https://giovanni-zanotti.is-a.dev",
       "sameAs": [
         "https://www.linkedin.com/in/giovanni-zanotti-it",
-        "https://github.com/GiZano"
+        "https://github.com/GiZano",
+        "https://www.instagram.com/giova.zano/"
       ],
       "jobTitle": "Software Developer",
       "worksFor": {
@@ -26,30 +29,29 @@
     }
     </script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GiZano - Portfolio</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <link href="./Style/globals.css" rel="stylesheet">
     <link href="./Style/index.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- JS -->
-    <script src="./Script/typewrite.js"></script>
-    <script src="./Script/index.js"></script>
-    <script src="./Script/nav.js"></script>
+
+    <script src="./Script/index.js" defer></script>
+    <script src="./Script/nav.js" defer></script>
+    <script src="./Script/projects-grid.js" defer></script>
 </head>
 <body>
     
     <nav class="navbar navbar-expand-lg fixed-top navbar-glass shadow-sm" style="--bs-navbar-toggler-border-color: rgba(255,255,255,0.1);">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">GiZano</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <a class="navbar-brand fw-bold" href="#" aria-label="Torna alla Home">GiZano</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Apri menu di navigazione">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -61,9 +63,9 @@
                             Portfolio
                         </a>
                         <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#portfolio">Project Gallery</a></li>
-                        <li><a class="dropdown-item" href="#talking">Talking about me</a></li>
-                    </ul>
+                            <li><a class="dropdown-item" href="#portfolio">Project Gallery</a></li>
+                            <li><a class="dropdown-item" href="#talking">Talking about me</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
@@ -71,140 +73,136 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 hero-content">
-                    <h1 class="display-4 fw-bold mb-4"><b>Hi, I'm <span class="text-primary">GiZano</span></b></h1>
-                    <div class="typewriter-container">
-                        <div id="typewriter" class="typewriter-text"></div>
-                    </div>
-                    <a href="#portfolio" class="btn btn-outline-primary btn-lg">Check out my projects</a>
-                </div>
-                <div class="col-lg-6">
-                    <div class="profile-image-container">
-                        <div class="rounded-circle bg-light d-inline-block p-4 img-profilo-back">
-                            <img src="./Media/home/immagine_profilo.webp" alt="" class="img-fluid rounded-circle img-profilo">
+    <main>
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 hero-content order-2 order-lg-1">
+                        <h1 class="display-4 fw-bold mb-4">Hi, I'm <span class="text-primary">GiZano</span></h1>
+                        <div class="typewriter-container">
+                            <div id="typewriter" class="typewriter-text"></div>
                         </div>
+                        <a href="#portfolio" class="btn btn-outline-primary btn-lg mt-3">Check out my projects</a>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-5 bg-alt-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="mb-4">About me</h2>
-                    <p class="text-muted lead">
-                        IT Student in the last year of high school.
-                        I'm passionate about learning and developing new solutions for the problems I encounter.
-                        In my free time I enjoy diving even more in technology by following courses and developing small projects on my own.
-                        I love all kinds of arts, from paintings to music.
-                        I like visiting museums and try to bring art inside my projects.
-                        I think real technology solutions are an actual form of art.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-5 bg-white">
-        <div class="container">
-            <h2 class="text-center portfolio-title mb-5">Project Gallery</h2>
-            <div class="row g-4" id="projectsGrid">
-                <!-- Projects will be dynamically shown here -->
-            </div>
-            
-            <!-- Project Template (hidden) -->
-            <template id="projectTemplate">
-                <div class="col-12 col-md-6 col-lg-4 project-card">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="img-container">
-                            <img src="" class="card-img-top project-image" alt="">
-                        </div>
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title project-title"></h5>
-                            <p class="card-text text-muted project-description flex-grow-1"></p>
-                            <div class="project-links mt-auto"></div>
-                        </div>
-                    </div>
-                </div>
-            </template>
-        </div>
-    </section>
-
-    <!-- Talking About me -->
-    <section id="talking" class="py-5 bg-alt-section">
-        <div class="container mt-5">
-            <h2 class="text-center mb-5">Talking about me</h2>
-            <div id="carouselExampleDark" class="carousel carousel-dark slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                </div>
-                <div class="carousel-inner">
-                    <!-- Panchina della Gentilezza - Prima Treviglio -->
-                    <div class="carousel-item active" data-bs-interval="10000">
-                        <a target="_blank" href="https://primatreviglio.it/attualita/inaugurate-allarchimede-le-panchine-della-gentilezza/">
-                            <img src="./Media/home/bench_news.webp" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Bench of Kindness</h5>
-                                <p>Real Life Implementation</p>
+                    <div class="col-lg-6 order-1 order-lg-2 text-center">
+                        <div class="profile-image-container">
+                            <div class="rounded-circle bg-light d-inline-block p-4 img-profilo-back">
+                                <img src="./Media/home/immagine_profilo.webp" alt="Foto profilo di Giovanni Zanotti" class="img-fluid rounded-circle img-profilo" width="300" height="300" fetchpriority="high">
                             </div>
-                        </a>
+                        </div>
                     </div>
-                    <!-- Borsa di Studio Agnelli - Instagram -->
-                    <div class="carousel-item" data-bs-interval="2000">
-                        <a target="_blank" href="https://primabergamo.it/scuola/quindici-studenti-vincono-la-borsa-di-studio-a-scuola-in-europa-tra-loro-un-bergamasco/">
-                            <img src="./Media/home/scholarship_news.webp" class="d-block w-100" alt="...">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Scholarship to Study Abroad</h5>
-                                <p>Real Life Experience</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-5 bg-alt-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="mb-4">About me</h2>
+                        <p class="text-muted lead">
+                            IT Student in the last year of high school.
+                            I'm passionate about learning and developing new solutions for the problems I encounter.
+                            In my free time I enjoy diving even more in technology by following courses and developing small projects on my own.
+                            I love all kinds of arts, from paintings to music.
+                            I like visiting museums and try to bring art inside my projects.
+                            I think real technology solutions are an actual form of art.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="py-5 bg-white">
+            <div class="container">
+                <h2 class="text-center portfolio-title mb-5">Project Gallery</h2>
+                <div class="row g-4" id="projectsGrid">
+                    </div>
+                
+                <template id="projectTemplate">
+                    <div class="col-12 col-md-6 col-lg-4 project-card">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="img-container">
+                                <img src="" class="card-img-top project-image" alt="" width="400" height="400">
                             </div>
-                        </a>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title project-title h5"></h3>
+                                <p class="card-text text-muted project-description flex-grow-1"></p>
+                                <div class="project-links mt-auto"></div>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </section>
+
+        <section id="talking" class="py-5 bg-alt-section">
+            <div class="container mt-5">
+                <h2 class="text-center mb-5">Talking about me</h2>
+                <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <a target="_blank" href="https://primatreviglio.it/attualita/inaugurate-allarchimede-le-panchine-della-gentilezza/" class="d-block" aria-label="Leggi l'articolo sulla Panchina della Gentilezza">
+                                <img src="./Media/home/bench_news.webp" class="d-block w-100 news-img" alt="Foto inaugurazione panchina della gentilezza" width="800" height="400">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3 class="h5">Bench of Kindness</h3>
+                                    <p>Real Life Implementation</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <a target="_blank" href="https://primabergamo.it/scuola/quindici-studenti-vincono-la-borsa-di-studio-a-scuola-in-europa-tra-loro-un-bergamasco/" class="d-block" aria-label="Leggi l'articolo sulla Borsa di Studio">
+                                <img src="./Media/home/scholarship_news.webp" class="d-block w-100 news-img" alt="Foto premiazione borsa di studio" width="800" height="400">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h3 class="h5">Scholarship to Study Abroad</h3>
+                                    <p>Real Life Experience</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev" aria-label="Previous Slide">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next" aria-label="Next Slide">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5 bg-dark text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="mb-4">Get in Contact</h2>
+                        <p class="lead mb-4">Ready for new adventures</p>
+                        <a href="mailto:giozanotti07@gmail.com" class="btn btn-primary btn-lg mb-3">Contact me</a>
+                        <p class="mt-2">and</p>
+                        <a href="media/home/Curriculum_Vitae-Giovanni_Zanotti.pdf" download class="btn btn-outline-light btn-lg">Download my CV</a>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contatti -->
-    <section id="contact" class="py-5 bg-dark text-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="mb-4">Get in Contact</h2>
-                    <p class="lead mb-4">Ready for new adventures</p>
-                    <a href="mailto:giozanotti07@gmail.com" class="btn btn-primary btn-lg">Contact me</a>
-                    <p class="mt-3">and</p>
-                    <a href="media/home/Curriculum_Vitae-Giovanni_Zanotti.pdf" download class="btn btn-primary btn-lg">Download my CV</a>
+                
+                <div class="social-links mt-5">
+                    <a target="_blank" href="https://www.linkedin.com/in/giovanni-zanotti-it/" class="text-light me-5 social-icon" aria-label="Visita il mio profilo Linkedin" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                    </a>
+                    <a target="_blank" href="https://github.com/GiZano" class="text-light me-5 social-icon" aria-label="Visita il mio profilo Github" rel="noopener noreferrer">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/giova.zano/" class="text-light social-icon" aria-label="Visita il mio profilo Instagram" rel="noopener noreferrer">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
                 </div>
             </div>
-            <div class="social-links">
-            <a target="_blank" href="https://www.linkedin.com/in/giovanni-zanotti-it/" class="text-light me-5"><i class="fab fa-linkedin fa-lg"></i></a>
-            <a target="_blank" href="https://github.com/GiZano" class="text-light me-5"><i class="fab fa-github fa-lg"></i></a>
-            <a target="_blank" href="https://www.instagram.com/giova.zano/" class="text-light"><i class="fab fa-instagram fa-lg"></i></a>
-        </div>
-        </div>
-        
-    </section>
+        </section>
+    </main>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Projects Grid JS -->
-    <script src="./Script/projects-grid.js"></script>
 </body>
 </html>
