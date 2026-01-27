@@ -2,7 +2,6 @@
 
 > A modern, fullstack & IoT developer portfolio showcasing my projects, skills, and professional background.
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Status](https://img.shields.io/website?url=https%3A%2F%2Fgiovanni-zanotti.is-a.dev)
 
 **Live Demo:** [https://giovanni-zanotti.is-a.dev](https://giovanni-zanotti.is-a.dev)
@@ -109,5 +108,6 @@ To run this project locally:
 - **Email:** Available in the contact section of the website.
 
 ---
+
 
 © 2026 Giovanni Zanotti. All Rights Reserved.
