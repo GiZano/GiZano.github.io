@@ -223,3 +223,30 @@
 .portfolio-title {
     margin-bottom: 4rem !important;
 }
+
+/* Animation: Fade In Up */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Class triggered by JS to animate hidden cards */
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* "View More" Button Hover Effect */
+#viewMoreBtn {
+    transition: all 0.3s ease;
+}
+
+#viewMoreBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+}

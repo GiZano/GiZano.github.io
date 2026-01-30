@@ -2,16 +2,33 @@
 const projects = [
     {
         title: 'bE-More - Company Energy Efficientation System',
-        description: 'IoT System - React - Arduino - ...',
+        description: 'IoT System - React - Arduino - Fullstack implementation for energy monitoring...',
         image: './Pages/Works/bE-More/static/media/logo.f891aae4577c48b75ca4.jpg',
         links: [
-            { text: 'Details (it)', url: './Pages/Works/bE-More/index.html', class: 'btn btn-primary', target: '_blank'},
+            { text: 'Details (it)', url: './Pages/Works/bE-More/index.html', class: 'btn btn-primary' },
             { text: 'Code', url: 'https://github.com/GiZano/project-day', class: 'btn btn-success' }
         ]
     },
     {
+        title: 'Private TCP Chat',
+        description: 'Multithreaded Local Chat - Python - Docker - Zero dependency secure communication...',
+        image: './Media/private-chat/main.webp',
+        links: [
+            { text: 'Details', url: './Pages/Works/private-chat.html', class: 'btn btn-primary' },
+            { text: 'Code', url: 'https://github.com/gizano/multithreaded-python-chat', class: 'btn btn-success' }
+        ]
+    },
+    {
+        title: 'Web Presentations',
+        description: 'React/Vite - HTML/CSS/JS - Web Design - Interactive slide decks...',
+        image: './Media/presentations/react-logo.svg',
+        links: [
+            { text: 'View Projects', url: './Pages/Works/web-presentations.html', class: 'btn btn-primary' }
+        ]
+    },
+    {
         title: 'Telegram Secretary Bot',
-        description: 'Telegram Bot - Google Calendar API - ...',
+        description: 'Telegram Bot - Google Calendar API - Automating appointments management...',
         image: './Media/telegram-bot/bot.webp',
         links: [
             { text: 'Details', url: './Pages/Works/telegram-bot.html', class: 'btn btn-primary' },
@@ -20,24 +37,16 @@ const projects = [
     },
     {
         title: "Burrows Wheeler's Algorithm Calculator",
-        description: 'Python - FastAPI - Server - ...',
+        description: 'Python - FastAPI - Server - Educational tool for data compression algorithms...',
         image: './Media/burrows/burrow_main.webp',
         links: [
-            { text: 'Details', url: './Pages/Works/burrows-wheeler.html', class: 'btn btn-primary' },
-            { text: 'Code', url: 'https://github.com/GiZano/burrow-wheeler-calculator', class: 'btn btn-success' }
-        ]
-    },
-    {
-        title: 'Web Presentations',
-        description: 'React/Vite - HTML/CSS/JS - Web Design - ...',
-        image: './Media/presentations/react-logo.svg',
-        links: [
-            { text: 'View Projects', url: './Pages/Works/web-presentations.html', class: 'btn btn-primary' }
+            { text: 'Details', url: './Works/Pages/burrows.html', class: 'btn btn-primary' },
+            { text: 'Code', url: 'https://github.com/GiZano/burrows-wheeler-calculator', class: 'btn btn-success' }
         ]
     },
     {
         title: 'The Bench of Kindness',
-        description: 'Project Management - Real Life Implementation - ...',
+        description: 'Project Management - Real Life Implementation - Social initiative project...',
         image: './Media/bench/bench_main.webp',
         links: [
             { text: 'Details', url: './Pages/Works/bench.html', class: 'btn btn-primary' }
@@ -45,7 +54,7 @@ const projects = [
     },
     {
         title: 'School Dungeon - Command Line Based Game',
-        description: 'Java - Game Development - ...',
+        description: 'Java - Game Development - RPG mechanics in console...',
         image: './Media/school-dungeon/school-dungeon_project.webp',
         links: [
             { text: 'Code', url: 'https://github.com/GiZano/school-dungeon', class: 'btn btn-success' }
@@ -63,42 +72,60 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
 
+    projectsGrid.innerHTML = '';
+
     // Aggiungi ogni progetto alla griglia
-    projects.forEach(project => {
+    projects.forEach((project, index) => {
         const template = projectTemplate.content.cloneNode(true);
-        const card = template.querySelector('.project-card');
+        const cardCol = template.querySelector('.project-card'); // Seleziona il div colonna (col-12...)
         
+        // LOGICA VIEW MORE:
+        // Se l'indice è 3 o superiore (quindi il 4° elemento in poi), lo nascondiamo
+        if (index >= 3) {
+            cardCol.classList.add('d-none'); // Classe Bootstrap per nascondere
+            cardCol.classList.add('hidden-project'); // Marcatore per trovarli dopo
+        }
+
         // Imposta i dati del progetto
-        const img = card.querySelector('.project-image');
+        const img = template.querySelector('.project-image');
         img.src = project.image;
         img.alt = project.title;
-        card.querySelector('.project-title').textContent = project.title;
-        card.querySelector('.project-description').textContent = project.description;
         
-        // Aggiungi i link
-        const linksContainer = card.querySelector('.project-links');
+        template.querySelector('.project-title').textContent = project.title;
+        template.querySelector('.project-description').textContent = project.description;
+        
+        // Gestione Link e Icone
+        const linksContainer = template.querySelector('.project-links');
+        
         project.links.forEach(link => {
             const linkElement = document.createElement('a');
             linkElement.href = link.url;
             linkElement.className = 'btn btn-sm me-2';
             
-            // Aggiungi la classe in base al testo del pulsante
-            if (link.text.toLowerCase().includes('details')) {
+            let iconHtml = '';
+            const textLower = link.text.toLowerCase();
+
+            if (textLower.includes('details') || textLower.includes('view')) {
                 linkElement.classList.add('btn-primary');
-            } else if (link.text.toLowerCase().includes('code')) {
+                iconHtml = '<i class="fas fa-info-circle me-1"></i> ';
+            } else if (textLower.includes('code')) {
                 linkElement.classList.add('btn-success');
+                iconHtml = '<i class="fab fa-github me-1"></i> ';
             } else {
                 linkElement.classList.add('btn-primary');
             }
             
-            // Aggiungi classi aggiuntive se presenti
             if (link.class) {
-                linkElement.classList.add(...link.class.split(' '));
+                const customClasses = link.class.split(' ');
+                customClasses.forEach(c => {
+                    if(!linkElement.classList.contains(c)) {
+                        linkElement.classList.add(c);
+                    }
+                });
             }
             
-            linkElement.textContent = link.text;
+            linkElement.innerHTML = iconHtml + link.text;
             
-            // Apri i link esterni in una nuova scheda
             if (link.url.startsWith('http') || link.url.startsWith('https')) {
                 linkElement.target = '_blank';
                 linkElement.rel = 'noopener noreferrer';
@@ -109,4 +136,31 @@ document.addEventListener('DOMContentLoaded', function() {
         
         projectsGrid.appendChild(template);
     });
+
+    // LOGICA BOTTONE: Se ci sono più di 3 progetti, aggiungi il bottone
+    if (projects.length > 3) {
+        const btnContainer = document.createElement('div');
+        btnContainer.className = 'text-center mt-5 w-100'; // Centrato e margine sopra
+        btnContainer.innerHTML = `
+            <button id="viewMoreBtn" class="btn btn-outline-primary px-4 py-2 rounded-pill fw-bold transition-all">
+                View More <i class="fas fa-chevron-down ms-2"></i>
+            </button>
+        `;
+        
+        // Inseriamo il bottone SUBITO DOPO la griglia (projectsGrid)
+        projectsGrid.parentNode.insertBefore(btnContainer, projectsGrid.nextSibling);
+
+        // Event Listener per il click
+        document.getElementById('viewMoreBtn').addEventListener('click', function() {
+            const hiddenProjects = document.querySelectorAll('.hidden-project');
+            
+            hiddenProjects.forEach(el => {
+                el.classList.remove('d-none'); // Mostra l'elemento
+                el.classList.add('fade-in-up'); // Aggiunge animazione (vedi CSS sotto)
+            });
+            
+            // Rimuovi il bottone dopo aver mostrato tutto
+            this.parentElement.remove();
+        });
+    }
 });

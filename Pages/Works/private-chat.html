@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5JCG2NQS1Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-5JCG2NQS1Y');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private On-Premise TCP Chat - GiZano</title>
+    <meta name="description" content="An ultra-lightweight, multithreaded TCP chat server built with Python and Docker. Secure, local-network communication with zero internet dependency.">
+    <meta name="author" content="Giovanni Zanotti">
+
+    <link rel="preload" as="image" href="../../Media/private-chat/main.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    </noscript>
+
+    <link rel="stylesheet" href="../../Style/globals.css">
+    <link rel="stylesheet" href="../../Style/projects.css">
+    
+    <script src="../../Script/nav.js" defer></script>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light navbar-glass fixed-top bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html" aria-label="Go to Homepage">GiZano</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open the navigation menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#portfolio" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sections
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#abstract">Abstract</a></li>
+                            <li><a class="dropdown-item" href="#project">The Project</a></li>
+                            <li><a class="dropdown-item" href="#development">Development</a></li>
+                            <li><a class="dropdown-item" href="#realization">Realization</a></li>
+                            <li><a class="dropdown-item" href="#protocol">Protocol</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html" aria-label="Back to Home">
+                            <i class="fab fa-arrow fa-lg"></i> Home
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="hero-section" style="padding-top: 120px; padding-bottom: 60px;">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h1 class="display-4 fw-bold mb-4">Private On-Premise TCP Chat</h1>
+                        <a href="#abstract" class="btn btn-primary btn-lg mb-3">Explore the Architecture</a>
+                        <br>
+                        <a href="../../Media/private-chat/Private_Chat_Technical_Report.pdf" download target="_blank" class="btn btn-outline-primary btn-lg download-report mb-3" aria-label="Download Technical Report PDF">
+                            Download the full Technical Report...
+                        </a>
+                        <br>
+                        <a href="https://github.com/gizano/multithreaded-python-chat" target="_blank" class="btn btn-outline-primary btn-lg download-report" aria-label="View Source Code on GitHub">
+                            <i class="fab fa-github"></i> View Source Code
+                        </a>
+                    </div>
+                    <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                        <div class="image-container rounded-circle bg-light d-inline-block p-4 bench-main">
+                            <img src="../../Media/private-chat/main.webp" 
+                                 alt="Private Chat System Logo" 
+                                 class="img-fluid rounded-circle img-profilo responsive-img"
+                                 width="400" height="400"
+                                 fetchpriority="high">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="abstract" class="py-5 bg-alt-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="mb-4 section-title">Abstract</h2>
+                        <p class="text-muted lead">
+                            In an era of cloud dependency, data privacy within local organizations is often overlooked.
+                            This project implements an ultra-lightweight, high-performance chat solution designed strictly for on-premise use.
+                            Engineered with Python and Socket programming, it supports over 6,000 concurrent connections, ensuring secure communication entirely within the local network (LAN) with zero internet dependency.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="project" class="py-5 bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto text-left">
+                        <h2 class="mb-4 section-title">The Project</h2>
+                    </div>
+                    <div class="col-lg-10 mx-auto">
+                        <div class="project-section">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <p class="text-muted lead">
+                                        The goal was to build a robust <strong>Client-Server architecture</strong> (Star Topology) that prioritizes speed and privacy.
+                                        <br><br>
+                                        The server acts as a multithreaded TCP engine, managing a dynamic client registry and routing JSON packets. Clients utilize independent threads for simultaneous sending and receiving, creating a fluid, real-time user experience without UI blocking.
+                                    </p>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="image-container text-center">
+                                        <img src="../../Media/private-chat/client-server-architecture.webp" 
+                                             alt="Client Server Architecture Visualization" 
+                                             class="responsive-img"
+                                             width="500" height="500"
+                                             loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="development" class="py-5 bg-alt-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto text-end">
+                        <h2 class="mb-4 section-title">Project Development</h2>
+                    </div>
+                    <div class="col-lg-10 mx-auto">
+                        <div class="development-section">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="image-container text-center">
+                                        <img src="../../Media/private-chat/example.webp" 
+                                             alt="Development Environment and Code" 
+                                             class="responsive-img"
+                                             width="600" height="400"
+                                             loading="lazy">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="section-content">
+                                        <p class="text-muted lead">
+                                            The development focused on scalability and stability under load. Key technical achievements include:
+                                        </p>
+                                        <ul class="group-list muted lead">
+                                            <li class="group-list-item"><strong>Multithreading:</strong> Handling 6000+ simultaneous clients.</li>
+                                            <li class="group-list-item"><strong>TCP Coalescing Fix:</strong> Implemented timing strategies to prevent packet merging during high-traffic handshakes.</li>
+                                            <li class="group-list-item"><strong>Dockerization:</strong> Complete container support for "write once, run anywhere" deployment.</li>
+                                            <li class="group-list-item"><strong>CI/CD:</strong> Automated testing via GitHub Actions.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="realization" class="py-5 bg-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto text-left">
+                        <h2 class="mb-4 section-title">Deployment & Usage</h2>
+                    </div>
+                    <div class="col-lg-10 mx-auto">
+                        <div class="realization-section">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="section-content">
+                                        <p class="text-muted lead">
+                                            The system is designed for flexibility. You can deploy the server using Docker for an instant setup:
+                                            <br>
+                                            <code class="d-block bg-light p-2 mt-2 mb-2 rounded">docker-compose up -d</code>
+                                            Or run it manually with Python. Once the server is live on the LAN, clients can connect by specifying the IP address, creating an instant, secure, private chatroom for the office or home network.
+                                        </p>
+                                        <a class="btn btn-outline-primary fw-bold mt-2" target="_blank" href="https://github.com/gizano/multithreaded-python-chat" aria-label="Download Chat Code from GitHub">
+                                            Get the Docker Image
+                                        </a> 
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="image-container text-center">
+                                        <img src="../../Media/private-chat/docker.webp" 
+                                             alt="Docker Deployment" 
+                                             class="responsive-img"
+                                             width="600" height="400"
+                                             loading="lazy">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="protocol" class="py-5 bg-alt-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <h2 class="mb-4 section-title">Communication Protocol</h2>
+                        <p class="lead mb-4">To ensure reliability across different OS and network conditions, a strict JSON protocol is enforced for all data packets.</p>
+                        
+                        <div class="card mb-4 shadow-sm border-0">
+                            <div class="card-header bg-white">
+                                <h5 class="mb-0">Packet Structure</h5>
+                            </div>
+                            <div class="card-body">
+                                <p>Every message sent over the TCP socket adheres to this schema:</p>
+                                <div class="p-3 bg-dark rounded">
+<pre class="text-white mb-0"><code>{
+  "from": { 
+      "name": "User_Alias", 
+      "ip": "192.168.1.X" 
+  },
+  "to": "Broadcast_or_Target_IP",
+  "msg": "Content of the message..."
+}</code></pre>
+                                </div>
+                                <div class="mt-3">
+                                    <small class="text-muted">This standardization allows for easy expansion of the protocol to include file transfers or encryption in the future.</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="social-links text-center">
+                <a target="_blank" href="https://www.linkedin.com/in/giovanni-zanotti-it/" class="text-light me-5" aria-label="LinkedIn Profile" rel="noopener noreferrer"><i class="fab fa-linkedin fa-lg"></i></a>
+                <a target="_blank" href="https://github.com/GiZano" class="text-light me-5" aria-label="GitHub Profile" rel="noopener noreferrer"><i class="fab fa-github fa-lg"></i></a>
+                <a target="_blank" href="https://www.instagram.com/giova.zano/" class="text-light" aria-label="Instagram Profile" rel="noopener noreferrer"><i class="fab fa-instagram fa-lg"></i></a>
+            </div>
+            <div class="text-center mt-4 text-white-50 small">
+                <p>&copy; 2026 Giovanni Zanotti. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>
