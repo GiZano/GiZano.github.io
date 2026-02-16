@@ -42,10 +42,12 @@ Portfolio/
 ├── Media/                # Optimized images (WebP), SVGs, and assets
 ├── Pages/                # Project Detail Pages
 │   └── Works/            
-│       ├── bE-More/             # React Project Build
-│       ├── bench.html           # IoT/Real-life Project
-│       ├── burrows-wheeler.html # Algorithm Project
-│       ├── telegram-bot.html    # Backend/Automation Project
+│       ├── bE-More/               # React Project Build
+│       ├── bench.html             # IoT/Real-life Project
+│       ├── burrows-wheeler.html   # Algorithm Project
+│       ├── curious-traveler.html  # API Orchestration
+│       ├── private-chat.html      # LAN CLI-based chat
+│       ├── telegram-bot.html      # Backend/Automation Project
 │       └── web-presentations.html # Frontend Showcase
 ├── Script/               # Logic
 │   ├── index.js          # Homepage logic (Typewriter, etc.)
@@ -115,4 +117,5 @@ To run this project locally:
 
 
 © 2026 Giovanni Zanotti. All Rights Reserved.
+
 
