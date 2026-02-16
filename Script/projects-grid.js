@@ -1,4 +1,4 @@
-// Dati dei progetti
+// Projects data
 const projects = [
     {
         title: 'bE-More - Company Energy Efficientation System',
@@ -71,31 +71,31 @@ const projects = [
     }
 ];
 
-// Inizializzazione della griglia
+// Grid initialization
 document.addEventListener('DOMContentLoaded', function() {
     const projectsGrid = document.getElementById('projectsGrid');
     const projectTemplate = document.getElementById('projectTemplate');
 
     if (!projectsGrid || !projectTemplate) {
-        console.error('Elementi della griglia o template non trovati');
+        console.error('Grid elements or template not found');
         return;
     }
 
     projectsGrid.innerHTML = '';
 
-    // Aggiungi ogni progetto alla griglia
+    // Add each project to the grid
     projects.forEach((project, index) => {
         const template = projectTemplate.content.cloneNode(true);
-        const cardCol = template.querySelector('.project-card'); // Seleziona il div colonna (col-12...)
+        const cardCol = template.querySelector('.project-card'); // Select the column div (col-12...)
         
-        // LOGICA VIEW MORE:
-        // Se l'indice è 3 o superiore (quindi il 4° elemento in poi), lo nascondiamo
+        // VIEW MORE LOGIC:
+        // If the index is 3 or greater (from the 4th element onwards), we hide it
         if (index >= 3) {
-            cardCol.classList.add('d-none'); // Classe Bootstrap per nascondere
-            cardCol.classList.add('hidden-project'); // Marcatore per trovarli dopo
+            cardCol.classList.add('d-none'); // Bootstrap class to hide
+            cardCol.classList.add('hidden-project'); // Marker to find them later
         }
 
-        // Imposta i dati del progetto
+        // Set project data
         const img = template.querySelector('.project-image');
         img.src = project.image;
         img.alt = project.title;
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
         template.querySelector('.project-title').textContent = project.title;
         template.querySelector('.project-description').textContent = project.description;
         
-        // Gestione Link e Icone
+        // Links and Icons management
         const linksContainer = template.querySelector('.project-links');
         
         project.links.forEach(link => {
@@ -146,29 +146,29 @@ document.addEventListener('DOMContentLoaded', function() {
         projectsGrid.appendChild(template);
     });
 
-    // LOGICA BOTTONE: Se ci sono più di 3 progetti, aggiungi il bottone
+    // BUTTON LOGIC: If there are more than 3 projects, add the button
     if (projects.length > 3) {
         const btnContainer = document.createElement('div');
-        btnContainer.className = 'text-center mt-5 w-100'; // Centrato e margine sopra
+        btnContainer.className = 'text-center mt-5 w-100'; // Centered with top margin
         btnContainer.innerHTML = `
             <button id="viewMoreBtn" class="btn btn-outline-primary px-4 py-2 rounded-pill fw-bold transition-all">
                 View More <i class="fas fa-chevron-down ms-2"></i>
             </button>
         `;
         
-        // Inseriamo il bottone SUBITO DOPO la griglia (projectsGrid)
+        // Insert the button RIGHT AFTER the grid (projectsGrid)
         projectsGrid.parentNode.insertBefore(btnContainer, projectsGrid.nextSibling);
 
-        // Event Listener per il click
+        // Click Event Listener
         document.getElementById('viewMoreBtn').addEventListener('click', function() {
             const hiddenProjects = document.querySelectorAll('.hidden-project');
             
             hiddenProjects.forEach(el => {
-                el.classList.remove('d-none'); // Mostra l'elemento
-                el.classList.add('fade-in-up'); // Aggiunge animazione (vedi CSS sotto)
+                el.classList.remove('d-none'); // Show the element
+                el.classList.add('fade-in-up'); // Add animation (see CSS below)
             });
             
-            // Rimuovi il bottone dopo aver mostrato tutto
+            // Remove the button after showing everything
             this.parentElement.remove();
         });
     }
