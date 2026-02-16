@@ -10,20 +10,12 @@ const projects = [
         ]
     },
     {
-        title: 'Private TCP Chat',
-        description: 'Multithreaded Local Chat - Python - Docker - Zero dependency secure communication...',
-        image: './Media/private-chat/main.webp',
+        title: 'CuriousTrip',
+        description: 'Asynchronous Python CLI - aiohttp - Orchestrating 9 public APIs for instant travel profiles...',
+        image: './Media/curious-traveler/hero.webp',
         links: [
-            { text: 'Details', url: './Pages/Works/private-chat.html', class: 'btn btn-primary' },
-            { text: 'Code', url: 'https://github.com/gizano/multithreaded-python-chat', class: 'btn btn-success' }
-        ]
-    },
-    {
-        title: 'Web Presentations',
-        description: 'React/Vite - HTML/CSS/JS - Web Design - Interactive slide decks...',
-        image: './Media/presentations/react-logo.svg',
-        links: [
-            { text: 'View Projects', url: './Pages/Works/web-presentations.html', class: 'btn btn-primary' }
+            { text: 'Details', url: './Pages/Works/curious-traveler.html', class: 'btn btn-primary' },
+            { text: 'Code', url: 'https://github.com/GiZano/traveler-api', class: 'btn btn-success' }
         ]
     },
     {
@@ -36,12 +28,29 @@ const projects = [
         ]
     },
     {
+        title: 'Private TCP Chat',
+        description: 'Multithreaded Local Chat - Python - Docker - Zero dependency secure communication...',
+        image: './Media/private-chat/main.webp',
+        links: [
+            { text: 'Details', url: './Pages/Works/private-chat.html', class: 'btn btn-primary' },
+            { text: 'Code', url: 'https://github.com/gizano/multithreaded-python-chat', class: 'btn btn-success' }
+        ]
+    },
+    {
         title: "Burrows Wheeler's Algorithm Calculator",
         description: 'Python - FastAPI - Server - Educational tool for data compression algorithms...',
         image: './Media/burrows/burrow_main.webp',
         links: [
             { text: 'Details', url: './Works/Pages/burrows.html', class: 'btn btn-primary' },
             { text: 'Code', url: 'https://github.com/GiZano/burrows-wheeler-calculator', class: 'btn btn-success' }
+        ]
+    },
+    {
+        title: 'Web Presentations',
+        description: 'React/Vite - HTML/CSS/JS - Web Design - Interactive slide decks...',
+        image: './Media/presentations/react-logo.svg',
+        links: [
+            { text: 'View Projects', url: './Pages/Works/web-presentations.html', class: 'btn btn-primary' }
         ]
     },
     {
