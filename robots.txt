@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://tuonome.is-a.dev/sitemap.xml
+Sitemap: https://giovanni-zanotti.is-a.dev/sitemap.xml
