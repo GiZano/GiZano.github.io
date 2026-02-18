@@ -22,8 +22,8 @@ jobs:
       id: sitemap
       uses: cicirello/generate-sitemap@v1
       with:
-        base-url-path: 'https://giovanni-zanotti.is-a.dev' # IL TUO DOMINIO REALE
-        drop-html-extension: true # Metti false se vuoi che i link finiscano con .html
+        base-url-path: 'https://giovanni-zanotti.is-a.dev'
+        drop-html-extension: true
 
     - name: Commit and push
       run: |
