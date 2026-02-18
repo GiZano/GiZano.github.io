@@ -1,58 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-   <url>
-      <loc>https://giovanni-zanotti.is-a.dev/</loc>
-      <lastmod>2023-10-27</lastmod>
-      <priority>1.0</priority>
-   </url>
-
-   <url>
-      <loc>https://giovanni-zanotti.is-a.dev/Pages/Works/bE-More/</loc>
-      <lastmod>2023-10-27</lastmod>
-      <priority>0.8</priority>
-   </url>
-
-   <url>
-      <loc>https://giovanni-zanotti.is-a.dev/Pages/Works/digital-well-being-presentation/</loc>
-      <lastmod>2023-10-27</lastmod>
-      <priority>0.8</priority>
-   </url>
-
-   <url>
-      <loc>https://giovanni-zanotti.is-a.dev/Pages/Works/gabriele-dannunzio-presentation/</loc>
-      <lastmod>2023-10-27</lastmod>
-      <priority>0.8</priority>
-   </url>
-
-   <url>
-      <loc>https://giovanni-zanotti.is-a.dev/Pages/Works/war-poets-presentation/</loc>
-      <lastmod>2023-10-27</lastmod>
-      <priority>0.8</priority>
-   </url>
-
-   <url>
-      <loc>https://giovanni-zanotti.is-a.dev/Pages/Works/bench.html</loc>
-      <lastmod>2023-10-27</lastmod>
-      <priority>0.6</priority>
-   </url>
-
-   <url>
-      <loc>https://giovanni-zanotti.is-a.dev/Pages/Works/burrows-wheeler.html</loc>
-      <lastmod>2023-10-27</lastmod>
-      <priority>0.6</priority>
-   </url>
-
-   <url>
-      <loc>https://giovanni-zanotti.is-a.dev/Pages/Works/telegram-bot.html</loc>
-      <lastmod>2023-10-27</lastmod>
-      <priority>0.6</priority>
-   </url>
-
-   <url>
-      <loc>https://giovanni-zanotti.is-a.dev/Pages/Works/web-presentations.html</loc>
-      <lastmod>2023-10-27</lastmod>
-      <priority>0.6</priority>
-   </url>
-
+<url>
+<loc>https://giovanni-zanotti.is-a.dev/</loc>
+<lastmod>2026-02-18T10:44:11+01:00</lastmod>
+</url>
+<url>
+<loc>https://giovanni-zanotti.is-a.dev/Media/burrows/Burrows_Wheeler_Transform_Technical_Report.pdf</loc>
+<lastmod>2026-01-22T13:13:51+01:00</lastmod>
+</url>
+<url>
+<loc>https://giovanni-zanotti.is-a.dev/Media/home/cv-Giovanni-Zanotti.pdf</loc>
+<lastmod>2026-01-28T23:40:49+01:00</lastmod>
+</url>
+<url>
+<loc>https://giovanni-zanotti.is-a.dev/Media/home/cv-Giovanni-Zanotti_EN.pdf</loc>
+<lastmod>2026-01-28T23:40:49+01:00</lastmod>
+</url>
+<url>
+<loc>https://giovanni-zanotti.is-a.dev/Media/private-chat/Private_Chat_Technical_Report.pdf</loc>
+<lastmod>2026-01-30T11:15:21+01:00</lastmod>
+</url>
+<url>
+<loc>https://giovanni-zanotti.is-a.dev/Pages/Template/works-template</loc>
+<lastmod>2026-01-23T22:55:06+01:00</lastmod>
+</url>
+<url>
+<loc>https://giovanni-zanotti.is-a.dev/Pages/Works/bench</loc>
+<lastmod>2026-02-18T10:44:11+01:00</lastmod>
+</url>
+<url>
+<loc>https://giovanni-zanotti.is-a.dev/Pages/Works/burrows-wheeler</loc>
+<lastmod>2026-02-18T10:44:11+01:00</lastmod>
+</url>
+<url>
+<loc>https://giovanni-zanotti.is-a.dev/Pages/Works/curious-traveler</loc>
+<lastmod>2026-02-18T10:44:11+01:00</lastmod>
+</url>
+<url>
+<loc>https://giovanni-zanotti.is-a.dev/Pages/Works/private-chat</loc>
+<lastmod>2026-02-18T10:44:11+01:00</lastmod>
+</url>
+<url>
+<loc>https://giovanni-zanotti.is-a.dev/Pages/Works/telegram-bot</loc>
+<lastmod>2026-02-18T10:44:11+01:00</lastmod>
+</url>
+<url>
+<loc>https://giovanni-zanotti.is-a.dev/Pages/Works/web-presentations</loc>
+<lastmod>2026-02-18T10:44:11+01:00</lastmod>
+</url>
+<url>
+<loc>https://giovanni-zanotti.is-a.dev/Pages/Works/api-presentation/</loc>
+<lastmod>2026-02-03T08:38:32+01:00</lastmod>
+</url>
+<url>
+<loc>https://giovanni-zanotti.is-a.dev/Pages/Works/bE-More/</loc>
+<lastmod>2025-10-19T20:48:38+02:00</lastmod>
+</url>
+<url>
+<loc>https://giovanni-zanotti.is-a.dev/Pages/Works/digital-well-being-presentation/</loc>
+<lastmod>2026-01-03T22:37:54+01:00</lastmod>
+</url>
+<url>
+<loc>https://giovanni-zanotti.is-a.dev/Pages/Works/gabriele-dannunzio-presentation/</loc>
+<lastmod>2026-01-13T21:50:35+01:00</lastmod>
+</url>
+<url>
+<loc>https://giovanni-zanotti.is-a.dev/Pages/Works/war-poets-presentation/</loc>
+<lastmod>2026-01-21T13:26:52+01:00</lastmod>
+</url>
+<url>
+<loc>https://giovanni-zanotti.is-a.dev/Pages/Works/api-presentation/assets/API-Lab_Technical_Report.pdf</loc>
+<lastmod>2026-02-03T08:31:58+01:00</lastmod>
+</url>
 </urlset>
