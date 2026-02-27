@@ -1,39 +1,80 @@
-# 🚀 GiZano Portfolio
+<div align="center">
 
-> A modern, fullstack & IoT developer portfolio showcasing my projects, skills, and professional background.
+# 🚀 GiZano Portfolio
+### Fullstack Developer | IoT Enthusiast | Continuous Learner
+
+> A modern, performance-oriented portfolio showcasing my journey in Software Development, IoT, and Data Science.
+
+<br>
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)
 
-![Status](https://img.shields.io/website?url=https%3A%2F%2Fgiovanni-zanotti.is-a.dev)
+<br>
 
-**Live Demo:** [https://giovanni-zanotti.is-a.dev](https://giovanni-zanotti.is-a.dev)
+[![Website Status](https://img.shields.io/website?label=GiZano%20Live&style=flat-square&url=https%3A%2F%2Fgiovanni-zanotti.is-a.dev)]([https://giovanni-zanotti.is-a.dev](https://giovanni-zanotti.is-a.dev))
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-Built with **HTML5**, **CSS3**, and **Vanilla JavaScript**, featuring a clean, minimalist design with smooth animations, high accessibility standards, and SEO optimization.
+**🔗 Live Demo:** [giovanni-zanotti.is-a.dev](https://giovanni-zanotti.is-a.dev)
 
-## 🌟 Key Features
+</div>
 
-- **⚡ High Performance:** Optimized for speed with Lazy Loading, Resource Hints (Preload/Preconnect), and critical CSS/JS strategies. Achieved **95+ Lighthouse scores** on Mobile & Desktop.
-- **📱 Fully Responsive:** Adaptive layout that works seamlessly on all devices (Mobile, Tablet, Desktop) using Bootstrap 5 and custom media queries.
-- **🔍 SEO Friendly:** Proper semantic HTML5, Meta Tags, Open Graph protocols, JSON-LD Structured Data, `sitemap.xml`, and `robots.txt` configuration.
-- **📊 Analytics:** Integrated with Google Analytics 4 for traffic monitoring.
-- **🎨 Modern UI/UX:** Clean interface with `Inter` typography, smooth scrolling, and typewriter effects.
+---
 
-## 🚀 Technologies Used
+## 📖 Overview
 
-- **Frontend Core:**
-  - HTML5 (Semantic)
-  - CSS3 (Custom Variables, Flexbox, Grid)
-  - Vanilla JavaScript (ES6+)
-- **Libraries & Frameworks:**
-  - [Bootstrap 5](https://getbootstrap.com/) - Responsive layout system
-  - [Font Awesome 6](https://fontawesome.com/) - Icons
-  - [Google Fonts](https://fonts.google.com/) - Inter Font Family
-- **Tools & Hosting:**
-  - **GitHub Pages** - Hosting
-  - **is-a.dev** - Custom Domain Service
-  - **Google Analytics 4** - User tracking
+Built with **HTML5**, **CSS3**, and **Vanilla JavaScript**, this portfolio features a clean, minimalist design with smooth animations, high accessibility standards (A11y), and aggressive SEO optimization. It serves as a central hub for my projects, ranging from **IoT embedded systems** to **React web applications**.
+
+### 🌟 Key Features
+
+* **⚡ High Performance:** Optimized for speed with Lazy Loading, Resource Hints (Preload/Preconnect), and critical CSS/JS strategies. Achieved **95+ Lighthouse scores** on Mobile & Desktop.
+* **📱 Fully Responsive:** Adaptive layout that works seamlessly on all devices (Mobile, Tablet, Desktop) using Bootstrap 5 and custom media queries.
+* **🔍 SEO Friendly:** Proper semantic HTML5, Meta Tags, Open Graph protocols, JSON-LD Structured Data, `sitemap.xml`, and `robots.txt` configuration.
+* **📊 Analytics:** Integrated with Google Analytics 4 for traffic monitoring.
+* **🎨 Modern UI/UX:** Clean interface with `Inter` typography, smooth scrolling, and typewriter effects.
+
+---
+
+## 🛠 Tech Stack & Tools
+
+| Category | Technologies |
+| :--- | :--- |
+| **Frontend Core** | HTML5 (Semantic), CSS3 (Variables, Flex/Grid), Vanilla JS (ES6+) |
+| **Frameworks** | [Bootstrap 5](https://getbootstrap.com/), React.js (for sub-projects) |
+| **Design** | [Font Awesome 6](https://fontawesome.com/), Google Fonts (Inter) |
+| **Hosting & DevOps** | GitHub Pages, `is-a.dev` DNS, Google Analytics 4 |
+| **Backend / IoT** | Python (AsyncIO), Java, C++ (Arduino), Raspberry Pi |
+
+---
+
+## 📝 Projects Showcase
+
+Here are the main projects featured in the portfolio gallery:
+
+### 1. 💡 [bE-More](./Pages/Works/bE-More/)
+* **Stack:** React, Java, IoT
+* A comprehensive web application focused on personal development and energy efficiency tracking systems. Integrates with local sensors to monitor workspace environments.
+
+### 2. 🤖 [Telegram Secretary Bot](./Pages/Works/telegram-bot.html)
+* **Stack:** Python, Telegram API, Google Calendar API
+* A bot hosted on Raspberry Pi that acts as a bridge between Telegram and Google Calendar. It parses natural language to schedule appointments automatically.
+
+### 3. 🔢 [Burrows-Wheeler Calculator](./Pages/Works/burrows-wheeler.html)
+* **Stack:** Python, Algorithms
+* A technical deep-dive into data compression. Includes a custom implementation of the BWT algorithm and a web-based calculator demo to visualize the transformation.
+
+### 4. 🧭 [CuriousTrip](./Pages/Works/curious-traveler.html)
+* **Stack:** Python (AsyncIO), REST APIs
+* An API orchestration engine that aggregates data from 9 different sources (Weather, Maps, Events) to generate travel itineraries. Refactored for asynchronous performance.
+
+### 5. 🪑 [Bench of Kindness](./Pages/Works/bench.html)
+* **Stack:** Real Life Engineering, 3D Modeling
+* A physical realization project involving 3D modeling, material sourcing (recycled pallets), and construction of a smart bench for schools.
+
+---
 
 ## 📁 Project Structure
 
@@ -58,64 +99,16 @@ Portfolio/
 │   ├── index.css         # Homepage specific styles
 │   └── projects.css      # Shared styles for project pages
 ├── CNAME                 # Custom domain configuration
-├── favicon.ico           # Site Icon
 ├── index.html            # Landing Page
 ├── robots.txt            # SEO Crawler directives
 └── sitemap.xml           # SEO Site Map
 ```
 
-## 🎨 Design System
-
-- **Color Palette:**
-  - Primary: `#2c3e50` (Midnight Blue) - Used for text and main elements.
-  - Accent: `#3498db` (Bright Blue) - Used for links and buttons.
-  - Highlight: `#ffc107` (Amber) - Used for emphasis.
-  - Text Light: `#7f8c8d` (Concrete Gray) - Used for secondary text.
-
-- **Typography:**
-  - Font Family: `'Inter', sans-serif`
-  - Weights: 300 (Light), 400 (Regular), 600 (Bold)
-
-## 📝 Projects Showcase
-
-Here are the main projects featured in the portfolio:
-
-### 1. 🤖 [Telegram Secretary Bot](./Pages/Works/telegram-bot.html)
-A Python-based bot hosted on Raspberry Pi that acts as a bridge between Telegram and Google Calendar API. It parses natural language to schedule appointments automatically.
-
-### 2. 🪑 [Bench of Kindness](./Pages/Works/bench.html)
-A real-life realization project involving 3D modeling, material sourcing (recycled pallets), and physical construction of a smart bench for schools.
-
-### 3. 🔢 [Burrows-Wheeler Calculator](./Pages/Works/burrows-wheeler.html)
-A technical deep-dive into data compression algorithms. Includes a Python implementation of the BWT algorithm and a web-based calculator demo.
-
-### 4. 💡 [bE-More](./Pages/Works/bE-More/)
-A comprehensive React web application focused on personal development and energy efficiency tracking systems.
-
-### 5. 🖥️ [Web Presentations](./Pages/Works/web-presentations.html)
-A showcase of interactive, web-based slide decks built with modern web technologies (React, Vite) replacing traditional PowerPoint files.
-
-## 🛠️ Local Development
-
-To run this project locally:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/GiZano/GiZano.github.io.git
-   ```
-
-2. **Open the project:**
-   Simply open `index.html` in your browser. No build step required for the main site (Vanilla JS).
-
-## 📬 Contact
-
-- **LinkedIn:** [Giovanni Zanotti](https://www.linkedin.com/in/giovanni-zanotti-it/)
-- **GitHub:** [@GiZano](https://github.com/GiZano)
-- **Email:** Available in the contact section of the website.
+<div align="center">
 
 ---
 
-
+<br><br>
 © 2026 Giovanni Zanotti. All Rights Reserved.
 
-
+</div>
