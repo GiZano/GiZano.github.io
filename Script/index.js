@@ -51,7 +51,7 @@ class TypeWriter {
 async function fetchLatestMediumArticle() {
     const mediumUsername = '@gizano'; 
     const rssUrl = `https://medium.com/feed/${mediumUsername}`;
-    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
+    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
     const linkElement = document.getElementById('medium-link');
 
     if (!linkElement) return;
