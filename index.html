@@ -11,6 +11,15 @@
     </script>
     
     <meta charset="UTF-8">
+    
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self'; 
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net; 
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; 
+    font-src 'self' https://fonts.gstatic.com; 
+    img-src 'self' data: https://www.googletagmanager.com; 
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com;">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GiZano - Portfolio Fullstack & IoT</title>
     <meta name="description" content="Portfolio di Giovanni Zanotti (GiZano), sviluppatore software esperto in Fullstack, IoT e Web Design. Scopri i miei progetti.">
@@ -43,15 +52,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="./Style/FontAwesome/css/all.min.css" media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="./Style/FontAwesome/css/all.min.css">
     </noscript>
     
     <link href="./Style/globals.css" rel="stylesheet">
