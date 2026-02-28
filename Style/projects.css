@@ -1,7 +1,9 @@
+/* Immagini Responsive con Centratura Assoluta */
 .responsive-img {
     max-width: 100%;
     height: auto;
     display: block;
+    margin: 0 auto; /* FIX: Questa è la magia che centra le immagini ovunque */
 }
 
 @media (max-width: 991.98px) {
@@ -18,10 +20,10 @@
     }
     
     .image-container {
-        display: flex;
-        justify-content: center;
-        width: 100%;
+        /* FIX: Rimosso il display: flex che andava in conflitto con d-inline-block sui tablet */
         margin: 0 auto;
+        text-align: center;
+        display: block; /* Assicura che il contenitore prenda la riga intera su mobile/tablet */
     }
     
     .section-content,
