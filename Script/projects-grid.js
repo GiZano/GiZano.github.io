@@ -41,7 +41,7 @@ const projects = [
         description: 'Python - FastAPI - Server - Educational tool for data compression algorithms...',
         image: './Media/burrows/burrow_main.webp',
         links: [
-            { text: 'Details', url: './Works/Pages/burrows.html', class: 'btn btn-primary' },
+            { text: 'Details', url: './Pages/Works/burrows-wheeler.html', class: 'btn btn-primary' },
             { text: 'Code', url: 'https://github.com/GiZano/burrows-wheeler-calculator', class: 'btn btn-success' }
         ]
     },

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5JCG2NQS1Y"></script>
     <script>
@@ -21,9 +21,9 @@
     connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com;">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GiZano - Portfolio Fullstack & IoT</title>
-    <meta name="description" content="Portfolio di Giovanni Zanotti (GiZano), sviluppatore software esperto in Fullstack, IoT e Web Design. Scopri i miei progetti.">
-    <meta name="keywords" content="Giovanni Zanotti, GiZano, Sviluppatore Fullstack, IoT, Portfolio, Web Developer, Italia">
+    <title>GiZano - Fullstack & IoT Portfolio</title>
+    <meta name="description" content="Portfolio of Giovanni Zanotti (GiZano), Software Developer specialized in Fullstack, IoT, and Web Design. Discover my projects.">
+    <meta name="keywords" content="Giovanni Zanotti, GiZano, Fullstack Developer, IoT, Portfolio, Web Developer, Italy">
     <meta name="author" content="Giovanni Zanotti">
     <meta name="google-site-verification" content="GggujLBm2j0mORanJ5b_txJz-jFb1l--kpyWC6i1KUM" />
 
@@ -72,8 +72,8 @@
     
     <nav class="navbar navbar-expand-lg fixed-top navbar-glass shadow-sm" style="--bs-navbar-toggler-border-color: rgba(255,255,255,0.1);">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#" aria-label="Torna alla Home">GiZano</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Apri menu di navigazione">
+            <a class="navbar-brand fw-bold" href="#" aria-label="Back to Home">GiZano</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -110,7 +110,7 @@
                         <div class="profile-image-container">
                             <div class="rounded-circle bg-light d-inline-block p-4 img-profilo-back">
                                 <img src="./Media/home/immagine_profilo.webp" 
-                                     alt="Foto profilo di Giovanni Zanotti" 
+                                     alt="Profile picture of Giovanni Zanotti" 
                                      class="img-fluid rounded-circle img-profilo" 
                                      width="300" height="300" 
                                      fetchpriority="high">
@@ -134,6 +134,14 @@
                             I like visiting museums and try to bring art inside my projects.
                             I think real technology solutions are an actual form of art.
                         </p>
+
+                        <div class="mt-5 p-4 border rounded bg-white shadow-sm mx-auto" style="max-width: 500px;">
+                            <span class="badge bg-dark mb-2"><i class="fab fa-medium me-1"></i> Medium Blog</span>
+                            <p class="mb-1 text-muted small">Read my latest article:</p>
+                            <a id="medium-link" href="https://medium.com/@gizano" target="_blank" rel="noopener noreferrer" class="text-decoration-none fw-bold text-primary fs-5 d-block text-truncate">
+                                Loading...
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -172,8 +180,8 @@
                     </div>
                     <div class="carousel-inner">
                         <div class="carousel-item active" data-bs-interval="10000">
-                            <a target="_blank" href="https://primatreviglio.it/attualita/inaugurate-allarchimede-le-panchine-della-gentilezza/" class="d-block" aria-label="Leggi l'articolo sulla Panchina della Gentilezza">
-                                <img src="./Media/home/bench_news.webp" class="d-block w-100 news-img" alt="Foto inaugurazione panchina della gentilezza" width="800" height="400" loading="lazy">
+                            <a target="_blank" href="https://primatreviglio.it/attualita/inaugurate-allarchimede-le-panchine-della-gentilezza/" class="d-block" aria-label="Read the article about the Bench of Kindness">
+                                <img src="./Media/home/bench_news.webp" class="d-block w-100 news-img" alt="Bench of Kindness inauguration photo" width="800" height="400" loading="lazy">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h3 class="h5">Bench of Kindness</h3>
                                     <p>Real Life Implementation</p>
@@ -181,8 +189,8 @@
                             </a>
                         </div>
                         <div class="carousel-item" data-bs-interval="2000">
-                            <a target="_blank" href="https://primabergamo.it/scuola/quindici-studenti-vincono-la-borsa-di-studio-a-scuola-in-europa-tra-loro-un-bergamasco/" class="d-block" aria-label="Leggi l'articolo sulla Borsa di Studio">
-                                <img src="./Media/home/scholarship_news.webp" class="d-block w-100 news-img" alt="Foto premiazione borsa di studio" width="800" height="400" loading="lazy">
+                            <a target="_blank" href="https://primabergamo.it/scuola/quindici-studenti-vincono-la-borsa-di-studio-a-scuola-in-europa-tra-loro-un-bergamasco/" class="d-block" aria-label="Read the article about the Scholarship">
+                                <img src="./Media/home/scholarship_news.webp" class="d-block w-100 news-img" alt="Scholarship award ceremony photo" width="800" height="400" loading="lazy">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h3 class="h5">Scholarship to Study Abroad</h3>
                                     <p>Real Life Experience</p>
@@ -224,15 +232,25 @@
                     </div>
                 </div>
                 
-                <div class="social-links mt-5">
-                    <a target="_blank" href="https://www.linkedin.com/in/giovanni-zanotti-it/" class="text-light me-5 social-icon" aria-label="Visita il mio profilo Linkedin" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin fa-2x"></i>
+                <div class="social-links text-center d-flex justify-content-center align-items-center mt-5 gap-4">
+                    <a target="_blank" href="https://www.credly.com/users/giovanni-zanotti" class="text-light social-icon" rel="noopener noreferrer">
+                        <i class="fas fa-certificate fa-2x" aria-hidden="true"></i>
+                        <span class="visually-hidden">Check out my certifications on Credly</span>
                     </a>
-                    <a target="_blank" href="https://github.com/GiZano" class="text-light me-5 social-icon" aria-label="Visita il mio profilo Github" rel="noopener noreferrer">
-                        <i class="fab fa-github fa-2x"></i>
+                
+                    <a target="_blank" href="https://www.linkedin.com/in/giovanni-zanotti-it/" class="text-light social-icon" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
+                        <span class="visually-hidden">Visit my LinkedIn profile</span>
                     </a>
-                    <a target="_blank" href="https://www.instagram.com/giova.zano/" class="text-light social-icon" aria-label="Visita il mio profilo Instagram" rel="noopener noreferrer">
-                        <i class="fab fa-instagram fa-2x"></i>
+                
+                    <a target="_blank" href="https://github.com/GiZano" class="text-light social-icon" rel="noopener noreferrer">
+                        <i class="fab fa-github fa-2x" aria-hidden="true"></i>
+                        <span class="visually-hidden">Explore my projects on GitHub</span>
+                    </a>
+                
+                    <a target="_blank" href="https://leetcode.com/u/GiZano" class="text-light social-icon" rel="noopener noreferrer">
+                        <img src="./Media/home/leetcode.svg" alt="LeetCode" style="width: 2em; height: 2em; filter: brightness(0) invert(1); vertical-align: -0.3em;">
+                        <span class="visually-hidden">Look at my algorithmic solutions on LeetCode</span>
                     </a>
                 </div>
             </div>

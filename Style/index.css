@@ -26,7 +26,7 @@
     align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991.98px) {
     .typewriter-container {
         justify-content: center;
     }
