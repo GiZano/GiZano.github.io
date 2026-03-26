@@ -6,7 +6,6 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-5JCG2NQS1Y');
     </script>
     
@@ -70,7 +69,7 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-expand-lg fixed-top navbar-glass shadow-sm" style="--bs-navbar-toggler-border-color: rgba(255,255,255,0.1);">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-glass shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#" aria-label="Back to Home">GiZano</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu">
@@ -86,6 +85,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#portfolio">Project Gallery</a></li>
+                            <li><a class="dropdown-item" href="#open-source">Open Source</a></li>
                             <li><a class="dropdown-item" href="#talking">Talking about me</a></li>
                         </ul>
                     </li>
@@ -135,7 +135,7 @@
                             I think real technology solutions are an actual form of art.
                         </p>
 
-                        <div class="mt-5 p-4 border rounded bg-white shadow-sm mx-auto" style="max-width: 500px;">
+                        <div class="mt-5 p-4 border rounded bg-white shadow-sm mx-auto medium-blog-container">
                             <span class="badge bg-dark mb-2"><i class="fab fa-medium me-1"></i> Medium Blog</span>
                             <p class="mb-1 text-muted small">Read my latest article:</p>
                             <a id="medium-link" href="https://medium.com/@gizano" target="_blank" rel="noopener noreferrer" class="text-decoration-none fw-bold text-primary fs-5 d-block text-truncate">
@@ -167,6 +167,111 @@
                         </div>
                     </div>
                 </template>
+            </div>
+        </section>
+
+        <section id="open-source" class="py-5 shadow-lg open-source-section">
+            <div class="container py-5">
+                <div class="row align-items-center">
+                    
+                    <div class="col-lg-5 mb-5 mb-lg-0">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fab fa-osi fa-2x text-success me-3"></i>
+                            <h2 class="fw-bold text-white mb-0">Open Source</h2>
+                        </div>
+                        <h3 class="h5 mb-4 text-primary">Giving back to the community</h3>
+                        <p class="mb-4 open-source-text">
+                            I actively contribute to <strong>SymPy</strong> and other open-source projects. 
+                            Navigating massive, production-grade codebases has sharpened my skills in CI/CD pipelines, strict PEP8 standards, and handling rigorous code reviews.
+                        </p>
+                        <a href="https://github.com/pulls?q=is%3Apr+author%3AGiZano" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light px-4 py-2 mt-2 btn-github-prs">
+                            <i class="fab fa-github me-2"></i> View all my PRs
+                        </a>
+                    </div>  
+
+                    <div class="col-lg-6 offset-lg-1">
+                        <div id="openSourceCarousel" class="carousel slide" data-bs-ride="carousel">
+                            
+                            <div class="carousel-indicators open-source-indicators">
+                                <button type="button" data-bs-target="#openSourceCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#openSourceCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            </div>
+
+                            <div class="carousel-inner pb-4">
+                                
+                                <div class="carousel-item active" data-bs-interval="6000">
+                                    <div class="card h-100 border rounded p-4 mx-auto card-link-wrapper open-source-card">
+                                        <div class="d-flex justify-content-between align-items-start mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-code-branch me-2 icon-purple"></i>
+                                                <span class="small fw-bold text-white">sympy / sympy</span>
+                                            </div>
+                                            <span class="badge rounded-pill badge-merged">
+                                                <i class="fas fa-code-merge me-1"></i> Merged
+                                            </span>
+                                        </div>
+                                        <h4 class="h5 text-white mb-3">
+                                            <a href="https://github.com/sympy/sympy/pull/29515" target="_blank" class="text-white text-decoration-none stretched-link">
+                                                Typing: add return and parameters types to diophantine <span class="pr-number">#29515</span>
+                                            </a>
+                                        </h4>
+                                        <p class="small mb-4 pr-description">
+                                            Added missing return and parameters types to several classes and helper functions in sympy.solvers.diophantine. First incremental step to improve type safety and help static type checkers.
+                                        </p>
+                                        <div class="mt-auto d-flex justify-content-between align-items-center pt-3 pr-footer">
+                                            <div class="font-monospace small">
+                                                <span class="text-success me-2"><i class="fas fa-plus me-1"></i>27</span>
+                                                <span class="text-danger"><i class="fas fa-minus me-1"></i>20</span>
+                                            </div>
+                                            <span class="small text-muted-gh"><i class="fab fa-python me-1"></i> Python</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item" data-bs-interval="6000">
+                                    <div class="card h-100 border rounded p-4 mx-auto card-link-wrapper open-source-card">
+                                        <div class="d-flex justify-content-between align-items-start mb-3">
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-code-branch me-2 icon-purple"></i>
+                                                <span class="small fw-bold text-white">is-a-dev / register</span>
+                                            </div>
+                                            <span class="badge rounded-pill badge-merged">
+                                                <i class="fas fa-code-merge me-1"></i> Merged
+                                            </span>
+                                        </div>
+                                        <h4 class="h5 text-white mb-3">
+                                            <a href="https://github.com/is-a-dev/register/pull/31813" target="_blank" class="text-white text-decoration-none stretched-link">
+                                                Add giovanni-zanotti.is-a.dev <span class="pr-number">#31813</span>
+                                            </a>
+                                        </h4>
+                                        <p class="small mb-4 pr-description">
+                                            Contributed to the open source community register to secure my personal developer domain, configuring proper CNAME DNS records.
+                                        </p>
+                                        <div class="mt-auto d-flex justify-content-between align-items-center pt-3 pr-footer">
+                                            <div class="font-monospace small">
+                                                <span class="text-success me-2"><i class="fas fa-plus me-1"></i>9</span>
+                                                <span class="text-danger"><i class="fas fa-minus me-1"></i>0</span>
+                                            </div>
+                                            <span class="small text-muted-gh"><i class="fab fa-js-square me-1"></i> JSON</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <button class="carousel-control-prev carousel-control-custom" type="button" data-bs-target="#openSourceCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next carousel-control-custom" type="button" data-bs-target="#openSourceCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </section>
 
@@ -249,7 +354,7 @@
                     </a>
                 
                     <a target="_blank" href="https://leetcode.com/u/GiZano" class="text-light social-icon" rel="noopener noreferrer">
-                        <img src="./Media/home/leetcode.svg" alt="LeetCode" style="width: 2em; height: 2em; filter: brightness(0) invert(1); vertical-align: -0.3em;">
+                        <img src="./Media/home/leetcode.svg" alt="LeetCode" class="leetcode-icon">
                         <span class="visually-hidden">Look at my algorithmic solutions on LeetCode</span>
                     </a>
                 </div>

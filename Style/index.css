@@ -1,4 +1,9 @@
-/* Profilo */
+/* Layout & Globals */
+.navbar-glass {
+    --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Profile Section */
 .img-profilo {
     width: 300px;
     height: 300px;
@@ -19,7 +24,7 @@
     margin-top: 20px;
 }
 
-/* Typewriter */
+/* Typewriter Animation */
 .typewriter-container {
     min-height: 80px;
     display: flex;
@@ -48,7 +53,6 @@
     }
 }
 
-/* Animazione cursore */
 .typing {
     animation: blink-caret 0.7s step-end infinite;
 }
@@ -56,6 +60,11 @@
 @keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: var(--text-important); }
+}
+
+/* About Section */
+.medium-blog-container {
+    max-width: 500px;
 }
 
 /* News Carousel */
@@ -96,7 +105,6 @@
     margin-bottom: 5px;
 }
 
-/* Carousel controls */
 #carouselExampleDark .carousel-control-prev,
 #carouselExampleDark .carousel-control-next {
     width: 50px;
@@ -126,7 +134,72 @@
     }
 }
 
-/* Project Cards Styling */
+/* Open Source Section */
+.open-source-section {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    border-top: 4px solid #238636;
+}
+
+.open-source-text {
+    color: #8b949e;
+    line-height: 1.7;
+}
+
+.btn-github-prs {
+    border-color: #30363d;
+}
+
+.open-source-indicators {
+    bottom: -40px;
+}
+
+.open-source-card {
+    background-color: #161b22;
+    border-color: #30363d !important;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.open-source-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-purple {
+    color: #8957e5;
+}
+
+.badge-merged {
+    background-color: rgba(137, 87, 229, 0.15);
+    color: #8957e5;
+    border: 1px solid rgba(137, 87, 229, 0.4);
+}
+
+.pr-number {
+    color: #8b949e;
+}
+
+.pr-description {
+    color: #8b949e;
+    position: relative;
+    z-index: 2;
+}
+
+.pr-footer {
+    border-top: 1px solid #30363d;
+    position: relative;
+    z-index: 2;
+}
+
+.text-muted-gh {
+    color: #8b949e;
+}
+
+.carousel-control-custom {
+    width: 10%;
+}
+
+/* Project Cards */
 .project-card .card {
     border: 1px solid #e0e0e0;
     border-radius: 12px;
@@ -146,9 +219,6 @@
 .project-card .img-container {
     position: relative;
     width: 100%;
-    /* RIPRISTINATO A 100% 
-       Questo rende l'immagine quadrata (1:1) e la card più grande 
-    */
     padding-top: 100%; 
     overflow: hidden;
     background-color: #f8f9fa;
@@ -180,12 +250,9 @@
     color: #6c757d;
     margin-bottom: 1.5rem;
     font-size: 0.95rem;
-    flex-grow: 1; /* Spinge i bottoni in basso */
+    flex-grow: 1;
 }
 
-/* RIPRISTINATO STILE BOTTONI OUTLINE 
-   Queste regole sovrascrivono Bootstrap standard solo dentro le card
-*/
 .project-card .btn {
     padding: 0.375rem 0.75rem;
     font-size: 0.875rem;
@@ -193,10 +260,9 @@
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
     transition: all 0.3s ease;
-    background-color: transparent; /* Sfondo trasparente di base */
+    background-color: transparent;
 }
 
-/* Bottone Details (Primary) */
 .project-card .btn-primary {
     color: #0d6efd;
     border: 1px solid #0d6efd;
@@ -208,7 +274,6 @@
     color: white;
 }
 
-/* Bottone Code (Success) */
 .project-card .btn-success {
     color: #198754;
     border: 1px solid #198754;
@@ -224,7 +289,27 @@
     margin-bottom: 4rem !important;
 }
 
-/* Animation: Fade In Up */
+/* Card Link Interactivity */
+.card-link-wrapper {
+    position: relative;
+}
+
+.card-link-wrapper a.stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+}
+
+.card-link-wrapper .badge {
+    position: relative;
+    z-index: 2;
+}
+
+/* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -236,12 +321,10 @@
     }
 }
 
-/* Class triggered by JS to animate hidden cards */
 .fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
 }
 
-/* "View More" Button Hover Effect */
 #viewMoreBtn {
     transition: all 0.3s ease;
 }
@@ -249,4 +332,12 @@
 #viewMoreBtn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+}
+
+/* Icons */
+.leetcode-icon {
+    width: 2em;
+    height: 2em;
+    filter: brightness(0) invert(1);
+    vertical-align: -0.3em;
 }
