@@ -37,7 +37,9 @@
       "sameAs": [
         "https://www.linkedin.com/in/giovanni-zanotti-it",
         "https://github.com/GiZano",
-        "https://www.instagram.com/giova.zano/"
+        "https://medium.com/@gizano",
+        "https://orcid.org/0009-0000-8900-9586",
+        "https://www.kaggle.com/gizano",
       ],
       "jobTitle": "Software Developer",
       "worksFor": {
@@ -96,6 +98,7 @@
     </nav>
 
     <main>
+        <!-- HERO SECTION -->
         <section id="home" class="hero-section">
             <div class="container">
                 <div class="row align-items-center">
@@ -120,7 +123,8 @@
                 </div>
             </div>
         </section>
-
+        
+        <!-- ABOUT SECTION -->
         <section id="about" class="py-5 bg-alt-section">
             <div class="container">
                 <div class="row">
@@ -147,12 +151,11 @@
             </div>
         </section>
 
+        <!-- PROJECTS PORTFOLIO SECTION -->
         <section id="portfolio" class="py-5 bg-white">
             <div class="container">
                 <h2 class="text-center portfolio-title mb-5">Project Gallery</h2>
-                
                 <div class="row g-4" id="projectsGrid"></div>
-                
                 <template id="projectTemplate">
                     <div class="col-12 col-md-6 col-lg-4 project-card">
                         <div class="card border-0 shadow-sm h-100">
@@ -169,7 +172,8 @@
                 </template>
             </div>
         </section>
-
+        
+        <!-- TALKING ABOUT ME SECTION -->
         <section id="talking" class="py-5 bg-alt-section">
             <div class="container mt-5">
                 <h2 class="text-center mb-5">Talking about me</h2>
@@ -210,13 +214,14 @@
             </div>
         </section>
 
+        <!-- CONTACT SECTION -->
         <section id="contact" class="py-5 bg-dark text-white">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center">
                         <h2 class="mb-4">Get in Contact</h2>
                         <p class="lead mb-4">Ready for new adventures</p>
-                        <a href="mailto:giozanotti07@gmail.com" class="btn btn-primary btn-lg mb-3">Contact me</a>
+                        <a href="mailto:gizano.dev@gmail.com" class="btn btn-primary btn-lg mb-3">Contact me</a>
                         
                         <p class="mt-2">and download my Resume</p>
                         
@@ -232,22 +237,44 @@
                     </div>
                 </div>
                 
-                <div class="social-links text-center d-flex justify-content-center align-items-center mt-5 gap-4">
+                <div class="social-links text-center d-flex justify-content-center align-items-center mt-5 gap-4 flex-wrap">
+                    <!-- ORCID -->
+                    <a target="_blank" href="https://orcid.org/0009-0000-8900-9586" class="text-light social-icon" rel="noopener noreferrer">
+                        <i class="fab fa-orcid fa-2x" aria-hidden="true"></i>
+                        <span class="visually-hidden">Visit my ORCID researcher profile</span>
+                    </a>
+
+                    <!-- CREDLY -->
                     <a target="_blank" href="https://www.credly.com/users/giovanni-zanotti" class="text-light social-icon" rel="noopener noreferrer">
                         <i class="fas fa-certificate fa-2x" aria-hidden="true"></i>
                         <span class="visually-hidden">Check out my certifications on Credly</span>
                     </a>
                 
+                    <!-- LINKEDIN -->
                     <a target="_blank" href="https://www.linkedin.com/in/giovanni-zanotti-it/" class="text-light social-icon" rel="noopener noreferrer">
                         <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
                         <span class="visually-hidden">Visit my LinkedIn profile</span>
                     </a>
                 
+                    <!-- GITHUB -->
                     <a target="_blank" href="https://github.com/GiZano" class="text-light social-icon" rel="noopener noreferrer">
                         <i class="fab fa-github fa-2x" aria-hidden="true"></i>
                         <span class="visually-hidden">Explore my projects on GitHub</span>
                     </a>
+
+                    <!-- MEDIUM -->
+                    <a target="_blank" href="https://medium.com/@gizano" class="text-light social-icon" rel="noopener noreferrer">
+                        <i class="fab fa-medium fa-2x" aria-hidden="true"></i>
+                        <span class="visually-hidden">Read my articles on Medium</span>
+                    </a>
+
+                    <!-- KAGGLE -->
+                    <a target="_blank" href="https://www.kaggle.com/gizano" class="text-light social-icon" rel="noopener noreferrer">
+                        <i class="fab fa-kaggle fa-2x" aria-hidden="true"></i>
+                        <span class="visually-hidden">Check my data science work on Kaggle</span>
+                    </a>
                 
+                    <!-- LEETCODE -->
                     <a target="_blank" href="https://leetcode.com/u/GiZano" class="text-light social-icon" rel="noopener noreferrer">
                         <img src="./Media/home/leetcode.svg" alt="LeetCode" style="width: 2em; height: 2em; filter: brightness(0) invert(1); vertical-align: -0.3em;">
                         <span class="visually-hidden">Look at my algorithmic solutions on LeetCode</span>
