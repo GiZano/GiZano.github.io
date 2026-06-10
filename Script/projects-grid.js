@@ -1,6 +1,15 @@
 // Projects data
 const projects = [
     {
+        title: 'QuakeGuard',
+        description: 'Full-Stack IoT Architecture - FastAPI - React Native - ESP32 - Distributed seismic sensor network for real-time earthquake detection and rapid alert propagation via WebSockets.',
+        image: './Media/quakeguard/logo.png',
+        links: [
+            { text: 'Details', url: './Pages/Works/quakeguard/', class: 'btn btn-primary'},
+            { text: 'Code', url: 'https://github.com/GiZano/QuakeGuard', class: 'btn btn-success' }
+        ]
+    },
+    {
         title: 'bE-More - Company Energy Efficientation System',
         description: 'IoT System - React - Arduino - Fullstack implementation for energy monitoring...',
         image: './Pages/Works/bE-More/static/media/logo.f891aae4577c48b75ca4.jpg',
