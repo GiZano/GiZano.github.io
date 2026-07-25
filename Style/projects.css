@@ -47,6 +47,11 @@
     overflow: visible;
 }
 
+.project-hero-pt {
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
 @media (max-width: 991.98px) {
     #carousel .carousel {
         width: 80%;
@@ -153,3 +158,4 @@
         text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
     }
 }
+

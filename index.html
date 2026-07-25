@@ -11,6 +11,7 @@
     
     <meta charset="UTF-8">
     
+    <!-- CSP: 'unsafe-inline' è mantenuto per gli script solo a causa del tag di Google Analytics qui sopra -->
     <meta http-equiv="Content-Security-Policy" content="
     default-src 'self'; 
     script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net; 
@@ -20,47 +21,22 @@
     connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://api.rss2json.com https://cdn.jsdelivr.net;">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GiZano - Fullstack & IoT Portfolio</title>
-    <meta name="description" content="Portfolio of Giovanni Zanotti (GiZano), Software Developer specialized in Fullstack, IoT, and Web Design. Discover my projects.">
-    <meta name="keywords" content="Giovanni Zanotti, GiZano, Fullstack Developer, IoT, Portfolio, Web Developer, Italy">
+    <title>Giovanni Zanotti - Software Developer & Edge Computing</title>
+    <meta name="description" content="Portfolio of Giovanni Zanotti. BSc Computer Science Student at UniPi, specializing in Edge Computing, Cloud Architecture, C++, and IoT Infrastructure.">
+    <meta name="keywords" content="Giovanni Zanotti, GiZano, Software Developer, Edge Computing, IoT, Cloud Architecture, C++, Python">
     <meta name="author" content="Giovanni Zanotti">
     <meta name="google-site-verification" content="GggujLBm2j0mORanJ5b_txJz-jFb1l--kpyWC6i1KUM" />
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Giovanni Zanotti",
-      "alternateName": "GiZano",
-      "url": "https://giovanni-zanotti.is-a.dev",
-      "sameAs": [
-        "https://www.linkedin.com/in/giovanni-zanotti-it",
-        "https://github.com/GiZano",
-        "https://medium.com/@gizano",
-        "https://orcid.org/0009-0000-8900-9586",
-        "https://www.kaggle.com/gizano",
-      ],
-      "jobTitle": "Software Developer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Freelance"
-      }
-    }
-    </script>
-
     <link rel="preload" as="image" href="./Media/home/immagine_profilo.webp">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <link rel="stylesheet" href="./Style/FontAwesome/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet" href="./Style/FontAwesome/css/all.min.css">
-    </noscript>
+    <noscript><link rel="stylesheet" href="./Style/FontAwesome/css/all.min.css"></noscript>
     
     <link href="./Style/globals.css" rel="stylesheet">
     <link href="./Style/index.css" rel="stylesheet">
@@ -70,7 +46,6 @@
     <script src="./Script/projects-grid.js" defer></script>
 </head>
 <body>
-    
     <nav class="navbar navbar-expand-lg fixed-top navbar-glass shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#" aria-label="Back to Home">GiZano</a>
@@ -81,16 +56,8 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#portfolio" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Portfolio
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#portfolio">Project Gallery</a></li>
-                            <li><a class="dropdown-item" href="#open-source">Open Source</a></li>
-                            <li><a class="dropdown-item" href="#talking">Talking about me</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -98,16 +65,18 @@
     </nav>
 
     <main>
-        <!-- HERO SECTION -->
+        <!-- HERO SECTION (Static & Professional) -->
         <section id="home" class="hero-section">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6 hero-content order-2 order-lg-1">
-                        <h1 class="display-4 fw-bold mb-4">Hi, I'm <span class="text-primary">GiZano</span></h1>
-                        <div class="typewriter-container">
-                            <div id="typewriter" class="typewriter-text"></div>
+                        <h1 class="display-4 fw-bold mb-3">Hi, I'm <span class="text-primary">GiZano</span></h1>
+                        <h2 class="h3 fw-light text-secondary mb-4">Software Developer | Edge Computing & Cloud Architecture</h2>
+                        <p class="lead mb-4 text-muted">Building robust IoT ecosystems, high-performance backends, and bridging the gap between low-level hardware constraints and cloud infrastructure.</p>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="#portfolio" class="btn btn-primary btn-lg">View Projects</a>
+                            <a href="#contact" class="btn btn-outline-dark btn-lg">Contact Me</a>
                         </div>
-                        <a href="#portfolio" class="btn btn-outline-primary btn-lg mt-3">Check out my projects</a>
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 text-center">
                         <div class="profile-image-container">
@@ -129,19 +98,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center">
-                        <h2 class="mb-4">About me</h2>
-                        <p class="text-muted lead">
-                            IT Student in the last year of high school.
-                            I'm passionate about learning and developing new solutions for the problems I encounter.
-                            In my free time I enjoy diving even more in technology by following courses and developing small projects on my own.
-                            I love all kinds of arts, from paintings to music.
-                            I like visiting museums and try to bring art inside my projects.
-                            I think real technology solutions are an actual form of art.
+                        <h2 class="mb-4">Engineering Mindset</h2>
+                        <p class="text-muted lead mb-4 text-start">
+                            BSc Computer Science Student at the University of Pisa. High School Diploma achieved with maximum honors (100/100 cum laude). My academic focus is centered on <strong>Systems Architecture, Edge Computing</strong>, and building solid logical-mathematical foundations.
+                        </p>
+                        <p class="text-muted lead mb-4 text-start">
+                            I approach software engineering as an exact discipline. Designing a scalable, efficient, and clean infrastructure requires a rigorous analytical approach and a deep understanding of low-level system dynamics. My current work bridges the gap between proximity hardware constraints and high-level cloud architectures, developing in <strong>C++, Python, FastAPI, and PostgreSQL</strong>.
                         </p>
 
                         <div class="mt-5 p-4 border rounded bg-white shadow-sm mx-auto medium-blog-container">
                             <span class="badge bg-dark mb-2"><i class="fab fa-medium me-1"></i> Medium Blog</span>
-                            <p class="mb-1 text-muted small">Read my latest article:</p>
+                            <p class="mb-1 text-muted small">Read my latest technical article:</p>
                             <a id="medium-link" href="https://medium.com/@gizano" target="_blank" rel="noopener noreferrer" class="text-decoration-none fw-bold text-primary fs-5 d-block text-truncate">
                                 Loading...
                             </a>
@@ -151,169 +118,363 @@
             </div>
         </section>
 
-        <!-- PROJECTS PORTFOLIO SECTION -->
-        <section id="portfolio" class="py-5 bg-white">
+        <!-- CERTIFICATIONS SECTION -->
+        <section id="certifications" class="py-5 bg-white">
             <div class="container">
-                <h2 class="text-center portfolio-title mb-5">Project Gallery</h2>
-                <div class="row g-4" id="projectsGrid"></div>
-                <template id="projectTemplate">
-                    <div class="col-12 col-md-6 col-lg-4 project-card">
-                        <div class="card border-0 shadow-sm h-100">
-                            <div class="img-container">
-                                <img src="" class="card-img-top project-image" alt="" width="400" height="400" loading="lazy">
-                            </div>
-                            <div class="card-body d-flex flex-column">
-                                <h3 class="card-title project-title h5"></h3>
-                                <p class="card-text text-muted project-description flex-grow-1"></p>
-                                <div class="project-links mt-auto"></div>
-                            </div>
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold">Certifications & Training</h2>
+                    <p class="text-muted">Industry standard credentials and academic excellence</p>
+                </div>
+
+                <h3 class="h4 mb-4 text-primary border-bottom pb-2">Industry & Technical Certifications</h3>
+                <div class="row g-4 mb-5">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card cert-card p-4 text-center">
+                            <img src="./Media/certifications/aws.png" class="mb-3 mx-auto" width="80" alt="AWS Badge">
+                            <h4 class="h6 fw-bold">Cloud Quest: Cloud Practitioner</h4>
+                            <p class="small text-muted mb-3">Amazon Web Services (AWS)</p>
+                            <a href="https://www.credly.com/badges/30581dda-1ad9-40e4-80d4-fe29f8714cca/public_url" class="btn btn-sm btn-outline-primary mt-auto stretched-link" target="_blank">Verify Credential</a>
                         </div>
                     </div>
-                </template>
-            </div>
-        </section>
-
-        <section id="open-source" class="py-5 shadow-lg open-source-section">
-            <div class="container py-5">
-                <div class="row align-items-center">
-                    
-                    <div class="col-lg-5 mb-5 mb-lg-0">
-                        <div class="d-flex align-items-center mb-3">
-                            <i class="fab fa-osi fa-2x text-success me-3"></i>
-                            <h2 class="fw-bold text-white mb-0">Open Source</h2>
-                        </div>
-                        <h3 class="h5 mb-4 text-primary">Giving back to the community</h3>
-                        <p class="mb-4 open-source-text">
-                            I actively contribute to <strong>SymPy</strong> and other open-source projects. 
-                            Navigating massive, production-grade codebases has sharpened my skills in CI/CD pipelines, strict PEP8 standards, and handling rigorous code reviews.
-                        </p>
-                        <a href="https://github.com/pulls?q=is%3Apr+author%3AGiZano" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light px-4 py-2 mt-2 btn-github-prs">
-                            <i class="fab fa-github me-2"></i> View all my PRs
-                        </a>
-                    </div>  
-
-                    <div class="col-lg-6 offset-lg-1">
-                        <div id="openSourceCarousel" class="carousel slide" data-bs-ride="carousel">
-                            
-                            <div class="carousel-indicators open-source-indicators">
-                                <button type="button" data-bs-target="#openSourceCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#openSourceCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            </div>
-
-                            <div class="carousel-inner pb-4">
-                                
-                                <div class="carousel-item active" data-bs-interval="6000">
-                                    <div class="card h-100 border rounded p-4 mx-auto card-link-wrapper open-source-card">
-                                        <div class="d-flex justify-content-between align-items-start mb-3">
-                                            <div class="d-flex align-items-center">
-                                                <i class="fas fa-code-branch me-2 icon-purple"></i>
-                                                <span class="small fw-bold text-white">sympy / sympy</span>
-                                            </div>
-                                            <span class="badge rounded-pill badge-merged">
-                                                <i class="fas fa-code-merge me-1"></i> Merged
-                                            </span>
-                                        </div>
-                                        <h4 class="h5 text-white mb-3">
-                                            <a href="https://github.com/sympy/sympy/pull/29515" target="_blank" class="text-white text-decoration-none stretched-link">
-                                                Typing: add return and parameters types to diophantine <span class="pr-number">#29515</span>
-                                            </a>
-                                        </h4>
-                                        <p class="small mb-4 pr-description">
-                                            Added missing return and parameters types to several classes and helper functions in sympy.solvers.diophantine. First incremental step to improve type safety and help static type checkers.
-                                        </p>
-                                        <div class="mt-auto d-flex justify-content-between align-items-center pt-3 pr-footer">
-                                            <div class="font-monospace small">
-                                                <span class="text-success me-2"><i class="fas fa-plus me-1"></i>27</span>
-                                                <span class="text-danger"><i class="fas fa-minus me-1"></i>20</span>
-                                            </div>
-                                            <span class="small text-muted-gh"><i class="fab fa-python me-1"></i> Python</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="carousel-item" data-bs-interval="6000">
-                                    <div class="card h-100 border rounded p-4 mx-auto card-link-wrapper open-source-card">
-                                        <div class="d-flex justify-content-between align-items-start mb-3">
-                                            <div class="d-flex align-items-center">
-                                                <i class="fas fa-code-branch me-2 icon-purple"></i>
-                                                <span class="small fw-bold text-white">is-a-dev / register</span>
-                                            </div>
-                                            <span class="badge rounded-pill badge-merged">
-                                                <i class="fas fa-code-merge me-1"></i> Merged
-                                            </span>
-                                        </div>
-                                        <h4 class="h5 text-white mb-3">
-                                            <a href="https://github.com/is-a-dev/register/pull/31813" target="_blank" class="text-white text-decoration-none stretched-link">
-                                                Add giovanni-zanotti.is-a.dev <span class="pr-number">#31813</span>
-                                            </a>
-                                        </h4>
-                                        <p class="small mb-4 pr-description">
-                                            Contributed to the open source community register to secure my personal developer domain, configuring proper CNAME DNS records.
-                                        </p>
-                                        <div class="mt-auto d-flex justify-content-between align-items-center pt-3 pr-footer">
-                                            <div class="font-monospace small">
-                                                <span class="text-success me-2"><i class="fas fa-plus me-1"></i>9</span>
-                                                <span class="text-danger"><i class="fas fa-minus me-1"></i>0</span>
-                                            </div>
-                                            <span class="small text-muted-gh"><i class="fab fa-js-square me-1"></i> JSON</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            
-                            <button class="carousel-control-prev carousel-control-custom" type="button" data-bs-target="#openSourceCarousel" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next carousel-control-custom" type="button" data-bs-target="#openSourceCarousel" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
-
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card cert-card p-4 text-center">
+                            <img src="./Media/certifications/CCNA.png" class="mb-3 mx-auto" width="80" alt="Cisco Badge">
+                            <h4 class="h6 fw-bold">CCNA: Introduction to Networks</h4>
+                            <p class="small text-muted mb-3">Cisco</p>
+                            <a href="https://www.credly.com/badges/20995e15-3bd8-439d-9b44-6472353a3b3d/public_url" class="btn btn-sm btn-outline-primary mt-auto stretched-link" target="_blank">Verify Credential</a>
                         </div>
                     </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card cert-card p-4 text-center">
+                            <img src="./Media/certifications/ITE.png" class="mb-3 mx-auto" width="80" alt="Cisco Badge">
+                            <h4 class="h6 fw-bold">IT Essentials: PC Hardware</h4>
+                            <p class="small text-muted mb-3">Cisco</p>
+                            <a href="https://www.credly.com/badges/51b90554-a612-42be-9382-a88eb8cd3a57/public_url" class="btn btn-sm btn-outline-primary mt-auto stretched-link" target="_blank">Verify Credential</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card cert-card p-4 text-center">
+                            <img src="./Media/certifications/cambridge.svg" class="mb-3 mx-auto" width="80" alt="Cambridge Logo">
+                            <h4 class="h6 fw-bold">Cambridge FCE - Grade A</h4>
+                            <p class="small text-muted mb-3">Level C1 Advanced</p>
+                            <span class="badge bg-light text-dark border mt-auto">Verified Offline</span>
+                        </div>
+                    </div>
+                </div>
 
+                <h3 class="h4 mb-4 text-primary border-bottom pb-2">Academic Excellence</h3>
+                <div class="row g-4 mb-5 justify-content-center">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card cert-card p-4 text-center">
+                            <img src="./Media/certifications/math.png" class="mb-3 mx-auto" width="80" alt="INVALSI Badge">
+                            <h4 class="h6 fw-bold">Math - Level 5</h4>
+                            <p class="small text-muted mb-3">INVALSI (Top National Percentile)</p>
+                            <a href="https://openbadges.bestr.it/public/assertions/4ae6dgGpSnir9MBpbxvwlQ" class="btn btn-sm btn-outline-primary mt-auto stretched-link" target="_blank">Verify via Bestr</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card cert-card p-4 text-center">
+                            <img src="./Media/certifications/italian.png" class="mb-3 mx-auto" width="80" alt="INVALSI Badge">
+                            <h4 class="h6 fw-bold">Italian - Level 5</h4>
+                            <p class="small text-muted mb-3">INVALSI (Top National Percentile)</p>
+                            <a href="https://openbadges.bestr.it/public/assertions/-5t1m3XLSgeAfQhz-flClQ" class="btn btn-sm btn-outline-primary mt-auto stretched-link" target="_blank">Verify via Bestr</a>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="h4 mb-3 text-primary border-bottom pb-2">Bootcamps & Specializations</h3>
+                <div class="d-flex flex-wrap gap-2">
+                    <a href="https://www.credly.com/badges/e2564a0d-b5df-44a8-879e-2eeb640c7cbe/public_url" target="_blank" rel="noopener noreferrer" class="bootcamp-pill text-decoration-none">
+                        <i class="fas fa-code-branch text-success"></i> GIT & GITHUB (Sorint.lab)
+                    </a>
+                    <a href="https://www.credly.com/badges/ff33b414-75eb-40f3-8cae-0683ed46fea1/public_url" target="_blank" rel="noopener noreferrer" class="bootcamp-pill text-decoration-none">
+                        <i class="fab fa-python text-primary"></i> Python Fundamentals (Sorint.lab)
+                    </a>
+                    <a href="https://www.credly.com/badges/d6202e76-41ee-4470-b4cf-7d542ad57c65/public_url" target="_blank" rel="noopener noreferrer" class="bootcamp-pill text-decoration-none">
+                        <i class="fas fa-robot text-danger"></i> Intro to Artificial Intelligence (Sorint.lab)
+                    </a>
+                    <a href="https://www.credly.com/badges/18be2f8f-09e0-4d0b-9aac-c4443e8ef95c/public_url" target="_blank" rel="noopener noreferrer" class="bootcamp-pill text-decoration-none">
+                        <i class="fas fa-microchip text-secondary"></i> Introduction to IoT (Cisco)
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section id="talking" class="py-5 bg-alt-section">
-            <div class="container mt-5">
-                <h2 class="text-center mb-5">Talking about me</h2>
-                <div id="carouselExampleDark" class="carousel carousel-dark slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active" data-bs-interval="10000">
-                            <a target="_blank" href="https://primatreviglio.it/attualita/inaugurate-allarchimede-le-panchine-della-gentilezza/" class="d-block" aria-label="Read the article about the Bench of Kindness">
-                                <img src="./Media/home/bench_news.webp" class="d-block w-100 news-img" alt="Bench of Kindness inauguration photo" width="800" height="400" loading="lazy">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h3 class="h5">Bench of Kindness</h3>
-                                    <p>Real Life Implementation</p>
+        <!-- PROJECTS PORTFOLIO SECTION (Hardcoded for SEO & Performance) -->
+        <section id="portfolio" class="py-5 bg-alt-section">
+            <div class="container">
+                <h2 class="text-center portfolio-title mb-5">Project Architecture</h2>
+                <div class="row g-4" id="projectsGrid">
+                    
+                    <!-- 1. QuakeGuard -->
+                    <div class="col-12 col-md-6 col-lg-4 project-card">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="img-container">
+                                <img src="./Media/quakeguard/logo.png" class="card-img-top project-image" alt="QuakeGuard" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title project-title h5">QuakeGuard</h3>
+                                <p class="card-text text-muted project-description flex-grow-1">Full-Stack IoT Architecture - FastAPI - React Native - ESP32 - Distributed seismic sensor network for real-time earthquake detection and rapid alert propagation via WebSockets.</p>
+                                <div class="project-links mt-auto">
+                                    <a href="./Pages/Works/quakeguard/" class="btn btn-sm btn-primary me-2"><i class="fas fa-info-circle me-1"></i> Details</a>
+                                    <a href="https://github.com/GiZano/QuakeGuard" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-success me-2"><i class="fab fa-github me-1"></i> Code</a>
                                 </div>
-                            </a>
-                        </div>
-                        <div class="carousel-item" data-bs-interval="2000">
-                            <a target="_blank" href="https://primabergamo.it/scuola/quindici-studenti-vincono-la-borsa-di-studio-a-scuola-in-europa-tra-loro-un-bergamasco/" class="d-block" aria-label="Read the article about the Scholarship">
-                                <img src="./Media/home/scholarship_news.webp" class="d-block w-100 news-img" alt="Scholarship award ceremony photo" width="800" height="400" loading="lazy">
-                                <div class="carousel-caption d-none d-md-block">
-                                    <h3 class="h5">Scholarship to Study Abroad</h3>
-                                    <p>Real Life Experience</p>
-                                </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev" aria-label="Previous Slide">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+
+                    <!-- 2. bE-More -->
+                    <div class="col-12 col-md-6 col-lg-4 project-card">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="img-container">
+                                <img src="./Pages/Works/bE-More/static/media/logo.f891aae4577c48b75ca4.jpg" class="card-img-top project-image" alt="bE-More" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title project-title h5">bE-More - Energy System</h3>
+                                <p class="card-text text-muted project-description flex-grow-1">IoT System - React - Arduino - Fullstack implementation for corporate energy monitoring and optimization at the edge.</p>
+                                <div class="project-links mt-auto">
+                                    <a href="./Pages/Works/bE-More/index.html" class="btn btn-sm btn-primary me-2"><i class="fas fa-info-circle me-1"></i> Details (it)</a>
+                                    <a href="https://github.com/GiZano/project-day" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-success me-2"><i class="fab fa-github me-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. CuriousTrip -->
+                    <div class="col-12 col-md-6 col-lg-4 project-card">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="img-container">
+                                <img src="./Media/curious-traveler/hero.webp" class="card-img-top project-image" alt="CuriousTrip" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title project-title h5">CuriousTrip</h3>
+                                <p class="card-text text-muted project-description flex-grow-1">Asynchronous Python CLI - aiohttp - Orchestrating 9 public REST APIs for instant travel profiles compilation and data synthesis.</p>
+                                <div class="project-links mt-auto">
+                                    <a href="./Pages/Works/curious-traveler.html" class="btn btn-sm btn-primary me-2"><i class="fas fa-info-circle me-1"></i> Details</a>
+                                    <a href="https://github.com/GiZano/traveler-api" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-success me-2"><i class="fab fa-github me-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Telegram Secretary -->
+                    <div class="col-12 col-md-6 col-lg-4 project-card d-none hidden-project">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="img-container">
+                                <img src="./Media/telegram-bot/bot.webp" class="card-img-top project-image" alt="Telegram Secretary" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title project-title h5">Telegram Secretary Bot</h3>
+                                <p class="card-text text-muted project-description flex-grow-1">Telegram Bot - Google Calendar API - Automating appointments management through natural language processing over Telegram UI.</p>
+                                <div class="project-links mt-auto">
+                                    <a href="./Pages/Works/telegram-bot.html" class="btn btn-sm btn-primary me-2"><i class="fas fa-info-circle me-1"></i> Details</a>
+                                    <a href="https://github.com/GiZano/telegram-to-calendar" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-success me-2"><i class="fab fa-github me-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Private TCP Chat -->
+                    <div class="col-12 col-md-6 col-lg-4 project-card d-none hidden-project">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="img-container">
+                                <img src="./Media/private-chat/main.webp" class="card-img-top project-image" alt="Private TCP Chat" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title project-title h5">Private TCP Chat</h3>
+                                <p class="card-text text-muted project-description flex-grow-1">Multithreaded Local Chat - Python - Docker - Zero dependency secure communication enforcing custom JSON protocol.</p>
+                                <div class="project-links mt-auto">
+                                    <a href="./Pages/Works/private-chat.html" class="btn btn-sm btn-primary me-2"><i class="fas fa-info-circle me-1"></i> Details</a>
+                                    <a href="https://github.com/gizano/multithreaded-python-chat" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-success me-2"><i class="fab fa-github me-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Burrows Wheeler -->
+                    <div class="col-12 col-md-6 col-lg-4 project-card d-none hidden-project">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="img-container">
+                                <img src="./Media/burrows/burrow_main.webp" class="card-img-top project-image" alt="Burrows Wheeler" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title project-title h5">Burrows Wheeler's Algorithm</h3>
+                                <p class="card-text text-muted project-description flex-grow-1">Python - FastAPI - Educational tool and visual calculator for data compression algorithms and string rotations.</p>
+                                <div class="project-links mt-auto">
+                                    <a href="./Pages/Works/burrows-wheeler.html" class="btn btn-sm btn-primary me-2"><i class="fas fa-info-circle me-1"></i> Details</a>
+                                    <a href="https://github.com/GiZano/burrows-wheeler-calculator" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-success me-2"><i class="fab fa-github me-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 7. Web Presentations -->
+                    <div class="col-12 col-md-6 col-lg-4 project-card d-none hidden-project">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="img-container">
+                                <img src="./Media/presentations/react-logo.svg" class="card-img-top project-image" alt="Web Presentations" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title project-title h5">Web Presentations</h3>
+                                <p class="card-text text-muted project-description flex-grow-1">React/Vite - HTML/CSS/JS - Web Design - A hub of interactive, responsive slide decks built natively for browsers.</p>
+                                <div class="project-links mt-auto">
+                                    <a href="./Pages/Works/web-presentations.html" class="btn btn-sm btn-primary me-2"><i class="fas fa-info-circle me-1"></i> View Projects</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. Bench of Kindness -->
+                    <div class="col-12 col-md-6 col-lg-4 project-card d-none hidden-project">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="img-container">
+                                <img src="./Media/bench/bench_main.webp" class="card-img-top project-image" alt="Bench of Kindness" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title project-title h5">The Bench of Kindness</h3>
+                                <p class="card-text text-muted project-description flex-grow-1">Project Management - Real Life Implementation - Social initiative project bringing sustainable design to public spaces.</p>
+                                <div class="project-links mt-auto">
+                                    <a href="./Pages/Works/bench.html" class="btn btn-sm btn-primary me-2"><i class="fas fa-info-circle me-1"></i> Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 9. School Dungeon -->
+                    <div class="col-12 col-md-6 col-lg-4 project-card d-none hidden-project">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="img-container">
+                                <img src="./Media/school-dungeon/school-dungeon_project.webp" class="card-img-top project-image" alt="School Dungeon" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title project-title h5">School Dungeon - CLI Game</h3>
+                                <p class="card-text text-muted project-description flex-grow-1">Java - Game Development - OOP - Building RPG mechanics natively in console environment.</p>
+                                <div class="project-links mt-auto">
+                                    <a href="https://github.com/GiZano/school-dungeon" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-success me-2"><i class="fab fa-github me-1"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pulsante Load More Statico -->
+                <div class="text-center mt-5 w-100" id="viewMoreContainer">
+                    <button id="viewMoreBtn" class="btn btn-outline-primary px-4 py-2 rounded-pill fw-bold transition-all">
+                        View More Projects <i class="fas fa-chevron-down ms-2"></i>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next" aria-label="Next Slide">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- OPEN SOURCE SECTION (Conversione a Griglia) -->
+        <section id="open-source" class="py-5 shadow-lg open-source-section">
+            <div class="container py-5">
+                <div class="d-flex align-items-center justify-content-center mb-3">
+                    <i class="fab fa-osi fa-2x text-success me-3"></i>
+                    <h2 class="fw-bold text-white mb-0">Open Source Contributions</h2>
+                </div>
+                <p class="text-center mb-5 open-source-text max-w-700 mx-auto">
+                    I actively contribute to <strong>SymPy</strong> and other open-source projects. Navigating massive, production-grade codebases has sharpened my skills in CI/CD pipelines, strict PEP8 standards, and handling rigorous code reviews.
+                </p>
+
+                <div class="row g-4 justify-content-center">
+                    <!-- PR 1 -->
+                    <div class="col-md-6 col-lg-5">
+                        <div class="card h-100 border rounded p-4 card-link-wrapper open-source-card w-100">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-code-branch me-2 icon-purple"></i>
+                                    <span class="small fw-bold text-white">sympy / sympy</span>
+                                </div>
+                                <span class="badge rounded-pill badge-merged">
+                                    <i class="fas fa-code-merge me-1"></i> Merged
+                                </span>
+                            </div>
+                            <h4 class="h5 text-white mb-3">
+                                <a href="https://github.com/sympy/sympy/pull/29515" target="_blank" class="text-white text-decoration-none stretched-link">
+                                    Typing: add return and parameters types to diophantine <span class="pr-number">#29515</span>
+                                </a>
+                            </h4>
+                            <p class="small mb-4 pr-description">
+                                Added missing return and parameters types to several classes and helper functions in sympy.solvers.diophantine. First incremental step to improve type safety and help static type checkers.
+                            </p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center pt-3 pr-footer">
+                                <div class="font-monospace small">
+                                    <span class="text-success me-2"><i class="fas fa-plus me-1"></i>27</span>
+                                    <span class="text-danger"><i class="fas fa-minus me-1"></i>20</span>
+                                </div>
+                                <span class="small text-muted-gh"><i class="fab fa-python me-1"></i> Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- PR 2 -->
+                    <div class="col-md-6 col-lg-5">
+                        <div class="card h-100 border rounded p-4 card-link-wrapper open-source-card w-100">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-code-branch me-2 icon-purple"></i>
+                                    <span class="small fw-bold text-white">is-a-dev / register</span>
+                                </div>
+                                <span class="badge rounded-pill badge-merged">
+                                    <i class="fas fa-code-merge me-1"></i> Merged
+                                </span>
+                            </div>
+                            <h4 class="h5 text-white mb-3">
+                                <a href="https://github.com/is-a-dev/register/pull/31813" target="_blank" class="text-white text-decoration-none stretched-link">
+                                    Add giovanni-zanotti.is-a.dev <span class="pr-number">#31813</span>
+                                </a>
+                            </h4>
+                            <p class="small mb-4 pr-description">
+                                Contributed to the open source community register to secure my personal developer domain, configuring proper CNAME DNS records.
+                            </p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center pt-3 pr-footer">
+                                <div class="font-monospace small">
+                                    <span class="text-success me-2"><i class="fas fa-plus me-1"></i>9</span>
+                                    <span class="text-danger"><i class="fas fa-minus me-1"></i>0</span>
+                                </div>
+                                <span class="small text-muted-gh"><i class="fab fa-js-square me-1"></i> JSON</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5">
+                    <a href="https://github.com/pulls?q=is%3Apr+author%3AGiZano" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light px-4 py-2 btn-github-prs">
+                        <i class="fab fa-github me-2"></i> View all my PRs
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TALKING ABOUT ME (Conversione a Griglia) -->
+        <section id="talking" class="py-5 bg-white">
+            <div class="container mt-4">
+                <h2 class="text-center mb-5 fw-bold">Press & Achievements</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-5">
+                        <a target="_blank" href="https://primatreviglio.it/attualita/inaugurate-allarchimede-le-panchine-della-gentilezza/" class="text-decoration-none">
+                            <div class="card h-100 border-0 shadow-sm overflow-hidden news-card">
+                                <img src="./Media/home/bench_news.webp" class="card-img-top news-img-grid" alt="Bench of Kindness">
+                                <div class="card-body text-center bg-light">
+                                    <h3 class="h5 text-dark fw-bold mb-1">Bench of Kindness</h3>
+                                    <p class="text-muted small mb-0">Real Life Implementation</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-5">
+                        <a target="_blank" href="https://primabergamo.it/scuola/quindici-studenti-vincono-la-borsa-di-studio-a-scuola-in-europa-tra-loro-un-bergamasco/" class="text-decoration-none">
+                            <div class="card h-100 border-0 shadow-sm overflow-hidden news-card">
+                                <img src="./Media/home/scholarship_news.webp" class="card-img-top news-img-grid" alt="Scholarship">
+                                <div class="card-body text-center bg-light">
+                                    <h3 class="h5 text-dark fw-bold mb-1">Scholarship to Study Abroad</h3>
+                                    <p class="text-muted small mb-0">Academic Merit Award</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -323,18 +484,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center">
-                        <h2 class="mb-4">Get in Contact</h2>
-                        <p class="lead mb-4">Ready for new adventures</p>
-                        <a href="mailto:gizano.dev@gmail.com" class="btn btn-primary btn-lg mb-3">Contact me</a>
+                        <h2 class="mb-4">Let's Connect</h2>
+                        <p class="lead mb-4">I'm open to discussing IoT architectures, Edge computing, and Backend engineering opportunities.</p>
+                        <a href="mailto:gizano.dev@gmail.com" class="btn btn-primary btn-lg mb-4"><i class="fas fa-envelope me-2"></i> Reach out directly</a>
                         
-                        <p class="mt-2">and download my Resume</p>
+                        <p class="mt-2 text-white-50">Download my Resume:</p>
                         
                         <div class="d-flex justify-content-center gap-3 flex-wrap">
-                            <a href="Media/home/cv-Giovanni-Zanotti.pdf" download class="btn btn-outline-light btn-lg">
+                            <a href="Media/home/cv-Giovanni-Zanotti.pdf" download class="btn btn-outline-light">
                                 <i class="fas fa-file-pdf me-2"></i>CV (Italiano) 🇮🇹
                             </a>
-                            
-                            <a href="Media/home/cv-Giovanni-Zanotti_EN.pdf" download class="btn btn-outline-light btn-lg">
+                            <a href="Media/home/cv-Giovanni-Zanotti_EN.pdf" download class="btn btn-outline-light">
                                 <i class="fas fa-file-pdf me-2"></i>CV (English) 🇬🇧
                             </a>
                         </div>
@@ -342,47 +502,13 @@
                 </div>
                 
                 <div class="social-links text-center d-flex justify-content-center align-items-center mt-5 gap-4 flex-wrap">
-                    <!-- ORCID -->
-                    <a target="_blank" href="https://orcid.org/0009-0000-8900-9586" class="text-light social-icon" rel="noopener noreferrer">
-                        <i class="fab fa-orcid fa-2x" aria-hidden="true"></i>
-                        <span class="visually-hidden">Visit my ORCID researcher profile</span>
-                    </a>
-
-                    <!-- CREDLY -->
-                    <a target="_blank" href="https://www.credly.com/users/giovanni-zanotti" class="text-light social-icon" rel="noopener noreferrer">
-                        <i class="fas fa-certificate fa-2x" aria-hidden="true"></i>
-                        <span class="visually-hidden">Check out my certifications on Credly</span>
-                    </a>
-                
-                    <!-- LINKEDIN -->
-                    <a target="_blank" href="https://www.linkedin.com/in/giovanni-zanotti-it/" class="text-light social-icon" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i>
-                        <span class="visually-hidden">Visit my LinkedIn profile</span>
-                    </a>
-                
-                    <!-- GITHUB -->
-                    <a target="_blank" href="https://github.com/GiZano" class="text-light social-icon" rel="noopener noreferrer">
-                        <i class="fab fa-github fa-2x" aria-hidden="true"></i>
-                        <span class="visually-hidden">Explore my projects on GitHub</span>
-                    </a>
-
-                    <!-- MEDIUM -->
-                    <a target="_blank" href="https://medium.com/@gizano" class="text-light social-icon" rel="noopener noreferrer">
-                        <i class="fab fa-medium fa-2x" aria-hidden="true"></i>
-                        <span class="visually-hidden">Read my articles on Medium</span>
-                    </a>
-
-                    <!-- KAGGLE -->
-                    <a target="_blank" href="https://www.kaggle.com/gizano" class="text-light social-icon" rel="noopener noreferrer">
-                        <i class="fab fa-kaggle fa-2x" aria-hidden="true"></i>
-                        <span class="visually-hidden">Check my data science work on Kaggle</span>
-                    </a>
-                
-                    <!-- LEETCODE -->
-                    <a target="_blank" href="https://leetcode.com/u/GiZano" class="text-light social-icon" rel="noopener noreferrer">
-                        <img src="./Media/home/leetcode.svg" alt="LeetCode" class="leetcode-icon">
-                        <span class="visually-hidden">Look at my algorithmic solutions on LeetCode</span>
-                    </a>
+                    <a target="_blank" href="https://orcid.org/0009-0000-8900-9586" class="text-light social-icon" rel="noopener noreferrer"><i class="fab fa-orcid fa-2x"></i></a>
+                    <a target="_blank" href="https://www.credly.com/users/giovanni-zanotti" class="text-light social-icon" rel="noopener noreferrer"><i class="fas fa-certificate fa-2x"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/giovanni-zanotti-it/" class="text-light social-icon" rel="noopener noreferrer"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a target="_blank" href="https://github.com/GiZano" class="text-light social-icon" rel="noopener noreferrer"><i class="fab fa-github fa-2x"></i></a>
+                    <a target="_blank" href="https://medium.com/@gizano" class="text-light social-icon" rel="noopener noreferrer"><i class="fab fa-medium fa-2x"></i></a>
+                    <a target="_blank" href="https://www.kaggle.com/gizano" class="text-light social-icon" rel="noopener noreferrer"><i class="fab fa-kaggle fa-2x"></i></a>
+                    <a target="_blank" href="https://leetcode.com/u/GiZano" class="text-light social-icon" rel="noopener noreferrer"><img src="./Media/home/leetcode.svg" alt="LeetCode" class="leetcode-icon"></a>
                 </div>
             </div>
         </section>
