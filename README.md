@@ -54,23 +54,23 @@ Built with **HTML5**, **CSS3**, and **Vanilla JavaScript**, this portfolio featu
 
 Here are the main projects featured in the portfolio gallery:
 
-### 1. 💡 [bE-More](./Pages/Works/bE-More/)
+### 1. 💡 [bE-More](./Projects/bE-More/)
 * **Stack:** React, Java, IoT
 * A comprehensive web application focused on personal development and energy efficiency tracking systems. Integrates with local sensors to monitor workspace environments.
 
-### 2. 🤖 [Telegram Secretary Bot](./Pages/Works/telegram-bot.html)
+### 2. 🤖 [Telegram Secretary Bot](./Projects/telegram-bot.html)
 * **Stack:** Python, Telegram API, Google Calendar API
 * A bot hosted on Raspberry Pi that acts as a bridge between Telegram and Google Calendar. It parses natural language to schedule appointments automatically.
 
-### 3. 🔢 [Burrows-Wheeler Calculator](./Pages/Works/burrows-wheeler.html)
+### 3. 🔢 [Burrows-Wheeler Calculator](./Projects/burrows-wheeler.html)
 * **Stack:** Python, Algorithms
 * A technical deep-dive into data compression. Includes a custom implementation of the BWT algorithm and a web-based calculator demo to visualize the transformation.
 
-### 4. 🧭 [CuriousTrip](./Pages/Works/curious-traveler.html)
+### 4. 🧭 [CuriousTrip](./Projects/curious-traveler.html)
 * **Stack:** Python (AsyncIO), REST APIs
 * An API orchestration engine that aggregates data from 9 different sources (Weather, Maps, Events) to generate travel itineraries. Refactored for asynchronous performance.
 
-### 5. 🪑 [Bench of Kindness](./Pages/Works/bench.html)
+### 5. 🪑 [Bench of Kindness](./Projects/bench.html)
 * **Stack:** Real Life Engineering, 3D Modeling
 * A physical realization project involving 3D modeling, material sourcing (recycled pallets), and construction of a smart bench for schools.
 
