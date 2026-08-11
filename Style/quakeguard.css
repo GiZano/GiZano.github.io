@@ -225,7 +225,7 @@ a:hover { color: var(--qg-orange); }
 
 @media (max-width: 991.98px) {
     .qhero { padding-top: 100px; }
-    .hero-logo-wrap { margin: 2rem 0 0; }
+    .hero-logo-wrap { margin: 0 0 2rem; }
     .hero-title { font-size: 2.2rem; }
 }
 /* ---------- EN/IT language toggle ---------- */

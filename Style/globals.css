@@ -149,3 +149,13 @@ img {
         text-align: center;
     }
 }
+/* Language switch */
+#i18n-toggle {
+    min-width: 2.75rem;
+    white-space: nowrap;
+}
+
+html[lang="it"] body [data-i18n-hide="it"],
+html[lang="en"] body [data-i18n-hide="en"] {
+    display: none !important;
+}

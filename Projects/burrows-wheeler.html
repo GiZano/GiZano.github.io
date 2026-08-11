@@ -10,6 +10,38 @@
       gtag('config', 'G-5JCG2NQS1Y');
     </script>
     <meta charset="UTF-8">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <script type="application/ld+json">
+    {
+          "@context": "https://schema.org",
+          "@type": "SoftwareSourceCode",
+          "name": "Burrows-Wheeler Transform Calculator",
+          "description": "A comprehensive technical analysis and interactive calculator for the Burrows-Wheeler Transform algorithm.",
+          "url": "https://giovanni-zanotti.is-a.dev/Projects/burrows-wheeler.html",
+          "codeRepository": "https://github.com/GiZano/burrows-wheeler-calculator",
+          "programmingLanguage": [
+                "Python",
+                "JavaScript"
+          ],
+          "datePublished": "2025-11-16",
+          "author": {
+                "@type": "Person",
+                "name": "Giovanni Zanotti",
+                "alternateName": "GiZano",
+                "url": "https://giovanni-zanotti.is-a.dev/",
+                "sameAs": [
+                      "https://github.com/GiZano",
+                      "https://www.linkedin.com/in/giovanni-zanotti-it/",
+                      "https://orcid.org/0009-0000-8900-9586",
+                      "https://www.credly.com/users/giovanni-zanotti",
+                      "https://medium.com/@gizano",
+                      "https://www.kaggle.com/gizano",
+                      "https://leetcode.com/u/GiZano"
+                ]
+          }
+    }
+    </script>
+
 
     <meta http-equiv="Content-Security-Policy" content="
     default-src 'self'; 
@@ -17,60 +49,77 @@
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; 
     font-src 'self' https://fonts.gstatic.com; 
     img-src 'self' data: https://www.googletagmanager.com; 
-    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://cdn.jsdelivr.net;;">
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://giovanni-zanotti.is-a.dev/Projects/burrows-wheeler">
+        <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GiZano Portfolio">
+    <meta property="og:title" content="Burrows-Wheeler Transform Calculator - GiZano">
+    <meta property="og:description" content="A comprehensive technical analysis and interactive calculator for the Burrows-Wheeler Transform algorithm. Developed with Python and FastAPI.">
+    <meta property="og:url" content="https://giovanni-zanotti.is-a.dev/Projects/burrows-wheeler">
+    <meta property="og:image" content="https://giovanni-zanotti.is-a.dev/assets/home/social-share.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Burrows-Wheeler Transform Calculator - GiZano">
+    <meta name="twitter:description" content="A comprehensive technical analysis and interactive calculator for the Burrows-Wheeler Transform algorithm. Developed with Python and FastAPI.">
+    <meta name="twitter:image" content="https://giovanni-zanotti.is-a.dev/assets/home/social-share.png">
+    
     <title>Burrows-Wheeler Transform Calculator - GiZano</title>
     <meta name="description" content="A comprehensive technical analysis and interactive calculator for the Burrows-Wheeler Transform algorithm. Developed with Python and FastAPI.">
     <meta name="author" content="Giovanni Zanotti">
 
-    <link rel="preload" as="image" href="../Media/burrows/burrow_main.webp">
+    <link rel="preload" as="image" href="../assets/burrows/burrow-main.webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="../Style/FontAwesome/css/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="../Style/font-awesome/css/all.min.css" media="print" onload="this.media='all'">
     <noscript>
-        <link rel="stylesheet" href="../Style/FontAwesome/css/all.min.css">
+        <link rel="stylesheet" href="../Style/font-awesome/css/all.min.css">
     </noscript>
 
     <link rel="stylesheet" href="../Style/globals.css">
     <link rel="stylesheet" href="../Style/projects.css">
     
     <script src="../Script/nav.js" defer></script>
+    <script src="../Script/i18n/burrows-wheeler.js" defer></script>
+    <script src="../Script/i18n.js" defer></script>
 </head>
 <body>
     
     <nav class="navbar navbar-expand-lg navbar-light navbar-glass fixed-top bg-white shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="../index.html" aria-label="Go to Homepage">GiZano</a>
+            <a class="navbar-brand fw-bold" href="../index.html" aria-label="GiZano - Go to Homepage">GiZano</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open the navigation menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#portfolio" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#portfolio" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_sections">
                             Sections
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#abstract">Abstract</a></li>
-                            <li><a class="dropdown-item" href="#project">The Project</a></li>
-                            <li><a class="dropdown-item" href="#development">Development</a></li>
-                            <li><a class="dropdown-item" href="#realization">Realization</a></li>
-                            <li><a class="dropdown-item" href="#demo">Demo</a></li>
+                            <li><a class="dropdown-item" href="#abstract" data-i18n="nav_abstract">Abstract</a></li>
+                            <li><a class="dropdown-item" href="#project" data-i18n="nav_project">The Project</a></li>
+                            <li><a class="dropdown-item" href="#development" data-i18n="nav_development">Development</a></li>
+                            <li><a class="dropdown-item" href="#realization" data-i18n="nav_realization">Realization</a></li>
+                            <li><a class="dropdown-item" href="#demo" data-i18n="nav_demo">Demo</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html" aria-label="Back to Home">
-                            <i class="fab fa-arrow fa-lg"></i> Home
+                        <a class="nav-link" href="../index.html" aria-label="Back to Home" data-i18n="nav_home">
+                            <i class="fas fa-arrow-left me-1"></i> Home
                         </a>
                     </li>
                 </ul>
+                <button type="button" id="i18n-toggle" class="btn btn-sm btn-outline-primary rounded-pill fw-semibold ms-lg-3" data-i18n-toggle>EN</button>
             </div>
         </div>
     </nav>
@@ -81,20 +130,20 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <h1 class="display-4 fw-bold mb-4">Burrows Wheeler's Transform Calculator</h1>
-                        <a href="#abstract" class="btn btn-primary btn-lg mb-3">Check out my journey!</a>
+                        <h1 class="display-4 fw-bold mb-4" data-i18n="hero_h1">Burrows Wheeler's Transform Calculator</h1>
+                        <a href="#abstract" class="btn btn-primary btn-lg mb-3" data-i18n="hero_cta">Check out my journey!</a>
                         <br>
-                        <a href="../Media/burrows/Burrows_Wheeler_Transform_Technical_Report.pdf" download target="_blank" class="btn btn-outline-primary btn-lg download-report mb-3" aria-label="Download Technical Report PDF">
+                        <a href="../assets/burrows/burrows-wheeler-transform-technical-report.pdf" download target="_blank" class="btn btn-outline-primary btn-lg download-report mb-3" aria-label="Download Technical Report PDF" data-i18n="hero_report">
                             Download the full Technical Report...
                         </a>
                         <br>
-                        <a href="https://github.com/GiZano/burrows-wheeler-calculator" target="_blank" class="btn btn-outline-primary btn-lg download-report" aria-label="View Source Code on GitHub">
+                        <a href="https://github.com/GiZano/burrows-wheeler-calculator" target="_blank" class="btn btn-outline-primary btn-lg download-report" aria-label="View Source Code on GitHub" data-i18n="hero_code">
                             <i class="fab fa-github"></i> View Source Code
                         </a>
                     </div>
                     <div class="col-lg-6 text-center mt-4 mt-lg-0">
                         <div class="image-container rounded-circle bg-light d-inline-block p-4 bench-main">
-                            <img src="../Media/burrows/burrow_main.webp" 
+                            <img src="../assets/burrows/burrow-main.webp" 
                                  alt="Burrows Wheeler Transform Logo" 
                                  class="img-fluid rounded-circle img-profilo responsive-img"
                                  width="400" height="400"
@@ -109,8 +158,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center">
-                        <h2 class="mb-4 section-title">Abstract</h2>
-                        <p class="text-muted lead">
+                        <h2 class="mb-4 section-title" data-i18n="abstract_ttl">Abstract</h2>
+                        <p class="text-muted lead" data-i18n="abstract_p">
                             It is often needed to compress data in order to efficiently send it over the network. 
                             To do this we first need a special algorithm to transform the string to compress in order for it to be ready for compression. 
                             This is where the Burrows Wheeler Transform algorithm comes into play. 
@@ -126,13 +175,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 mx-auto text-left">
-                        <h2 class="mb-4 section-title">The Project</h2>
+                        <h2 class="mb-4 section-title" data-i18n="proj_ttl">The Project</h2>
                     </div>
                     <div class="col-lg-10 mx-auto">
                         <div class="project-section">
                             <div class="row align-items-center">
                                 <div class="col-lg-6">
-                                    <p class="text-muted lead">
+                                    <p class="text-muted lead" data-i18n="proj_p">
                                         Often, to transmit data, we have to compress it, but to do this we first need to prepare it.
                                         <br>
                                         This is where the Burrows Wheeler Transform Algorithm comes in handy.
@@ -142,7 +191,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="image-container text-center">
-                                        <img src="../Media/burrows/burrow_main.webp" 
+                                        <img src="../assets/burrows/burrow-main.webp" 
                                              alt="Burrows Wheeler Transform Visualization" 
                                              class="responsive-img"
                                              width="500" height="500"
@@ -160,14 +209,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 mx-auto text-end">
-                        <h2 class="mb-4 section-title">Project Development</h2>
+                        <h2 class="mb-4 section-title" data-i18n="dev_ttl">Project Development</h2>
                     </div>
                     <div class="col-lg-10 mx-auto">
                         <div class="development-section">
                             <div class="row align-items-center">
                                 <div class="col-lg-6">
                                     <div class="image-container text-center">
-                                        <img src="../Media/burrows/burrow-wheeler-develop.webp" 
+                                        <img src="../assets/burrows/burrow-wheeler-develop.webp" 
                                              alt="Terminal Demo of BWT Algorithm" 
                                              class="responsive-img"
                                              width="600" height="400"
@@ -176,15 +225,15 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="section-content">
-                                        <p class="text-muted lead">
+                                        <p class="text-muted lead" data-i18n="dev_lead">
                                             To develop this project, many different solutions have been applied:
                                         </p>
                                         <ul class="group-list muted lead">
-                                            <li class="group-list-item">Terminal Application</li>
-                                            <li class="group-list-item">FastAPI Client-Server Application</li>
-                                            <li class="group-list-item">Normal Client-Server Application</li>
+                                            <li class="group-list-item" data-i18n="dev_li1">Terminal Application</li>
+                                            <li class="group-list-item" data-i18n="dev_li2">FastAPI Client-Server Application</li>
+                                            <li class="group-list-item" data-i18n="dev_li3">Normal Client-Server Application</li>
                                         </ul>
-                                        <p class="text-muted lead">Other than that, there is also the chance to just use the transformation script for debug.</p>
+                                        <p class="text-muted lead" data-i18n="dev_tail">Other than that, there is also the chance to just use the transformation script for debug.</p>
                                     </div>
                                 </div>
                             </div>
@@ -198,16 +247,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 mx-auto text-left">
-                        <h2 class="mb-4 section-title">Real Life Application</h2>
+                        <h2 class="mb-4 section-title" data-i18n="real_ttl">Real Life Application</h2>
                     </div>
                     <div class="col-lg-10 mx-auto">
                         <div class="realization-section">
                             <div class="row align-items-center">
                                 <div class="col-lg-6">
                                     <div class="section-content">
-                                        <p class="text-muted lead">
+                                        <p class="text-muted lead" data-i18n="real_p">
                                             It is now possible to download the code in my github repository. 
-                                            <a class="btn btn-outline-primary fw-bold" target="_blank" href="https://github.com/GiZano/burrow-wheeler-calculator/tree/master" aria-label="Download BWT Code from GitHub">
+                                            <a class="btn btn-outline-primary fw-bold" target="_blank" href="https://github.com/GiZano/burrows-wheeler-calculator" aria-label="Download BWT Code from GitHub">
                                                 Download Code
                                             </a> 
                                             and follow the steps to clone the code 
@@ -219,7 +268,7 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="image-container text-center">
-                                        <img src="../Media/burrows/burrow-wheeler-real.webp" 
+                                        <img src="../assets/burrows/burrow-wheeler-real.webp" 
                                              alt="Final Project Realization Setup" 
                                              class="responsive-img"
                                              width="600" height="400"
@@ -237,20 +286,20 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 mx-auto">
-                        <h2 class="mb-4 section-title">Interactive Demo</h2>
-                        <p class="lead mb-4">Try the Burrows-Wheeler Transform algorithm with your own input or use one of the examples below:</p>
+                        <h2 class="mb-4 section-title" data-i18n="demo_ttl">Interactive Demo</h2>
+                        <p class="lead mb-4" data-i18n="demo_intro">Try the Burrows-Wheeler Transform algorithm with your own input or use one of the examples below:</p>
                         
                         <div class="card mb-4 shadow-sm border-0">
                             <div class="card-body">
                                 <form id="bwt-form">
                                     <div class="mb-3">
-                                        <label for="bwt-input" class="form-label">Enter a string to encode:</label>
+                                        <label for="bwt-input" class="form-label" data-i18n="demo_label">Enter a string to encode:</label>
                                         <div class="input-group">
-                                            <input type="text" class="form-control form-control-lg" id="bwt-input" placeholder="e.g., BANANA" required>
-                                            <button class="btn btn-primary" type="submit">Encode</button>
+                                            <input type="text" class="form-control form-control-lg" id="bwt-input" placeholder="e.g., BANANA" required data-i18n-attr="demo_placeholder">
+                                            <button class="btn btn-primary" type="submit" data-i18n="demo_encode">Encode</button>
                                         </div>
                                         <div class="mt-2">
-                                            <small class="text-muted">Try these examples: </small>
+                                            <small class="text-muted" data-i18n="demo_examples">Try these examples: </small>
                                             <button type="button" class="btn btn-sm btn-outline-secondary example-btn" data-example="BANANA">BANANA</button>
                                             <button type="button" class="btn btn-sm btn-outline-secondary example-btn" data-example="MISSISSIPPI">MISSISSIPPI</button>
                                             <button type="button" class="btn btn-sm btn-outline-secondary example-btn" data-example="ABRACADABRA">ABRACADABRA</button>
@@ -263,18 +312,18 @@
                         <div id="results" class="d-none">
                             <div class="card mb-4 shadow-sm border-0">
                                 <div class="card-header bg-white">
-                                    <h5 class="mb-0">Results</h5>
+                                    <h5 class="mb-0" data-i18n="results_ttl">Results</h5>
                                 </div>
                                 <div class="card-body">
                                     <div class="row mb-3">
                                         <div class="col-md-6">
-                                            <p class="mb-1"><strong>Original string:</strong></p>
+                                            <p class="mb-1" data-i18n="results_original"><strong>Original string:</strong></p>
                                             <div class="p-3 bg-light rounded">
                                                 <code id="original-input"></code>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <p class="mb-1"><strong>BWT Encoded:</strong></p>
+                                            <p class="mb-1" data-i18n="results_encoded"><strong>BWT Encoded:</strong></p>
                                             <div class="p-3 bg-light rounded">
                                                 <code id="bwt-output"></code>
                                             </div>
@@ -287,7 +336,7 @@
                                 <div class="col-md-6 mb-4">
                                     <div class="card h-100 shadow-sm border-0">
                                         <div class="card-header bg-white">
-                                            <h5 class="mb-0">Rotations</h5>
+                                            <h5 class="mb-0" data-i18n="results_rotations">Rotations</h5>
                                         </div>
                                         <div class="card-body p-0" style="max-height: 300px; overflow-y: auto;">
                                             <ul id="rotations-list" class="list-group list-group-flush">
@@ -298,7 +347,7 @@
                                 <div class="col-md-6">
                                     <div class="card h-100 shadow-sm border-0">
                                         <div class="card-header bg-white">
-                                            <h5 class="mb-0">Sorted Rotations</h5>
+                                            <h5 class="mb-0" data-i18n="results_sorted">Sorted Rotations</h5>
                                         </div>
                                         <div class="card-body p-0" style="max-height: 300px; overflow-y: auto;">
                                             <ul id="sorted-rotations" class="list-group list-group-flush">
@@ -318,13 +367,13 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
-                    <h4 class="h5 mb-3 fw-bold">GiZano</h4>
-                    <p class="text-white-50 small mb-0">BSc Computer Science Student at UniPi | Specialized in Edge Computing, Cloud Architecture, and IoT.</p>
+                    <p class="h5 mb-3 fw-bold">GiZano</p>
+                    <p class="text-white-50 small mb-0" data-i18n="footer_tagline">BSc Computer Science Student at UniPi | Specialized in Edge Computing, Cloud Architecture, and IoT.</p>
                 </div>
                 
                 <div class="col-md-4 text-center mb-4 mb-md-0">
-                    <p class="mb-3 small text-uppercase fw-bold ls-1">Get in touch</p>
-                    <a href="mailto:gizano.dev@gmail.com" class="btn btn-outline-primary btn-sm px-4">
+                    <p class="mb-3 small text-uppercase fw-bold ls-1" data-i18n="footer_ttl">Get in touch</p>
+                    <a href="mailto:gizano&#46;dev&#64;gmail&#46;com" class="btn btn-outline-light btn-sm px-4" data-i18n="footer_email">
                         <i class="fas fa-envelope me-2"></i>Email Me
                     </a>
                 </div>
@@ -337,11 +386,7 @@
                         </a>
 
                         <!-- CREDLY -->
-                        <a target="_blank" href="https://www.credly.com/users/giovanni-zanotti" class="text-light social-icon-footer" aria-label="Credly Certifications" rel="noopener noreferrer">
-                            <i class="fas fa-certificate fa-lg"></i>
-                        </a>
-                    
-                        <!-- LINKEDIN -->
+<!-- LINKEDIN -->
                         <a target="_blank" href="https://www.linkedin.com/in/giovanni-zanotti-it/" class="text-light social-icon-footer" aria-label="LinkedIn Profile" rel="noopener noreferrer">
                             <i class="fab fa-linkedin fa-lg"></i>
                         </a>
@@ -357,15 +402,8 @@
                         </a>
 
                         <!-- KAGGLE -->
-                        <a target="_blank" href="https://www.kaggle.com/gizano" class="text-light social-icon-footer" aria-label="Kaggle Profile" rel="noopener noreferrer">
-                            <i class="fab fa-kaggle fa-lg"></i>
-                        </a>
-                    
-                        <!-- LEETCODE -->
-                        <a target="_blank" href="https://leetcode.com/u/GiZano" class="text-light social-icon-footer" aria-label="LeetCode Profile" rel="noopener noreferrer">
-                            <img src="../Media/home/leetcode.svg" alt="LeetCode" style="width: 1.3em; height: 1.3em; filter: brightness(0) invert(1); vertical-align: -0.25em;">
-                        </a> 
-                    </div>
+<!-- LEETCODE -->
+</div>
                 </div>
             </div>
 
@@ -373,13 +411,13 @@
 
             <div class="row">
                 <div class="col-12 text-center text-white-50 small">
-                    <p class="mb-0">&copy; 2026 Giovanni Zanotti. All rights reserved.</p>
+                    <p class="mb-0">&copy; 2026 Giovanni Zanotti. All rights reserved. <a href="../privacy.html" class="text-white-50 text-decoration-underline" rel="noopener noreferrer">Privacy Policy</a></p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="../Script/burrows-wheeler-demo.js" defer></script>
 </body>
 </html>

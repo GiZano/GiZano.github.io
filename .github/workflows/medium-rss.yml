@@ -1,0 +1,31 @@
+name: Update latest Medium article
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  medium_job:
+    runs-on: ubuntu-latest
+    name: Inline the latest Medium article into index.html
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v4
+
+      - name: Fetch and patch index.html
+        run: python3 Script/update-medium.py
+
+      - name: Commit and push if changed
+        run: |
+          if [[ `git status --porcelain index.html` ]]; then
+            git config --global user.name 'GitHub Actions'
+            git config --global user.email 'actions@github.com'
+            git add index.html
+            git commit -m "Automated medium article update"
+            git push
+          fi

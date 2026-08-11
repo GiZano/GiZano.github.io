@@ -66,6 +66,7 @@
 
     function updateMagnitude() {
         if (magRead) magRead.textContent = parseFloat(magSlider.value).toFixed(1);
+        magSlider.setAttribute('aria-valuetext', 'Magnitude ' + parseFloat(magSlider.value).toFixed(1));
     }
     magSlider.addEventListener('input', updateMagnitude);
     updateMagnitude();

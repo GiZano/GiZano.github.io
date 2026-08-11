@@ -3,6 +3,9 @@ name: Generate xml sitemap
 on:
   push:
     branches: [ main ] # O 'master', controlla il nome del tuo branch principale
+  schedule:
+    - cron: '0 5 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write

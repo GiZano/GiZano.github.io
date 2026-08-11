@@ -162,7 +162,7 @@
 
 .badge-merged {
     background-color: rgba(137, 87, 229, 0.15);
-    color: #8957e5;
+    color: #a371f7;
     border: 1px solid rgba(137, 87, 229, 0.4);
 }
 
@@ -184,6 +184,15 @@
 
 .text-muted-gh {
     color: #8b949e;
+}
+
+/* Higher-contrast diff stats on the dark open-source section */
+.open-source-section .text-success { color: #3fb950 !important; }
+.open-source-section .text-danger { color: #f85149 !important; }
+
+#viewMoreBtn {
+    color: #0a58ca;
+    border-color: #0a58ca;
 }
 
 .carousel-control-custom {

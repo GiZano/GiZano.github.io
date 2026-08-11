@@ -1,0 +1,36 @@
+name: Refresh static project badges
+
+on:
+  schedule:
+    - cron: '30 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  badges_job:
+    runs-on: ubuntu-latest
+    name: Re-download low-churn badges to assets/badges
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v4
+
+      - name: Fetch the three low-churn badges
+        run: |
+          set -e
+          cd assets/badges
+          curl -fsSL -o zenodo-doi.svg "https://zenodo.org/badge/1094177232.svg"
+          curl -fsSL -o license.svg "https://img.shields.io/badge/License-AGPL--3.0-blue?style=plastic"
+          curl -fsSL -o release.svg "https://img.shields.io/github/v/tag/GiZano/QuakeGuard?style=plastic&label=release&color=red"
+
+      - name: Commit and push if changed
+        run: |
+          if [[ `git status --porcelain assets/badges` ]]; then
+            git config --global user.name 'GitHub Actions'
+            git config --global user.email 'actions@github.com'
+            git add assets/badges
+            git commit -m "Automated badge refresh"
+            git push
+          fi

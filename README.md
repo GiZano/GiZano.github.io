@@ -54,7 +54,7 @@ Built with **HTML5**, **CSS3**, and **Vanilla JavaScript**, this portfolio featu
 
 Here are the main projects featured in the portfolio gallery:
 
-### 1. 💡 [bE-More](./Projects/bE-More/)
+### 1. 💡 [be-More](./Projects/be-more/)
 * **Stack:** React, Java, IoT
 * A comprehensive web application focused on personal development and energy efficiency tracking systems. Integrates with local sensors to monitor workspace environments.
 
@@ -80,25 +80,33 @@ Here are the main projects featured in the portfolio gallery:
 
 ```text
 Portfolio/
-├── Media/                # Optimized images (WebP), SVGs, and assets
-├── Pages/                # Project Detail Pages
-│   └── Works/            
-│       ├── bE-More/               # React Project Build
-│       ├── bench.html             # IoT/Real-life Project
-│       ├── burrows-wheeler.html   # Algorithm Project
-│       ├── curious-traveler.html  # API Orchestration
-│       ├── private-chat.html      # LAN CLI-based chat
-│       ├── telegram-bot.html      # Backend/Automation Project
-│       └── web-presentations.html # Frontend Showcase
+├── assets/                # Optimized images (WebP), SVGs, PDFs and assets (kebab-case)
+├── Projects/              # Project pages + React sub-apps
+│   ├── bench.html             # IoT/Real-life Project
+│   ├── burrows-wheeler.html   # Algorithm Project
+│   ├── curious-traveler.html  # API Orchestration
+│   ├── private-chat.html      # LAN CLI-based chat
+│   ├── quakeguard.html        # Seismic IoT Engineering Project
+│   ├── telegram-bot.html      # Backend/Automation Project
+│   ├── web-presentations.html # Frontend Showcase
+│   └── be-more/               # React Project Build (compiled, source not available)
 ├── Script/               # Logic
 │   ├── index.js          # Homepage logic (Typewriter, etc.)
 │   ├── nav.js            # Sticky navbar & mobile menu
-│   └── projects-grid.js  # Dynamic grid rendering
+│   ├── projects-grid.js  # Dynamic grid rendering
+│   ├── i18n.js           # i18n engine (toggle EN/IT)
+│   ├── i18n/             # EN/IT dictionaries (one file per page)
+│   └── update-medium.py  # Medium → portfolio sync script
 ├── Style/                # Styling
 │   ├── globals.css       # Variables & Reset
 │   ├── index.css         # Homepage specific styles
-│   └── projects.css      # Shared styles for project pages
+│   ├── projects.css      # Shared styles for project pages
+│   ├── quakeguard.css    # QuakeGuard page styles
+│   └── font-awesome/     # Font Awesome 6 (vendored locally, no CDN)
+├── 404.html              # Custom 404 page
+├── privacy.html          # Privacy policy (GA4/cookies)
 ├── CNAME                 # Custom domain configuration
+├── favicon.ico
 ├── index.html            # Landing Page
 ├── robots.txt            # SEO Crawler directives
 └── sitemap.xml           # SEO Site Map
