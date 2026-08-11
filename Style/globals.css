@@ -148,6 +148,10 @@ img {
     .hero-section {
         text-align: center;
     }
+
+    .hero-content .d-flex {
+        justify-content: center;
+    }
 }
 /* Language switch */
 #i18n-toggle {
