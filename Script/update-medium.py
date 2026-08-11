@@ -22,8 +22,12 @@ def local(tag):
 
 
 def main():
+    req = urllib.request.Request(
+        FEED_URL,
+        headers={"User-Agent": "Mozilla/5.0 (compatible; PersonalPortfolioBot/1.0; +https://giovanni-zanotti.is-a.dev)"}
+    )
     try:
-        with urllib.request.urlopen(FEED_URL, timeout=30) as resp:
+        with urllib.request.urlopen(req, timeout=30) as resp:
             root = ET.fromstring(resp.read())
     except Exception as exc:  # noqa: BLE001 - keep current content on failure
         print(f"INFO: could not fetch feed ({exc}); keeping current content")
