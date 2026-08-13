@@ -15,12 +15,12 @@
     {
           "@context": "https://schema.org",
           "@type": "SoftwareSourceCode",
-          "name": "CuriousTrip \u2014 Curious Traveler",
-          "description": "A blazing-fast, asynchronous Python CLI orchestrating 9 public APIs for comprehensive travel profiles.",
-          "url": "https://giovanni-zanotti.is-a.dev/Projects/curious-traveler.html",
-          "codeRepository": "https://github.com/GiZano/traveler-api",
+          "name": "Telegram Secretary Bot",
+          "description": "A seamless bridge between Telegram and Google Calendar, hosted locally on Raspberry Pi, with natural-language appointment scheduling.",
+          "url": "https://giovanni-zanotti.is-a.dev/projects/telegram-bot.html",
+          "codeRepository": "https://github.com/GiZano/telegram-to-calendar",
           "programmingLanguage": "Python",
-          "datePublished": "2026-02-13",
+          "datePublished": "2026-01-16",
           "author": {
                 "@type": "Person",
                 "name": "Giovanni Zanotti",
@@ -49,25 +49,25 @@
     connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://giovanni-zanotti.is-a.dev/Projects/curious-traveler">
+    <link rel="canonical" href="https://giovanni-zanotti.is-a.dev/projects/telegram-bot">
         <meta property="og:type" content="website">
     <meta property="og:site_name" content="GiZano Portfolio">
-    <meta property="og:title" content="GiZano - Curious Traveler">
-    <meta property="og:description" content="The Curious Traveler: A blazing-fast, asynchronous Python CLI orchestrating 9 public APIs for comprehensive travel profiles.">
-    <meta property="og:url" content="https://giovanni-zanotti.is-a.dev/Projects/curious-traveler">
+    <meta property="og:title" content="GiZano - Telegram Secretary">
+    <meta property="og:description" content="Personal Telegram Secretary Bot: A seamless bridge between instant messaging and Google Calendar, hosted locally on Raspberry Pi.">
+    <meta property="og:url" content="https://giovanni-zanotti.is-a.dev/projects/telegram-bot">
     <meta property="og:image" content="https://giovanni-zanotti.is-a.dev/assets/home/social-share.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="GiZano - Curious Traveler">
-    <meta name="twitter:description" content="The Curious Traveler: A blazing-fast, asynchronous Python CLI orchestrating 9 public APIs for comprehensive travel profiles.">
+    <meta name="twitter:title" content="GiZano - Telegram Secretary">
+    <meta name="twitter:description" content="Personal Telegram Secretary Bot: A seamless bridge between instant messaging and Google Calendar, hosted locally on Raspberry Pi.">
     <meta name="twitter:image" content="https://giovanni-zanotti.is-a.dev/assets/home/social-share.png">
     
-    <title>GiZano - Curious Traveler</title>
-    <meta name="description" content="The Curious Traveler: A blazing-fast, asynchronous Python CLI orchestrating 9 public APIs for comprehensive travel profiles.">
+    <title>GiZano - Telegram Secretary</title>
+    <meta name="description" content="Personal Telegram Secretary Bot: A seamless bridge between instant messaging and Google Calendar, hosted locally on Raspberry Pi.">
     <meta name="author" content="Giovanni Zanotti">
 
-    <link rel="preload" as="image" href="../assets/curious-traveler/hero.webp">
+    <link rel="preload" as="image" href="../assets/telegram-bot/bot.webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,7 +85,7 @@
     <link href="../Style/projects.css" rel="stylesheet">
     
     <script src="../Script/nav.js" defer></script>
-    <script src="../Script/i18n/curious-traveler.js" defer></script>
+    <script src="../Script/i18n/telegram-bot.js" defer></script>
     <script src="../Script/i18n.js" defer></script>
 </head>
 <body>
@@ -104,9 +104,9 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#abstract" data-i18n="nav_abstract">Abstract</a></li>
-                            <li><a class="dropdown-item" href="#orchestration" data-i18n="nav_orchestration">Multi-API Orchestration</a></li>
-                            <li><a class="dropdown-item" href="#async-io" data-i18n="nav_async">Asynchronous I/O</a></li>
-                            <li><a class="dropdown-item" href="#persistency" data-i18n="nav_persistency">Export & Persistency</a></li>
+                            <li><a class="dropdown-item" href="#telegram" data-i18n="nav_telegram">The Interface</a></li>
+                            <li><a class="dropdown-item" href="#google" data-i18n="nav_google">The Brain</a></li>
+                            <li><a class="dropdown-item" href="#hosting" data-i18n="nav_hosting">Self Hosting</a></li>
                             <li><a class="dropdown-item" href="#demo" data-i18n="nav_demo">Live Demo</a></li>
                         </ul>
                     </li>
@@ -127,18 +127,18 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <h1 class="display-4 fw-bold mb-4" data-i18n="hero_h1">The Curious Traveler</h1>
-                        <p class="lead text-muted mb-4" data-i18n="hero_lead">A blazing-fast, asynchronous Python CLI orchestrating 9 public APIs for comprehensive travel profiles.</p>
+                        <h1 class="display-4 fw-bold mb-4" data-i18n="hero_h1">Personal Telegram Secretary Bot</h1>
+                        <p class="lead text-muted mb-4" data-i18n="hero_lead">A seamless bridge between instant messaging and Google Calendar, hosted locally.</p>
                         <a href="#abstract" class="btn btn-primary btn-lg mb-3" data-i18n="hero_cta">Discover the architecture</a>
                         <br>
-                        <a href="https://github.com/GiZano/traveler-api" target="_blank" class="btn btn-outline-primary btn-lg download-report" aria-label="View Source Code on GitHub" data-i18n="hero_github">
+                        <a href="https://github.com/GiZano/telegram-to-calendar" target="_blank" class="btn btn-outline-primary btn-lg download-report" aria-label="View Source Code on GitHub" data-i18n="hero_github">
                             <i class="fab fa-github"></i> View Source Code
                         </a>
                     </div>
                     <div class="col-lg-6 text-center mt-4 mt-lg-0">
                         <div class="image-container rounded-circle bg-light d-inline-block p-4 bench-main">
-                            <img src="../assets/curious-traveler/hero.webp" 
-                                 alt="Terminal displaying the Curious Traveler Swindle Sheet output" 
+                            <img src="../assets/telegram-bot/bot.webp" 
+                                 alt="Telegram Bot Project Logo" 
                                  class="img-fluid rounded-circle img-profilo responsive-img"
                                  width="400" height="400"
                                  fetchpriority="high">
@@ -154,35 +154,36 @@
                     <div class="col-lg-8 mx-auto text-center">
                         <h2 class="mb-4 section-title" data-i18n="abstract_ttl">Abstract</h2>
                         <p class="text-muted lead" data-i18n="abstract_p">
-                            The Curious Traveler (also known as CuriousTrip) is a modular, 
-                            high-performance command-line application designed for travel data aggregation. 
-                            By orchestrating nine distinct RESTful APIs, the application generates a comprehensive "Swindle Sheet" — a curated travel profile featuring demographic, meteorological, financial, and cultural insights.
+                            In a fast-paced digital environment, opening a calendar app to schedule a simple meeting can be a friction point. 
+                            The goal of this project was to create a conversational interface using Telegram—an app I use daily—to interact directly with my Google Account.
+                            By leveraging the Telegram API and Google Calendar API, I created a "Secretary Bot" that parses natural language and manages my schedule automatically.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="orchestration" class="py-5 bg-white">
+        <section id="telegram" class="py-5 bg-white">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 mx-auto text-left">
-                        <h2 class="mb-4 section-title" data-i18n="orch_ttl">Multi-API Orchestration</h2>
+                        <h2 class="mb-4 section-title" data-i18n="interface_ttl">The Interface: Telegram</h2>
                     </div>
                     <div class="col-lg-10 mx-auto">
                         <div class="project-section">
                             <div class="row align-items-center">
                                 <div class="col-lg-6">
-                                    <p class="text-muted lead" data-i18n="orch_p">
-                                        The core strength of CuriousTrip lies in its ability to synthesize data from diverse sources into a single, cohesive narrative. Rather than requiring users to manually search multiple websites, the application acts as a centralized hub.
+                                    <p class="text-muted lead" data-i18n="interface_p">
+                                        The frontend of this application is entirely chat-based. Using <strong>@BotFather</strong>, I registered a new bot identity on the Telegram network.
                                         <br><br>
-                                        It seamlessly integrates demographic data from REST Countries, real-time weather from Open-Meteo, live currency exchange rates, culinary suggestions, and daily trivia. This unified approach demonstrates robust handling of various JSON payloads and error states across nine separate external services.
+                                        Instead of building a complex React or Vue UI, I utilized the chat interface which provides zero-latency interactions on both mobile and desktop. 
+                                        The bot listens for specific command triggers or natural language inputs, ready to parse dates and event titles.
                                     </p>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="image-container text-center">
-                                        <img src="../assets/curious-traveler/api-orchestration.webp" 
-                                             alt="Diagram showing the multi-API orchestration flow" 
+                                        <img src="../assets/telegram-bot/botfather.webp" 
+                                             alt="Telegram BotFather Setup Interface" 
                                              class="responsive-img rounded shadow-sm"
                                              width="600" height="400"
                                              loading="lazy">
@@ -195,19 +196,19 @@
             </div>
         </section>
 
-        <section id="async-io" class="py-5 bg-alt-section">
+        <section id="google" class="py-5 bg-alt-section">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 mx-auto text-end">
-                        <h2 class="mb-4 section-title" data-i18n="async_ttl">The Async Revolution: aiohttp & asyncio</h2>
+                        <h2 class="mb-4 section-title" data-i18n="brain_ttl">The Brain: Google Integration</h2>
                     </div>
                     <div class="col-lg-10 mx-auto">
                         <div class="development-section">
                             <div class="row align-items-center">
                                 <div class="col-lg-6 order-lg-1 order-2">
                                     <div class="image-container text-center">
-                                        <img src="../assets/curious-traveler/async-comparison.webp" 
-                                             alt="Chart comparing synchronous vs asynchronous execution times" 
+                                        <img src="../assets/telegram-bot/google-api.webp" 
+                                             alt="Google Cloud Console API Dashboard" 
                                              class="responsive-img rounded shadow-sm"
                                              width="600" height="400"
                                              loading="lazy">
@@ -215,13 +216,13 @@
                                 </div>
                                 <div class="col-lg-6 order-lg-2 order-1">
                                     <div class="section-content">
-                                        <p class="text-muted lead" data-i18n="async_p">
-                                            The transition to v2 marked a significant architectural shift from sequential, blocking requests to a fully asynchronous model, resulting in a dramatic reduction in execution time.
+                                        <p class="text-muted lead" data-i18n="brain_p">
+                                            The core logic handles the authentication and data sync with Google Services.
                                         </p>
                                         <ul class="group-list muted lead">
-                                            <li class="group-list-item" data-i18n="async_li1"><strong>Parallel Execution:</strong> Leveraging <code>asyncio.gather</code>, multiple independent API calls are fired concurrently, minimizing wait times.</li>
-                                            <li class="group-list-item" data-i18n="async_li2"><strong>Efficient Connections:</strong> Utilizing <code>aiohttp.ClientSession</code> ensures connections are reused efficiently across the application loop.</li>
-                                            <li class="group-list-item" data-i18n="async_li3"><strong>Hybrid Flow:</strong> A strategic design where dependent data (like country coordinates) is fetched first, unlocking the parallel fetching of the remaining datasets.</li>
+                                            <li class="group-list-item" data-i18n="brain_li1"><strong>Google Service Account:</strong> Used for secure server-to-server authentication without manual OAuth logins.</li>
+                                            <li class="group-list-item" data-i18n="brain_li2"><strong>Calendar API:</strong> The bot allows reading upcoming events and inserting new ones (POST requests).</li>
+                                            <li class="group-list-item" data-i18n="brain_li3"><strong>Chrome Integration:</strong> The system is linked to my main Google Chrome account, ensuring instant sync across all my devices.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -232,28 +233,28 @@
             </div>
         </section>
 
-        <section id="persistency" class="py-5 bg-white">
+        <section id="hosting" class="py-5 bg-white">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 mx-auto text-left">
-                        <h2 class="mb-4 section-title" data-i18n="persist_ttl">Data Export & Resilience</h2>
+                        <h2 class="mb-4 section-title" data-i18n="hosting_ttl">The Home: Self Hosting</h2>
                     </div>
                     <div class="col-lg-10 mx-auto">
                         <div class="realization-section">
                             <div class="row align-items-center">
                                 <div class="col-lg-6">
                                     <div class="section-content">
-                                        <p class="text-muted lead" data-i18n="persist_p">
-                                            Robust software must anticipate failure. CuriousTrip implements comprehensive error handling and safe initialization to ensure stability even when external services timeout or return invalid data.
+                                        <p class="text-muted lead" data-i18n="hosting_p">
+                                            To ensure the "Secretary" is awake 24/7, I deployed the Python codebase on a <strong>Raspberry Pi</strong>.
                                             <br><br>
-                                            Furthermore, the application features a dedicated <code>saver.py</code> utility. This module dynamically creates necessary directory structures and securely exports the generated profiles as UTF-8 encoded text files, providing persistent, locally stored data for the user.
+                                            This IoT approach allows for a low-power, always-on solution. The bot runs as a systemd service (or via Docker), ensuring it automatically restarts if the Pi reboots. This makes the architecture completely independent of third-party cloud hosting providers, giving me full control over the data flow.
                                         </p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="image-container text-center">
-                                        <img src="../assets/curious-traveler/data-folder.webp" 
-                                             alt="Directory structure showing saved text files in the data folder" 
+                                        <img src="../assets/telegram-bot/raspberry.webp" 
+                                             alt="Raspberry Pi Hosting Setup" 
                                              class="responsive-img rounded shadow-sm"
                                              width="600" height="400"
                                              loading="lazy">
@@ -270,13 +271,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 mx-auto text-center">
-                        <h2 class="mb-4 section-title" data-i18n="demo_ttl">Application in Action</h2>
-                        <p class="lead mb-5" data-i18n="demo_lead">Witness the speed of asynchronous Python as CuriousTrip compiles a comprehensive travel profile in milliseconds.</p>
+                        <h2 class="mb-4 section-title" data-i18n="demo_ttl">Bot in Action</h2>
+                        <p class="lead mb-5" data-i18n="demo_lead">Watch how a simple text message converts into a real Google Calendar event in seconds.</p>
                         
                         <div class="card shadow-lg border-0">
                             <div class="card-body p-0">
-                                <img src="../assets/curious-traveler/demo-cli.gif" 
-                                     alt="Animated GIF showing the CLI terminal executing the Curious Traveler script" 
+                                <img src="../assets/telegram-bot/demo-bot.gif" 
+                                     alt="Demo of the Telegram Bot adding an event" 
                                      class="img-fluid rounded"
                                      width="800" height="600"
                                      loading="lazy">

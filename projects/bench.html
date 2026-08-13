@@ -14,16 +14,11 @@
     <script type="application/ld+json">
     {
           "@context": "https://schema.org",
-          "@type": "SoftwareSourceCode",
-          "name": "Burrows-Wheeler Transform Calculator",
-          "description": "A comprehensive technical analysis and interactive calculator for the Burrows-Wheeler Transform algorithm.",
-          "url": "https://giovanni-zanotti.is-a.dev/Projects/burrows-wheeler.html",
-          "codeRepository": "https://github.com/GiZano/burrows-wheeler-calculator",
-          "programmingLanguage": [
-                "Python",
-                "JavaScript"
-          ],
-          "datePublished": "2025-11-16",
+          "@type": "CreativeWork",
+          "name": "The Bench of Kindness",
+          "description": "Development and realization of a sustainable, purple bench built with recycled materials to promote kindness in schools.",
+          "url": "https://giovanni-zanotti.is-a.dev/projects/bench.html",
+          "datePublished": "2025-05-01",
           "author": {
                 "@type": "Person",
                 "name": "Giovanni Zanotti",
@@ -42,7 +37,7 @@
     }
     </script>
 
-
+    
     <meta http-equiv="Content-Security-Policy" content="
     default-src 'self'; 
     script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net; 
@@ -52,25 +47,25 @@
     connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="https://giovanni-zanotti.is-a.dev/Projects/burrows-wheeler">
+    <link rel="canonical" href="https://giovanni-zanotti.is-a.dev/projects/bench">
         <meta property="og:type" content="website">
     <meta property="og:site_name" content="GiZano Portfolio">
-    <meta property="og:title" content="Burrows-Wheeler Transform Calculator - GiZano">
-    <meta property="og:description" content="A comprehensive technical analysis and interactive calculator for the Burrows-Wheeler Transform algorithm. Developed with Python and FastAPI.">
-    <meta property="og:url" content="https://giovanni-zanotti.is-a.dev/Projects/burrows-wheeler">
+    <meta property="og:title" content="Bench of Kindness - GiZano Project">
+    <meta property="og:description" content="Development and realization of the Bench of Kindness: a sustainable, purple bench built with recycled materials to promote kindness in schools.">
+    <meta property="og:url" content="https://giovanni-zanotti.is-a.dev/projects/bench">
     <meta property="og:image" content="https://giovanni-zanotti.is-a.dev/assets/home/social-share.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Burrows-Wheeler Transform Calculator - GiZano">
-    <meta name="twitter:description" content="A comprehensive technical analysis and interactive calculator for the Burrows-Wheeler Transform algorithm. Developed with Python and FastAPI.">
+    <meta name="twitter:title" content="Bench of Kindness - GiZano Project">
+    <meta name="twitter:description" content="Development and realization of the Bench of Kindness: a sustainable, purple bench built with recycled materials to promote kindness in schools.">
     <meta name="twitter:image" content="https://giovanni-zanotti.is-a.dev/assets/home/social-share.png">
     
-    <title>Burrows-Wheeler Transform Calculator - GiZano</title>
-    <meta name="description" content="A comprehensive technical analysis and interactive calculator for the Burrows-Wheeler Transform algorithm. Developed with Python and FastAPI.">
+    <title>Bench of Kindness - GiZano Project</title>
+    <meta name="description" content="Development and realization of the Bench of Kindness: a sustainable, purple bench built with recycled materials to promote kindness in schools.">
     <meta name="author" content="Giovanni Zanotti">
 
-    <link rel="preload" as="image" href="../assets/burrows/burrow-main.webp">
+    <link rel="preload" as="image" href="../assets/bench/bench-main.webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -88,7 +83,7 @@
     <link rel="stylesheet" href="../Style/projects.css">
     
     <script src="../Script/nav.js" defer></script>
-    <script src="../Script/i18n/burrows-wheeler.js" defer></script>
+    <script src="../Script/i18n/bench.js" defer></script>
     <script src="../Script/i18n.js" defer></script>
 </head>
 <body>
@@ -108,9 +103,9 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#abstract" data-i18n="nav_abstract">Abstract</a></li>
                             <li><a class="dropdown-item" href="#project" data-i18n="nav_project">The Project</a></li>
-                            <li><a class="dropdown-item" href="#development" data-i18n="nav_development">Development</a></li>
-                            <li><a class="dropdown-item" href="#realization" data-i18n="nav_realization">Realization</a></li>
-                            <li><a class="dropdown-item" href="#demo" data-i18n="nav_demo">Demo</a></li>
+                            <li><a class="dropdown-item" href="#development" data-i18n="nav_dev">Development</a></li>
+                            <li><a class="dropdown-item" href="#realization" data-i18n="nav_real">Realization</a></li>
+                            <li><a class="dropdown-item" href="#carousel" data-i18n="nav_carousel">Carousel</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -125,26 +120,18 @@
     </nav>
 
     <main>
-
+        
         <section class="hero-section project-hero-pt">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <h1 class="display-4 fw-bold mb-4" data-i18n="hero_h1">Burrows Wheeler's Transform Calculator</h1>
-                        <a href="#abstract" class="btn btn-primary btn-lg mb-3" data-i18n="hero_cta">Check out my journey!</a>
-                        <br>
-                        <a href="../assets/burrows/burrows-wheeler-transform-technical-report.pdf" download target="_blank" class="btn btn-outline-primary btn-lg download-report mb-3" aria-label="Download Technical Report PDF" data-i18n="hero_report">
-                            Download the full Technical Report...
-                        </a>
-                        <br>
-                        <a href="https://github.com/GiZano/burrows-wheeler-calculator" target="_blank" class="btn btn-outline-primary btn-lg download-report" aria-label="View Source Code on GitHub" data-i18n="hero_code">
-                            <i class="fab fa-github"></i> View Source Code
-                        </a>
+                        <h1 class="display-4 fw-bold mb-4" data-i18n="hero_h1">Bench of Kindness Development and Realization</h1>
+                        <a href="#abstract" class="btn btn-primary btn-lg" data-i18n="hero_cta">Check out my journey!</a>
                     </div>
                     <div class="col-lg-6 text-center mt-4 mt-lg-0">
                         <div class="image-container rounded-circle bg-light d-inline-block p-4 bench-main">
-                            <img src="../assets/burrows/burrow-main.webp" 
-                                 alt="Burrows Wheeler Transform Logo" 
+                            <img src="../assets/bench/bench-main.webp" 
+                                 alt="Bench of Kindness Project Logo" 
                                  class="img-fluid rounded-circle img-profilo responsive-img"
                                  width="400" height="400"
                                  fetchpriority="high">
@@ -159,12 +146,11 @@
                 <div class="row">
                     <div class="col-lg-8 mx-auto text-center">
                         <h2 class="mb-4 section-title" data-i18n="abstract_ttl">Abstract</h2>
-                        <p class="text-muted lead" data-i18n="abstract_p">
-                            It is often needed to compress data in order to efficiently send it over the network. 
-                            To do this we first need a special algorithm to transform the string to compress in order for it to be ready for compression. 
-                            This is where the Burrows Wheeler Transform algorithm comes into play. 
-                            In our solution, we develop our own Burrows Wheeler Transform python script. 
-                            The script is then used by the server solutions we developed to make the algorithm available for the services which are then going to compress the data.
+                        <p class="lead text-body" data-i18n="abstract_p">
+                            Realization of the project "<a target="_blank" href="https://costruiamogentilezza.org/strumenti-di-gentilezza/le-panchine-viola/" aria-label="Visit Costruiamo Gentilezza website">Bench of Kindness</a>". 
+                            Development of a bench, mandatorily in a purple shade, to be built by the school and placed inside the school complex.
+                            <br>
+                            To be actually built, the project had to compete against others.
                         </p>
                     </div>
                 </div>
@@ -181,20 +167,31 @@
                         <div class="project-section">
                             <div class="row align-items-center">
                                 <div class="col-lg-6">
-                                    <p class="text-muted lead" data-i18n="proj_p">
-                                        Often, to transmit data, we have to compress it, but to do this we first need to prepare it.
-                                        <br>
-                                        This is where the Burrows Wheeler Transform Algorithm comes in handy.
-                                        The objective of this project is to create a server that makes it possible for clients 
-                                        to send strings, and then be received after being transformed by the server.
+                                    <p class="text-muted lead">
+                                        <span data-i18n="proj_lead">To design the bench, students had to follow specific rules:</span>
                                     </p>
+                                    <ul class="group-list text-muted lead">
+                                        <li class="group-list-item" data-i18n="proj_li1">Build with recycled materials;</li>
+                                        <li class="group-list-item" data-i18n="proj_li2">Paint with a shade of purple;</li>
+                                        <li class="group-list-item" data-i18n="proj_li3">Adorned with phrase or poem about kindness;</li>
+                                        <li class="group-list-item" data-i18n="proj_li4">Provide a QR code to reach the description site.</li>
+                                    </ul>
+                                    <p class="text-muted lead" data-i18n="proj_voted">
+                                        The developed projects, would then be voted by jury basing on:
+                                    </p>
+                                    <ul class="group-list text-muted lead">
+                                        <li class="group-list-item" data-i18n="proj_j1">Feasability;</li>
+                                        <li class="group-list-item" data-i18n="proj_j2">Functionality;</li>
+                                        <li class="group-list-item" data-i18n="proj_j3">Creativity and originality;</li>
+                                        <li class="group-list-item" data-i18n="proj_j4">Disciplinary transversality (number of subjects involved).</li>
+                                    </ul>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="image-container text-center">
-                                        <img src="../assets/burrows/burrow-main.webp" 
-                                             alt="Burrows Wheeler Transform Visualization" 
+                                        <img src="../assets/bench/carousel/carousel1.webp" 
+                                             alt="3D Project visualization of the bench" 
                                              class="responsive-img"
-                                             width="500" height="500"
+                                             width="678" height="557"
                                              loading="lazy">
                                     </div>
                                 </div>
@@ -216,24 +213,22 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-6">
                                     <div class="image-container text-center">
-                                        <img src="../assets/burrows/burrow-wheeler-develop.webp" 
-                                             alt="Terminal Demo of BWT Algorithm" 
+                                        <img src="../assets/bench/carousel/carousel2.webp" 
+                                             alt="Exploded view of the bench components" 
                                              class="responsive-img"
-                                             width="600" height="400"
+                                             width="1163" height="615"
                                              loading="lazy">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="section-content">
-                                        <p class="text-muted lead" data-i18n="dev_lead">
-                                            To develop this project, many different solutions have been applied:
+                                        <p class="lead" style="color: #495057;" data-i18n="dev_p">
+                                            To develop this bench, we decided to use pallets as main material,
+                                            as it is easily reusable and recyclable.
+                                            To put together the parts, we decided to create a steel frame with tubular profiles,
+                                            that we could easily retrieve from dismentled old school desks.
+                                            Next to the seating area, we added a bike rack to encourage sustainable mobility.
                                         </p>
-                                        <ul class="group-list muted lead">
-                                            <li class="group-list-item" data-i18n="dev_li1">Terminal Application</li>
-                                            <li class="group-list-item" data-i18n="dev_li2">FastAPI Client-Server Application</li>
-                                            <li class="group-list-item" data-i18n="dev_li3">Normal Client-Server Application</li>
-                                        </ul>
-                                        <p class="text-muted lead" data-i18n="dev_tail">Other than that, there is also the chance to just use the transformation script for debug.</p>
                                     </div>
                                 </div>
                             </div>
@@ -247,7 +242,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 mx-auto text-left">
-                        <h2 class="mb-4 section-title" data-i18n="real_ttl">Real Life Application</h2>
+                        <h2 class="mb-4 section-title" data-i18n="real_ttl">Real Life Realization</h2>
                     </div>
                     <div class="col-lg-10 mx-auto">
                         <div class="realization-section">
@@ -255,23 +250,21 @@
                                 <div class="col-lg-6">
                                     <div class="section-content">
                                         <p class="text-muted lead" data-i18n="real_p">
-                                            It is now possible to download the code in my github repository. 
-                                            <a class="btn btn-outline-primary fw-bold" target="_blank" href="https://github.com/GiZano/burrows-wheeler-calculator" aria-label="Download BWT Code from GitHub">
-                                                Download Code
-                                            </a> 
-                                            and follow the steps to clone the code 
-                                            in local and then execute it in your local machine! Other than that, it is also possible to run the server side on a machine and then
-                                            access it through a second machine in the network. To do this, you just have to fix the server configuration 
-                                            if you want to use the normal client-server solution.
+                                            Then the project competed against others, resulting in the winning one. <br>
+                                            The realization took place in the school workshop, and it has been decided
+                                            to actually use an already existing bench, painting it purple and adding 
+                                            the bike rack on the back.
+                                            It doesn't fully look like the original project, but it still represents
+                                            the values we wanted to convey.
                                         </p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="image-container text-center">
-                                        <img src="../assets/burrows/burrow-wheeler-real.webp" 
-                                             alt="Final Project Realization Setup" 
+                                        <img src="../assets/bench/carousel/carousel6.webp" 
+                                             alt="Final realization of the purple bench" 
                                              class="responsive-img"
-                                             width="600" height="400"
+                                             width="998" height="661"
                                              loading="lazy">
                                     </div>
                                 </div>
@@ -282,85 +275,70 @@
             </div>
         </section>
 
-        <section id="demo" class="py-5 bg-alt-section">
+        <section id="carousel" class="py-5 bg-alt-section">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-10 mx-auto">
-                        <h2 class="mb-4 section-title" data-i18n="demo_ttl">Interactive Demo</h2>
-                        <p class="lead mb-4" data-i18n="demo_intro">Try the Burrows-Wheeler Transform algorithm with your own input or use one of the examples below:</p>
-                        
-                        <div class="card mb-4 shadow-sm border-0">
-                            <div class="card-body">
-                                <form id="bwt-form">
-                                    <div class="mb-3">
-                                        <label for="bwt-input" class="form-label" data-i18n="demo_label">Enter a string to encode:</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control form-control-lg" id="bwt-input" placeholder="e.g., BANANA" required data-i18n-attr="demo_placeholder">
-                                            <button class="btn btn-primary" type="submit" data-i18n="demo_encode">Encode</button>
-                                        </div>
-                                        <div class="mt-2">
-                                            <small class="text-muted" data-i18n="demo_examples">Try these examples: </small>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary example-btn" data-example="BANANA">BANANA</button>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary example-btn" data-example="MISSISSIPPI">MISSISSIPPI</button>
-                                            <button type="button" class="btn btn-sm btn-outline-secondary example-btn" data-example="ABRACADABRA">ABRACADABRA</button>
-                                        </div>
-                                    </div>
-                                </form>
+                <div class="col-lg-10 mx-auto text-center">
+                    <h2 class="mb-4 section-title" data-i18n="car_ttl">Development Carousel</h2>
+                </div>
+                <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="10000">
+                            <img src="../assets/bench/carousel/carousel1.webp" class="d-block w-100" alt="3D Model" width="678" height="557" loading="lazy">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 data-i18n="car_cap1">Finished 3D Model</h5>
                             </div>
                         </div>
-
-                        <div id="results" class="d-none">
-                            <div class="card mb-4 shadow-sm border-0">
-                                <div class="card-header bg-white">
-                                    <h5 class="mb-0" data-i18n="results_ttl">Results</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row mb-3">
-                                        <div class="col-md-6">
-                                            <p class="mb-1" data-i18n="results_original"><strong>Original string:</strong></p>
-                                            <div class="p-3 bg-light rounded">
-                                                <code id="original-input"></code>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p class="mb-1" data-i18n="results_encoded"><strong>BWT Encoded:</strong></p>
-                                            <div class="p-3 bg-light rounded">
-                                                <code id="bwt-output"></code>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="carousel-item" data-bs-interval="10000">
+                            <img src="../assets/bench/carousel/carousel2.webp" class="d-block w-100" alt="Exploded View" width="1163" height="615" loading="lazy">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 data-i18n="car_cap2">Exploded View</h5>
                             </div>
-
-                            <div class="row">
-                                <div class="col-md-6 mb-4">
-                                    <div class="card h-100 shadow-sm border-0">
-                                        <div class="card-header bg-white">
-                                            <h5 class="mb-0" data-i18n="results_rotations">Rotations</h5>
-                                        </div>
-                                        <div class="card-body p-0" style="max-height: 300px; overflow-y: auto;">
-                                            <ul id="rotations-list" class="list-group list-group-flush">
-                                                </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card h-100 shadow-sm border-0">
-                                        <div class="card-header bg-white">
-                                            <h5 class="mb-0" data-i18n="results_sorted">Sorted Rotations</h5>
-                                        </div>
-                                        <div class="card-body p-0" style="max-height: 300px; overflow-y: auto;">
-                                            <ul id="sorted-rotations" class="list-group list-group-flush">
-                                                </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="10000">
+                            <img src="../assets/bench/carousel/carousel3.webp" class="d-block w-100" alt="Bike Rack Detail" width="561" height="369" loading="lazy">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 data-i18n="car_cap3">Bike Rack 3D Model</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="10000">
+                            <img src="../assets/bench/carousel/carousel4.webp" class="d-block w-100" alt="Bench Model" width="548" height="481" loading="lazy">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 data-i18n="car_cap4">Bench 3D Model</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="10000">
+                            <img src="../assets/bench/carousel/carousel5.webp" class="d-block w-100" alt="Uncolored Model" width="1067" height="892" loading="lazy">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 data-i18n="car_cap5">Finished Uncolored 3D Model</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="10000">
+                            <img src="../assets/bench/carousel/carousel6.webp" class="d-block w-100" alt="Final Product Real Life" width="998" height="661" loading="lazy">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 data-i18n="car_cap6">Final Product</h5>
                             </div>
                         </div>
                     </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev" aria-label="Previous Slide">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next" aria-label="Next Slide">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer class="py-5 bg-dark text-white">
@@ -418,6 +396,5 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <script src="../Script/burrows-wheeler-demo.js" defer></script>
 </body>
 </html>
