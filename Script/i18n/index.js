@@ -1,13 +1,13 @@
 /* Home (index.html) EN/IT dictionary */
 window.I18N_DATA = {
     en: {
-        __title: "Giovanni Zanotti - Software Developer & Edge Computing",
+        __title: "Giovanni Zanotti - BSc Student in Computer Science | IoT & Edge Computing",
         nav_about: "About",
         nav_certifications: "Certifications",
         nav_portfolio: "Portfolio",
         nav_contact: "Contact",
         hero_h1: "Hi, I'm <span class=\"text-primary\">GiZano</span>",
-        hero_h2: "Software Developer | Edge Computing &amp; Cloud Architecture",
+        hero_h2: "BSc Student in Computer Science | IoT &amp; Edge Computing",
         hero_lead: "Building robust IoT ecosystems, high-performance backends, and bridging the gap between low-level hardware constraints and cloud infrastructure.",
         hero_projects: "View Projects",
         hero_contact: "Contact Me",
@@ -74,13 +74,13 @@ window.I18N_DATA = {
         cv_dl: "Download my Resume:"
     },
     it: {
-        __title: "Giovanni Zanotti - Software Developer &amp; Edge Computing",
+        __title: "Giovanni Zanotti - Studente di Informatica (L-31) | IoT & Edge Computing",
         nav_about: "Chi sono",
         nav_certifications: "Certificazioni",
         nav_portfolio: "Portfolio",
         nav_contact: "Contatti",
         hero_h1: "Ciao, sono <span class=\"text-primary\">GiZano</span>",
-        hero_h2: "Software Developer | Edge Computing &amp; Cloud Architecture",
+        hero_h2: "Studente di Informatica (L-31) | IoT &amp; Edge Computing",
         hero_lead: "Progettazione di sistemi IoT robusti e backend ad alte prestazioni, colmando il divario tra i vincoli hardware di basso livello e l'infrastruttura cloud.",
         hero_projects: "Vedi i progetti",
         hero_contact: "Scrivimi",

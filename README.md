@@ -91,7 +91,6 @@ Portfolio/
 │   ├── web-presentations.html # Frontend Showcase
 │   └── be-more/               # React Project Build (compiled, source not available)
 ├── Script/               # Logic
-│   ├── index.js          # Homepage logic (Typewriter, etc.)
 │   ├── nav.js            # Sticky navbar & mobile menu
 │   ├── projects-grid.js  # Dynamic grid rendering
 │   ├── i18n.js           # i18n engine (toggle EN/IT)
