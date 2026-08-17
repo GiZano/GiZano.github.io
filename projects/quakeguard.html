@@ -19,9 +19,9 @@
           "alternateName": "QuakeGuard \u2014 Electro-Domestic Seismic Alarm System",
           "applicationCategory": "IoTApplication",
           "operatingSystem": "Web, ESP32-C3, React Native (Android/iOS)",
-          "softwareVersion": "1.2.0",
+          "softwareVersion": "1.2.1",
           "url": "https://giovanni-zanotti.is-a.dev/projects/quakeguard.html",
-          "description": "Full-stack IoT architecture for real-time earthquake detection and early warning. ESP32-C3 + ADXL345 edge sensors with on-device STA/LTA, ECDSA-signed MQTT telemetry, FastAPI + Redis + PostGIS backend, and a React Native app with on-premise AI emergency reports (Ollama).",
+          "description": "Full-stack IoT architecture for real-time earthquake detection and early warning. ESP32-C3 + ADXL345 edge sensors with on-device STA/LTA and optional GNSS, ECDSA-signed MQTT telemetry, FastAPI + Redis Streams + TimescaleDB/PostGIS backend with per-area geo-zoning, and a React Native app with on-premise AI emergency reports (Ollama).",
           "codeRepository": "https://github.com/GiZano/QuakeGuard",
           "programmingLanguage": [
                 "C++",
@@ -144,7 +144,8 @@
                         A full-stack IoT architecture for real-time detection, analysis and reporting of seismic events.
                         Everyday household appliances — washing machines, TVs, refrigerators — become a distributed
                         earthquake early-warning network that alerts you <strong style="color:#fff">before the shaking arrives</strong>.
-                        <strong style="color:#fff">v1.2.0 AI</strong> generates emergency reports on-premise with Ollama — privacy-first,
+                        <strong style="color:#fff">v1.2.1 Geo-Zoning &amp; GNSS-Ready</strong> — Redis Streams ingestion, per-area cooldown,
+                        TimescaleDB persistence and on-premise AI emergency reports with Ollama — privacy-first,
                         seismic telemetry never leaves the machine.
                     </p>
                     <div class="d-flex flex-wrap gap-2 mb-4">
@@ -257,7 +258,7 @@
                         </div>
                         <h5 class="text-white mb-3"><i class="fas fa-history me-2" style="color:#f1a208"></i><span data-i18n="demo_feed_heading">Recent critical events (last 10)</span></h5>
                         <div class="list-group feed" id="demo-feed" aria-live="polite"></div>
-                        <h5 class="text-white mb-3 mt-4"><i class="fas fa-robot me-2" style="color:#00f5ff"></i><span data-i18n="demo_ai_heading">AI Emergency Report</span> <span class="badge rounded-pill text-bg-info">v1.2.0</span></h5>
+                        <h5 class="text-white mb-3 mt-4"><i class="fas fa-robot me-2" style="color:#00f5ff"></i><span data-i18n="demo_ai_heading">AI Emergency Report</span> <span class="badge rounded-pill text-bg-info">v1.2.1</span></h5>
                         <div class="ai-report" style="background:rgba(3,21,32,0.7);border:1px solid rgba(0,245,255,0.25);border-left:4px solid #00f5ff;border-radius:10px;padding:1rem;" aria-live="polite">
                             <div class="mb-2"><span class="t" style="color:#00f5ff">[AI]</span> <strong id="ai-report-title" style="color:#fff">Magnitude 6.6 &middot; Eastern Sicily</strong></div>
                             <p id="ai-report-body" class="mb-2 text-white" style="font-size:0.92rem;">Moderate-strong event detected by 12 sensors in Sicily. Shaking intensity IV-V MMI; recommend staying away from windows and tall furniture, and monitoring aftershocks over the next 2 hours.</p>
@@ -289,11 +290,11 @@
                         <div class="pipe-arrow"><i class="fas fa-chevron-down"></i></div>
                         <div class="pipe-step"><span class="n">4</span><strong data-i18n="pipe_4_t">Verify</strong><br><span data-i18n="pipe_4_d">Bridge → <code style="color:#00f5ff">POST /readings/</code>. API key, sensor status, anti-replay (60 s) and signature are all validated.</span></div>
                         <div class="pipe-arrow"><i class="fas fa-chevron-down"></i></div>
-                        <div class="pipe-step"><span class="n">5</span><strong data-i18n="pipe_5_t">Queue</strong><br><span data-i18n="pipe_5_d">Rate limit (50 req/s per IP) passes → event pushed to the Redis list; API replies <code style="color:#00f5ff">202 Accepted</code> instantly.</span></div>
+                        <div class="pipe-step"><span class="n">5</span><strong data-i18n="pipe_5_t">Queue</strong><br><span data-i18n="pipe_5_d">Rate limit (50 req/s per IP) passes → event appended to Redis Streams (<code style="color:#00f5ff">readings:stream</code>); API replies <code style="color:#00f5ff">202 Accepted</code> instantly.</span></div>
                         <div class="pipe-arrow"><i class="fas fa-chevron-down"></i></div>
                         <div class="pipe-step"><span class="n">6</span><strong data-i18n="pipe_6_t">Process</strong><br><span data-i18n="pipe_6_d">Worker estimates <code style="color:#00f5ff">M = log10(PGA × 1.6) + 3.0</code>; if M ≥ 4.5 an Alert is triggered.</span></div>
                         <div class="pipe-arrow"><i class="fas fa-chevron-down"></i></div>
-                        <div class="pipe-step"><span class="n">7</span><strong data-i18n="pipe_7_t">Persist &amp; dedup</strong><br><span data-i18n="pipe_7_d">Atomically saved to PostgreSQL + PostGIS; a 60 s Redis cooldown per zone prevents alert storms (outbox pattern).</span></div>
+                        <div class="pipe-step"><span class="n">7</span><strong data-i18n="pipe_7_t">Persist &amp; dedup</strong><br><span data-i18n="pipe_7_d">Atomically saved to TimescaleDB (hypertable) + PostGIS; a per-area Redis cooldown (geohash region or zone) prevents alert storms (outbox pattern).</span></div>
                         <div class="pipe-arrow"><i class="fas fa-chevron-down"></i></div>
                         <div class="pipe-step"><span class="n">8</span><strong data-i18n="pipe_8_t">Alert</strong><br><span data-i18n="pipe_8_d">WebSocket broadcast → mobile SOS haptic vibration + high-priority push notification, sub-second delivery.</span></div>
                         <div class="pipe-arrow"><i class="fas fa-chevron-down"></i></div>
@@ -307,7 +308,7 @@
                     <div class="qg-card">
                         <div class="icon"><i class="fas fa-microchip"></i></div>
                         <h3 data-i18n="arch_iot">IoT Edge Sensors</h3>
-                        <p data-i18n="arch_iot_p">ESP32-C3 (RISC-V) + ADXL345 accelerometer. Runs a FreeRTOS DSP pipeline with O(1) ring-buffer STA/LTA and ECDSA signing on every payload.</p>
+                        <p data-i18n="arch_iot_p">ESP32-C3 (RISC-V) + ADXL345 accelerometer. Runs a FreeRTOS DSP pipeline with O(1) ring-buffer STA/LTA, ECDSA signing on every payload and an optional GNSS subsystem (NEO-6M/M8N) with NVS last-known-fix.</p>
                         <span class="qg-tag">ESP32-C3</span><span class="qg-tag">STA/LTA</span><span class="qg-tag">100 Hz</span>
                         <img src="https://img.shields.io/badge/C%2B%2B-Hardware%20Logic-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" style="height:22px;margin-top:8px;" loading="lazy">
                     </div>
@@ -324,9 +325,9 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="qg-card">
                         <div class="icon"><i class="fas fa-layer-group"></i></div>
-                        <h3 data-i18n="arch_redis">Redis Queue + Pub/Sub</h3>
-                        <p data-i18n="arch_redis_p">Decouples ingestion from processing (producer-consumer). Queue offloading, 60 s per-zone dedup locks and a Dead Letter Queue on failure — plus a dedicated <code style="color:#00f5ff">ai_report_queue</code> for the <code style="color:#00f5ff">ai_report_worker.py</code>, decoupled from the alert engine.</p>
-                        <span class="qg-tag">Producer/Consumer</span><span class="qg-tag">DLQ</span><span class="qg-tag">Outbox</span>
+                        <h3 data-i18n="arch_redis">Redis Streams + Pub/Sub</h3>
+                        <p data-i18n="arch_redis_p">Decouples ingestion from processing (producer-consumer). Redis Streams offloading, per-area dedup locks, a Dead Letter Queue on failure — plus a dedicated <code style="color:#00f5ff">ai_report_queue</code> for the <code style="color:#00f5ff">ai_report_worker.py</code>, decoupled from the alert engine.</p>
+                        <span class="qg-tag">Streams</span><span class="qg-tag">DLQ</span><span class="qg-tag">Outbox</span>
                         <img src="https://img.shields.io/badge/Redis-Message%20Broker-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" style="height:22px;margin-top:8px;" loading="lazy">
                     </div>
                 </div>
@@ -342,9 +343,9 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="qg-card">
                         <div class="icon"><i class="fas fa-database"></i></div>
-                        <h3 data-i18n="arch_pg">PostgreSQL + PostGIS</h3>
-                        <p data-i18n="arch_pg_p">Spatial persistence. Sensors auto-assigned to the smallest containing macro-region via <code style="color:#00f5ff">ST_Contains</code>, ordered by area.</p>
-                        <span class="qg-tag">Spatial</span><span class="qg-tag">Zones</span><span class="qg-tag">Atomic</span>
+                        <h3 data-i18n="arch_pg">PostgreSQL + TimescaleDB + PostGIS</h3>
+                        <p data-i18n="arch_pg_p">Time-series + spatial persistence. Sensor data lands in a TimescaleDB hypertable; zones resolve through a geohash fast-path Redis index, with PostGIS <code style="color:#00f5ff">ST_Contains</code> as the authoritative fallback.</p>
+                        <span class="qg-tag">TimescaleDB</span><span class="qg-tag">Geohash</span><span class="qg-tag">ST_Contains</span>
                         <img src="https://img.shields.io/badge/PostgreSQL-PostGIS-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" style="height:22px;margin-top:8px;" loading="lazy">
                     </div>
                 </div>
@@ -352,7 +353,7 @@
                     <div class="qg-card">
                         <div class="icon"><i class="fas fa-mobile-alt"></i></div>
                         <h3 data-i18n="arch_app">React Native App</h3>
-                        <p data-i18n="arch_app_p">Three-tab app (Monitor, Sensor Map, Settings). WebSocket alerts with SOS haptics &amp; push, live seismograph, offline mode, last-10 alert history, plus a new AI Report UI: banner for the latest alert, feed cards with summary + recommendations, and a "AI Report Unavailable" badge on FAILED.</p>
+                        <p data-i18n="arch_app_p">Three-tab app (Monitor, Sensor Map, Settings). Per-zone live seismograph with a horizontal zone strip, GPS "Detect my zone" via <code style="color:#00f5ff">GET /zones/locate</code>, WebSocket alerts with SOS haptics &amp; push, siren audio (<code style="color:#00f5ff">expo-audio</code>), MIC/RESEARCH dual theme, offline mode, last-10 alert history and AI report cards.</p>
                         <span class="qg-tag">Expo</span><span class="qg-tag">Zustand</span><span class="qg-tag">TanStack Query</span>
                         <img src="https://img.shields.io/badge/React%20Native-Mobile-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Native" style="height:22px;margin-top:8px;" loading="lazy">
                     </div>
@@ -383,16 +384,16 @@
                     <p class="qg-lead" data-i18n="res_lead2">
                         QuakeGuard is engineered for exactly that moment: ingestion is decoupled from processing, requests return
                         <code style="color:#00f5ff">202 Accepted</code> in milliseconds, connection pooling absorbs the load, and a
-                        per-zone Redis cooldown guarantees the network fires <strong style="color:#fff">one clean alert</strong> — not a storm of duplicates.
+                        per-area Redis cooldown guarantees the network fires <strong style="color:#fff">one clean alert</strong> — not a storm of duplicates.
                     </p>
                 </div>
                 <div class="col-lg-6">
                     <div class="qg-card">
                         <h3 class="mb-3" data-i18n="res_card_title">How the spike is absorbed</h3>
-                        <div class="sec-gate"><div class="ico"><i class="fas fa-tachometer-alt"></i></div><div><strong data-i18n="res_queue_t">Producer-consumer queue</strong><p data-i18n="res_queue_p">Ingestion never waits on the database; events offload to Redis instantly.</p></div></div>
+                        <div class="sec-gate"><div class="ico"><i class="fas fa-tachometer-alt"></i></div><div><strong data-i18n="res_queue_t">Producer-consumer queue</strong><p data-i18n="res_queue_p">Ingestion never waits on the database; events offload to Redis Streams instantly.</p></div></div>
                         <div class="sec-gate"><div class="ico"><i class="fas fa-water"></i></div><div><strong data-i18n="res_rate_t">Control-plane rate limit</strong><p data-i18n="res_rate_p">50 req/s per IP, backs off buggy or malicious nodes early.</p></div></div>
                         <div class="sec-gate"><div class="ico"><i class="fas fa-info"></i></div><div><strong data-i18n="res_pool_t">Connection pooling</strong><p data-i18n="res_pool_p">Aggressive SQLAlchemy pool configured for high concurrency, no queue exhaustion.</p></div></div>
-                        <div class="sec-gate"><div class="ico"><i class="fas fa-filter"></i></div><div><strong data-i18n="res_cooldown_t">60 s zone cooldown</strong><p data-i18n="res_cooldown_p">Dedup lock per zone; only the winning worker publishes the Alert (outbox pattern).</p></div></div>
+                        <div class="sec-gate"><div class="ico"><i class="fas fa-filter"></i></div><div><strong data-i18n="res_cooldown_t">Per-area cooldown</strong><p data-i18n="res_cooldown_p">Dedup lock per geohash region or zone; only the winning worker publishes the Alert (outbox pattern).</p></div></div>
                     </div>
                 </div>
             </div>
@@ -450,8 +451,9 @@
                 <h2 class="qg-title" data-i18n="zones_title">Geographic Zones</h2>
                 <div class="accent-bar mx-auto"></div>
                 <p class="qg-lead" data-i18n="zones_lead" style="max-width:720px;margin:0 auto;">
-                    8 global macro-regions are pre-seeded. Sensors are auto-assigned to the smallest containing polygon via a
-                    PostGIS spatial query — with an <strong style="color:#fff">Unknown Region</strong> fallback for unmapped coordinates.
+                    8 global macro-regions are pre-seeded. Zone resolution uses a geohash Redis fast path, with PostGIS
+                    <strong style="color:#fff">ST_Contains</strong> as the authoritative fallback — plus an <strong style="color:#fff">Unknown Region</strong>
+                    fallback for unmapped coordinates. The mobile app can detect your zone with one tap via <code style="color:#00f5ff">GET /zones/locate</code>.
                 </p>
             </div>
             <div class="zone-list">
@@ -480,8 +482,9 @@
                     <div class="road">
                         <div class="road-item done"><span class="ver" data-i18n="road_1_label">v1.0 · Released</span><p data-i18n="road_1"><strong>Edge seismic detection</strong> on ESP32-C3 and local alerts.</p></div>
                         <div class="road-item done"><span class="ver" data-i18n="road_11_label">v1.1 · Released</span><p data-i18n="road_11"><strong>HiveMQ Cloud MQTT (TLS)</strong>, ngrok HTTPS tunnel, security hardening.</p></div>
-                        <div class="road-item done wip"><span class="ver" data-i18n="road_12_label">v1.2 · Current</span><p data-i18n="road_12"><strong>LLM backend</strong> for automatic emergency-report generation from MQTT telemetry.</p></div>
-                        <div class="road-item"><span class="ver" data-i18n="road_13_label">v1.3 · GNSS sync</span><p data-i18n="road_13">Accurate node timestamps, GPS coordinate resolution and ADXL345 calibration.</p></div>
+                        <div class="road-item done wip"><span class="ver" data-i18n="road_12_label">v1.2.1 · Current</span><p data-i18n="road_12"><strong>Geo-Zoning &amp; GNSS-Ready</strong>: Redis Streams ingestion, TimescaleDB persistence, per-area dedup cooldown and on-premise AI emergency reports.</p></div>
+                        <div class="road-item"><span class="ver" data-i18n="road_122_label">v1.2.2 · Cleanup</span><p data-i18n="road_122">SonarCloud cleanup and quality-gate fixes (PR #368).</p></div>
+                        <div class="road-item"><span class="ver" data-i18n="road_13_label">v1.3 · GNSS (in progress)</span><p data-i18n="road_13">GNSS module already done (NEO-6M/M8N, NVS last-known fix); NTP + PPS time sync still pending.</p></div>
                         <div class="road-item"><span class="ver" data-i18n="road_20_label">v2.0 · Triangulation</span><p data-i18n="road_20">Multi-node spatial correlation + AI reports for <strong>epicenter calculation</strong>.</p></div>
                         <div class="road-item"><span class="ver" data-i18n="road_21_label">v2.1 · Dashboards</span><p data-i18n="road_21"><strong>Grafana</strong> live visualization of seismic telemetry.</p></div>
                     </div>
@@ -508,7 +511,8 @@
                             <li><code>frontend-ci</code> — ESLint, npm audit</li>
                             <li><code>iot-ci</code> — PlatformIO compilation</li>
                             <li><code>pr-lint</code> + <code>devops-ci</code></li>
-                            <li>✔️ 85 backend tests + 17 mobile tests</li>
+                            <li>Dedicated <code>geo</code>/<code>timescale</code>/<code>zone</code> CI jobs</li>
+                            <li>✔️ 104 backend tests + 23 mobile tests</li>
                         </ul>
                     </div>
                 </div>
