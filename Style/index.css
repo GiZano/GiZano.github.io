@@ -395,6 +395,12 @@
 .news-img-grid {
     height: 250px;
     object-fit: cover;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+.news-card {
+    margin-bottom: 0;
 }
 
 /* --- UTILITIES --- */
