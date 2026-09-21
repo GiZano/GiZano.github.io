@@ -1,0 +1,42 @@
+name: Generate Linktree QR Code
+
+on:
+  push:
+    paths:
+      - 'CNAME'
+      - 'links.html'
+      - 'Script/generate-qr.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate_qr:
+    runs-on: ubuntu-latest
+    name: Generate QR code for linktree and update README
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install "qrcode[pil]"
+
+      - name: Generate QR code and patch README
+        run: python3 Script/generate-qr.py
+
+      - name: Commit and push if changed
+        run: |
+          if [[ `git status --porcelain assets/home/linktree-qr.png README.md` ]]; then
+            git config --global user.name 'GitHub Actions'
+            git config --global user.email 'actions@github.com'
+            git add assets/home/linktree-qr.png README.md
+            git commit -m "chore: auto-generate linktree QR code"
+            git push
+          fi

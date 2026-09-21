@@ -118,4 +118,14 @@ Portfolio/
 <br><br>
 © 2026 Giovanni Zanotti. All Rights Reserved.
 
+<!-- QR-LINKTREE-START -->
+### 📱 Linktree QR Code
+
+Scan to view all my links:
+
+<img src="assets/home/linktree-qr.png" alt="Linktree QR Code" width="200">
+
+**🔗 [https://giovanni-zanotti.is-a.dev/links](https://giovanni-zanotti.is-a.dev/links)**
+<!-- QR-LINKTREE-END -->
+
 </div>
