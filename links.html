@@ -222,6 +222,38 @@
             white-space: nowrap;
         }
 
+        /* ── QR Code ─────────────────────────────── */
+        .qr-container {
+            margin-top: 3rem;
+            text-align: center;
+            opacity: 0;
+            animation: fadeUp 0.6s ease-out 0.6s forwards;
+            width: 100%;
+        }
+
+        .qr-text {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+        }
+
+        .qr-img {
+            width: 50%;
+            height: auto;
+            border-radius: 14px;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .qr-img:hover {
+            transform: scale(1.02);
+        }
+
         /* ── Footer ──────────────────────────────── */
         .links-footer {
             margin-top: 2.5rem;
@@ -347,6 +379,12 @@
                 </a>
             </li>
         </ul>
+
+        <!-- QR Code -->
+        <div class="qr-container">
+            <p class="qr-text">Scan to share</p>
+            <img src="./assets/home/linktree-qr.png" alt="QR Code to share this page" class="qr-img" loading="lazy">
+        </div>
 
         <!-- Footer -->
         <footer class="links-footer">
