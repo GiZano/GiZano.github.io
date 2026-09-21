@@ -51,9 +51,9 @@ This is a **personal portfolio website** for Giovanni Zanotti, hosted via **GitH
 │   ├── projects-grid.js          # Project grid filtering
 │   ├── burrows-wheeler-demo.js   # BWT interactive demo
 │   ├── quakeguard-demo.js        # QuakeGuard interactive demo
-│   └── update-medium.py          # Script to pull latest Medium articles
+│   └── update-hashnode.py          # Script to pull latest Hashnode articles
 ├── assets/                       # Images, PDFs, and media per project
-├── .github/workflows/            # CI: sitemap generation, Medium RSS, badges
+├── .github/workflows/            # CI: sitemap generation, Hashnode RSS, badges
 ├── CNAME                         # Custom domain config
 ├── sitemap.xml                   # Auto-generated sitemap
 └── robots.txt                    # Crawler directives
@@ -82,7 +82,7 @@ There are two footer patterns:
 
 > **To add/remove social links**: edit the `socials[]` array in `Script/footer.js`. No need to touch individual HTML files (except `index.html` which has its own inline social icons in `#contact`, and `projects/quakeguard.html` which has its own independent footer with custom `qg-footer-bg` styling).
 
-**Current social links (in order):** ORCID → LinkedIn → GitHub → Medium → YouTube
+**Current social links (in order):** ORCID → LinkedIn → GitHub → Hashnode → YouTube
 
 ### CSS
 - CSS custom properties are defined in `Style/globals.css` (`:root` block).
@@ -103,7 +103,7 @@ There are two footer patterns:
 - Push to `main` → GitHub Pages auto-deploys.
 - Three GitHub Actions workflows handle:
   - `generate-sitemap.yml` — rebuilds `sitemap.xml`
-  - `medium-rss.yml` — fetches latest Medium articles
+  - `hashnode-rss.yml` — fetches latest Hashnode articles
   - `badges.yml` — generates repo badges
 
 ## Social Links
@@ -115,5 +115,5 @@ When adding or modifying social links, update **all** footer instances across ev
 | ORCID | https://orcid.org/0009-0000-8900-9586 |
 | LinkedIn | https://www.linkedin.com/in/giovanni-zanotti-it/ |
 | GitHub | https://github.com/GiZano |
-| Medium | https://medium.com/@gizano |
+| Hashnode | https://gizano.hashnode.dev/ |
 | YouTube | https://www.youtube.com/channel/UCgjix1Xt4O97c2sFsFN6_fQ |

@@ -76,8 +76,8 @@ window.I18N_DATA = {
         g6_p: "Una galleria digitale per scoprire poeti e pittori che hanno portato la pace nelle loro opere, in particolare coloro che hanno parlato della guerra e l'hanno davvero vissuta.",
         g7_title: "Gabriele D'Annunzio [IT]",
         g7_p: "Una raccolta digitale utile per ripassare in preparazione a verifiche ed esami per gli studenti delle scuole superiori",
-        footer_tagline: "Studente di Computer Science (BSc) presso UniPi | Specializzato in Edge Computing, Cloud Architecture e IoT.",
-        footer_ttl: "Contattaci",
+        footer_tagline: "Studente BSc in Informatica presso UniPi | Specializzato in Edge Computing, Cloud Architecture e IoT.",
+        footer_ttl: "Contattami",
         footer_email: "<i class=\"fas fa-envelope me-2\"></i>Scrivimi"
     }
 };

@@ -56,8 +56,8 @@ window.I18N_DATA = {
         hosting_p: "Per avere il \"Segretario\" attivo 24/7, ho distribuito il codice Python su un <strong>Raspberry Pi</strong>. <br><br> Questo approccio IoT consente una soluzione a basso consumo e sempre accesa. Il bot gira come servizio systemd (o tramite Docker), assicurando il riavvio automatico se il Pi si riavvia. L'architettura resta così completamente indipendente da hosting cloud di terze parti, dandomi pieno controllo sul flusso dei dati.",
         demo_ttl: "Il bot in azione",
         demo_lead: "Più che una demo, osserva come un semplice messaggio di testo si trasforma in un vero evento di Google Calendar in pochi secondi.",
-        footer_tagline: "Studente di Computer Science (BSc) presso UniPi | Specializzato in Edge Computing, Cloud Architecture e IoT.",
-        footer_ttl: "Contattaci",
+        footer_tagline: "Studente BSc in Informatica presso UniPi | Specializzato in Edge Computing, Cloud Architecture e IoT.",
+        footer_ttl: "Contattami",
         footer_email: "<i class=\"fas fa-envelope me-2\"></i>Scrivimi"
     }
 };

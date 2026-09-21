@@ -37,7 +37,7 @@ window.I18N_DATA = {
         car_cap6: "Final Product",
         footer_tagline: "BSc Computer Science Student at UniPi | Specialized in Edge Computing, Cloud Architecture, and IoT.",
         footer_ttl: "Get in touch",
-        footer_email: "<i class=\"fas fa-envelope me-2\"></i> Email Me"
+        footer_email: "<i class=\"fas fa-envelope me-2\"></i>Email Me"
     },
     it: {
         __title: "Panchina della Gentilezza - GiZano Project",
@@ -74,8 +74,8 @@ window.I18N_DATA = {
         car_cap4: "Modello 3D panchina",
         car_cap5: "Modello 3D non colorato finito",
         car_cap6: "Prodotto finale",
-        footer_tagline: "Studente di Computer Science (BSc) presso UniPi | Specializzato in Edge Computing, Cloud Architecture e IoT.",
-        footer_ttl: "Contattaci",
-        footer_email: "<i class=\"fas fa-envelope me-2\"></i> Scrivimi"
+        footer_tagline: "Studente BSc in Informatica presso UniPi | Specializzato in Edge Computing, Cloud Architecture e IoT.",
+        footer_ttl: "Contattami",
+        footer_email: "<i class=\"fas fa-envelope me-2\"></i>Scrivimi"
     }
 };

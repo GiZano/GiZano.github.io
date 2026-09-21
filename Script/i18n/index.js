@@ -14,7 +14,7 @@ window.I18N_DATA = {
         about_heading: "Engineering Mindset",
         about_p1: "BSc Computer Science Student at the University of Pisa. High School Diploma achieved with maximum honors (100/100 cum laude). My academic focus is centered on <strong>Systems Architecture, Edge Computing</strong>, and building solid logical-mathematical foundations.",
         about_p2: "I approach software engineering as an exact discipline. Designing a scalable, efficient, and clean infrastructure requires a rigorous analytical approach and a deep understanding of low-level system dynamics. My current work bridges the gap between proximity hardware constraints and high-level cloud architectures, developing in <strong>C++, Python, FastAPI, and PostgreSQL</strong>.",
-        medium_label: "Read my latest technical article:",
+        hashnode_label: "Read my latest technical article:",
         cert_main: "Certifications &amp; Training",
         cert_sub: "Industry standard credentials and academic excellence",
         cert_prof: "Professional &amp; Technical Certifications",
@@ -70,7 +70,7 @@ window.I18N_DATA = {
         contact_title: "Let's Connect",
         contact_lead: "I'm open to discussing IoT architectures, Edge computing, and Backend engineering opportunities.",
         contact_mail: "<i class=\"fas fa-envelope me-2\"></i> Reach out directly",
-        medium_cta: "Visit my Medium blog",
+        hashnode_cta: "Visit my Hashnode blog",
         cv_dl: "Download my Resume:"
     },
     it: {
@@ -87,8 +87,8 @@ window.I18N_DATA = {
         about_heading: "Mindset ingegneristico",
         about_p1: "Studente in Computer Science (BSc) presso l'Università di Pisa. Diploma di scuola superiore con il massimo dei voti (100/100 e lode). Il mio focus accademico si concentra su <strong>Systems Architecture, Edge Computing</strong> e solide basi logico-matematiche.",
         about_p2: "Considero l'ingegneria del software una disciplina esatta. Progettare un'infrastruttura scalabile, efficiente e pulita richiede un approccio analitico rigoroso e una profonda comprensione delle dinamiche di basso livello del sistema. Il mio lavoro attuale unisce i vincoli dell'hardware periferico alle architetture cloud di alto livello, sviluppando in <strong>C++, Python, FastAPI e PostgreSQL</strong>.",
-        medium_label: "Leggi il mio ultimo articolo tecnico:",
-        medium_cta: "Visita il mio blog su Medium",
+        hashnode_label: "Leggi il mio ultimo articolo tecnico:",
+        hashnode_cta: "Visita il mio blog su Hashnode",
         cert_main: "Certificazioni &amp; Formazione",
         cert_sub: "Credenziali standard del settore ed eccellenza accademica",
         cert_prof: "Certificazioni Professionali &amp; Tecniche",

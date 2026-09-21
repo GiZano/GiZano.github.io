@@ -26,7 +26,7 @@
         { id: 'ORCID',    href: 'https://orcid.org/0009-0000-8900-9586',                       icon: 'fa-orcid',    label: 'ORCID Researcher Profile' },
         { id: 'LINKEDIN', href: 'https://www.linkedin.com/in/giovanni-zanotti-it/',             icon: 'fa-linkedin', label: 'LinkedIn Profile' },
         { id: 'GITHUB',   href: 'https://github.com/GiZano',                                   icon: 'fa-github',   label: 'GitHub Profile' },
-        { id: 'MEDIUM',   href: 'https://medium.com/@gizano',                                  icon: 'fa-medium',   label: 'Medium Blog' },
+        { id: 'HASHNODE', href: 'https://gizano.hashnode.dev/',                                icon: 'fa-hashnode', label: 'Hashnode Blog' },
         { id: 'YOUTUBE',  href: 'https://www.youtube.com/channel/UCgjix1Xt4O97c2sFsFN6_fQ',    icon: 'fa-youtube',  label: 'YouTube Channel' }
     ];
 

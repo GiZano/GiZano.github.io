@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Build-time updater for the Medium widget on the homepage.
+"""Build-time updater for the Hashnode widget on the homepage.
 
-Fetches the latest article from the Medium RSS feed and inlines its title+link
+Fetches the latest article from the Hashnode RSS feed and inlines its title+link
 into index.html so the content is present in the static HTML at page load
 (no client-side fetch required).
 
@@ -12,8 +12,8 @@ import re
 import urllib.request
 import xml.etree.ElementTree as ET
 
-FEED_URL = "https://medium.com/feed/@gizano"
-BLOG_URL = "https://medium.com/@gizano"
+FEED_URL = "https://gizano.hashnode.dev/rss.xml"
+BLOG_URL = "https://gizano.hashnode.dev/"
 FILE = "index.html"
 
 
@@ -50,14 +50,14 @@ def main():
 
     html = open(FILE, encoding="utf-8").read()
     new_anchor = (
-        '<a id="medium-link" href="%s" target="_blank" rel="noopener noreferrer" '
+        '<a id="hashnode-link" href="%s" target="_blank" rel="noopener noreferrer" '
         'class="text-decoration-none fw-bold text-primary fs-5 d-block text-truncate">%s</a>'
         % (link, title.replace("<", "&lt;").replace(">", "&gt;"))
     )
 
-    pattern = re.compile(r'<a id="medium-link"[^>]*>.*?</a>', re.DOTALL)
+    pattern = re.compile(r'<a id="hashnode-link"[^>]*>.*?</a>', re.DOTALL)
     if not pattern.search(html):
-        print("INFO: medium-link anchor not found; index.html left unchanged")
+        print("INFO: hashnode-link anchor not found; index.html left unchanged")
         return
 
     updated, n = pattern.subn(new_anchor, html)

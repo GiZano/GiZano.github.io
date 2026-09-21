@@ -76,8 +76,8 @@ window.I18N_DATA = {
         results_encoded: "<strong>BWT codificata:</strong>",
         results_rotations: "Rotazioni",
         results_sorted: "Rotazioni ordinate",
-        footer_tagline: "Studente di Computer Science (BSc) presso UniPi | Specializzato in Edge Computing, Cloud Architecture e IoT.",
-        footer_ttl: "Contattaci",
+        footer_tagline: "Studente BSc in Informatica presso UniPi | Specializzato in Edge Computing, Cloud Architecture e IoT.",
+        footer_ttl: "Contattami",
         footer_email: "<i class=\"fas fa-envelope me-2\"></i>Scrivimi"
     }
 };

@@ -95,7 +95,7 @@ Portfolio/
 │   ├── projects-grid.js  # Dynamic grid rendering
 │   ├── i18n.js           # i18n engine (toggle EN/IT)
 │   ├── i18n/             # EN/IT dictionaries (one file per page)
-│   └── update-medium.py  # Medium → portfolio sync script
+│   └── update-hashnode.py  # Hashnode → portfolio sync script
 ├── Style/                # Styling
 │   ├── globals.css       # Variables & Reset
 │   ├── index.css         # Homepage specific styles

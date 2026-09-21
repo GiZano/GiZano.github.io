@@ -56,8 +56,8 @@ window.I18N_DATA = {
         persist_p: "Un software robusto deve anticipare i guasti. CuriousTrip implementa una gestione completa degli errori e un'inizializzazione sicura per garantire stabilità anche quando i servizi esterni vanno in timeout o restituiscono dati non validi. <br><br> Inoltre, l'applicazione include un'utilità dedicata, <code>saver.py</code>. Questo modulo conserva i dati in modo permanente ed esporta i profili in file di testo locali, portabili e in UTF-8.",
         demo_ttl: "L'applicazione in azione",
         demo_lead: "Scopri la velocità di Python mentre CuriousTrip compila un profilo di viaggio in pochi millisecondi, mentre aspetti il risultato.",
-        footer_tagline: "Studente di Computer Science (BSc) presso UniPi | Specializzato in Edge Computing, Cloud Architecture e IoT.",
-        footer_ttl: "Contattaci",
+        footer_tagline: "Studente BSc in Informatica presso UniPi | Specializzato in Edge Computing, Cloud Architecture e IoT.",
+        footer_ttl: "Contattami",
         footer_email: "<i class=\"fas fa-envelope me-2\"></i>Scrivimi"
     }
 };
