@@ -23,7 +23,7 @@
 
     /* ── social links (single source of truth) ─────────────── */
     var socials = [
-        { id: 'ORCID',    href: 'https://orcid.org/0009-0000-8900-9586',                       icon: 'fa-orcid',    label: 'ORCID Researcher Profile' },
+        { id: 'ORCID',    href: 'https://orcid.org/0009-0000-8900-9586',                       icon: 'fa-orcid',    label: 'ORCID Researcher Profile', rel: 'me noopener noreferrer' },
         { id: 'LINKEDIN', href: 'https://www.linkedin.com/in/giovanni-zanotti-it/',             icon: 'fa-linkedin', label: 'LinkedIn Profile' },
         { id: 'GITHUB',   href: 'https://github.com/GiZano',                                   icon: 'fa-github',   label: 'GitHub Profile' },
         { id: 'HASHNODE', href: 'https://gizano.hashnode.dev/',                                icon: 'fa-hashnode', label: 'Hashnode Blog' },
