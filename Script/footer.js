@@ -27,7 +27,8 @@
         { id: 'LINKEDIN', href: 'https://www.linkedin.com/in/giovanni-zanotti-it/',             icon: 'fa-linkedin', label: 'LinkedIn Profile' },
         { id: 'GITHUB',   href: 'https://github.com/GiZano',                                   icon: 'fa-github',   label: 'GitHub Profile' },
         { id: 'HASHNODE', href: 'https://gizano.hashnode.dev/',                                icon: 'fa-hashnode', label: 'Hashnode Blog' },
-        { id: 'YOUTUBE',  href: 'https://www.youtube.com/channel/UCgjix1Xt4O97c2sFsFN6_fQ',    icon: 'fa-youtube',  label: 'YouTube Channel' }
+        { id: 'YOUTUBE',  href: 'https://www.youtube.com/channel/UCgjix1Xt4O97c2sFsFN6_fQ',    icon: 'fa-youtube',  label: 'YouTube Channel' },
+        { id: 'MASTODON', href: 'https://hachyderm.io/@gizano',                                icon: 'fa-mastodon', label: 'Mastodon Profile', rel: 'me noopener noreferrer' }
     ];
 
     /* ── build social icons markup ─────────────────────────── */
@@ -35,8 +36,9 @@
         var html = '';
         for (var i = 0; i < socials.length; i++) {
             var s = socials[i];
+            var rel = s.rel || 'noopener noreferrer';
             html +=
-                '<a target="_blank" href="' + s.href + '" class="text-light social-icon-footer" aria-label="' + s.label + '" rel="noopener noreferrer">' +
+                '<a target="_blank" href="' + s.href + '" class="text-light social-icon-footer" aria-label="' + s.label + '" rel="' + rel + '">' +
                     '<i class="fab ' + s.icon + ' fa-lg"></i>' +
                 '</a>\n';
         }
