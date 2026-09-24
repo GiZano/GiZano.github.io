@@ -27,7 +27,7 @@
         { id: 'LINKEDIN', href: 'https://www.linkedin.com/in/giovanni-zanotti-it/',             icon: 'fa-linkedin', label: 'LinkedIn Profile' },
         { id: 'GITHUB',   href: 'https://github.com/GiZano',                                   icon: 'fa-github',   label: 'GitHub Profile' },
         { id: 'HASHNODE', href: 'https://gizano.hashnode.dev/',                                icon: 'fa-hashnode', label: 'Hashnode Blog' },
-        { id: 'YOUTUBE',  href: 'https://www.youtube.com/channel/UCgjix1Xt4O97c2sFsFN6_fQ',    icon: 'fa-youtube',  label: 'YouTube Channel' },
+        { id: 'YOUTUBE',  href: 'https://www.youtube.com/@GZanotti',    icon: 'fa-youtube',  label: 'YouTube Channel' },
         { id: 'MASTODON', href: 'https://hachyderm.io/@gizano',                                icon: 'fa-mastodon', label: 'Mastodon Profile', rel: 'me noopener noreferrer' }
     ];
 

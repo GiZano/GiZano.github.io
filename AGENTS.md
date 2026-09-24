@@ -116,4 +116,4 @@ When adding or modifying social links, update **all** footer instances across ev
 | LinkedIn | https://www.linkedin.com/in/giovanni-zanotti-it/ |
 | GitHub | https://github.com/GiZano |
 | Hashnode | https://gizano.hashnode.dev/ |
-| YouTube | https://www.youtube.com/channel/UCgjix1Xt4O97c2sFsFN6_fQ |
+| YouTube | https://www.youtube.com/@GZanotti |
