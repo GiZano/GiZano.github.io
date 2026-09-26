@@ -1,0 +1,280 @@
+/* 
+  LevelUp Landing Page Styles 
+  Theme: Alpine Dusk
+*/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --lu-bg-main: #0D1117;
+  --lu-bg-surface: #161B22;
+  --lu-primary: #4397B8;
+  --lu-primary-hover: #327A97;
+  --lu-accent: #E5A970;
+  --lu-text-main: #FFFFFF;
+  --lu-text-sec: #8B949E;
+  --lu-border: #30363D;
+  --lu-font: 'Outfit', sans-serif;
+}
+
+body.levelup-page {
+  background-color: var(--lu-bg-main);
+  color: var(--lu-text-main);
+  font-family: var(--lu-font);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.levelup-page h1, 
+.levelup-page h2, 
+.levelup-page h3, 
+.levelup-page h4 {
+  font-family: var(--lu-font);
+  color: var(--lu-text-main);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.levelup-page p {
+  color: var(--lu-text-sec);
+  line-height: 1.6;
+}
+
+/* Nav / Header */
+.lu-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  max-width: 1400px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.lu-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--lu-text-main);
+}
+
+.lu-brand img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
+/* Hero Section */
+.lu-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  padding: 8rem 5% 4rem; /* Increased top padding to clear absolute nav */
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+  min-height: 100vh;
+}
+
+@media (min-width: 992px) {
+  .lu-hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.lu-hero-content {
+  max-width: 600px;
+}
+
+.lu-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+
+.lu-hero-sub {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  color: var(--lu-text-sec);
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+.lu-hero-visual {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 24px 48px rgba(0,0,0,0.4);
+  border: 1px solid var(--lu-border);
+}
+
+.lu-hero-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Buttons */
+.lu-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.lu-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.lu-btn:active {
+  transform: translateY(2px);
+}
+
+.lu-btn-primary {
+  background-color: var(--lu-primary);
+  color: #FFFFFF;
+}
+
+.lu-btn-primary:hover {
+  background-color: var(--lu-primary-hover);
+  color: #FFFFFF;
+}
+
+.lu-btn-secondary {
+  background-color: var(--lu-bg-surface);
+  color: var(--lu-text-main);
+  border: 1px solid var(--lu-border);
+}
+
+.lu-btn-secondary:hover {
+  background-color: #21262d;
+  color: var(--lu-text-main);
+}
+
+/* Features */
+.lu-features {
+  background-color: var(--lu-bg-surface);
+  padding: 6rem 5%;
+  border-top: 1px solid var(--lu-border);
+  border-bottom: 1px solid var(--lu-border);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lu-features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .lu-features-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+.lu-feature-card {
+  padding: 2rem;
+  border-radius: 16px;
+  background-color: var(--lu-bg-main);
+  border: 1px solid var(--lu-border);
+  transition: transform 0.3s ease;
+}
+
+.lu-feature-card:hover {
+  transform: translateY(-4px);
+}
+
+.lu-feature-icon {
+  font-size: 2rem;
+  color: var(--lu-accent);
+  margin-bottom: 1.5rem;
+}
+
+.lu-feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.lu-feature-card p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* Open Source Section */
+.lu-os {
+  background-color: var(--lu-bg-main);
+  padding: 6rem 5%;
+  border-bottom: 1px solid var(--lu-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.lu-os-content {
+  max-width: 800px;
+}
+
+.lu-os-sub {
+  font-size: 1.125rem;
+  color: var(--lu-text-sec);
+  margin-bottom: 2.5rem;
+}
+
+/* Simple text pages (Privacy) */
+.lu-page-content {
+  max-width: 800px;
+  margin: 8rem auto 4rem;
+  padding: 0 5%;
+  min-height: 60vh;
+}
+
+.lu-page-content h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--lu-border);
+  padding-bottom: 1rem;
+}
+
+.lu-page-content h2 {
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer Overrides for Dark Theme integration */
+#site-footer {
+  background-color: var(--lu-bg-surface) !important;
+  border-top: 1px solid var(--lu-border) !important;
+  color: var(--lu-text-sec) !important;
+}
+
+#site-footer * {
+  color: inherit;
+}
+
+#site-footer a:hover {
+  color: var(--lu-text-main) !important;
+}
