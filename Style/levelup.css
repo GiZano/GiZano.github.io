@@ -41,21 +41,6 @@ body.levelup-page {
 }
 
 /* Nav / Header */
-.lu-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 5%;
-  max-width: 1400px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .lu-brand {
   display: flex;
   align-items: center;
@@ -70,6 +55,21 @@ body.levelup-page {
   width: 40px;
   height: 40px;
   border-radius: 8px;
+}
+
+@media (max-width: 991.98px) {
+  #luNavbar {
+    background-color: var(--lu-bg-surface);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+    border: 1px solid var(--lu-border);
+    box-shadow: 0 16px 48px rgba(0,0,0,0.6);
+  }
+  
+  #luNavbar .nav-item {
+    margin-bottom: 0.5rem;
+  }
 }
 
 /* Hero Section */
