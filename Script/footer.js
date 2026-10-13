@@ -58,7 +58,7 @@
                     /* Column 2 — Email CTA */
                     '<div class="col-md-4 text-center mb-4 mb-md-0">' +
                         '<p class="mb-3 small text-uppercase fw-bold ls-1" data-i18n="footer_ttl">Get in touch</p>' +
-                        '<a href="mailto:gizano&#46;dev&#64;gmail&#46;com" class="btn btn-outline-light btn-sm px-4" data-i18n="footer_email">' +
+                        '<a href="mailto:contact&#64;giovanni-zanotti&#46;is-a&#46;dev" class="btn btn-outline-light btn-sm px-4" data-i18n="footer_email">' +
                             '<i class="fas fa-envelope me-2"></i>Email Me' +
                         '</a>' +
                     '</div>' +
