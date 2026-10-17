@@ -191,6 +191,28 @@
     color: white;
 }
 
+.project-card .btn-danger {
+    color: #dc3545;
+    border: 1px solid #dc3545;
+    background-color: transparent;
+}
+
+.project-card .btn-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.project-card .btn-warning {
+    color: #d97706;
+    border: 1px solid #d97706;
+    background-color: transparent;
+}
+
+.project-card .btn-warning:hover {
+    background-color: #d97706;
+    color: white;
+}
+
 .portfolio-title {
     margin-bottom: 4rem !important;
 }
