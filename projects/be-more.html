@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5JCG2NQS1Y');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <script type="application/ld+json">
+    {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "bE-More",
+          "alternateName": "bE-More — Corporate Energy Monitoring & Edge AI",
+          "applicationCategory": "IoTApplication",
+          "operatingSystem": "Web, Arduino, ThingsBoard",
+          "url": "https://giovanni-zanotti.is-a.dev/projects/be-more.html",
+          "description": "An end-to-end IoT and Edge AI corporate energy monitoring system developed for school Project Day. Integrates Arduino sensor telemetry with ThingsBoard and on-premise AI models.",
+          "codeRepository": "https://github.com/GiZano/bE-More",
+          "programmingLanguage": [
+                "C++",
+                "JavaScript",
+                "Python"
+          ],
+          "datePublished": "2024-05-20",
+          "author": {
+                "@type": "Person",
+                "name": "Giovanni Zanotti",
+                "alternateName": "GiZano",
+                "url": "https://giovanni-zanotti.is-a.dev/",
+                "sameAs": [
+                      "https://github.com/GiZano",
+                      "https://www.linkedin.com/in/giovanni-zanotti-it/",
+                      "https://orcid.org/0009-0000-8900-9586",
+                      "https://www.credly.com/users/giovanni-zanotti",
+                      "https://gizano.hashnode.dev/"
+                ]
+          }
+    }
+    </script>
+
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self'; 
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net; 
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; 
+    font-src 'self' https://fonts.gstatic.com; 
+    img-src 'self' data: https://www.googletagmanager.com https://github.com; 
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://giovanni-zanotti.is-a.dev/projects/be-more">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GiZano Portfolio">
+    <meta property="og:title" content="bE-More - Corporate Energy Optimization & Edge AI | GiZano">
+    <meta property="og:description" content="bE-More is an IoT and Local AI corporate energy monitoring system developed for school Project Day. Built with Arduino, ThingsBoard, and React/Edge AI.">
+    <meta property="og:url" content="https://giovanni-zanotti.is-a.dev/projects/be-more">
+    <meta property="og:image" content="https://giovanni-zanotti.is-a.dev/assets/home/social-share.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="bE-More - Corporate Energy Optimization & Edge AI | GiZano">
+    <meta name="twitter:description" content="bE-More is an IoT and Local AI corporate energy monitoring system developed for school Project Day. Built with Arduino, ThingsBoard, and React/Edge AI.">
+    <meta name="twitter:image" content="https://giovanni-zanotti.is-a.dev/assets/home/social-share.png">
+    
+    <title>bE-More - Corporate Energy Optimization & Edge AI | GiZano</title>
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <meta name="description" content="bE-More is an IoT and Local AI corporate energy monitoring system developed for school Project Day. Built with Arduino, ThingsBoard, and React/Edge AI.">
+    <meta name="author" content="Giovanni Zanotti">
+
+    <link rel="preload" as="image" href="../assets/be-more/logo.webp" fetchpriority="high">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../Style/font-awesome/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="../Style/font-awesome/css/all.min.css"></noscript>
+
+    <link rel="stylesheet" href="../Style/globals.css">
+    <link rel="stylesheet" href="../Style/projects.css">
+    
+    <script src="../Script/nav.js" defer></script>
+    <script src="../Script/i18n/be-more.js" defer></script>
+    <script src="../Script/i18n.js" defer></script>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light navbar-glass fixed-top bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html" aria-label="GiZano - Go to Homepage">GiZano</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Open the navigation menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#portfolio" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_sections">
+                            Sections
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#abstract" data-i18n="nav_abstract">Abstract</a></li>
+                            <li><a class="dropdown-item" href="#objective" data-i18n="nav_objective">Objective & Context</a></li>
+                            <li><a class="dropdown-item" href="#architecture" data-i18n="nav_architecture">IoT Architecture</a></li>
+                            <li><a class="dropdown-item" href="#model" data-i18n="nav_model">Physical Model</a></li>
+                            <li><a class="dropdown-item" href="#impact" data-i18n="nav_impact">Contest Victory</a></li>
+                            <li><a class="dropdown-item" href="#team" data-i18n="nav_team">Team</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html" aria-label="Back to Home" data-i18n="nav_home">
+                            <i class="fas fa-arrow-left me-1"></i> Home
+                        </a>
+                    </li>
+                </ul>
+                <button type="button" id="i18n-toggle" class="btn btn-sm btn-outline-primary rounded-pill fw-semibold ms-lg-3" data-i18n-toggle>EN</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-section project-hero-pt">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <div class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 rounded-pill mb-3 fw-semibold" data-i18n="hero_sub">With Us, bE-More.</div>
+                        <h1 class="display-4 fw-bold mb-3" data-i18n="hero_h1">bE-More: Corporate Energy Optimization</h1>
+                        <p class="lead text-muted mb-4" data-i18n="hero_lead">An end-to-end IoT and Edge AI system designed to monitor, analyze, and optimize corporate energy consumption in real time, aligned with Agenda 2030 goals.</p>
+                        
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <a href="#abstract" class="btn btn-primary btn-lg" aria-label="Explore the project" data-i18n="hero_cta">Explore the Project</a>
+                            <a href="https://gizano.hashnode.dev/winning-a-tech-contest-with-be-more-integrating-iot-and-local-ai-for-a-greener-office" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-lg" aria-label="Read article about bE-More on Hashnode" data-i18n="hero_article">
+                                <i class="fab fa-hashnode me-1"></i> Read Hashnode Article
+                            </a>
+                            <a href="https://github.com/GiZano/bE-More" target="_blank" rel="noopener noreferrer" class="btn btn-outline-success btn-lg" aria-label="View Source Code on GitHub" data-i18n="hero_code">
+                                <i class="fab fa-github me-1"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-center mt-4 mt-lg-0">
+                        <div class="image-container rounded-circle bg-light d-inline-block p-4 shadow-sm">
+                            <img src="../assets/be-more/logo.webp" 
+                                 alt="bE-More Logo" 
+                                 class="img-fluid rounded-circle responsive-img"
+                                 width="400" height="400"
+                                 fetchpriority="high">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABSTRACT SECTION -->
+        <section id="abstract" class="py-5 bg-alt-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 mx-auto text-center">
+                        <h2 class="mb-4 section-title" data-i18n="abstract_ttl">Abstract</h2>
+                        <p class="text-muted lead" data-i18n="abstract_p">
+                            Energy waste in commercial and industrial offices is a silent overhead with significant environmental and economic costs. Developed during our 4th-year high school Project Day following a specialized React course by Sorint.lab, <strong>bE-More</strong> is a comprehensive smart energy platform. It pairs edge microcontroller telemetry (Arduino) with ThingsBoard cloud/local streams and on-premise AI models to automatically identify power drains and trigger immediate optimization actions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OBJECTIVE & CONTEXT SECTION -->
+        <section id="objective" class="py-5 bg-white">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="mb-4 section-title" data-i18n="obj_ttl">Objective & Educational Context</h2>
+                        <p class="text-muted lead mb-4" data-i18n="obj_p">
+                            With strict sustainability directives under <strong>Agenda 2030</strong>, our team set out to engineer a scalable, low-cost solution suitable for small and medium enterprises. The project originated as our capstone for the annual <em>Project Day</em> at I.S. Archimede (class 4Ht-i). Having recently completed an intensive React training program delivered by Sorint.lab, we applied enterprise front-end patterns to visualize telemetry streams in real time.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill" data-i18n="obj_badge1"><i class="fas fa-graduation-cap text-primary me-1"></i> Project Day Capstone</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill" data-i18n="obj_badge2"><i class="fab fa-react text-info me-1"></i> Sorint.lab React Training</span>
+                            <span class="badge bg-light text-dark border px-3 py-2 rounded-pill" data-i18n="obj_badge3"><i class="fas fa-leaf text-success me-1"></i> Agenda 2030 Sustainability</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <div class="image-container">
+                            <img src="../assets/be-more/objective.webp" 
+                                 alt="Agenda 2030 Sustainability and bE-More Objective" 
+                                 class="responsive-img shadow-sm rounded-4"
+                                 width="500" height="500"
+                                 loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IOT ARCHITECTURE SECTION -->
+        <section id="architecture" class="py-5 bg-alt-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                        <h2 class="mb-4 section-title" data-i18n="arch_ttl">IoT Architecture & Edge Intelligence</h2>
+                        <p class="text-muted lead" data-i18n="arch_lead">The system bridges physical edge sensor telemetry with real-time analytics and user control:</p>
+                        <ul class="list-unstyled d-flex flex-column gap-3 text-muted">
+                            <li class="d-flex align-items-start">
+                                <i class="fas fa-microchip text-primary mt-1 me-3 fa-lg"></i>
+                                <span data-i18n="arch_li1"><strong>Sensor Layer (Arduino):</strong> Current transformers, temperature/humidity sensors, and motion detectors capturing power metrics at device-level resolution.</span>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <i class="fas fa-network-wired text-success mt-1 me-3 fa-lg"></i>
+                                <span data-i18n="arch_li2"><strong>Telemetry Pipeline (ThingsBoard):</strong> Real-time bi-directional messaging transmitting sensor state updates and device control commands.</span>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <i class="fas fa-brain text-info mt-1 me-3 fa-lg"></i>
+                                <span data-i18n="arch_li3"><strong>Edge AI & Decision Engine:</strong> Local intelligence inspecting historical patterns to detect anomalous standby spikes, proposing automated power-down states.</span>
+                            </li>
+                            <li class="d-flex align-items-start">
+                                <i class="fas fa-chart-line text-warning mt-1 me-3 fa-lg"></i>
+                                <span data-i18n="arch_li4"><strong>Responsive Control Dashboard:</strong> Web and mobile-accessible interface displaying instantaneous kilowatt-hour metrics, predictive graphs, and alert thresholds.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 text-center">
+                        <div class="image-container">
+                            <img src="../assets/be-more/architecture.webp" 
+                                 alt="bE-More IoT Architecture Diagram" 
+                                 class="responsive-img shadow-sm rounded-4 border bg-white p-3"
+                                 width="600" height="465"
+                                 loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHYSICAL MODEL SECTION -->
+        <section id="model" class="py-5 bg-white">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="mb-3 section-title" data-i18n="model_ttl">Physical Prototype: The Smart Office Model</h2>
+                        <p class="text-muted lead" data-i18n="model_lead">To prove real-world viability, we engineered a scale physical model of a modern office environment:</p>
+                    </div>
+                </div>
+
+                <div class="row g-4 align-items-center mb-4">
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                            <img src="../assets/be-more/model_front.webp" class="card-img-top" alt="Front view of the smart office scale model" width="600" height="400" loading="lazy">
+                            <div class="card-body p-4 bg-light">
+                                <h3 class="h5 fw-bold mb-2">Smart Office Prototype (Front)</h3>
+                                <p class="text-muted small mb-0" data-i18n="model_p1">The prototype integrated working ambient light sensors, automated climate relays, and smart power strips connected directly to our edge boards.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+                            <img src="../assets/be-more/model_back.webp" class="card-img-top" alt="Back electronics view of the smart office scale model" width="600" height="400" loading="lazy">
+                            <div class="card-body p-4 bg-light">
+                                <h3 class="h5 fw-bold mb-2">Wiring & Sensor Interfacing (Rear)</h3>
+                                <p class="text-muted small mb-0" data-i18n="model_p2">This physical testbed allowed live demonstrations of energy-saving triggers — showing visitors in real time how lights, HVAC, and peripherals shut down when rooms emptied.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mt-4">
+                    <div class="col-lg-10 text-center">
+                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden p-3 bg-light">
+                            <img src="../assets/be-more/model_app.webp" class="img-fluid rounded-3" alt="bE-More Control Dashboard Interface" width="1000" height="530" loading="lazy">
+                            <div class="card-body pt-3 pb-1">
+                                <p class="text-muted small mb-0">bE-More Application Mockup & Telemetry View</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IMPACT & TECH CONTEST VICTORY -->
+        <section id="impact" class="py-5 bg-alt-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 mb-4 mb-lg-0">
+                        <div class="d-inline-flex align-items-center badge bg-warning-subtle text-warning-emphasis border border-warning-subtle px-3 py-2 rounded-pill mb-3 fw-semibold">
+                            <i class="fas fa-trophy me-2 text-warning"></i> 1st Place Winner
+                        </div>
+                        <h2 class="mb-4 section-title" data-i18n="impact_ttl">Tech Contest Victory & Practical Results</h2>
+                        <p class="text-muted lead mb-3" data-i18n="impact_p1">
+                            bE-More was presented at our school's competitive Project Day, evaluated by industry professionals and engineers. Thanks to the combination of tangible hardware, functional local AI recommendations, and clean telemetry visualization, our project was awarded <strong>First Place</strong> in the technical competition.
+                        </p>
+                        <p class="text-muted lead mb-4" data-i18n="impact_p2">
+                            Beyond the award, the project validated that corporate sustainability does not require expensive industrial overhaul — smart edge IoT can deliver immediate energy reductions on existing infrastructure.
+                        </p>
+                        <a href="https://gizano.hashnode.dev/winning-a-tech-contest-with-be-more-integrating-iot-and-local-ai-for-a-greener-office" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" aria-label="Read the full article about bE-More on Hashnode" data-i18n="impact_btn">
+                            <i class="fab fa-hashnode me-1"></i> Read the Full Story on Hashnode
+                        </a>
+                    </div>
+                    <div class="col-lg-5 text-center">
+                        <div class="image-container">
+                            <img src="../assets/be-more/conclusion.webp" 
+                                 alt="With us, bE-More Conclusion Graphic" 
+                                 class="responsive-img shadow-sm rounded-4"
+                                 width="450" height="450"
+                                 loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM SECTION -->
+        <section id="team" class="py-5 bg-white">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-lg-8 mx-auto text-center">
+                        <h2 class="mb-3 section-title" data-i18n="team_ttl">The Project Team</h2>
+                        <p class="text-muted lead" data-i18n="team_lead">Built collaboratively by the students of class 4Ht-i at I.S. Archimede:</p>
+                    </div>
+                </div>
+
+                <div class="row g-3 justify-content-center">
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card h-100 border text-center p-3 rounded-3 shadow-sm">
+                            <i class="fab fa-github fa-2x text-dark mb-2"></i>
+                            <h3 class="h6 fw-bold mb-1">Giovanni Zanotti</h3>
+                            <a href="https://github.com/GiZano" target="_blank" rel="noopener noreferrer" class="small text-decoration-none text-primary" aria-label="Giovanni Zanotti on GitHub">GiZano</a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card h-100 border text-center p-3 rounded-3 shadow-sm">
+                            <i class="fab fa-github fa-2x text-dark mb-2"></i>
+                            <h3 class="h6 fw-bold mb-1">Antonio Brambilla</h3>
+                            <a href="https://github.com/LeBramboix" target="_blank" rel="noopener noreferrer" class="small text-decoration-none text-primary" aria-label="Antonio Brambilla on GitHub">LeBramboix</a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card h-100 border text-center p-3 rounded-3 shadow-sm">
+                            <i class="fab fa-github fa-2x text-dark mb-2"></i>
+                            <h3 class="h6 fw-bold mb-1">Gabriele Ciseria</h3>
+                            <a href="https://github.com/Cise07" target="_blank" rel="noopener noreferrer" class="small text-decoration-none text-primary" aria-label="Gabriele Ciseria on GitHub">_CISE_</a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card h-100 border text-center p-3 rounded-3 shadow-sm">
+                            <i class="fab fa-github fa-2x text-dark mb-2"></i>
+                            <h3 class="h6 fw-bold mb-1">Rayan Dourka</h3>
+                            <a href="https://github.com/dourko" target="_blank" rel="noopener noreferrer" class="small text-decoration-none text-primary" aria-label="Rayan Dourka on GitHub">dourko</a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card h-100 border text-center p-3 rounded-3 shadow-sm">
+                            <i class="fab fa-github fa-2x text-dark mb-2"></i>
+                            <h3 class="h6 fw-bold mb-1">Giorgio Forlani</h3>
+                            <a href="https://github.com/forlynss" target="_blank" rel="noopener noreferrer" class="small text-decoration-none text-primary" aria-label="Giorgio Forlani on GitHub">forlynss</a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card h-100 border text-center p-3 rounded-3 shadow-sm">
+                            <i class="fab fa-github fa-2x text-dark mb-2"></i>
+                            <h3 class="h6 fw-bold mb-1">Thomas Ponsini</h3>
+                            <a href="https://github.com/thommypons" target="_blank" rel="noopener noreferrer" class="small text-decoration-none text-primary" aria-label="Thomas Ponsini on GitHub">thomas.ponsinii</a>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card h-100 border text-center p-3 rounded-3 shadow-sm">
+                            <i class="fab fa-github fa-2x text-dark mb-2"></i>
+                            <h3 class="h6 fw-bold mb-1">Thomas Solitro</h3>
+                            <a href="https://github.com/sdrogoooo" target="_blank" rel="noopener noreferrer" class="small text-decoration-none text-primary" aria-label="Thomas Solitro on GitHub">soliz__</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <script src="../Script/footer.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5JCG2NQS1Y"></script>
+</body>
+</html>
