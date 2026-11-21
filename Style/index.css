@@ -56,7 +56,10 @@
 .open-source-card {
     background-color: #161b22;
     border-color: #30363d !important;
-    max-width: 400px;
+    width: 100%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
     transition: transform 0.3s ease;
 }
 
