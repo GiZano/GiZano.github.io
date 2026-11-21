@@ -26,7 +26,7 @@ window.I18N_DATA = {
         hosting_p: "To ensure the \"Secretary\" is awake 24/7, I deployed the Python codebase on a <strong>Raspberry Pi</strong>. <br><br> This IoT approach allows for a low-power, always-on solution. The bot runs as a systemd service (or via Docker), ensuring the restart is automatic if the Pi reboots. This keeps the architecture fully independent from third-party cloud hosting, giving me full control over the data flow.",
         demo_ttl: "Bot in Action",
         demo_lead: "Rather than a demo, watch how a simple text message converts into a real Google Calendar event in seconds.",
-        footer_tagline: "BSc Computer Science Student at UniPi | Specialized in Edge Computing, Cloud Architecture, and IoT.",
+        footer_tagline: "BSc Computer Science Student at UniPi | Embedded Systems, Edge Computing, and IoT Infrastructure.",
         footer_ttl: "Get in touch",
         footer_email: "<i class=\"fas fa-envelope me-2\"></i>Email Me"
     },
@@ -56,7 +56,7 @@ window.I18N_DATA = {
         hosting_p: "Per avere il \"Segretario\" attivo 24/7, ho distribuito il codice Python su un <strong>Raspberry Pi</strong>. <br><br> Questo approccio IoT consente una soluzione a basso consumo e sempre accesa. Il bot gira come servizio systemd (o tramite Docker), assicurando il riavvio automatico se il Pi si riavvia. L'architettura resta così completamente indipendente da hosting cloud di terze parti, dandomi pieno controllo sul flusso dei dati.",
         demo_ttl: "Il bot in azione",
         demo_lead: "Più che una demo, osserva come un semplice messaggio di testo si trasforma in un vero evento di Google Calendar in pochi secondi.",
-        footer_tagline: "Studente BSc in Informatica presso UniPi | Specializzato in Edge Computing, Cloud Architecture e IoT.",
+        footer_tagline: "Studente BSc in Informatica presso UniPi | Sistemi Embedded, Edge Computing e Infrastrutture IoT.",
         footer_ttl: "Contattami",
         footer_email: "<i class=\"fas fa-envelope me-2\"></i>Scrivimi"
     }

@@ -79,9 +79,9 @@
         var btn = document.querySelector('[data-i18n-toggle]');
         if (!btn) return;
         var en = current === 'en';
-        btn.textContent = en ? 'IT' : 'EN';
-        btn.setAttribute('aria-label', en ? 'Passa all\u2019italiano' : 'Switch to English');
-        btn.setAttribute('title', en ? 'Italiano' : 'English');
+        btn.innerHTML = '<i class="fas fa-globe me-1" aria-hidden="true"></i>' + (en ? 'IT' : 'EN');
+        btn.setAttribute('aria-label', en ? 'Passa alla lingua italiana' : 'Switch to English');
+        btn.setAttribute('title', en ? 'Passa a Italiano' : 'Switch to English');
     }
 
     function boot() {

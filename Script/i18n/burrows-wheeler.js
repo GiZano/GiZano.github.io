@@ -36,7 +36,7 @@ window.I18N_DATA = {
         results_encoded: "<strong>BWT Encoded:</strong>",
         results_rotations: "Rotations",
         results_sorted: "Sorted Rotations",
-        footer_tagline: "BSc Computer Science Student at UniPi | Specialized in Edge Computing, Cloud Architecture, and IoT.",
+        footer_tagline: "BSc Computer Science Student at UniPi | Embedded Systems, Edge Computing, and IoT Infrastructure.",
         footer_ttl: "Get in touch",
         footer_email: "<i class=\"fas fa-envelope me-2\"></i>Email Me"
     },
@@ -76,7 +76,7 @@ window.I18N_DATA = {
         results_encoded: "<strong>BWT codificata:</strong>",
         results_rotations: "Rotazioni",
         results_sorted: "Rotazioni ordinate",
-        footer_tagline: "Studente BSc in Informatica presso UniPi | Specializzato in Edge Computing, Cloud Architecture e IoT.",
+        footer_tagline: "Studente BSc in Informatica presso UniPi | Sistemi Embedded, Edge Computing e Infrastrutture IoT.",
         footer_ttl: "Contattami",
         footer_email: "<i class=\"fas fa-envelope me-2\"></i>Scrivimi"
     }

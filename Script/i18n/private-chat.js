@@ -31,7 +31,7 @@ window.I18N_DATA = {
         proto_packet: "Packet Structure",
         proto_schema: "Every message sent over the TCP socket adheres to this schema:",
         proto_note: "This standardization allows for easy expansion of the protocol to include file transfers or encryption in the future.",
-        footer_tagline: "BSc Computer Science Student at UniPi | Specialized in Edge Computing, Cloud Architecture, and IoT.",
+        footer_tagline: "BSc Computer Science Student at UniPi | Embedded Systems, Edge Computing, and IoT Infrastructure.",
         footer_ttl: "Get in touch",
         footer_email: "<i class=\"fas fa-envelope me-2\"></i>Email Me"
     },
@@ -66,7 +66,7 @@ window.I18N_DATA = {
         proto_packet: "Struttura del pacchetto",
         proto_schema: "Ogni messaggio inviato sul socket TCP rispetta questo schema:",
         proto_note: "Questa standardizzazione consente di estendere facilmente il protocollo per includere in futuro trasferimenti di file o crittografia.",
-        footer_tagline: "Studente BSc in Informatica presso UniPi | Specializzato in Edge Computing, Cloud Architecture e IoT.",
+        footer_tagline: "Studente BSc in Informatica presso UniPi | Sistemi Embedded, Edge Computing e Infrastrutture IoT.",
         footer_ttl: "Contattami",
         footer_email: "<i class=\"fas fa-envelope me-2\"></i>Scrivimi"
     }

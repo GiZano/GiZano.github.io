@@ -53,7 +53,7 @@
                     /* Column 1 — Brand & tagline */
                     '<div class="col-md-4 text-center text-md-start mb-4 mb-md-0">' +
                         '<p class="h5 mb-3 fw-bold">GiZano</p>' +
-                        '<p class="text-white-50 small mb-0" data-i18n="footer_tagline">BSc Computer Science Student at UniPi | Specialized in Edge Computing, Cloud Architecture, and IoT.</p>' +
+                        '<p class="text-white-50 small mb-0" data-i18n="footer_tagline">BSc Computer Science Student at UniPi | Embedded Systems, Edge Computing, and IoT Infrastructure.</p>' +
                     '</div>' +
                     /* Column 2 — Email CTA */
                     '<div class="col-md-4 text-center mb-4 mb-md-0">' +

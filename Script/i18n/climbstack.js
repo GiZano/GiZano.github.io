@@ -53,7 +53,7 @@ window.I18N_DATA = {
         eco_play_ttl: "Google Play Store",
         eco_play_desc: "Install the production Android build directly from the Google Play Store.",
         eco_play_btn: "View on Google Play",
-        footer_tagline: "BSc Computer Science Student at UniPi | Specialized in Edge Computing, Cloud Architecture, and IoT.",
+        footer_tagline: "BSc Computer Science Student at UniPi | Embedded Systems, Edge Computing, and IoT Infrastructure.",
         footer_ttl: "Get in touch",
         footer_email: "<i class=\"fas fa-envelope me-2\"></i>Email Me"
     },
@@ -110,7 +110,7 @@ window.I18N_DATA = {
         eco_play_ttl: "Google Play Store",
         eco_play_desc: "Installa la versione di produzione Android direttamente da Google Play.",
         eco_play_btn: "Vedi su Google Play",
-        footer_tagline: "Studente BSc in Informatica presso UniPi | Specializzato in Edge Computing, Cloud Architecture e IoT.",
+        footer_tagline: "Studente BSc in Informatica presso UniPi | Sistemi Embedded, Edge Computing e Infrastrutture IoT.",
         footer_ttl: "Contattami",
         footer_email: "<i class=\"fas fa-envelope me-2\"></i>Inviami un'email"
     }

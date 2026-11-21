@@ -51,7 +51,7 @@ window.I18N_DATA = {
         impact_btn: "<i class=\"fab fa-hashnode me-1\"></i> Read the Full Story on Hashnode",
         team_ttl: "The Project Team",
         team_lead: "Built collaboratively by the students of class 4Ht-i at I.S. Archimede:",
-        footer_tagline: "BSc Computer Science Student at UniPi | Specialized in Edge Computing, Cloud Architecture, and IoT.",
+        footer_tagline: "BSc Computer Science Student at UniPi | Embedded Systems, Edge Computing, and IoT Infrastructure.",
         footer_ttl: "Get in touch",
         footer_email: "<i class=\"fas fa-envelope me-2\"></i>Email Me"
     },
@@ -106,7 +106,7 @@ window.I18N_DATA = {
         impact_btn: "<i class=\"fab fa-hashnode me-1\"></i> Leggi l'articolo completo su Hashnode",
         team_ttl: "Il Team di Sviluppo",
         team_lead: "Sviluppato in collaborazione dagli studenti della classe 4Ht-i dell'I.S. Archimede:",
-        footer_tagline: "Studente BSc in Informatica presso UniPi | Specializzato in Edge Computing, Cloud Architecture e IoT.",
+        footer_tagline: "Studente BSc in Informatica presso UniPi | Sistemi Embedded, Edge Computing e Infrastrutture IoT.",
         footer_ttl: "Contattami",
         footer_email: "<i class=\"fas fa-envelope me-2\"></i>Inviami un'email"
     }

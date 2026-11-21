@@ -11,8 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 el.classList.add('fade-in-up');
             });
             
+            const secondaryWrapper = document.getElementById('secondaryProjectsWrapper');
+            if (secondaryWrapper) {
+                secondaryWrapper.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
             // Remove the button container after showing everything
-            if(container) {
+            if (container) {
                 container.remove();
             }
         });

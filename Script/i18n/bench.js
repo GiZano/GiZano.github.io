@@ -35,7 +35,7 @@ window.I18N_DATA = {
         car_cap4: "Bench 3D Model",
         car_cap5: "Finished Uncolored 3D Model",
         car_cap6: "Final Product",
-        footer_tagline: "BSc Computer Science Student at UniPi | Specialized in Edge Computing, Cloud Architecture, and IoT.",
+        footer_tagline: "BSc Computer Science Student at UniPi | Embedded Systems, Edge Computing, and IoT Infrastructure.",
         footer_ttl: "Get in touch",
         footer_email: "<i class=\"fas fa-envelope me-2\"></i>Email Me"
     },
@@ -74,7 +74,7 @@ window.I18N_DATA = {
         car_cap4: "Modello 3D panchina",
         car_cap5: "Modello 3D non colorato finito",
         car_cap6: "Prodotto finale",
-        footer_tagline: "Studente BSc in Informatica presso UniPi | Specializzato in Edge Computing, Cloud Architecture e IoT.",
+        footer_tagline: "Studente BSc in Informatica presso UniPi | Sistemi Embedded, Edge Computing e Infrastrutture IoT.",
         footer_ttl: "Contattami",
         footer_email: "<i class=\"fas fa-envelope me-2\"></i>Scrivimi"
     }

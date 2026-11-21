@@ -36,7 +36,7 @@ window.I18N_DATA = {
         g6_p: "A digital gallery to discover poets and painters who brought peace in their works, in particular those who talked about the war and actually have lived it.",
         g7_title: "Gabriele D'Annunzio [IT]",
         g7_p: "A digital pantry useful for reviewing in preparation for tests or exams for high school students",
-        footer_tagline: "BSc Computer Science Student at UniPi | Specialized in Edge Computing, Cloud Architecture, and IoT.",
+        footer_tagline: "BSc Computer Science Student at UniPi | Embedded Systems, Edge Computing, and IoT Infrastructure.",
         footer_ttl: "Get in touch",
         footer_email: "<i class=\"fas fa-envelope me-2\"></i>Email Me"
     },
@@ -76,7 +76,7 @@ window.I18N_DATA = {
         g6_p: "Una galleria digitale per scoprire poeti e pittori che hanno portato la pace nelle loro opere, in particolare coloro che hanno parlato della guerra e l'hanno davvero vissuta.",
         g7_title: "Gabriele D'Annunzio [IT]",
         g7_p: "Una raccolta digitale utile per ripassare in preparazione a verifiche ed esami per gli studenti delle scuole superiori",
-        footer_tagline: "Studente BSc in Informatica presso UniPi | Specializzato in Edge Computing, Cloud Architecture e IoT.",
+        footer_tagline: "Studente BSc in Informatica presso UniPi | Sistemi Embedded, Edge Computing e Infrastrutture IoT.",
         footer_ttl: "Contattami",
         footer_email: "<i class=\"fas fa-envelope me-2\"></i>Scrivimi"
     }
