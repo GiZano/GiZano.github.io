@@ -100,7 +100,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_sections">
+                        <a class="nav-link dropdown-toggle" href="../index.html#portfolio" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-i18n="nav_sections">
                             Sections
                         </a>
                         <ul class="dropdown-menu">
@@ -155,9 +155,9 @@
                     <div class="col-lg-8 mx-auto text-center">
                         <h2 class="mb-4 section-title" data-i18n="abstract_ttl">Abstract</h2>
                         <p class="text-muted lead" data-i18n="abstract_p">
-                            The Curious Traveler (also known as CuriousTrip) is a modular, 
-                            high-performance command-line application designed for travel data aggregation. 
-                            By orchestrating nine distinct RESTful APIs, the application generates a comprehensive "Swindle Sheet" — a curated travel profile featuring demographic, meteorological, financial, and cultural insights.
+                            The Curious Traveler (CuriousTrip) is a modular, 
+                            asynchronous command-line application designed for travel data aggregation. 
+                            By orchestrating nine distinct RESTful APIs concurrently, the application generates a comprehensive "Swindle Sheet" — a traveler's slang for a quick-reference cheat sheet summarizing demographic, meteorological, financial, and cultural insights.
                         </p>
                     </div>
                 </div>
@@ -175,9 +175,9 @@
                             <div class="row align-items-center">
                                 <div class="col-lg-6">
                                     <p class="text-muted lead" data-i18n="orch_p">
-                                        The core strength of CuriousTrip lies in its ability to synthesize data from diverse sources into a single, cohesive narrative. Rather than requiring users to manually search multiple websites, the application acts as a centralized hub.
+                                        The core strength of CuriousTrip lies in its ability to synthesize data from diverse public sources into a single, cohesive narrative. Rather than requiring users to manually search multiple websites, the application acts as an asynchronous aggregation engine.
                                         <br><br>
-                                        It seamlessly integrates demographic data from REST Countries, real-time weather from Open-Meteo, live currency exchange rates, culinary suggestions, and daily trivia. This unified approach demonstrates robust handling of various JSON payloads and error states across nine separate external services.
+                                        It orchestrates nine distinct external REST services concurrently: 1) REST Countries (demographics &amp; capitals), 2) Open-Meteo (real-time weather &amp; forecasts), 3) ExchangeRate-API (live currency conversion), 4) TheMealDB (culinary traditions), 5) NumbersAPI (trivia &amp; historical facts), 6) Open-Elevation (altitude profiling), 7) TimeZoneDB (local time offsets), 8) Nager.Date (public holidays), and 9) Wikipedia API (cultural summary).
                                     </p>
                                 </div>
                                 <div class="col-lg-6">
@@ -200,7 +200,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 mx-auto text-end">
-                        <h2 class="mb-4 section-title" data-i18n="async_ttl">The Async Revolution: aiohttp & asyncio</h2>
+                        <h2 class="mb-4 section-title" data-i18n="async_ttl">The Async Architecture: v1 vs v2</h2>
                     </div>
                     <div class="col-lg-10 mx-auto">
                         <div class="development-section">
@@ -217,12 +217,12 @@
                                 <div class="col-lg-6 order-lg-2 order-1">
                                     <div class="section-content">
                                         <p class="text-muted lead" data-i18n="async_p">
-                                            The transition to v2 marked a significant architectural shift from sequential, blocking requests to a fully asynchronous model, resulting in a dramatic reduction in execution time.
+                                            The transition from v1 to v2 marked a fundamental architectural rewrite: while v1 relied on sequential, blocking requests via the standard requests library (accumulating network latency across each endpoint), v2 operates completely non-blocking with aiohttp.ClientSession and asyncio.gather, achieving concurrent I/O with hybrid dependency resolution.
                                         </p>
                                         <ul class="group-list muted lead">
-                                            <li class="group-list-item" data-i18n="async_li1"><strong>Parallel Execution:</strong> Leveraging <code>asyncio.gather</code>, multiple independent API calls are fired concurrently, minimizing wait times.</li>
-                                            <li class="group-list-item" data-i18n="async_li2"><strong>Efficient Connections:</strong> Utilizing <code>aiohttp.ClientSession</code> ensures connections are reused efficiently across the application loop.</li>
-                                            <li class="group-list-item" data-i18n="async_li3"><strong>Hybrid Flow:</strong> A strategic design where dependent data (like country coordinates) is fetched first, unlocking the parallel fetching of the remaining datasets.</li>
+                                            <li class="group-list-item" data-i18n="async_li1"><strong>Parallel Execution:</strong> Leveraging <code>asyncio.gather</code>, multiple independent API calls are fired concurrently, eliminating cumulative round-trip latency.</li>
+                                            <li class="group-list-item" data-i18n="async_li2"><strong>Efficient Connections:</strong> Utilizing <code>aiohttp.ClientSession</code> ensures TCP connection reuse and keep-alive across requests.</li>
+                                            <li class="group-list-item" data-i18n="async_li3"><strong>Hybrid Two-Stage Flow:</strong> Dependent data (country coordinates and capital city) is resolved first, unlocking the simultaneous parallel fetching of the remaining 8 datasets.</li>
                                         </ul>
                                     </div>
                                 </div>
