@@ -74,6 +74,8 @@
     connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2c3e50">
+    <link rel="manifest" href="./site.webmanifest">
     <link rel="canonical" href="https://giovanni-zanotti.is-a.dev/">
     <link rel="alternate" type="text/markdown" href="https://giovanni-zanotti.is-a.dev/llms.txt" title="LLM-friendly text">
     <meta property="og:type" content="website">
@@ -179,7 +181,17 @@
                             I approach software engineering as an exact discipline. Designing a scalable, efficient, and clean infrastructure requires a rigorous analytical approach and a deep understanding of low-level system dynamics. My current work bridges the gap between proximity hardware constraints and high-level cloud architectures, developing in <strong>C++, Python, FastAPI, and PostgreSQL</strong>.
                         </p>
 
-                        <div class="mt-5 p-4 border rounded bg-white shadow-sm mx-auto hashnode-blog-container">
+                        <div class="mt-4 p-4 border rounded bg-white shadow-sm mx-auto text-start">
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="badge bg-primary me-2"><i class="fas fa-compass me-1"></i> Current Focus</span>
+                                <span class="small text-muted fw-semibold" data-i18n="focus_title">Academic Direction &amp; Roadmap</span>
+                            </div>
+                            <p class="mb-0 text-muted small" data-i18n="focus_desc">
+                                Currently pursuing my BSc in Computer Science at the University of Pisa (UniPi) with top academic priority. Moving forward from AI-assisted prototyping, I am systematically rebuilding QuakeGuard from first principles: migrating its edge firmware to Zephyr RTOS, diving deep into low-level C, and preparing for formal verification on safety-critical edge dynamics.
+                            </p>
+                        </div>
+
+                        <div class="mt-3 p-4 border rounded bg-white shadow-sm mx-auto hashnode-blog-container">
                             <span class="badge bg-dark mb-2"><i class="fab fa-hashnode me-1"></i> Hashnode Blog</span>
                             <p class="mb-1 text-muted small" data-i18n="hashnode_label">Read my latest technical article:</p>
                             <a id="hashnode-link" href="https://gizano.hashnode.dev/fighting-decision-fatigue-how-climbstack-was-born" target="_blank" rel="noopener noreferrer" class="text-decoration-none fw-bold text-primary fs-5 d-block text-truncate">Fighting Decision Fatigue: How ClimbStack was Born</a>
@@ -307,6 +319,7 @@
                                 <img src="./assets/quakeguard/logo.png" class="card-img-top project-image" alt="QuakeGuard" width="400" height="400" loading="lazy">
                             </div>
                             <div class="card-body d-flex flex-column">
+                                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle mb-2 align-self-start fw-semibold" data-i18n="p1_award"><i class="fas fa-trophy text-warning me-1"></i> 1st Place National Contest — GF Marilli</span>
                                 <h3 class="card-title project-title h5" data-i18n="p1_name">QuakeGuard</h3>
                                 <p class="card-text text-muted project-description flex-grow-1" data-i18n="p1_desc">Full-Stack IoT Architecture - FastAPI - React Native - ESP32 - Distributed seismic sensor network for real-time earthquake detection and rapid alert propagation via WebSockets.</p>
                                 <div class="project-links mt-auto">
@@ -343,6 +356,7 @@
                                 <img src="./assets/be-more/logo.webp" class="card-img-top project-image" alt="bE-More" width="400" height="400" loading="lazy">
                             </div>
                             <div class="card-body d-flex flex-column">
+                                <span class="badge bg-warning-subtle text-warning-emphasis border border-warning-subtle mb-2 align-self-start fw-semibold" data-i18n="p2_award"><i class="fas fa-trophy text-warning me-1"></i> 1st Place — Project Day Contest</span>
                                 <h3 class="card-title project-title h5" data-i18n="p2_name">bE-More - Energy System</h3>
                                 <p class="card-text text-muted project-description flex-grow-1" data-i18n="p2_desc">IoT System - React - Arduino - Fullstack implementation for corporate energy monitoring and optimization at the edge.</p>
                                 <div class="project-links mt-auto">
@@ -552,12 +566,53 @@
             <div class="container mt-4">
                 <h2 class="text-center mb-5 fw-bold" data-i18n="press_title">Press & Achievements</h2>
                 <div class="row g-4 justify-content-center">
-                    <!-- Bench of Kindness - Prima Treviglio -->
-                    <div class="col-md-6 col-lg-5">
+                    <!-- 1. GF Marilli - HackersGen -->
+                    <div class="col-md-6 col-lg-4">
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.isarchimede.edu.it/2026/10/22/hackersgen-event-2026-larchimede-protagonista-con-i-suoi-talenti-dellinformatica/" class="text-decoration-none">
+                            <div class="card h-100 border-0 shadow-sm overflow-hidden news-card">
+                                <div class="text-center py-2 bg-warning-subtle border-bottom border-warning-subtle">
+                                    <span class="badge bg-warning text-dark fs-6 px-3 py-1 fw-bold"><i class="fas fa-trophy me-1"></i> I.S. Archimede / HackersGen</span>
+                                </div>
+                                <img src="./assets/home/marilli-news.webp" class="card-img-top news-img-grid" alt="Premio GF Marilli - QuakeGuard" width="400" height="250" loading="lazy">
+                                <div class="card-body text-center bg-light">
+                                    <h3 class="h5 text-dark fw-bold mb-1" data-i18n="press_marilli_t">1st Place National Contest — GF Marilli</h3>
+                                    <p class="text-muted small mb-0" data-i18n="press_marilli_s">HackersGen Event 2026 — QuakeGuard</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- 2. Scholarship to Study Abroad - Corriere della Sera & Prima Bergamo -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm overflow-hidden news-card d-flex flex-column">
+                            <div class="text-center py-2 bg-dark">
+                                <span class="badge bg-white text-dark fs-6 px-3 py-1 fw-bold">Corriere della Sera &amp; Prima Bergamo</span>
+                            </div>
+                            <div class="row g-0 flex-grow-1">
+                                <div class="col-6">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://bergamo.corriere.it/notizie/cronaca/24_giugno_24/a-scuola-in-europa-il-viaggio-di-giovanni-da-cologno-alle-fiandre-b138eb4d-a89d-428f-bca1-a42ff9f5axlk.shtml" class="text-decoration-none">
+                                        <img src="./assets/home/scholarship-corriere.webp" class="card-img-top news-img-grid" alt="Scholarship Corriere della Sera" width="200" height="250" loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="col-6">
+                                    <a target="_blank" rel="noopener noreferrer" href="https://primabergamo.it/scuola/quindici-studenti-vincono-la-borsa-di-studio-a-scuola-in-europa-tra-loro-un-bergamasco/" class="text-decoration-none">
+                                        <img src="./assets/home/scholarship-news.webp" class="card-img-top news-img-grid" alt="Scholarship Prima Bergamo" width="200" height="250" loading="lazy">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body text-center bg-light mt-auto">
+                                <h3 class="h5 text-dark fw-bold mb-1" data-i18n="press_sch_t">Scholarship to Study Abroad</h3>
+                                <p class="text-muted small mb-0" data-i18n="press_sch_s">Academic Merit Award</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Bench of Kindness - Prima Treviglio -->
+                    <div class="col-md-6 col-lg-4">
                         <a target="_blank" rel="noopener noreferrer" href="https://primatreviglio.it/attualita/inaugurate-allarchimede-le-panchine-della-gentilezza/" class="text-decoration-none">
                             <div class="card h-100 border-0 shadow-sm overflow-hidden news-card">
                                 <div class="text-center py-2 bg-primary">
-                                    <span class="badge bg-white text-primary fs-6 px-3 py-2 fw-bold">Prima Treviglio</span>
+                                    <span class="badge bg-white text-primary fs-6 px-3 py-1 fw-bold">Prima Treviglio</span>
                                 </div>
                                 <img src="./assets/home/bench-news.webp" class="card-img-top news-img-grid" alt="Bench of Kindness" width="400" height="250" loading="lazy">
                                 <div class="card-body text-center bg-light">
@@ -566,38 +621,6 @@
                                 </div>
                             </div>
                         </a>
-                    </div>
-                    
-                    <!-- Scholarship to Study Abroad - Corriere della Sera & Prima Bergamo -->
-                    <div class="col-md-6 col-lg-5">
-                        <div class="row g-3 align-items-start">
-                            <!-- Corriere della Sera -->
-                            <div class="col-12 col-md-6">
-                                <a target="_blank" rel="noopener noreferrer" href="https://bergamo.corriere.it/notizie/cronaca/24_giugno_24/a-scuola-in-europa-il-viaggio-di-giovanni-da-cologno-alle-fiandre-b138eb4d-a89d-428f-bca1-a42ff9f5axlk.shtml" class="text-decoration-none">
-                                    <div class="card border-0 shadow-sm overflow-hidden news-card">
-                                        <div class="text-center py-2 bg-dark">
-                                            <span class="badge bg-white text-dark fs-6 px-3 py-2 fw-bold">Corriere della Sera</span>
-                                        </div>
-                                        <img src="./assets/home/scholarship-corriere.webp" class="card-img-top news-img-grid" alt="Scholarship Corriere della Sera" width="400" height="250" loading="lazy">
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- Prima Bergamo -->
-                            <div class="col-12 col-md-6">
-                                <a target="_blank" rel="noopener noreferrer" href="https://primabergamo.it/scuola/quindici-studenti-vincono-la-borsa-di-studio-a-scuola-in-europa-tra-loro-un-bergamasco/" class="text-decoration-none">
-                                    <div class="card border-0 shadow-sm overflow-hidden news-card">
-                                        <div class="text-center py-2 bg-success">
-                                            <span class="badge bg-white text-success fs-6 px-3 py-2 fw-bold">Prima Bergamo</span>
-                                        </div>
-                                        <img src="./assets/home/scholarship-news.webp" class="card-img-top news-img-grid" alt="Scholarship Prima Bergamo" width="400" height="250" loading="lazy">
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="text-center mt-3">
-                            <h3 class="h5 text-dark fw-bold mb-1" data-i18n="press_sch_t">Scholarship to Study Abroad</h3>
-                            <p class="text-muted small mb-0" data-i18n="press_sch_s">Academic Merit Award</p>
-                        </div>
                     </div>
                 </div>
             </div>
