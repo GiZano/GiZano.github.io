@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+
+# LLM-friendly context and documentation:
+# https://giovanni-zanotti.is-a.dev/llms.txt
+
 Sitemap: https://giovanni-zanotti.is-a.dev/sitemap.xml

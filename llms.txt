@@ -1,0 +1,36 @@
+# Giovanni Zanotti
+
+> BSc Computer Science Student at the University of Pisa (UniPi) specializing in Embedded Systems, Edge Computing, IoT, and Formal Methods.
+
+Personal portfolio and technical index for Giovanni Zanotti (GiZano), software developer and computer science student at the University of Pisa. His work focuses on safety-critical edge architectures, real-time operating systems (RTOS), low-power IoT sensing networks, and local-first application development.
+
+## Core Projects
+
+- [QuakeGuard](https://giovanni-zanotti.is-a.dev/projects/quakeguard): Real-time seismic detection network at the edge using MEMS accelerometers, RTOS (FreeRTOS / Zephyr), and distributed MQTT telemetry. Winner of the GF Marilli technical competition.
+- [ClimbStack](https://giovanni-zanotti.is-a.dev/projects/climbstack): Local-first, offline-first mobile application gamifying long-term goals into visual climbs, featuring weekly time-blocking and zero cloud latency. Built with React Native and SQLite. Available on Google Play.
+- [bE-More](https://giovanni-zanotti.is-a.dev/projects/be-more): Corporate energy optimization platform bridging edge microcontroller telemetry (Arduino UNO R4 WiFi with custom shield) and local AI decision engines. First-place winner at Project Day.
+- [Burrows-Wheeler Transform Demo](https://giovanni-zanotti.is-a.dev/projects/burrows-wheeler): Interactive web-based visualization of the Burrows-Wheeler block-sorting transform, run-length encoding (RLE), and Huffman coding.
+- [Curious Traveler](https://giovanni-zanotti.is-a.dev/projects/curious-traveler): Real-time flight tracking and discovery dashboard querying open aeronautical APIs.
+- [Bench](https://giovanni-zanotti.is-a.dev/projects/bench): Lightweight hardware profiling and benchmarking tool designed to evaluate local compute throughput.
+
+## Technical Writing & Case Studies
+
+- [Winning a Tech Contest with bE-More](https://gizano.hashnode.dev/winning-a-tech-contest-with-be-more-integrating-iot-and-local-ai-for-a-greener-office): Architectural overview of edge telemetry, physical prototyping with custom Arduino shields, and local AI recommendations.
+- [Fighting Decision Fatigue: How ClimbStack was Born](https://gizano.hashnode.dev/fighting-decision-fatigue-how-climbstack-was-born): Design principles, cognitive friction reduction, and local-first mobile engineering with React Native and SQLite.
+
+## Technical Expertise
+
+- **Embedded Systems & IoT**: Zephyr RTOS, FreeRTOS, Arduino, ESP32, MEMS sensors, MQTT, Edge Computing, hardware prototyping, custom shield design.
+- **Languages**: C, C++, Python, JavaScript (ES6+), TypeScript, SQL, Bash.
+- **Mobile & Web**: React Native, Vanilla HTML5/CSS3/JavaScript, SQLite, Bootstrap, REST APIs.
+- **Academic & Theory**: Formal Methods, Concurrency Semantics, Algorithms & Data Structures.
+
+## Profiles & Contact
+
+- [Website](https://giovanni-zanotti.is-a.dev/)
+- [GitHub](https://github.com/GiZano): Open-source repositories and experimental code.
+- [LinkedIn](https://www.linkedin.com/in/giovanni-zanotti-it/): Professional network and project announcements.
+- [ORCID](https://orcid.org/0009-0000-8900-9586): Academic identifier.
+- [Google Play](https://play.google.com/store/apps/details?id=com.gizano.levelup): ClimbStack mobile application.
+- [Hashnode Blog](https://gizano.hashnode.dev/): In-depth technical articles and engineering deep dives.
+- [YouTube](https://www.youtube.com/@GZanotti): Technical presentations and demos.
