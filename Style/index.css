@@ -213,6 +213,17 @@
     color: white;
 }
 
+.project-card .btn-hashnode {
+    color: #2942ff;
+    border: 1px solid #2942ff;
+    background-color: transparent;
+}
+
+.project-card .btn-hashnode:hover {
+    background-color: #2942ff;
+    color: white;
+}
+
 .portfolio-title {
     margin-bottom: 4rem !important;
 }
