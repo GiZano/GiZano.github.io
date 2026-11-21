@@ -246,27 +246,72 @@
                 <div class="row mb-5">
                     <div class="col-lg-8 mx-auto text-center">
                         <h2 class="mb-3 section-title" data-i18n="model_ttl">Physical Prototype: The Smart Office Model</h2>
-                        <p class="text-muted lead" data-i18n="model_lead">To prove real-world viability, we engineered a scale physical model of a modern office environment:</p>
+                        <p class="text-muted lead" data-i18n="model_lead">To prove real-world viability, we engineered a fully functional, scale physical prototype of a modern office featuring custom microcontroller electronics, sustainable salvaged hardware, and 3D-printed interiors:</p>
                     </div>
                 </div>
 
-                <div class="row g-4 align-items-center mb-4">
+                <div class="row g-4 align-items-center mb-5">
                     <div class="col-md-6">
                         <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
-                            <img src="../assets/be-more/model_front.webp" class="card-img-top" alt="Front view of the smart office scale model" width="600" height="400" loading="lazy">
+                            <img src="../assets/be-more/model_front.webp" class="card-img-top" alt="Front view of the smart office scale model with 3D printed furniture" width="600" height="400" loading="lazy">
                             <div class="card-body p-4 bg-light">
                                 <h3 class="h5 fw-bold mb-2">Smart Office Prototype (Front)</h3>
-                                <p class="text-muted small mb-0" data-i18n="model_p1">The prototype integrated working ambient light sensors, automated climate relays, and smart power strips connected directly to our edge boards.</p>
+                                <p class="text-muted small mb-0" data-i18n="model_p1">Front view of the smart office scale model: 3D-printed miniature furniture, ceiling-mounted LDR light sensor, and television backlight LED strips providing room illumination.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
-                            <img src="../assets/be-more/model_back.webp" class="card-img-top" alt="Back electronics view of the smart office scale model" width="600" height="400" loading="lazy">
+                            <img src="../assets/be-more/model_back.webp" class="card-img-top" alt="Back electronics view of Arduino UNO R4 WiFi and custom shield" width="600" height="400" loading="lazy">
                             <div class="card-body p-4 bg-light">
                                 <h3 class="h5 fw-bold mb-2">Wiring & Sensor Interfacing (Rear)</h3>
-                                <p class="text-muted small mb-0" data-i18n="model_p2">This physical testbed allowed live demonstrations of energy-saving triggers — showing visitors in real time how lights, HVAC, and peripherals shut down when rooms emptied.</p>
+                                <p class="text-muted small mb-0" data-i18n="model_p2">Rear electronics view: Arduino UNO R4 WiFi equipped with a custom expansion shield, acoustic buzzer, red status indicator LED, and physical toggle buttons.</p>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HARDWARE BREAKDOWN -->
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <h3 class="h4 fw-bold mb-3" data-i18n="model_hw_ttl">Prototype Engineering & Hardware Breakdown</h3>
+                    </div>
+                </div>
+
+                <div class="row g-4 justify-content-center mb-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-light">
+                            <div class="text-primary mb-3"><i class="fas fa-microchip fa-2x"></i></div>
+                            <h4 class="h5 fw-bold mb-2" data-i18n="model_card1_ttl">Arduino UNO R4 WiFi & Custom Shield</h4>
+                            <p class="text-muted small mb-0" data-i18n="model_card1_desc">The prototype's brain is an Arduino UNO R4 with onboard Wi-Fi and Bluetooth. A custom-built shield handles the wiring cleanly, interfacing the microcontroller with sensors and power lines.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-light">
+                            <div class="text-warning mb-3"><i class="fas fa-lightbulb fa-2x"></i></div>
+                            <h4 class="h5 fw-bold mb-2" data-i18n="model_card2_ttl">Recycled TV Backlight LEDs</h4>
+                            <p class="text-muted small mb-0" data-i18n="model_card2_desc">Embracing sustainability and circular hardware, lighting was crafted by salvaging actual LED strips from television backlights, wired directly to the custom shield for bright, energy-efficient illumination.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-light">
+                            <div class="text-info mb-3"><i class="fas fa-sun fa-2x"></i></div>
+                            <h4 class="h5 fw-bold mb-2" data-i18n="model_card3_ttl">Ceiling LDR & Auto-Dimming</h4>
+                            <p class="text-muted small mb-0" data-i18n="model_card3_desc">A light sensor (LDR) mounted at the top of the room measures ambient daylight. In automatic mode, if natural light surpasses a set threshold, the lights instantly power down to eliminate unnecessary power draw.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-light">
+                            <div class="text-danger mb-3"><i class="fas fa-toggle-on fa-2x"></i></div>
+                            <h4 class="h5 fw-bold mb-2" data-i18n="model_card4_ttl">Dual Buttons & Sensory Feedback</h4>
+                            <p class="text-muted small mb-0" data-i18n="model_card4_desc">Two physical buttons allow manual control: one toggles lights ON/OFF, the other toggles Auto Mode. A bright red status LED illuminates when Auto Mode is active, and an acoustic buzzer beeps on every mode toggle.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6">
+                        <div class="card h-100 border-0 shadow-sm rounded-4 p-4 bg-light">
+                            <div class="text-success mb-3"><i class="fas fa-cube fa-2x"></i></div>
+                            <h4 class="h5 fw-bold mb-2" data-i18n="model_card5_ttl">3D-Printed Miniature Furniture</h4>
+                            <p class="text-muted small mb-0" data-i18n="model_card5_desc">All desks, chairs, and office workstations were custom modeled and 3D printed to accurately recreate an authentic modern corporate office to evaluate lumen dispersion and aesthetic appeal.</p>
                         </div>
                     </div>
                 </div>
