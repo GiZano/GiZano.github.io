@@ -70,8 +70,8 @@
     script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net; 
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; 
     font-src 'self' https://fonts.gstatic.com; 
-    img-src 'self' data: https://www.googletagmanager.com; 
-    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'">
+    img-src 'self' data: https://www.googletagmanager.com https://github.com https://avatars.githubusercontent.com; 
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://cdn.jsdelivr.net https://api.github.com; object-src 'none'; base-uri 'self'">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2c3e50">
@@ -118,6 +118,7 @@
     <script src="./Script/projects-grid.js" defer></script>
     <script src="./Script/i18n/index.js" defer></script>
     <script src="./Script/i18n.js" defer></script>
+    <script src="./Script/contributors.js" defer></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-glass shadow-sm">
@@ -185,14 +186,14 @@
                         <div class="mt-4 p-4 border rounded bg-white shadow-sm mx-auto text-start">
                             <div class="d-flex align-items-center mb-3">
                                 <span class="badge bg-primary me-2"><i class="fas fa-university me-1"></i> UniPi</span>
-                                <span class="small text-muted fw-semibold" data-i18n="academic_title">Core Coursework &amp; Academic Credits — Year 1 (L-31, 60 ECTS)</span>
+                                <span class="small text-muted fw-semibold" data-i18n="academic_title">Insegnamenti del 1° Anno &amp; Crediti Accademici — UniPi L-31 (59 CFU)</span>
                             </div>
                             <div class="row g-3">
                                 <div class="col-12 col-md-6">
                                     <div class="p-3 border rounded-3 bg-light h-100">
                                         <div class="d-flex align-items-center mb-2">
                                             <span class="badge bg-success-subtle text-success-emphasis border border-success-subtle small me-2">Sem. I</span>
-                                            <span class="fw-bold small text-dark" data-i18n="academic_sem1">Semester I · In corso (Currently Attending)</span>
+                                            <span class="fw-bold small text-dark" data-i18n="academic_sem1">Insegnamenti Principali · I Semestre (In Corso)</span>
                                         </div>
                                         <ul class="list-unstyled mb-0 small text-muted">
                                             <li class="mb-2">
@@ -218,7 +219,7 @@
                                     <div class="p-3 border rounded-3 bg-light h-100 d-flex flex-column">
                                         <div class="d-flex align-items-center mb-2">
                                             <span class="badge bg-secondary-subtle text-secondary-emphasis border border-secondary-subtle small me-2">Sem. II</span>
-                                            <span class="fw-bold small text-dark" data-i18n="academic_sem2">Semester II · Previsto</span>
+                                            <span class="fw-bold small text-dark" data-i18n="academic_sem2">Insegnamenti Principali · II Semestre (Previsto)</span>
                                         </div>
                                         <ul class="list-unstyled mb-3 small text-muted">
                                             <li class="mb-2">
@@ -227,10 +228,10 @@
                                             </li>
                                         </ul>
                                         <div class="mt-auto pt-2 border-top">
-                                            <div class="small fw-semibold text-dark mb-1" data-i18n="academic_cfu_title">Crediti Aggiuntivi Riconosciuti (5 CFU):</div>
+                                            <div class="small fw-semibold text-dark mb-1" data-i18n="academic_cfu_title">Crediti Registrati a Libretto (5 CFU):</div>
                                             <ul class="list-unstyled mb-0 small text-muted">
-                                                <li class="mb-1"><i class="fas fa-check-circle text-success me-1"></i> <span data-i18n="academic_cfu_en"><strong>Lingua Inglese (3 CFU):</strong> convalidati tramite certificazione Cambridge B2 First (C1).</span></li>
-                                                <li><i class="fas fa-check-circle text-success me-1"></i> <span data-i18n="academic_cfu_tolc"><strong>Competenze di Base (2 CFU):</strong> riconosciuti al superamento del TOLC-S.</span></li>
+                                                <li class="mb-1"><i class="fas fa-check-circle text-success me-1"></i> <span data-i18n="academic_cfu_en"><strong>Lingua Inglese (3 CFU):</strong> convalidati e registrati a libretto tramite certificazione Cambridge B2 First (Grade A, CEFR C1).</span></li>
+                                                <li><i class="fas fa-check-circle text-success me-1"></i> <span data-i18n="academic_cfu_tolc"><strong>Competenze di Base (2 CFU):</strong> registrati a libretto al superamento del test TOLC-S (CISIA).</span></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -522,12 +523,18 @@
                     <h2 class="fw-bold text-white mb-0" data-i18n="os_title">Open Source Contributions</h2>
                 </div>
                 <p class="text-center mb-5 open-source-text max-w-700 mx-auto" data-i18n="os_text">
-                    I actively contribute to <strong>SymPy</strong> and other open-source projects. Navigating massive, production-grade codebases has sharpened my skills in CI/CD pipelines, strict PEP8 standards, and handling rigorous code reviews.
+                    From upstream contributions to established scientific libraries like SymPy, to authoring and actively maintaining open-source systems with external community contributors.
                 </p>
 
-                <div class="row g-4 justify-content-center">
-                    <!-- SymPy PR 29515 (Centered Single Card) -->
-                    <div class="col-12 col-md-8 col-lg-6">
+                <!-- Sub-section 1: Upstream Contributions -->
+                <div class="d-flex align-items-center mb-4">
+                    <span class="badge bg-secondary text-light border border-secondary-subtle px-3 py-1 fw-semibold text-uppercase font-monospace small" data-i18n="os_sub_upstream_badge">Upstream Contributions</span>
+                    <div class="border-top border-secondary flex-grow-1 opacity-25 ms-3"></div>
+                </div>
+
+                <div class="row g-4 justify-content-center mb-5">
+                    <!-- SymPy PR 29515 -->
+                    <div class="col-12 col-md-10 col-lg-8">
                         <div class="card h-100 border rounded p-4 card-link-wrapper open-source-card w-100">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <div class="d-flex align-items-center">
@@ -554,6 +561,137 @@
                                     <span class="text-danger"><i class="fas fa-minus me-1"></i>20 deletions</span>
                                 </div>
                                 <span class="small text-muted-gh"><i class="fab fa-python me-1"></i> Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sub-section 2: Maintained Projects -->
+                <div class="d-flex align-items-center mb-4">
+                    <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-1 fw-semibold text-uppercase font-monospace small" data-i18n="os_sub_maintained_badge">Maintained Repositories &amp; Community</span>
+                    <div class="border-top border-secondary flex-grow-1 opacity-25 ms-3"></div>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <!-- 1. ClimbStack (Maintained - First Priority) -->
+                    <div class="col-12 col-lg-6">
+                        <div class="card h-100 border rounded p-4 card-link-wrapper open-source-card w-100">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-book-bookmark me-2 text-info"></i>
+                                    <span class="small fw-bold text-white">ClimbStack / climbstack-app</span>
+                                </div>
+                                <div class="d-flex gap-2 align-items-center">
+                                    <span class="badge bg-primary-subtle text-info border border-info-subtle small"><i class="fas fa-user-shield me-1"></i> Maintainer</span>
+                                    <span class="badge bg-dark text-success border border-success-subtle small"><i class="fas fa-users me-1"></i> <span id="climbstack-count">5 contributors</span></span>
+                                </div>
+                            </div>
+                            <h3 class="h5 text-white mb-2">
+                                <a href="https://github.com/ClimbStack/climbstack-app" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none stretched-link" data-i18n="os_climbstack_title">
+                                    ClimbStack App Repository
+                                </a>
+                            </h3>
+                            <p class="small mb-3 pr-description" data-i18n="os_climbstack_d">
+                                Lead maintainer and architect for the offline-first React Native codebase. Reviewing and merging community PRs, structuring SQLite migration pipelines, and shipping to Google Play users.
+                            </p>
+
+                            <!-- Merged Community PRs -->
+                            <div class="small mb-3 position-relative z-index-2 text-muted-gh">
+                                <span class="fw-semibold text-light d-block mb-1" data-i18n="os_reviewed_prs_title"><i class="fas fa-code-pull-request me-1 text-purple"></i> Merged Community Contributions:</span>
+                                <ul class="list-unstyled mb-0 ps-1">
+                                    <li class="mb-1 text-truncate">
+                                        <i class="fas fa-check text-success me-1 small"></i>
+                                        <a href="https://github.com/ClimbStack/climbstack-app/pull/194" target="_blank" rel="noopener noreferrer" class="repo-sublink">#194 Persistent Achievements System</a> <span class="text-muted-gh small">by @matotvrdon</span>
+                                    </li>
+                                    <li class="text-truncate">
+                                        <i class="fas fa-check text-success me-1 small"></i>
+                                        <a href="https://github.com/ClimbStack/climbstack-app/pull/119" target="_blank" rel="noopener noreferrer" class="repo-sublink">#119 Batch SQLite Transaction Storage</a> <span class="text-muted-gh small">by @patrik1531</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-auto pt-3 pr-footer d-flex flex-wrap justify-content-between align-items-center gap-2">
+                                <div class="d-flex align-items-center gap-2 position-relative z-index-2" id="climbstack-contributors-container">
+                                    <span class="text-muted-gh small me-1" data-i18n="os_team">Team:</span>
+                                    <div class="contributor-avatars d-inline-flex" id="climbstack-avatars">
+                                        <a href="https://github.com/GiZano" target="_blank" rel="noopener noreferrer" class="contributor-avatar-link" title="GiZano (Maintainer)" aria-label="GiZano">
+                                            <img src="https://github.com/GiZano.png?size=48" alt="GiZano" class="contributor-avatar" width="28" height="28" loading="lazy">
+                                        </a>
+                                        <a href="https://github.com/matotvrdon" target="_blank" rel="noopener noreferrer" class="contributor-avatar-link" title="matotvrdon" aria-label="matotvrdon">
+                                            <img src="https://github.com/matotvrdon.png?size=48" alt="matotvrdon" class="contributor-avatar" width="28" height="28" loading="lazy">
+                                        </a>
+                                        <a href="https://github.com/patrik1531" target="_blank" rel="noopener noreferrer" class="contributor-avatar-link" title="patrik1531" aria-label="patrik1531">
+                                            <img src="https://github.com/patrik1531.png?size=48" alt="patrik1531" class="contributor-avatar" width="28" height="28" loading="lazy">
+                                        </a>
+                                        <a href="https://github.com/V-Kozintsev" target="_blank" rel="noopener noreferrer" class="contributor-avatar-link" title="V-Kozintsev" aria-label="V-Kozintsev">
+                                            <img src="https://github.com/V-Kozintsev.png?size=48" alt="V-Kozintsev" class="contributor-avatar" width="28" height="28" loading="lazy">
+                                        </a>
+                                        <a href="https://github.com/Gheb6" target="_blank" rel="noopener noreferrer" class="contributor-avatar-link" title="Gheb6" aria-label="Gheb6">
+                                            <img src="https://github.com/Gheb6.png?size=48" alt="Gheb6" class="contributor-avatar" width="28" height="28" loading="lazy">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="small text-muted-gh">
+                                    <span class="me-2"><i class="fab fa-react me-1 text-info"></i> React Native</span>
+                                    <span><i class="fas fa-database me-1 text-warning"></i> SQLite</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. LeetCode Journey Template (Maintained - Second Priority) -->
+                    <div class="col-12 col-lg-6">
+                        <div class="card h-100 border rounded p-4 card-link-wrapper open-source-card w-100">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-book-bookmark me-2 text-warning"></i>
+                                    <span class="small fw-bold text-white">GiZano / leetcode-journey-template</span>
+                                </div>
+                                <div class="d-flex gap-2 align-items-center">
+                                    <span class="badge bg-primary-subtle text-info border border-info-subtle small"><i class="fas fa-user-shield me-1"></i> Author</span>
+                                    <span class="badge bg-dark text-success border border-success-subtle small"><i class="fas fa-users me-1"></i> <span id="leetcode-count">2 contributors</span></span>
+                                </div>
+                            </div>
+                            <h3 class="h5 text-white mb-2">
+                                <a href="https://github.com/GiZano/leetcode-journey-template" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none stretched-link" data-i18n="os_leetcode_title">
+                                    LeetCode Journey Template
+                                </a>
+                            </h3>
+                            <p class="small mb-3 pr-description" data-i18n="os_leetcode_d">
+                                Author and maintainer of an open-source scaffolding system for algorithmic tracking, featuring multi-language GitHub Actions CI matrices and community contributions.
+                            </p>
+
+                            <!-- Merged Community PRs -->
+                            <div class="small mb-3 position-relative z-index-2 text-muted-gh">
+                                <span class="fw-semibold text-light d-block mb-1" data-i18n="os_reviewed_prs_title"><i class="fas fa-code-pull-request me-1 text-purple"></i> Merged Community Contributions:</span>
+                                <ul class="list-unstyled mb-0 ps-1">
+                                    <li class="mb-1 text-truncate">
+                                        <i class="fas fa-check text-success me-1 small"></i>
+                                        <a href="https://github.com/GiZano/leetcode-journey-template/pull/27" target="_blank" rel="noopener noreferrer" class="repo-sublink">#27 Automated Test Suite &amp; Coverage</a> <span class="text-muted-gh small">by @Golden007-prog</span>
+                                    </li>
+                                    <li class="text-truncate">
+                                        <i class="fas fa-hourglass-half text-warning me-1 small"></i>
+                                        <a href="https://github.com/GiZano/leetcode-journey-template/pull/28" target="_blank" rel="noopener noreferrer" class="repo-sublink">#28 Java Runner Support (In Review)</a> <span class="text-muted-gh small">by @aniketShukla1605</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-auto pt-3 pr-footer d-flex flex-wrap justify-content-between align-items-center gap-2">
+                                <div class="d-flex align-items-center gap-2 position-relative z-index-2" id="leetcode-contributors-container">
+                                    <span class="text-muted-gh small me-1" data-i18n="os_team">Team:</span>
+                                    <div class="contributor-avatars d-inline-flex" id="leetcode-avatars">
+                                        <a href="https://github.com/GiZano" target="_blank" rel="noopener noreferrer" class="contributor-avatar-link" title="GiZano (Maintainer)" aria-label="GiZano">
+                                            <img src="https://github.com/GiZano.png?size=48" alt="GiZano" class="contributor-avatar" width="28" height="28" loading="lazy">
+                                        </a>
+                                        <a href="https://github.com/Golden007-prog" target="_blank" rel="noopener noreferrer" class="contributor-avatar-link" title="Golden007-prog" aria-label="Golden007-prog">
+                                            <img src="https://github.com/Golden007-prog.png?size=48" alt="Golden007-prog" class="contributor-avatar" width="28" height="28" loading="lazy">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="small text-muted-gh">
+                                    <span class="me-2"><i class="fab fa-python me-1 text-primary"></i> Python</span>
+                                    <span><i class="fas fa-gears me-1 text-light"></i> GitHub Actions</span>
+                                </div>
                             </div>
                         </div>
                     </div>
