@@ -99,7 +99,6 @@
                         <li><strong>Data Retention Window:</strong> User and event data retention is configured to <strong>14 months</strong> (the maximum standard retention period before automatic and irreversible deletion from Google Analytics servers).</li>
                         <li><strong>Google Signals Disabled:</strong> Google Signals cross-device tracking is disabled (<code>allow_google_signals: false</code>) to prevent user identification across Google accounts and services.</li>
                         <li><strong>Ad Personalization Disabled:</strong> Advertising personalization and remarketing features are disabled (<code>allow_ad_personalization_signals: false</code>).</li>
-                        <li><strong>Restricted Data Processing:</strong> Enabled (<code>restricted_data_processing: true</code>).</li>
                     </ul>
 
                     <h2 class="h4 fw-bold mb-3 mt-5" id="cookies">4. Cookies & Preference Management</h2>
@@ -122,8 +121,9 @@
                     <h2 class="h4 fw-bold mb-3 mt-5" id="third">6. Self-Hosted Infrastructure & Third Parties</h2>
                     <p class="text-muted">To eliminate unauthorized data leakage to third-party CDNs:</p>
                     <ul class="text-muted">
-                        <li><strong>Self-Hosted Typography & Frameworks:</strong> All font files (Inter, Exo 2, Rajdhani WOFF2), vector icons (Font Awesome), and framework scripts/styles (Bootstrap CSS and JavaScript) are hosted locally on this origin. No IP addresses or requests are sent to Google Fonts, Google Hosted Libraries, or jsDelivr CDNs.</li>
+                        <li><strong>Self-Hosted Typography & Frameworks:</strong> All font files (Inter, Exo 2, Rajdhani, Merriweather WOFF2), vector icons (Font Awesome), and framework scripts/styles (Bootstrap CSS and JavaScript) are hosted locally on this origin. No IP addresses or requests are sent to Google Fonts, Google Hosted Libraries, or jsDelivr CDNs.</li>
                         <li><strong>Google Analytics 4 (Google LLC):</strong> Dispatched only upon affirmative user consent. For details, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.</li>
+                        <li><strong>Optional On-Demand Video Embedding (QuakeGuard Project):</strong> The QuakeGuard project page offers video demonstrations that can be activated on demand. Only when you actively click the preview button to watch the video, an embedded player from YouTube (operated via <code>youtube-nocookie.com</code> in privacy-enhanced mode) is loaded into the page. No network request or cookie is sent to YouTube prior to your explicit click.</li>
                     </ul>
 
                     <h2 class="h4 fw-bold mb-3 mt-5" id="rights">7. Your Rights under GDPR</h2>
