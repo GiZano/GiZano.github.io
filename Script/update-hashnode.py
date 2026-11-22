@@ -8,6 +8,7 @@ into index.html so the content is present in the static HTML at page load
 Idempotent: if the feed is unreachable or a change is not needed, index.html
 is left untouched and the script returns success.
 """
+import html
 import re
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -48,19 +49,19 @@ def main():
     title = " ".join(title_el.text.split())
     link = link_el.text.strip() or BLOG_URL
 
-    html = open(FILE, encoding="utf-8").read()
+    html_content = open(FILE, encoding="utf-8").read()
     new_anchor = (
         '<a id="hashnode-link" href="%s" target="_blank" rel="noopener noreferrer" '
         'class="text-decoration-none fw-bold text-primary fs-5 d-block text-truncate">%s</a>'
-        % (link, title.replace("<", "&lt;").replace(">", "&gt;"))
+        % (html.escape(link, quote=True), html.escape(title, quote=True))
     )
 
     pattern = re.compile(r'<a id="hashnode-link"[^>]*>.*?</a>', re.DOTALL)
-    if not pattern.search(html):
+    if not pattern.search(html_content):
         print("INFO: hashnode-link anchor not found; index.html left unchanged")
         return
 
-    updated, n = pattern.subn(new_anchor, html)
+    updated, n = pattern.subn(new_anchor, html_content)
     if n == 0:
         print("INFO: nothing to update")
         return
