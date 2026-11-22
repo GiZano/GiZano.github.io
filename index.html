@@ -70,8 +70,8 @@
     script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net; 
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; 
     font-src 'self' https://fonts.gstatic.com; 
-    img-src 'self' data: https://www.googletagmanager.com https://github.com https://avatars.githubusercontent.com; 
-    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://cdn.jsdelivr.net https://api.github.com; object-src 'none'; base-uri 'self'">
+    img-src 'self' data: https://www.googletagmanager.com; 
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2c3e50">
@@ -118,7 +118,6 @@
     <script src="./Script/projects-grid.js" defer></script>
     <script src="./Script/i18n/index.js" defer></script>
     <script src="./Script/i18n.js" defer></script>
-    <script src="./Script/contributors.js" defer></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-glass shadow-sm">
@@ -186,31 +185,31 @@
                         <div class="mt-4 p-4 border rounded bg-white shadow-sm mx-auto text-start">
                             <div class="d-flex align-items-center mb-3">
                                 <span class="badge bg-primary me-2"><i class="fas fa-university me-1"></i> UniPi</span>
-                                <span class="small text-muted fw-semibold" data-i18n="academic_title">Insegnamenti del 1° Anno &amp; Crediti Accademici — UniPi L-31 (59 CFU)</span>
+                                <span class="small text-muted fw-semibold" data-i18n="academic_title">First-Year Coursework &amp; Academic Credits (UniPi L-31)</span>
                             </div>
                             <div class="row g-3">
                                 <div class="col-12 col-md-6">
                                     <div class="p-3 border rounded-3 bg-light h-100">
                                         <div class="d-flex align-items-center mb-2">
                                             <span class="badge bg-success-subtle text-success-emphasis border border-success-subtle small me-2">Sem. I</span>
-                                            <span class="fw-bold small text-dark" data-i18n="academic_sem1">Insegnamenti Principali · I Semestre (In Corso)</span>
+                                            <span class="fw-bold small text-dark" data-i18n="academic_sem1">Core Coursework · Semester I (In Progress)</span>
                                         </div>
                                         <ul class="list-unstyled mb-0 small text-muted">
                                             <li class="mb-2">
-                                                <strong class="text-dark d-block" data-i18n="academic_c1_t">Programmazione e Algoritmica (15 CFU, annuale)</strong>
-                                                <span data-i18n="academic_c1_d">Problem solving algoritmico, complessità asintotica, strutture dati dinamiche e semantica formale tramite Mao (linguaggio didattico UniPi). In corso.</span>
+                                                <strong class="text-dark d-block" data-i18n="academic_c1_t">Programming and Algorithmic Thinking (15 CFU, full year)</strong>
+                                                <span data-i18n="academic_c1_d">Algorithmic problem solving, asymptotic complexity, dynamic data structures, and operational semantics using Mao (UniPi educational language). In progress.</span>
                                             </li>
                                             <li class="mb-2">
-                                                <strong class="text-dark d-block" data-i18n="academic_lab_t">Laboratorio I (12 CFU, annuale — TypeScript)</strong>
-                                                <span data-i18n="academic_lab_d">Ingegneria del software e implementazione di strutture dati in TypeScript; tipizzazione statica, programmazione funzionale/OOP, debugging e unit testing. In corso.</span>
+                                                <strong class="text-dark d-block" data-i18n="academic_lab_t">Programming Laboratory I (12 CFU, full year — TypeScript)</strong>
+                                                <span data-i18n="academic_lab_d">Software engineering and dynamic data structures in TypeScript; static typing, functional and OOP paradigms, debugging, and modular unit testing. In progress.</span>
                                             </li>
                                             <li class="mb-2">
-                                                <strong class="text-dark d-block" data-i18n="academic_c2_t">Fondamenti dell'Informatica (9 CFU, sem. I)</strong>
-                                                <span data-i18n="academic_c2_d">Teoria degli automi, linguaggi formali, grammatiche e calcolabilità (macchine di Turing) — pilastro teorico per la verifica formale di sistemi concorrenti. In corso.</span>
+                                                <strong class="text-dark d-block" data-i18n="academic_c2_t">Foundations of Computer Science (9 CFU, Sem. I)</strong>
+                                                <span data-i18n="academic_c2_d">Automata theory, formal languages, grammars, and computability (Turing machines) — theoretical foundation for formal verification of concurrent sensor networks. In progress.</span>
                                             </li>
                                             <li>
-                                                <strong class="text-dark d-block" data-i18n="academic_c3_t">Analisi Matematica (12 CFU, annuale)</strong>
-                                                <span data-i18n="academic_c3_d">Numeri reali, successioni, limiti, continuità, calcolo differenziale e integrale in una variabile con rigore dimostrativo. In corso.</span>
+                                                <strong class="text-dark d-block" data-i18n="academic_c3_t">Mathematical Analysis (12 CFU, full year)</strong>
+                                                <span data-i18n="academic_c3_d">Real numbers, sequences and limits, continuity, differential and integral calculus in one variable with formal mathematical proofs. In progress.</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -219,19 +218,19 @@
                                     <div class="p-3 border rounded-3 bg-light h-100 d-flex flex-column">
                                         <div class="d-flex align-items-center mb-2">
                                             <span class="badge bg-secondary-subtle text-secondary-emphasis border border-secondary-subtle small me-2">Sem. II</span>
-                                            <span class="fw-bold small text-dark" data-i18n="academic_sem2">Insegnamenti Principali · II Semestre (Previsto)</span>
+                                            <span class="fw-bold small text-dark" data-i18n="academic_sem2">Core Coursework · Semester II (Planned)</span>
                                         </div>
                                         <ul class="list-unstyled mb-3 small text-muted">
                                             <li class="mb-2">
-                                                <strong class="text-dark d-block" data-i18n="academic_c4_t">Algebra Lineare (6 CFU, sem. II)</strong>
-                                                <span data-i18n="academic_c4_d">Spazi vettoriali, matrici, trasformazioni lineari, sistemi lineari, diagonalizzazione e prodotti scalari. Previsto nel secondo semestre.</span>
+                                                <strong class="text-dark d-block" data-i18n="academic_c4_t">Linear Algebra (6 CFU, Sem. II)</strong>
+                                                <span data-i18n="academic_c4_d">Vector spaces, matrices, linear transformations, systems of linear equations, and spectral decomposition. Scheduled for Semester II.</span>
                                             </li>
                                         </ul>
                                         <div class="mt-auto pt-2 border-top">
-                                            <div class="small fw-semibold text-dark mb-1" data-i18n="academic_cfu_title">Crediti Registrati a Libretto (5 CFU):</div>
+                                            <div class="small fw-semibold text-dark mb-1" data-i18n="academic_cfu_title">Credits Registered on Academic Record (5 CFU):</div>
                                             <ul class="list-unstyled mb-0 small text-muted">
-                                                <li class="mb-1"><i class="fas fa-check-circle text-success me-1"></i> <span data-i18n="academic_cfu_en"><strong>Lingua Inglese (3 CFU):</strong> convalidati e registrati a libretto tramite certificazione Cambridge B2 First (Grade A, CEFR C1).</span></li>
-                                                <li><i class="fas fa-check-circle text-success me-1"></i> <span data-i18n="academic_cfu_tolc"><strong>Competenze di Base (2 CFU):</strong> registrati a libretto al superamento del test TOLC-S (CISIA).</span></li>
+                                                <li class="mb-1"><i class="fas fa-check-circle text-success me-1"></i> <span data-i18n="academic_cfu_en"><strong>English Language (3 CFU):</strong> validated and registered via Cambridge B2 First certification (Grade A, CEFR C1).</span></li>
+                                                <li><i class="fas fa-check-circle text-success me-1"></i> <span data-i18n="academic_cfu_tolc"><strong>Basic Skills (2 CFU):</strong> registered upon passing the TOLC-S examination (CISIA).</span></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -582,17 +581,17 @@
                                     <span class="small fw-bold text-white">ClimbStack / climbstack-app</span>
                                 </div>
                                 <div class="d-flex gap-2 align-items-center">
-                                    <span class="badge bg-primary-subtle text-info border border-info-subtle small"><i class="fas fa-user-shield me-1"></i> Maintainer</span>
-                                    <span class="badge bg-dark text-success border border-success-subtle small"><i class="fas fa-users me-1"></i> <span id="climbstack-count">5 contributors</span></span>
+                                    <span class="badge bg-primary-subtle text-info border border-info-subtle small"><i class="fas fa-crown me-1"></i> Founder &amp; Lead Maintainer</span>
+                                    <a href="https://github.com/ClimbStack/climbstack-app/graphs/contributors" target="_blank" rel="noopener noreferrer" class="badge bg-dark text-success border border-success-subtle text-decoration-none small position-relative z-index-2" aria-label="View 5 contributors on GitHub"><i class="fas fa-users me-1"></i> 5 contributors</a>
                                 </div>
                             </div>
                             <h3 class="h5 text-white mb-2">
                                 <a href="https://github.com/ClimbStack/climbstack-app" target="_blank" rel="noopener noreferrer" class="text-white text-decoration-none stretched-link" data-i18n="os_climbstack_title">
-                                    ClimbStack App Repository
+                                    ClimbStack (Organization &amp; Production App)
                                 </a>
                             </h3>
                             <p class="small mb-3 pr-description" data-i18n="os_climbstack_d">
-                                Lead maintainer and architect for the offline-first React Native codebase. Reviewing and merging community PRs, structuring SQLite migration pipelines, and shipping to Google Play users.
+                                Founder of the ClimbStack organization and lead maintainer of the offline-first React Native &amp; SQLite codebase published on Google Play. Reviewing and merging external pull requests, architecting SQLite schemas, and publishing production releases.
                             </p>
 
                             <!-- Merged Community PRs -->
@@ -611,25 +610,10 @@
                             </div>
 
                             <div class="mt-auto pt-3 pr-footer d-flex flex-wrap justify-content-between align-items-center gap-2">
-                                <div class="d-flex align-items-center gap-2 position-relative z-index-2" id="climbstack-contributors-container">
-                                    <span class="text-muted-gh small me-1" data-i18n="os_team">Team:</span>
-                                    <div class="contributor-avatars d-inline-flex" id="climbstack-avatars">
-                                        <a href="https://github.com/GiZano" target="_blank" rel="noopener noreferrer" class="contributor-avatar-link" title="GiZano (Maintainer)" aria-label="GiZano">
-                                            <img src="https://github.com/GiZano.png?size=48" alt="GiZano" class="contributor-avatar" width="28" height="28" loading="lazy">
-                                        </a>
-                                        <a href="https://github.com/matotvrdon" target="_blank" rel="noopener noreferrer" class="contributor-avatar-link" title="matotvrdon" aria-label="matotvrdon">
-                                            <img src="https://github.com/matotvrdon.png?size=48" alt="matotvrdon" class="contributor-avatar" width="28" height="28" loading="lazy">
-                                        </a>
-                                        <a href="https://github.com/patrik1531" target="_blank" rel="noopener noreferrer" class="contributor-avatar-link" title="patrik1531" aria-label="patrik1531">
-                                            <img src="https://github.com/patrik1531.png?size=48" alt="patrik1531" class="contributor-avatar" width="28" height="28" loading="lazy">
-                                        </a>
-                                        <a href="https://github.com/V-Kozintsev" target="_blank" rel="noopener noreferrer" class="contributor-avatar-link" title="V-Kozintsev" aria-label="V-Kozintsev">
-                                            <img src="https://github.com/V-Kozintsev.png?size=48" alt="V-Kozintsev" class="contributor-avatar" width="28" height="28" loading="lazy">
-                                        </a>
-                                        <a href="https://github.com/Gheb6" target="_blank" rel="noopener noreferrer" class="contributor-avatar-link" title="Gheb6" aria-label="Gheb6">
-                                            <img src="https://github.com/Gheb6.png?size=48" alt="Gheb6" class="contributor-avatar" width="28" height="28" loading="lazy">
-                                        </a>
-                                    </div>
+                                <div class="d-flex align-items-center gap-2 position-relative z-index-2">
+                                    <a href="https://github.com/ClimbStack/climbstack-app/graphs/contributors" target="_blank" rel="noopener noreferrer" class="repo-sublink small text-muted-gh">
+                                        <i class="fab fa-github me-1"></i> <span data-i18n="os_climbstack_team">4 external contributors + Founder &rarr;</span>
+                                    </a>
                                 </div>
                                 <div class="small text-muted-gh">
                                     <span class="me-2"><i class="fab fa-react me-1 text-info"></i> React Native</span>
@@ -648,8 +632,8 @@
                                     <span class="small fw-bold text-white">GiZano / leetcode-journey-template</span>
                                 </div>
                                 <div class="d-flex gap-2 align-items-center">
-                                    <span class="badge bg-primary-subtle text-info border border-info-subtle small"><i class="fas fa-user-shield me-1"></i> Author</span>
-                                    <span class="badge bg-dark text-success border border-success-subtle small"><i class="fas fa-users me-1"></i> <span id="leetcode-count">2 contributors</span></span>
+                                    <span class="badge bg-primary-subtle text-info border border-info-subtle small"><i class="fas fa-user-shield me-1"></i> Author &amp; Maintainer</span>
+                                    <a href="https://github.com/GiZano/leetcode-journey-template/graphs/contributors" target="_blank" rel="noopener noreferrer" class="badge bg-dark text-success border border-success-subtle text-decoration-none small position-relative z-index-2" aria-label="View 2 contributors on GitHub"><i class="fas fa-users me-1"></i> 2 contributors</a>
                                 </div>
                             </div>
                             <h3 class="h5 text-white mb-2">
@@ -665,32 +649,22 @@
                             <div class="small mb-3 position-relative z-index-2 text-muted-gh">
                                 <span class="fw-semibold text-light d-block mb-1" data-i18n="os_reviewed_prs_title"><i class="fas fa-code-pull-request me-1 text-purple"></i> Merged Community Contributions:</span>
                                 <ul class="list-unstyled mb-0 ps-1">
-                                    <li class="mb-1 text-truncate">
+                                    <li class="text-truncate">
                                         <i class="fas fa-check text-success me-1 small"></i>
                                         <a href="https://github.com/GiZano/leetcode-journey-template/pull/27" target="_blank" rel="noopener noreferrer" class="repo-sublink">#27 Automated Test Suite &amp; Coverage</a> <span class="text-muted-gh small">by @Golden007-prog</span>
-                                    </li>
-                                    <li class="text-truncate">
-                                        <i class="fas fa-hourglass-half text-warning me-1 small"></i>
-                                        <a href="https://github.com/GiZano/leetcode-journey-template/pull/28" target="_blank" rel="noopener noreferrer" class="repo-sublink">#28 Java Runner Support (In Review)</a> <span class="text-muted-gh small">by @aniketShukla1605</span>
                                     </li>
                                 </ul>
                             </div>
 
                             <div class="mt-auto pt-3 pr-footer d-flex flex-wrap justify-content-between align-items-center gap-2">
-                                <div class="d-flex align-items-center gap-2 position-relative z-index-2" id="leetcode-contributors-container">
-                                    <span class="text-muted-gh small me-1" data-i18n="os_team">Team:</span>
-                                    <div class="contributor-avatars d-inline-flex" id="leetcode-avatars">
-                                        <a href="https://github.com/GiZano" target="_blank" rel="noopener noreferrer" class="contributor-avatar-link" title="GiZano (Maintainer)" aria-label="GiZano">
-                                            <img src="https://github.com/GiZano.png?size=48" alt="GiZano" class="contributor-avatar" width="28" height="28" loading="lazy">
-                                        </a>
-                                        <a href="https://github.com/Golden007-prog" target="_blank" rel="noopener noreferrer" class="contributor-avatar-link" title="Golden007-prog" aria-label="Golden007-prog">
-                                            <img src="https://github.com/Golden007-prog.png?size=48" alt="Golden007-prog" class="contributor-avatar" width="28" height="28" loading="lazy">
-                                        </a>
-                                    </div>
+                                <div class="d-flex align-items-center gap-2 position-relative z-index-2">
+                                    <a href="https://github.com/GiZano/leetcode-journey-template/graphs/contributors" target="_blank" rel="noopener noreferrer" class="repo-sublink small text-muted-gh">
+                                        <i class="fab fa-github me-1"></i> <span data-i18n="os_leetcode_team">1 external contributor + Author &rarr;</span>
+                                    </a>
                                 </div>
                                 <div class="small text-muted-gh">
                                     <span class="me-2"><i class="fab fa-python me-1 text-primary"></i> Python</span>
-                                    <span><i class="fas fa-gears me-1 text-light"></i> GitHub Actions</span>
+                                    <span><i class="fas fa-gears me-1 text-light"></i> GitHub Actions CI</span>
                                 </div>
                             </div>
                         </div>
