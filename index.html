@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
+    
     <script src="./Script/consent.js" defer></script>
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
@@ -109,7 +109,7 @@
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbar-glass shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#home" aria-label="Giovanni Zanotti - Back to Home">Giovanni Zanotti <span class="text-primary small fs-6">(GiZano)</span></a>
+            <a class="navbar-brand fw-bold" href="#home" aria-label="Giovanni Zanotti - Back to Home"><span class="d-none d-sm-inline">Giovanni Zanotti </span><span class="d-none d-sm-inline text-primary small fs-6">(GiZano)</span><span class="d-sm-none">GiZano</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -121,7 +121,7 @@
                     <li class="nav-item"><a class="nav-link" href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav_contact">Contact</a></li>
                 </ul>
-                <button type="button" id="i18n-toggle" class="btn btn-sm btn-outline-primary rounded-pill fw-semibold ms-lg-3 d-flex align-items-center" data-i18n-toggle aria-label="Toggle language"><i class="fas fa-globe me-1" aria-hidden="true"></i>IT</button>
+                <button type="button" id="i18n-toggle" class="btn btn-sm btn-outline-primary rounded-pill fw-semibold mt-2 mt-lg-0 ms-lg-3 d-inline-flex align-items-center" data-i18n-toggle aria-label="Toggle language"><i class="fas fa-globe me-1" aria-hidden="true"></i>IT</button>
             </div>
         </div>
     </nav>
@@ -373,7 +373,7 @@
                                 <h3 class="card-title project-title h5" data-i18n="p2_name">bE-More — Energy System</h3>
                                 <p class="card-text text-muted project-description flex-grow-1" data-i18n="p2_desc">Industrial IoT Platform · React · Arduino / C++ · Edge Computing — Autonomous enterprise energy telemetry, sub-metering, and load balancing designed for industrial efficiency.</p>
                                 <div class="project-links mt-auto d-flex flex-wrap gap-2">
-                                    <a href="./projects/be-more.html" class="btn btn-sm btn-primary" data-i18n="p_details" aria-label="Details about bE-More"><i class="fas fa-info-circle me-1"></i> Details</a>
+                                    <a href="./projects/be-more.html" class="btn btn-sm btn-primary" data-i18n="p_details" aria-label="Case study on bE-More"><i class="fas fa-info-circle me-1"></i> Details</a>
                                     <a href="https://github.com/GiZano/bE-More" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-success" data-i18n="p_code" aria-label="Code repository for bE-More"><i class="fab fa-github me-1"></i> Code</a>
                                     <a href="https://gizano.hashnode.dev/winning-a-tech-contest-with-be-more-integrating-iot-and-local-ai-for-a-greener-office" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-hashnode" data-i18n="p_article" aria-label="Read article about bE-More on Hashnode"><i class="fab fa-hashnode me-1"></i> Article</a>
                                 </div>
@@ -514,7 +514,7 @@
 
                 <!-- Sub-section 1: Upstream Contributions -->
                 <div class="d-flex align-items-center mb-4">
-                    <span class="badge bg-secondary text-light border border-secondary-subtle px-3 py-1 fw-semibold text-uppercase font-monospace small" data-i18n="os_sub_upstream_badge">Upstream Contributions</span>
+                    <span class="badge bg-dark text-white border border-secondary px-3 py-1 fw-semibold text-uppercase font-monospace small" data-i18n="os_sub_upstream_badge">Upstream Contributions</span>
                     <div class="border-top border-secondary flex-grow-1 opacity-25 ms-3"></div>
                 </div>
 
@@ -554,7 +554,7 @@
 
                 <!-- Sub-section 2: Maintained Projects -->
                 <div class="d-flex align-items-center mb-4">
-                    <span class="badge bg-success-subtle text-success border border-success-subtle px-3 py-1 fw-semibold text-uppercase font-monospace small" data-i18n="os_sub_maintained_badge">Maintained Repositories &amp; Community</span>
+                    <span class="badge bg-dark text-white border border-success px-3 py-1 fw-semibold text-uppercase font-monospace small" data-i18n="os_sub_maintained_badge">Maintained Repositories &amp; Community</span>
                     <div class="border-top border-secondary flex-grow-1 opacity-25 ms-3"></div>
                 </div>
 
@@ -585,11 +585,11 @@
                             <div class="small mb-3 position-relative z-index-2 text-muted-gh">
                                 <span class="fw-semibold text-light d-block mb-1" data-i18n="os_reviewed_prs_title"><i class="fas fa-code-pull-request me-1 text-purple"></i> Merged Community Contributions:</span>
                                 <ul class="list-unstyled mb-0 ps-1">
-                                    <li class="mb-1 text-truncate">
+                                    <li class="mb-1 text-break">
                                         <i class="fas fa-check text-success me-1 small"></i>
                                         <a href="https://github.com/ClimbStack/climbstack-app/pull/194" target="_blank" rel="noopener noreferrer" class="repo-sublink">#194 Persistent Achievements System</a> <span class="text-muted-gh small">by @matotvrdon</span>
                                     </li>
-                                    <li class="text-truncate">
+                                    <li class="text-break">
                                         <i class="fas fa-check text-success me-1 small"></i>
                                         <a href="https://github.com/ClimbStack/climbstack-app/pull/119" target="_blank" rel="noopener noreferrer" class="repo-sublink">#119 Batch SQLite Transaction Storage</a> <span class="text-muted-gh small">by @patrik1531</span>
                                     </li>
@@ -636,11 +636,11 @@
                             <div class="small mb-3 position-relative z-index-2 text-muted-gh">
                                 <span class="fw-semibold text-light d-block mb-1" data-i18n="os_reviewed_prs_title"><i class="fas fa-code-pull-request me-1 text-purple"></i> Merged Community Contributions:</span>
                                 <ul class="list-unstyled mb-0 ps-1">
-                                    <li class="text-truncate mb-1">
+                                    <li class="text-break mb-1">
                                         <i class="fas fa-check text-success me-1 small"></i>
                                         <a href="https://github.com/GiZano/leetcode-journey-template/pull/27" target="_blank" rel="noopener noreferrer" class="repo-sublink">#27 Automated Test Suite &amp; Coverage</a> <span class="text-muted-gh small">by @Golden007-prog</span>
                                     </li>
-                                    <li class="text-truncate">
+                                    <li class="text-break">
                                         <i class="fas fa-check text-success me-1 small"></i>
                                         <a href="https://github.com/GiZano/leetcode-journey-template/pull/28" target="_blank" rel="noopener noreferrer" class="repo-sublink">#28 Java Template &amp; Local Test Runner</a> <span class="text-muted-gh small">by @aniketShukla1605</span>
                                     </li>
@@ -695,7 +695,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm overflow-hidden news-card d-flex flex-column">
                             <div class="text-center py-2 bg-dark">
-                                <span class="badge bg-white text-dark fs-6 px-3 py-1 fw-bold">Corriere della Sera (Bergamo) &amp; Prima Bergamo</span>
+                                <span class="badge bg-white text-dark fs-6 px-3 py-1 fw-bold text-wrap">Corriere della Sera (Bergamo) &amp; Prima Bergamo</span>
                             </div>
                             <div class="row g-0 flex-grow-1">
                                 <div class="col-6">
@@ -720,7 +720,7 @@
                     <div class="col-md-6 col-lg-4">
                         <div class="card h-100 border-0 shadow-sm overflow-hidden news-card">
                             <div class="text-center py-2 bg-primary">
-                                <span class="badge bg-white text-primary fs-6 px-3 py-1 fw-bold">Prima Treviglio</span>
+                                <span class="badge bg-white text-primary fs-6 px-3 py-1 fw-bold text-wrap">Prima Treviglio</span>
                             </div>
                             <img src="./assets/home/bench-news.webp" class="card-img-top news-img-grid" alt="" width="400" height="250" loading="lazy">
                             <div class="card-body text-center bg-light">

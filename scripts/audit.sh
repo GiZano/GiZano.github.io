@@ -66,6 +66,12 @@ for f in $LEVELUP_FILES; do
     fi
 done
 
+# Optional: Run live post-deploy check if requested with --live
+if [ "${1:-}" = "--live" ]; then
+    SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    "$SCRIPT_DIR/audit-live.sh"
+fi
+
 echo "-----------------------------------------------"
 if [ "$ERRORS" -eq 0 ]; then
     echo " [PASS] All audit checks passed successfully!"

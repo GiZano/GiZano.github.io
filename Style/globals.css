@@ -44,11 +44,6 @@ img {
     transform: translateY(-5px);
 }
 
-.navbar > .container,
-.navbar > .container-fluid {
-    flex-wrap: nowrap;
-}
-
 .navbar-glass {
     background: rgba(255, 255, 255, 0.8) !important; /* Più chiaro per contrasto */
     backdrop-filter: blur(15px);
@@ -97,6 +92,7 @@ img {
 .navbar-brand {
     font-size: 1.5rem;
     white-space: nowrap;
+    min-width: 0;
 }
 
 @media (max-width: 575.98px) {
