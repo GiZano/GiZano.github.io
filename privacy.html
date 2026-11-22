@@ -9,8 +9,8 @@
     script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; 
     style-src 'self' 'unsafe-inline'; 
     font-src 'self' data:; 
-    img-src 'self' data: https://www.googletagmanager.com; 
-    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; object-src 'none'; base-uri 'self'">
+    img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com; 
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google-analytics.com; object-src 'none'; base-uri 'self'">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://giovanni-zanotti.is-a.dev/privacy">
@@ -85,11 +85,11 @@
                     <p class="text-muted">On your initial visit, no tracking script is loaded, no remote analytics connection is initiated, and no analytics cookies are stored. Only if you explicitly grant permission via the cookie consent banner, <strong>Google Analytics 4</strong> (GA4) is loaded to collect aggregate usage statistics, such as:</p>
                     <ul class="text-muted">
                         <li>Anonymized aggregate browsing metrics (page views, session duration, device type, approximate geographic region);</li>
-                        <li>Referrer domain and browser type (with IP anonymization enforced).</li>
+                        <li>Referrer domain and browser type (GA4 architecture does not log or store visitor IP addresses).</li>
                     </ul>
 
                     <h2 class="h4 fw-bold mb-3 mt-5" id="cookies">3. Cookies & Consent Management</h2>
-                    <p class="text-muted">This site uses no profiling or marketing cookies. Statistical cookies from GA4 are loaded strictly upon prior consent. If you decline or ignore the consent banner, no analytics cookies are placed on your browser.</p>
+                    <p class="text-muted">This site uses no profiling or marketing cookies. Statistical cookies from GA4 are loaded strictly upon prior consent. If you decline, close, or ignore the consent banner, no analytics cookies are placed on your browser.</p>
                     <p class="text-muted">You can change or revoke your cookie consent choice at any time by clicking the button below:</p>
                     <div>
                         <button type="button" class="btn btn-outline-primary btn-sm" onclick="window.resetCookieConsent()">

@@ -43,8 +43,8 @@
  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com ; 
  style-src 'self' 'unsafe-inline' ; 
  font-src 'self' ; 
- img-src 'self' data: https://www.googletagmanager.com https://github.com; 
- connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com ; object-src 'none'; base-uri 'self'">
+ img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com https://github.com; 
+ connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google-analytics.com ; object-src 'none'; base-uri 'self'">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2c3e50">
@@ -131,7 +131,7 @@
                         <p class="lead text-muted mb-4" data-i18n="hero_lead">An offline-first mobile productivity engine built with React Native and SQLite that gamifies long-term goals into scalable mountain peaks, powered by an intuitive weekly time-blocking system.</p>
                         
                         <div class="d-flex flex-wrap gap-2 mb-3">
-                            <a href="https://climbstack.github.io/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" aria-label="Visit ClimbStack Official Website" data-i18n="hero_website">
+                            <a href="https://climbstack.is-a.software/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" aria-label="Visit ClimbStack Official Website" data-i18n="hero_website">
                                 <i class="fas fa-globe me-1"></i> Visit Live Website
                             </a>
                             <a href="https://gizano.hashnode.dev/fighting-decision-fatigue-how-climbstack-was-born" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-lg" aria-label="Read ClimbStack article on Hashnode" data-i18n="hero_article">
@@ -335,8 +335,8 @@
                             <i class="fas fa-globe fa-2x text-primary mb-3"></i>
                             <h3 class="h6 fw-bold mb-2" data-i18n="eco_web_ttl">Official Website</h3>
                             <p class="text-muted small mb-4 flex-grow-1" data-i18n="eco_web_desc">Dedicated project landing page with live interactive previews and release notes.</p>
-                            <a href="https://climbstack.github.io/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm mt-auto" aria-label="Visit ClimbStack Website" data-i18n="eco_web_btn">
-                                Visit climbstack.github.io
+                            <a href="https://climbstack.is-a.software/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm mt-auto" aria-label="Visit ClimbStack Website" data-i18n="eco_web_btn">
+                                Visit climbstack.is-a.software
                             </a>
                         </div>
                     </div>

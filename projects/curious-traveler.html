@@ -38,8 +38,8 @@
  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com ; 
  style-src 'self' 'unsafe-inline' ; 
  font-src 'self' ; 
- img-src 'self' data: https://www.googletagmanager.com; 
- connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com ; object-src 'none'; base-uri 'self'">
+ img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com; 
+ connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google-analytics.com ; object-src 'none'; base-uri 'self'">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://giovanni-zanotti.is-a.dev/projects/curious-traveler">
@@ -117,7 +117,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <h1 class="display-4 fw-bold mb-4" data-i18n="hero_h1">The Curious Traveler</h1>
-                        <p class="lead text-muted mb-4" data-i18n="hero_lead">An asynchronous Python CLI orchestrating 9 public REST APIs concurrently, reducing aggregate latency from ~1500ms down to ~600ms.</p>
+                        <p class="lead text-muted mb-4" data-i18n="hero_lead">An asynchronous Python CLI orchestrating 9 public REST APIs concurrently, reducing aggregate latency from ~2100ms down to ~880ms (58% reduction).</p>
                         <a href="#abstract" class="btn btn-primary btn-lg mb-3" aria-label="Read the abstract" data-i18n="hero_cta">Discover the architecture</a>
                         <br>
                         <a href="https://github.com/GiZano/traveler-api" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-lg download-report" aria-label="View Source Code on GitHub" data-i18n="hero_github">
@@ -203,7 +203,7 @@
                                 <div class="col-lg-6 order-lg-2 order-1">
                                     <div class="section-content">
                                         <p class="text-muted lead" data-i18n="async_p">
-                                            The transition from v1 to v2 marked an architectural overhaul isolating concurrency benefits from connection reuse. Benchmarked over 20 consecutive runs querying destination Tokyo: v1 unpooled (individual requests.get calls) had a median execution time of ~1500ms [min: 1320ms, max: 1840ms, IQR: 1410–1620ms] due to repeated TCP/TLS setups and cumulative blocking I/O; v1 pooled (sequential requests.Session with HTTP keep-alive) reduced median time to ~1250ms [min: 1120ms, max: 1480ms, IQR: 1180–1330ms]; v2 concurrent (aiohttp.ClientSession and asyncio.gather) drops median total wall-clock time to ~600ms [min: 510ms, max: 740ms, IQR: 560–650ms] — achieving an overall 60% reduction vs unpooled and &gt;50% vs pooled sequential execution by running the 8 independent secondary endpoints in parallel. Residual variance is governed by remote API server response times.
+                                            The transition from v1 to v2 marked an architectural overhaul isolating concurrency benefits from connection reuse. Benchmarked over 20 live interleaved runs querying destination Tokyo: v1 unpooled (individual requests.get calls) had a median execution time of 2103.7ms [min: 1994.2ms, max: 2836.9ms, Q1–Q3: 2039.9–2187.8ms, IQR: 148.0ms] due to repeated TCP/TLS setups and cumulative blocking I/O; v1 pooled (sequential requests.Session with HTTP keep-alive) had a median time of 2075.0ms [min: 1972.3ms, max: 3091.6ms, Q1–Q3: 2045.3–2102.5ms, IQR: 57.3ms]; v2 concurrent (aiohttp.ClientSession and asyncio.gather) drops median total wall-clock time to 882.8ms [min: 857.2ms, max: 931.6ms, Q1–Q3: 873.5–895.8ms, IQR: 22.2ms] — achieving an overall 58.0% reduction vs unpooled and 57.5% (>50%) vs pooled sequential execution by running the 8 independent secondary endpoints in parallel. Residual variance is governed by remote API server response times.
                                         </p>
                                         <ul class="group-list muted lead">
                                             <li class="group-list-item" data-i18n="async_li1"><strong>Parallel Execution:</strong> Leveraging <code>asyncio.gather</code>, multiple independent API calls are fired concurrently, eliminating cumulative round-trip latency.</li>

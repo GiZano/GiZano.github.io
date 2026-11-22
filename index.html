@@ -65,8 +65,8 @@
  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com ; 
  style-src 'self' 'unsafe-inline' ; 
  font-src 'self' ; 
- img-src 'self' data: https://www.googletagmanager.com; 
- connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com ; object-src 'none'; base-uri 'self'">
+ img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com; 
+ connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google-analytics.com ; object-src 'none'; base-uri 'self'">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#2c3e50">
@@ -621,7 +621,7 @@
                                 </div>
                                 <div class="d-flex gap-2 align-items-center">
                                     <span class="badge bg-primary-subtle text-info border border-info-subtle small"><i class="fas fa-user-shield me-1"></i> Author &amp; Maintainer</span>
-                                    <a href="https://github.com/GiZano/leetcode-journey-template/graphs/contributors" target="_blank" rel="noopener noreferrer" class="badge bg-dark text-success border border-success-subtle text-decoration-none small position-relative z-index-2" aria-label="View 2 contributors on GitHub"><i class="fas fa-users me-1"></i> 2 contributors</a>
+                                    <a href="https://github.com/GiZano/leetcode-journey-template/graphs/contributors" target="_blank" rel="noopener noreferrer" class="badge bg-dark text-success border border-success-subtle text-decoration-none small position-relative z-index-2" aria-label="View 3 contributors on GitHub"><i class="fas fa-users me-1"></i> 3 contributors</a>
                                 </div>
                             </div>
                             <h3 class="h5 text-white mb-2">
@@ -647,7 +647,7 @@
                             <div class="mt-auto pt-3 pr-footer d-flex flex-wrap justify-content-between align-items-center gap-2">
                                 <div class="d-flex align-items-center gap-2 position-relative z-index-2">
                                     <a href="https://github.com/GiZano/leetcode-journey-template/graphs/contributors" target="_blank" rel="noopener noreferrer" class="repo-sublink small text-muted-gh">
-                                        <i class="fab fa-github me-1"></i> <span data-i18n="os_leetcode_team">1 external contributor + Author &rarr;</span>
+                                        <i class="fab fa-github me-1"></i> <span data-i18n="os_leetcode_team">2 external contributors + Author &rarr;</span>
                                     </a>
                                 </div>
                                 <div class="small text-muted-gh">
