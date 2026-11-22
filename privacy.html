@@ -10,7 +10,7 @@
     style-src 'self' 'unsafe-inline'; 
     font-src 'self' data:; 
     img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com https://*.google-analytics.com; 
-    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google-analytics.com; object-src 'none'; base-uri 'self'">
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self'">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://giovanni-zanotti.is-a.dev/privacy">
@@ -77,45 +77,60 @@
         <section class="py-5 bg-white">
             <div class="container">
                 <div class="col-lg-9 mx-auto">
-                    <h2 class="h4 fw-bold mb-3" id="intro">1. Introduction</h2>
-                    <p class="text-muted">This privacy policy explains how the personal portfolio website <strong>giovanni-zanotti.is-a.dev</strong> ("this site") collects and uses information when you visit it. This site is a static portfolio hosted on GitHub Pages and does not run e-commerce, user registration, or database services.</p>
+                    <h2 class="h4 fw-bold mb-3" id="intro">1. Data Controller & Scope</h2>
+                    <p class="text-muted">This privacy policy explains how the personal portfolio website <strong>giovanni-zanotti.is-a.dev</strong> ("this site") handles information when you visit it. This site is a static portfolio hosted on GitHub Pages and does not operate e-commerce, user registration, comment systems, or server-side databases.</p>
+                    <p class="text-muted"><strong>Data Controller:</strong> Giovanni Zanotti — Contact: <a href="mailto:contact&#64;giovanni-zanotti&#46;is-a&#46;dev">contact@giovanni-zanotti.is-a.dev</a>.</p>
 
-                    <h2 class="h4 fw-bold mb-3 mt-5" id="data">2. Data Processing & Prior Consent</h2>
-                    <p class="text-muted">In compliance with the General Data Protection Regulation (GDPR, EU 2016/679) and the Italian Data Protection Authority guidelines (Garante Privacy Provv. 231/2021), <strong>statistical tracking is disabled by default</strong>.</p>
-                    <p class="text-muted">On your initial visit, no tracking script is loaded, no remote analytics connection is initiated, and no analytics cookies are stored. Only if you explicitly grant permission via the cookie consent banner, <strong>Google Analytics 4</strong> (GA4) is loaded to collect aggregate usage statistics, such as:</p>
+                    <h2 class="h4 fw-bold mb-3 mt-5" id="data">2. Legal Basis & Prior-Consent Architecture</h2>
+                    <p class="text-muted">In compliance with the General Data Protection Regulation (GDPR, Regulation EU 2016/679) and the Italian Data Protection Authority guidelines on cookies and tracking tools (Garante Privacy Provv. n. 231 del 10 giugno 2021), <strong>statistical tracking is completely disabled by default</strong>.</p>
                     <ul class="text-muted">
-                        <li>Anonymized aggregate browsing metrics (page views, session duration, device type, approximate geographic region);</li>
-                        <li>Referrer domain and browser type (GA4 architecture does not log or store visitor IP addresses).</li>
+                        <li><strong>Statistical Analytics (GA4):</strong> Processed exclusively upon freely given, specific, informed, and unambiguous opt-in consent pursuant to <strong>Art. 6(1)(a) GDPR</strong>. Prior to explicit consent, no tracking script is loaded, no remote network request is initiated, and no cookies are written.</li>
+                        <li><strong>Functional Storage (Local Storage):</strong> Technical parameters (language selection, cookie consent state) are processed under the legitimate interest of providing essential website functionality pursuant to <strong>Art. 6(1)(f) GDPR</strong> and Art. 5(3) of the ePrivacy Directive (Directive 2002/58/EC).</li>
                     </ul>
 
-                    <h2 class="h4 fw-bold mb-3 mt-5" id="cookies">3. Cookies & Consent Management</h2>
-                    <p class="text-muted">This site uses no profiling or marketing cookies. Statistical cookies from GA4 are loaded strictly upon prior consent. If you decline, close, or ignore the consent banner, no analytics cookies are placed on your browser.</p>
-                    <p class="text-muted">You can change or revoke your cookie consent choice at any time by clicking the button below:</p>
+                    <h2 class="h4 fw-bold mb-3 mt-5" id="analytics">3. Google Analytics 4 & Data Retention</h2>
+                    <p class="text-muted">Only if you actively click <strong>"Accept"</strong> on the cookie consent banner, <strong>Google Analytics 4</strong> (GA4, operated by Google LLC) is initialized asynchronously to collect high-level aggregate usage metrics, including:</p>
+                    <ul class="text-muted">
+                        <li>Aggregated metrics (page views, session duration, device type, approximate geographic region at country/city level);</li>
+                        <li>Referrer domain and browser family. GA4 architecture does not log or store individual IP addresses (IP addresses are dropped at the edge ingestion servers).</li>
+                    </ul>
+                    <p class="text-muted">The following strict privacy protections are enforced in the analytics configuration:</p>
+                    <ul class="text-muted">
+                        <li><strong>Data Retention Window:</strong> User and event data retention is configured to <strong>14 months</strong> (the maximum standard retention period before automatic and irreversible deletion from Google Analytics servers).</li>
+                        <li><strong>Google Signals Disabled:</strong> Google Signals cross-device tracking is disabled (<code>allow_google_signals: false</code>) to prevent user identification across Google accounts and services.</li>
+                        <li><strong>Ad Personalization Disabled:</strong> Advertising personalization and remarketing features are disabled (<code>allow_ad_personalization_signals: false</code>).</li>
+                        <li><strong>Restricted Data Processing:</strong> Enabled (<code>restricted_data_processing: true</code>).</li>
+                    </ul>
+
+                    <h2 class="h4 fw-bold mb-3 mt-5" id="cookies">4. Cookies & Preference Management</h2>
+                    <p class="text-muted">This site uses no marketing, advertising, or third-party profiling cookies. Statistical cookies from GA4 (such as <code>_ga</code> and <code>_ga_*</code>) are set only after affirmative opt-in consent. If you decline, close the banner (✕), or ignore the banner, no analytics cookies are stored and no external script is loaded.</p>
+                    <p class="text-muted">You can review or revoke your choice at any time. Clicking the button below clears your stored preference and re-opens the consent banner, allowing you to grant, decline, or adjust your cookie preferences:</p>
                     <div>
                         <button type="button" class="btn btn-outline-primary btn-sm" onclick="window.resetCookieConsent()">
                             <i class="fas fa-cookie-bite me-1"></i> Update Cookie Preferences
                         </button>
                     </div>
 
-                    <h2 class="h4 fw-bold mb-3 mt-5" id="storage">4. Local Storage on Your Device</h2>
+                    <h2 class="h4 fw-bold mb-3 mt-5" id="storage">5. Local Storage on Your Device</h2>
                     <p class="text-muted">The site stores two minimal, functional flags in your browser's <code>localStorage</code>:</p>
                     <ul class="text-muted">
-                        <li><code>gizano-site-lang</code>: Remembers your language preference (Italian or English);</li>
-                        <li><code>gizano_analytics_consent</code>: Stores your cookie preference (<code>granted</code> or <code>denied</code>) so you are not prompted on every page load.</li>
+                        <li><code>gizano-site-lang</code>: Remembers your preferred display language (Italian or English);</li>
+                        <li><code>gizano_analytics_consent</code>: Stores your cookie preference (<code>granted</code> or <code>denied</code>) so you are not prompted repeatedly on every page load.</li>
                     </ul>
-                    <p class="text-muted">These values remain exclusively on your local device and are never transmitted to external servers.</p>
+                    <p class="text-muted">These values reside solely in your browser and are never transmitted to external servers.</p>
 
-                    <h2 class="h4 fw-bold mb-3 mt-5" id="third">5. Self-Hosted Infrastructure & Third Parties</h2>
-                    <p class="text-muted">To eliminate unauthorized data transmission to third-party content delivery networks:</p>
+                    <h2 class="h4 fw-bold mb-3 mt-5" id="third">6. Self-Hosted Infrastructure & Third Parties</h2>
+                    <p class="text-muted">To eliminate unauthorized data leakage to third-party CDNs:</p>
                     <ul class="text-muted">
-                        <li><strong>Self-Hosted Typography & Frameworks:</strong> All font files (Inter, Exo 2, Rajdhani), icons (Font Awesome), and framework libraries (Bootstrap CSS and JavaScript) are hosted locally on this origin. No IP addresses or requests are sent to Google Fonts or jsDelivr CDNs.</li>
-                        <li><strong>Google Analytics 4 (Google LLC):</strong> Dispatched only upon explicit user opt-in. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's privacy policy</a>.</li>
+                        <li><strong>Self-Hosted Typography & Frameworks:</strong> All font files (Inter, Exo 2, Rajdhani WOFF2), vector icons (Font Awesome), and framework scripts/styles (Bootstrap CSS and JavaScript) are hosted locally on this origin. No IP addresses or requests are sent to Google Fonts, Google Hosted Libraries, or jsDelivr CDNs.</li>
+                        <li><strong>Google Analytics 4 (Google LLC):</strong> Dispatched only upon affirmative user consent. For details, see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.</li>
                     </ul>
 
-                    <h2 class="h4 fw-bold mb-3 mt-5" id="rights">6. Your Rights</h2>
-                    <p class="text-muted">Under the GDPR, you have the right to access, rectify, or request deletion of any personal data concerning you. Since this site operates as a static portfolio without user accounts, data processing is strictly limited to aggregate, anonymized statistics. To exercise your rights or submit inquiries, contact: <a href="mailto:contact&#64;giovanni-zanotti&#46;is-a&#46;dev">contact@giovanni-zanotti.is-a.dev</a>.</p>
+                    <h2 class="h4 fw-bold mb-3 mt-5" id="rights">7. Your Rights under GDPR</h2>
+                    <p class="text-muted">Under Articles 15 to 22 of the GDPR, you have the right to access, rectify, restrict, or request the deletion of any personal data concerning you, as well as the right to withdraw your consent at any time without affecting the lawfulness of processing based on consent prior to its withdrawal. You also have the right to lodge a complaint with a supervisory authority (in Italy, the <em>Garante per la protezione dei dati personali</em>).</p>
+                    <p class="text-muted">To exercise your rights or submit inquiries regarding data protection on this site, contact the Data Controller directly: <a href="mailto:contact&#64;giovanni-zanotti&#46;is-a&#46;dev">contact@giovanni-zanotti.is-a.dev</a>.</p>
 
-                    <h2 class="h4 fw-bold mb-3 mt-5" id="changes">7. Changes to This Policy</h2>
+                    <h2 class="h4 fw-bold mb-3 mt-5" id="changes">8. Changes to This Policy</h2>
                     <p class="text-muted">Any updates to this policy will be published on this page with an updated revision date.</p>
                 </div>
             </div>
