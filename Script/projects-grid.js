@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (btn) {
         btn.addEventListener('click', function() {
+            btn.setAttribute('aria-expanded', 'true');
             const hiddenProjects = document.querySelectorAll('.hidden-project');
             
             hiddenProjects.forEach(el => {
