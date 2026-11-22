@@ -1,0 +1,23 @@
+name: Pre-flight Quality & Privacy Audit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  audit:
+    name: Run Strict Pre-flight Audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set audit script permissions
+        run: chmod +x scripts/audit.sh
+
+      - name: Execute audit checks
+        run: ./scripts/audit.sh

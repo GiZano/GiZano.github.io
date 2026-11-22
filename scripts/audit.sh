@@ -21,13 +21,14 @@ for term in "${PROHIBITED[@]}"; do
 done
 
 # 2. Check for live fetch calls to jsonplaceholder
+echo "[2/5] Checking for live external fetch calls..."
 if git grep -nE "fetch\([^)]*jsonplaceholder" -- '*.js' '*.html' 2>/dev/null; then
     echo "  [FAIL] Live fetch to jsonplaceholder detected!"
     ERRORS=$((ERRORS + 1))
 fi
 
 # 3. Remote asset check in HTML (scripts, links, iframes, images)
-echo "[2/5] Checking for unauthorized external assets in HTML files..."
+echo "[3/5] Checking for unauthorized external assets in HTML files..."
 UNAUTHORIZED_ASSETS=$(git ls-files '*.html' ':!LevelUp/**' ':!projects/LevelUp/**' | while read -r f; do
     grep -oE '<(script|img|iframe|link)[^>]+(src|href)="https?://[^"]+"' "$f" 2>/dev/null \
         | grep -vE 'giovanni-zanotti\.is-a\.dev|rel="(me|canonical)"|googletagmanager\.com|youtube-nocookie\.com' \
@@ -40,7 +41,7 @@ if [ -n "$UNAUTHORIZED_ASSETS" ]; then
 fi
 
 # 4. Strict check on QuakeGuard: zero inline script and zero inline event handlers
-echo "[3/5] Checking QuakeGuard CSP & handler compliance..."
+echo "[4/5] Checking QuakeGuard CSP & handler compliance..."
 QG_INLINE=$(grep -n -E '<script[ >]' projects/quakeguard.html | grep -vE 'src=|type="application/ld\+json"' || true)
 if [ -n "$QG_INLINE" ]; then
     echo "  [FAIL] QuakeGuard has inline script tag(s):"
@@ -56,7 +57,7 @@ if [ -n "$QG_HANDLERS" ]; then
 fi
 
 # 5. LevelUp redirect integrity check
-echo "[4/5] Checking LevelUp redirect integrity..."
+echo "[5/5] Checking LevelUp redirect integrity..."
 LEVELUP_FILES=$(git ls-files '*LevelUp*.html' '*levelup*.html')
 for f in $LEVELUP_FILES; do
     if ! grep -q "climbstack.is-a.software" "$f"; then
