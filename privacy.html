@@ -1,51 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5JCG2NQS1Y"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-5JCG2NQS1Y');
-    </script>
+    <script src="./Script/consent.js" defer></script>
     <meta charset="UTF-8">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta http-equiv="Content-Security-Policy" content="
     default-src 'self'; 
-    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://cdn.jsdelivr.net; 
-    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; 
-    font-src 'self' https://fonts.gstatic.com; 
+    script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; 
+    style-src 'self' 'unsafe-inline'; 
+    font-src 'self' data:; 
     img-src 'self' data: https://www.googletagmanager.com; 
-    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://cdn.jsdelivr.net; object-src 'none'; base-uri 'self'">
+    connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; object-src 'none'; base-uri 'self'">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://giovanni-zanotti.is-a.dev/privacy">
     
     <title>Privacy Policy - GiZano</title>
     <link rel="icon" type="image/x-icon" href="./favicon.ico">
-    <meta name="description" content="Privacy Policy for giovanni-zanotti.is-a.dev. Information about data collection, Google Analytics cookies and your rights.">
+    <meta name="description" content="Privacy Policy for giovanni-zanotti.is-a.dev. Information about data collection, prior-consent Google Analytics, self-hosted assets and your rights.">
     <meta name="author" content="Giovanni Zanotti">
     <meta name="robots" content="index, follow">
 
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="GiZano Portfolio">
     <meta property="og:title" content="Privacy Policy - GiZano">
-    <meta property="og:description" content="Privacy Policy for giovanni-zanotti.is-a.dev: Google Analytics, cookies e i tuoi diritti.">
+    <meta property="og:description" content="Privacy Policy for giovanni-zanotti.is-a.dev: Prior-consent Google Analytics, self-hosted assets e i tuoi diritti.">
     <meta property="og:url" content="https://giovanni-zanotti.is-a.dev/privacy">
     <meta property="og:image" content="https://giovanni-zanotti.is-a.dev/assets/home/social-share.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Privacy Policy - GiZano">
-    <meta name="twitter:description" content="Privacy Policy for giovanni-zanotti.is-a.dev: Google Analytics, cookies e i tuoi diritti.">
+    <meta name="twitter:description" content="Privacy Policy for giovanni-zanotti.is-a.dev: Prior-consent Google Analytics, self-hosted assets e i tuoi diritti.">
     <meta name="twitter:image" content="https://giovanni-zanotti.is-a.dev/assets/home/social-share.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Style/bootstrap.min.css">
     
     <link rel="stylesheet" href="./Style/font-awesome/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="./Style/font-awesome/css/all.min.css"></noscript>
@@ -79,7 +68,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-8 mx-auto text-center">
                         <h1 class="display-4 fw-bold mb-3">Privacy Policy</h1>
-                        <p class="lead text-muted mb-0">giovanni-zanotti.is-a.dev — last updated: 10 August 2026</p>
+                        <p class="lead text-muted mb-0">giovanni-zanotti.is-a.dev — last updated: 22 November 2026</p>
                     </div>
                 </div>
             </div>
@@ -89,33 +78,45 @@
             <div class="container">
                 <div class="col-lg-9 mx-auto">
                     <h2 class="h4 fw-bold mb-3" id="intro">1. Introduction</h2>
-                    <p class="text-muted">This privacy policy explains how the personal portfolio website <strong>giovanni-zanotti.is-a.dev</strong> ("this site") collects and uses information when you visit it. This site is a static portfolio hosted on GitHub Pages and does not run e-commerce, login, or data-submission services.</p>
+                    <p class="text-muted">This privacy policy explains how the personal portfolio website <strong>giovanni-zanotti.is-a.dev</strong> ("this site") collects and uses information when you visit it. This site is a static portfolio hosted on GitHub Pages and does not run e-commerce, user registration, or database services.</p>
 
-                    <h2 class="h4 fw-bold mb-3 mt-5" id="data">2. Data we collect</h2>
-                    <p class="text-muted">The only third-party service that processes aggregate usage data is <strong>Google Analytics 4</strong> (GA4). When you visit this site, Google Analytics may set cookies and collect information such as:</p>
+                    <h2 class="h4 fw-bold mb-3 mt-5" id="data">2. Data Processing & Prior Consent</h2>
+                    <p class="text-muted">In compliance with the General Data Protection Regulation (GDPR, EU 2016/679) and the Italian Data Protection Authority guidelines (Garante Privacy Provv. 231/2021), <strong>statistical tracking is disabled by default</strong>.</p>
+                    <p class="text-muted">On your initial visit, no tracking script is loaded, no remote analytics connection is initiated, and no analytics cookies are stored. Only if you explicitly grant permission via the cookie consent banner, <strong>Google Analytics 4</strong> (GA4) is loaded to collect aggregate usage statistics, such as:</p>
                     <ul class="text-muted">
-                        <li>Anonymized browsing statistics (pages visited, time on page, device type, approximate location);</li>
-                        <li>Referrer and browser information.</li>
-                    </ul>
-                    <p class="text-muted">The site itself is static: it stores no databases, user accounts, or personal forms.</p>
-
-                    <h2 class="h4 fw-bold mb-3 mt-5" id="cookies">3. Cookies</h2>
-                    <p class="text-muted">This site does not use essential cookies. GA4 may use cookies to distinguish unique visitors and track session statistics. These are <em>analytics/performance</em> cookies, not used for advertising or profiling. You can block or delete them through your browser settings, or use <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics' official opt-out browser add-on</a>.</p>
-
-                    <h2 class="h4 fw-bold mb-3 mt-5" id="storage">4. Local storage on your device</h2>
-                    <p class="text-muted">To remember your preferred language (Italian/English), the site stores a small preference flag named <code>gizano-site-lang</code> in your browser's <code>localStorage</code>. This value never leaves your device and is used only to restore your language choice on the next visit.</p>
-
-                    <h2 class="h4 fw-bold mb-3 mt-5" id="third">5. Third-party services</h2>
-                    <ul class="text-muted">
-                        <li><strong>Google Analytics</strong> — usage statistics. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's privacy policy</a>.</li>
-                        <li><strong>Bootstrap, Font Awesome, Google Fonts</strong> — CSS/JS/font assets served via CDN (jsdelivr, fonts.googleapis.com). Your browser may contact these CDNs to load resources.</li>
+                        <li>Anonymized aggregate browsing metrics (page views, session duration, device type, approximate geographic region);</li>
+                        <li>Referrer domain and browser type (with IP anonymization enforced).</li>
                     </ul>
 
-                    <h2 class="h4 fw-bold mb-3 mt-5" id="rights">6. Your rights</h2>
-                    <p class="text-muted">Depending on your jurisdiction (e.g. GDPR in the EU), you may have the right to access, rectify, or delete personal data related to you. Since this site does not store personal accounts, the data processed is limited to aggregate analytics. To exercise your rights or ask questions about this policy, contact the site owner at <a href="mailto:contact&#64;giovanni-zanotti&#46;is-a&#46;dev">contact@giovanni-zanotti.is-a.dev</a>.</p>
+                    <h2 class="h4 fw-bold mb-3 mt-5" id="cookies">3. Cookies & Consent Management</h2>
+                    <p class="text-muted">This site uses no profiling or marketing cookies. Statistical cookies from GA4 are loaded strictly upon prior consent. If you decline or ignore the consent banner, no analytics cookies are placed on your browser.</p>
+                    <p class="text-muted">You can change or revoke your cookie consent choice at any time by clicking the button below:</p>
+                    <div>
+                        <button type="button" class="btn btn-outline-primary btn-sm" onclick="window.resetCookieConsent()">
+                            <i class="fas fa-cookie-bite me-1"></i> Update Cookie Preferences
+                        </button>
+                    </div>
 
-                    <h2 class="h4 fw-bold mb-3 mt-5" id="changes">7. Changes to this policy</h2>
-                    <p class="text-muted">This policy may be updated from time to time. Any changes will be reflected by updating the "last updated" date at the top of this page.</p>
+                    <h2 class="h4 fw-bold mb-3 mt-5" id="storage">4. Local Storage on Your Device</h2>
+                    <p class="text-muted">The site stores two minimal, functional flags in your browser's <code>localStorage</code>:</p>
+                    <ul class="text-muted">
+                        <li><code>gizano-site-lang</code>: Remembers your language preference (Italian or English);</li>
+                        <li><code>gizano_analytics_consent</code>: Stores your cookie preference (<code>granted</code> or <code>denied</code>) so you are not prompted on every page load.</li>
+                    </ul>
+                    <p class="text-muted">These values remain exclusively on your local device and are never transmitted to external servers.</p>
+
+                    <h2 class="h4 fw-bold mb-3 mt-5" id="third">5. Self-Hosted Infrastructure & Third Parties</h2>
+                    <p class="text-muted">To eliminate unauthorized data transmission to third-party content delivery networks:</p>
+                    <ul class="text-muted">
+                        <li><strong>Self-Hosted Typography & Frameworks:</strong> All font files (Inter, Exo 2, Rajdhani), icons (Font Awesome), and framework libraries (Bootstrap CSS and JavaScript) are hosted locally on this origin. No IP addresses or requests are sent to Google Fonts or jsDelivr CDNs.</li>
+                        <li><strong>Google Analytics 4 (Google LLC):</strong> Dispatched only upon explicit user opt-in. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's privacy policy</a>.</li>
+                    </ul>
+
+                    <h2 class="h4 fw-bold mb-3 mt-5" id="rights">6. Your Rights</h2>
+                    <p class="text-muted">Under the GDPR, you have the right to access, rectify, or request deletion of any personal data concerning you. Since this site operates as a static portfolio without user accounts, data processing is strictly limited to aggregate, anonymized statistics. To exercise your rights or submit inquiries, contact: <a href="mailto:contact&#64;giovanni-zanotti&#46;is-a&#46;dev">contact@giovanni-zanotti.is-a.dev</a>.</p>
+
+                    <h2 class="h4 fw-bold mb-3 mt-5" id="changes">7. Changes to This Policy</h2>
+                    <p class="text-muted">Any updates to this policy will be published on this page with an updated revision date.</p>
                 </div>
             </div>
         </section>
@@ -123,7 +124,6 @@
 
     <div id="site-footer"></div>
     <script src="./Script/footer.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous" defer></script>
+    <script src="./Script/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>
