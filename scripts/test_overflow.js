@@ -24,18 +24,38 @@ async function main() {
         '--headless=new',
         '--no-sandbox',
         '--disable-gpu',
+        '--disable-dev-shm-usage',
+        '--disable-software-rasterizer',
         '--remote-debugging-port=9222'
     ]);
 
-    await new Promise(r => setTimeout(r, 1200));
+    let stderr = '';
+    chrome.stderr?.on('data', d => stderr += d.toString());
 
-    const versionRes = await new Promise((resolve, reject) => {
-        http.get('http://127.0.0.1:9222/json/version', res => {
-            let data = '';
-            res.on('data', chunk => data += chunk);
-            res.on('end', () => resolve(JSON.parse(data)));
-        }).on('error', reject);
-    });
+    let versionRes = null;
+    for (let i = 0; i < 25; i++) {
+        try {
+            versionRes = await new Promise((resolve, reject) => {
+                const req = http.get('http://127.0.0.1:9222/json/version', res => {
+                    let data = '';
+                    res.on('data', chunk => data += chunk);
+                    res.on('end', () => {
+                        try { resolve(JSON.parse(data)); } catch (e) { reject(e); }
+                    });
+                });
+                req.on('error', reject);
+                req.setTimeout(1000, () => { req.destroy(); reject(new Error('timeout')); });
+            });
+            if (versionRes && versionRes.webSocketDebuggerUrl) break;
+        } catch (e) {
+            await new Promise(r => setTimeout(r, 400));
+        }
+    }
+
+    if (!versionRes || !versionRes.webSocketDebuggerUrl) {
+        console.error('Failed to connect to headless Chrome on port 9222. Stderr:', stderr);
+        throw new Error('Chrome DevTools port not ready');
+    }
 
     const ws = new WebSocket(versionRes.webSocketDebuggerUrl);
     let id = 1;
