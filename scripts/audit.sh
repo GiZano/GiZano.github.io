@@ -73,7 +73,11 @@ done
 # 6. Automated horizontal viewport overflow check (across all 20 sitemap pages)
 echo "[6/6] Checking for horizontal viewport overflow (all 20 sitemap pages)..."
 if command -v node >/dev/null 2>&1 && [ -f "$SCRIPT_DIR/test_overflow.js" ]; then
-    if ! node "$SCRIPT_DIR/test_overflow.js"; then
+    NODE_CMD=(node)
+    if node --version 2>/dev/null | grep -qE '^v(18|20)\.'; then
+        NODE_CMD=(node --experimental-websocket)
+    fi
+    if ! "${NODE_CMD[@]}" "$SCRIPT_DIR/test_overflow.js"; then
         echo "  [FAIL] Viewport overflow detected on sitemap pages!"
         ERRORS=$((ERRORS + 1))
     fi
