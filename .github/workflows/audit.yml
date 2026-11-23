@@ -16,8 +16,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set audit script permissions
-        run: chmod +x scripts/audit.sh
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
 
-      - name: Execute audit checks
+      - name: Set audit script permissions
+        run: chmod +x scripts/audit.sh scripts/audit-live.sh
+
+      - name: Execute audit checks (including 20-page mobile overflow)
         run: ./scripts/audit.sh
