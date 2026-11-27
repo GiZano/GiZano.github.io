@@ -1,4 +1,4 @@
-name: Pre-flight Quality & Privacy Audit
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -7,11 +7,19 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   audit:
     name: Run Strict Pre-flight Audit
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -21,8 +29,56 @@ jobs:
         with:
           node-version: 22
 
-      - name: Set audit script permissions
+      - name: Set script permissions
         run: chmod +x scripts/audit.sh scripts/audit-live.sh
 
       - name: Execute audit checks (including 20-page mobile overflow)
         run: ./scripts/audit.sh
+
+  deploy:
+    name: Build & Deploy
+    needs: audit
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Stamp build SHA into index.html
+        run: |
+          SHORT_SHA=$(echo "$GITHUB_SHA" | cut -c1-7)
+          sed -i "s/__BUILD_SHA__/${SHORT_SHA}/" index.html
+          if grep -q "__BUILD_SHA__" index.html; then
+            echo "ERROR: placeholder was not replaced"
+            exit 1
+          fi
+          echo "Stamped build SHA: $SHORT_SHA"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  live-audit:
+    name: Run Post-Deploy Live Audit
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run live audit
+        run: |
+          chmod +x scripts/audit-live.sh
+          scripts/audit-live.sh "$GITHUB_SHA"

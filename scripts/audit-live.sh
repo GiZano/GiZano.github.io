@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 # scripts/audit-live.sh - Post-deploy production verification on live domain
+# Usage: audit-live.sh [COMMIT_SHA]
+#   COMMIT_SHA  Full or short SHA to match against <meta name="build"> on live site.
+#               Falls back to git rev-parse --short HEAD if omitted.
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -13,9 +16,13 @@ trap 'rm -rf "$TMP_DIR"' EXIT
 ERRORS=0
 echo "=== Running Post-Deploy Production Audit ($BASE_URL) ==="
 
-# 1. Wait for deployment by matching <meta name="build" content="...">
-EXPECTED_BUILD=$(grep -oE '<meta name="build" content="[^"]+"' index.html 2>/dev/null | cut -d'"' -f4 || true)
-echo "[1/5] Verifying live deployment matches local build ($EXPECTED_BUILD)..."
+# Determine expected build SHA (first 7 chars)
+if [ -n "${1:-}" ]; then
+    EXPECTED_SHA=$(echo "$1" | cut -c1-7)
+else
+    EXPECTED_SHA=$(git rev-parse --short=7 HEAD)
+fi
+echo "[1/5] Verifying live deployment matches commit SHA ($EXPECTED_SHA)..."
 
 MAX_ATTEMPTS=12
 DEPLOYED=false
@@ -23,17 +30,13 @@ DEPLOYED=false
 for ((i=1; i<=MAX_ATTEMPTS; i++)); do
     TIMESTAMP=$(date +%s)
     if curl -sSL -f "${BASE_URL}/?nocache=${TIMESTAMP}" > "$TMP_DIR/home.html" 2>/dev/null; then
-        LIVE_BUILD=$(grep -oE '<meta name="build" content="[^"]+"' "$TMP_DIR/home.html" 2>/dev/null | cut -d'"' -f4 || true)
-        if [ -n "$EXPECTED_BUILD" ] && [ "$LIVE_BUILD" = "$EXPECTED_BUILD" ]; then
-            echo "  [PASS] Live site build '$LIVE_BUILD' matches expected commit build '$EXPECTED_BUILD' (attempt $i)."
-            DEPLOYED=true
-            break
-        elif [ -z "$EXPECTED_BUILD" ]; then
-            echo "  [INFO] No local <meta name=\"build\"> set; proceeding with live checks."
+        LIVE_SHA=$(grep -oE '<meta name="build" content="[^"]+"' "$TMP_DIR/home.html" 2>/dev/null | cut -d'"' -f4 || true)
+        if [ "$LIVE_SHA" = "$EXPECTED_SHA" ]; then
+            echo "  [PASS] Live build SHA '$LIVE_SHA' matches expected '$EXPECTED_SHA' (attempt $i)."
             DEPLOYED=true
             break
         else
-            echo "  [WAIT] Live site build is '${LIVE_BUILD:-legacy}' (waiting for '$EXPECTED_BUILD', attempt $i/$MAX_ATTEMPTS)..."
+            echo "  [WAIT] Live build is '${LIVE_SHA:-not set}' (waiting for '$EXPECTED_SHA', attempt $i/$MAX_ATTEMPTS)..."
             sleep 5
         fi
     else
@@ -43,7 +46,7 @@ for ((i=1; i<=MAX_ATTEMPTS; i++)); do
 done
 
 if [ "$DEPLOYED" = false ]; then
-    echo "  [FAIL] Live site deployment timeout: still serving build '${LIVE_BUILD:-unknown}' instead of '$EXPECTED_BUILD'."
+    echo "  [FAIL] Live site deployment timeout: still serving '${LIVE_SHA:-unknown}' instead of '$EXPECTED_SHA'."
     ERRORS=$((ERRORS + 1))
 fi
 
